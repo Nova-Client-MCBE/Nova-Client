@@ -1,7 +1,7 @@
 <br>
 <div align="center">
   <p>
-    <a href="https://discord.gg/Q4n3WaYGHJ"><img src="https://github.com/lliTImInternet/Nova-Client/blob/main/title.png?raw=true" width="600" alt="proj64-logo" /></a>
+    <a href="https://discord.gg/Q4n3WaYGHJ"><img src="https://github.com/Nova-Client-MCPE/LauncherResources/blob/main/IMG_3639.png?raw=true" width="600" alt="proj64-logo" /></a>
   </p>
   <br/>
   <p>
