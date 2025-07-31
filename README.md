@@ -4,9 +4,6 @@
     <a href="https://discord.com/invite/hu6ftWcsbU"><img src="https://github.com/Nova-Client-MCPE/LauncherResources/blob/main/IMG_3639.png?raw=true" width="600" alt="Nova-Client-logo" /></a>
   </p>
   <br/>
-  <p>
-    <h1>Nova Client<h1>
-  </p>
 </div>
 <br>
 
