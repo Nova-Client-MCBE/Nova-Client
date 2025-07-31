@@ -14,12 +14,6 @@
           "$header_label": "Pocket ui",
           "$dialog_version_text_ignored": true
         }
-      },
-      {
-        "3@Nova_Client_dialog.content_lock": {
-          "$header_label": "Version outdated",
-          "$dialog_pocket_text_ignored": true
-        }
       }
     ]
   },

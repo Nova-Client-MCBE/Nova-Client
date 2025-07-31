@@ -3,7 +3,7 @@
   "bg_and_title@Nova_Client_common.black": {
     "controls": [
       {
-        "title@Nova_Client_common.version_lock": {
+        "title": {
           "type": "image",
           "texture": "textures/ui/title",
           "layer": 1,
@@ -24,7 +24,7 @@
       }
     ]
   },
-  "play@Nova_Client_common.version_lock": {
+  "play": {
     "type": "panel",
     "size": [
       "100%",
@@ -170,7 +170,7 @@
       }
     ]
   },
-  "sidebar@Nova_Client_common.version_lock": {
+  "sidebar": {
     "type": "image",
     "texture": ".NC/textures/background/White",
     "color": [
