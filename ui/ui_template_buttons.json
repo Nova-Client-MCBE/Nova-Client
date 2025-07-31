@@ -1,0 +1,31 @@
+{
+    "namespace": "common_buttons",
+    "dark_button_assets@common.button": {
+        "$default_button_texture|default": ".NC/textures/buttons/gray/button_default",
+        "$hover_button_texture|default": ".NC/textures/buttons/gray/button_hover",
+        "$pressed_button_texture|default": ".NC/textures/buttons/gray/button_pressed",
+        "$locked_button_texture|default": ".NC/textures/buttons/gray/button_pressed",
+        "locked_control": "locked",
+        "$border_visible": false,
+        "$default_state_border_visible": false,
+        "$hover_state_border_visible": false,
+        "$pressed_state_border_visible": false,
+        "$locked_state_border_visible": false,
+        "$default_border_visible": false,
+        "$locked_alpha": 1
+    },
+    "light_button_assets@common.button": {
+        "$default_button_texture|default": ".NC/textures/buttons/common/button_default",
+        "$hover_button_texture|default": ".NC/textures/buttons/common/button_hover",
+        "$pressed_button_texture|default": ".NC/textures/buttons/common/button_pressed",
+        "$locked_button_texture|default": ".NC/textures/buttons/common/button_pressed",
+        "locked_control": "locked",
+        "$border_visible": false,
+        "$default_state_border_visible": false,
+        "$hover_state_border_visible": false,
+        "$pressed_state_border_visible": false,
+        "$locked_state_border_visible": false,
+        "$default_border_visible": false,
+        "$locked_alpha": 1
+    }
+}

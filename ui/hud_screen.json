@@ -1,0 +1,211 @@
+{
+  "namespace": "hud",
+  "hud_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "modules_menu@Nova_client_modules_menu.content": {}
+          },
+          {
+            "modules@Nova_client_module_list.content": {}
+          },
+          {
+            "f1@Nova_Client_hud_buttons.content": {}
+          }
+        ]
+      }
+    ]
+  },
+  "hud_player_renderer": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@Nova_Client_paperdoll.content": {}
+      }
+    ]
+  },
+  "player_position": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@Nova_Client_coords.content": {}
+      }
+    ]
+  },
+  "number_of_days_played": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@Nova_Client_day_counter.content": {}
+      }
+    ]
+  },
+  "hud_actionbar_text": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "action_bar_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_text/subtitle_frame": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "subtitle_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_title_text/title_frame": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "title_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "root_panel/boss_health_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "boss_bar_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "boss_health_panel": {
+    "bindings": [
+      {
+        "binding_name": "#bar_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "1@Nova_Client_bossbar.bossbar_percent_content": {}
+          }
+        ]
+      }
+    ]
+  },
+  "root_panel/mob_effects_renderer": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mob_effect_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "root_panel/sidebar": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "scoreboard_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "root_panel/vignette_rend": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "vignette_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "root_panel/chat_stack": {
+    "modifications": [
+      {
+        "control_name": "chat_panel",
+        "operation": "insert_before",
+        "value": [
+          {
+            "1@Nova_Client_common.spacer": {
+              "bindings": [
+                {
+                  "binding_type": "view",
+                  "source_control_name": "moon_phase_toggle",
+                  "source_property_name": "#toggle_state",
+                  "target_property_name": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "2@Nova_Client_moon_phase.content": {}
+          },
+          {
+            "3@Nova_Client_common.spacer": {
+              "bindings": [
+                {
+                  "binding_type": "view",
+                  "source_control_name": "item_information_toggle",
+                  "source_property_name": "#toggle_state",
+                  "target_property_name": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "4@Nova_Client_item_info_panel.content": {}
+          },
+          {
+            "5@Nova_Client_common.spacer": {}
+          }
+        ]
+      }
+    ]
+  },
+  "jukebox_popup_text": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "jukebox_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "root_panel": {
+    "modifications": [
+      {
+        "control_name": "curor_rend",
+        "operation": "remove"
+      }
+    ]
+  },
+  "chat_panel": {
+    "ignored": true,
+    "controls": []
+  },
+  "hud_screen": {
+    "always_accepts_input": true,
+    "send_telemetry": false,
+    "should_steal_mouse": true,
+    "render_only_when_topmost": false,
+    "$use_loading_bars": false,
+    "cache_screen": true,
+    "$screen_animations": []
+  }
+}

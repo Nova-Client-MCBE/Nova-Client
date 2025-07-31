@@ -1,0 +1,28 @@
+{
+    "world_loading_progress_screen": {
+      "$screen_content": "Nova_Client_progress_screen.content"
+    },
+    "overworld_loading_progress_screen": {
+      "$screen_content": "Nova_Client_progress_screen.content",
+      "$screen_animations": []
+    },
+    "nether_loading_progress_screen": {
+      "$screen_content": "Nova_Client_progress_screen.content",
+      "$screen_animations": []
+    },
+    "theend_loading_progress_screen": {
+      "$screen_content": "Nova_Client_progress_screen.content",
+      "$screen_animations": []
+    },
+    "realms_loading_progress_screen": {
+      "$screen_content": "Nova_Client_progress_screen.content",
+      "$screen_bg_content": "common.portal_background"
+    },
+    "realms_stories_enabled_loading_progress_screen": {
+      "$screen_content": "Nova_Client_progress_screen.content",
+      "$screen_bg_content": "progress.realms_loading_background"
+    },
+    "world_saving_progress_screen": {
+      "$screen_content": "Nova_Client_progress_screen.content"
+    }
+  }

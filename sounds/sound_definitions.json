@@ -1,0 +1,14 @@
+{
+  "NC.click": {
+    "category": "ui",
+    "max_distance" : null,
+    "min_distance" : null,
+    "sounds": [
+      {
+        "name": ".NC/textures/click",
+        "volume": 0.20,
+        "load_on_low_memory": true
+      }
+    ]
+  }
+}

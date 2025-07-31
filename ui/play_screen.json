@@ -1,0 +1,15 @@
+{
+  "namespace": "play",
+  "play_screen@common.base_screen": {
+    "$screen_content": "play.Nova_Client_play_content",
+    "variables": []
+  },
+  "Nova_Client_play_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@Nova_Client_play.content": {}
+      }
+    ]
+  }
+}

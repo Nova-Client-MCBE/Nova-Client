@@ -1,0 +1,139 @@
+{"namespace": "config","1": {"type": "panel",
+
+
+
+        /*Modules*/
+
+        "$inventoryhud": true,
+        "$Inventoryhud_opacity": 0.5,
+
+
+        "$world_name": true,
+        "$world_name_opacity": 0.5,
+
+
+        "$mainhand": true,
+        "$mainhand_item": true,
+        "$mainhand_stack": true,
+        "$mainhand_durability": true,
+        "$mainhand_slot_opacity": 1,
+        "$mainhand_durability_opacity": 0.5,
+
+        
+        "$item_counter": true,
+        "$arrow_counter": true,
+        "$potion_counter": true,
+        "$totem_counter": true,
+        "$item_counter_opacity": 0.5,
+
+
+        "$clock_and_compass": true,
+        "$compass": true,
+        "$clock": true,
+        "$recovery_compass": false,
+        "$clock_and_compass_opacity": 0.5,
+
+
+        "$day_counter": true,
+        "$day_counter_opacity": 0.5,
+
+
+        "$coordinates": true,
+        "$default_coordinates": true,
+        "$chunk_coordinates": true,
+        "$coordinates_opacity": 0.5,
+
+
+        "$crosshair": true,
+        "$third_person_crosshair": false,
+        "$rgb_crosshair": false,
+
+
+        "$inventory_slot_counter": true,
+        "$inventory_slot_counter_icon": true,
+        "$inventory_slot_opacity": 0.5,
+
+
+        "$paperdoll": true,
+        "$2d_paperdoll": false,
+
+
+        "$item_info": false,
+        "$item_info_item_name": true,
+        "$item_aux_id": true,
+        "$item_id": true,
+        "$item_info_opacity": 0.5,
+
+
+        "$brightness": false,
+        "$night_shift": false,
+        "$brightness_opacity": 0.5,
+
+
+        "$exp_calculator": true,
+        "$exp_panel_icon": true,
+        "$exp_points": true,
+        "$exp_level": true,
+        "$exp_panel_buffer": true,
+        "$exp_panel_opacity": 0.5,
+
+
+        "$playerlist": false,
+        "$playerlist_icon": true,
+        "$playerlist_pc_tab": true,
+        "$playlist_mobile_hud_toggle": true,
+        "$playerlist_background_opacity": 0.5,
+        "$accent_background_opacity": 0.2,
+
+        "$moon_phase": true,
+        "$moon_phase_text": true,
+        "$moon_phase_icon": true,
+        "$moon_phase_opacity": 0.5,
+
+
+
+        /*HUD Elements*/
+
+        "$bossbar": true,
+        "$bossbar_percent": true,
+        "$bossbar_percent_opacity": 0.5,
+
+
+        "$mob_effects": true,
+
+
+        "$scoreboard": true,
+        "$scoreboard_numbers": false,
+        "$scoreboard_opacity": 0.5,
+
+
+        "$vignette": false,
+
+
+        "$chat": true,
+        "$bottom_chat": false,
+        "$chat_opacity": 0.5,
+
+
+        "$title": true,
+
+
+        "$action_bar": true,
+
+
+        "$subtitle": true,
+
+
+        "$jukebox_text": true,
+
+
+
+        /*Mobile Only*/
+
+        "$f1_button": false
+
+
+
+
+
+}}

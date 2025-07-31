@@ -1,0 +1,24 @@
+{
+  "namespace": "resource_packs",
+  "selected_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "help_hover@Nova_client_button.white_border": {
+              "$button_text": "Correct Texture Pack order",
+              "$NC_hover_text": "1. Extension\n2. Nova Client\n3. Any other Texture Pack\n\n§cNot following this oder will break things",
+              "$custom_content": "Nova_client_button.label_hover_text",
+              "size": [
+                "100%",
+                15
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

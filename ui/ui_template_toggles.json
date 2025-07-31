@@ -1,0 +1,21 @@
+{
+    "namespace": "common_toggles",
+    "toggle_unchecked_hover_with_chevron@toggle_unchecked_hover": {
+       "$default_texture": ".NC/textures/buttons/common/button_default",
+       "$hover_texture": ".NC/textures/buttons/common/button_pressed",
+       "$pressed_texture": ".NC/textures/buttons/common/button_hover",
+       "$locked_texture": ".NC/textures/buttons/common/button_pressed"
+    },
+    "toggle_checked_hover_with_chevron@toggle_checked_hover": {
+       "$default_texture": ".NC/textures/buttons/common/button_default",
+       "$hover_texture": ".NC/textures/buttons/common/button_pressed",
+       "$pressed_texture": ".NC/textures/buttons/common/button_hover",
+       "$locked_texture": ".NC/textures/buttons/common/button_pressed"
+    },
+    "dark_ui_toggle_collection@common_toggles.light_ui_toggle_collection": {
+       "$default_texture": ".NC/textures/buttons/gray/button_default",
+       "$hover_texture": ".NC/textures/buttons/gray/button_pressed",
+       "$pressed_texture": ".NC/textures/buttons/gray/button_hover",
+       "$locked_texture": ".NC/textures/buttons/gray/button_pressed"
+    }
+ }

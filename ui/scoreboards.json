@@ -1,0 +1,28 @@
+{
+  "namespace": "scoreboard",
+  "scoreboard_sidebar_score": {
+    "bindings": [
+      {
+        "binding_name": "#player_score_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_scores"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "scorecoard_numbers_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "scoreboard_sidebar/main": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "scoreboard_opacity",
+        "source_property_name": "(#slider_value / 10)",
+        "target_property_name": "#alpha"
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "ui_defs": [
+      "config.json",
+    //button
+      ".NC/ui/button/NC_button.json",
+    //modules
+      ".NC/ui/modules/NC_bossbar.json",
+      ".NC/ui/modules/NC_brightness.json",
+      ".NC/ui/modules/NC_chat.json",
+      ".NC/ui/modules/NC_coords.json",
+      ".NC/ui/modules/NC_cnc.json",
+      ".NC/ui/modules/NC_crosshair.json",
+      ".NC/ui/modules/NC_day_counter.json",
+      ".NC/ui/modules/NC_inventory_hud.json",
+      ".NC/ui/modules/NC_ip_display.json",
+      ".NC/ui/modules/NC_item_counters.json",
+      ".NC/ui/modules/NC_item_info.json",
+      ".NC/ui/modules/NC_mainhand_slot.json",
+      ".NC/ui/modules/NC_mobile_hud_buttons.json",
+      ".NC/ui/modules/NC_moon.json",
+      ".NC/ui/modules/NC_paper_doll.json",
+      ".NC/ui/modules/NC_player_list.json",
+      ".NC/ui/modules/NC_slot_counter.json",
+      ".NC/ui/modules/NC_xp_indicator.json",
+    //screens
+      ".NC/ui/screen/buy_game/NC_nova_screen.json",
+      ".NC/ui/screen/chest/NC_chest_screen.json",
+
+
+      ".NC/ui/screen/hud/mod_menu/NC_modules_menu.json",
+      ".NC/ui/screen/hud/mod_menu/NC_tabs.json",
+      ".NC/ui/screen/hud/mod_menu/NC_modules_screen.json",
+      ".NC/ui/screen/hud/mod_menu/NC_elements_screen.json",
+      ".NC/ui/screen/hud/mod_menu/NC_info_screen.json",
+
+      ".NC/ui/screen/hud/mod_menu/rows/modules/NC_1.json",
+      ".NC/ui/screen/hud/mod_menu/rows/modules/NC_2.json",
+      ".NC/ui/screen/hud/mod_menu/rows/modules/NC_3.json",
+      ".NC/ui/screen/hud/mod_menu/rows/modules/NC_4.json",
+      ".NC/ui/screen/hud/mod_menu/rows/modules/NC_5.json",
+
+      ".NC/ui/screen/hud/mod_menu/rows/element/NC_1.json",
+      ".NC/ui/screen/hud/mod_menu/rows/element/NC_2.json",
+      ".NC/ui/screen/hud/mod_menu/rows/element/NC_3.json",
+      ".NC/ui/screen/hud/mod_menu/rows/element/NC_4.json",
+
+      ".NC/ui/screen/hud/mod_menu/screens/NC_bossbar_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_brightness_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_clock_and_compass_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_chat_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_coordinates_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_crosshair_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_day_counter_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_inventory_hud_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_inventory_slot_counter.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_item_counter_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_item_info_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_main_hand_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_moon_phase_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_paperdoll_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_playerlist_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_scoreboard_screen.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_world_name.json",
+      ".NC/ui/screen/hud/mod_menu/screens/NC_xp_screen.json",
+
+
+      ".NC/ui/screen/pause/NC_pause.json",
+      ".NC/ui/screen/play/NC_play.json",
+      ".NC/ui/screen/progress/NC_progress_percentage.json",
+      ".NC/ui/screen/progress/NC_progress.json",
+      ".NC/ui/screen/start/NC_start.json",
+      ".NC/ui/screen/start/NC_news.json",
+      ".NC/ui/screen/trade/NC_trade.json",
+    //templates
+      ".NC/ui/templates/NC_dialog_toggle.json",
+      ".NC/ui/templates/NC_dialog.json",
+      ".NC/ui/templates/NC_ip.json",
+      ".NC/ui/templates/NC_math.json",
+      ".NC/ui/templates/NC_screen_offset_display.json",
+      ".NC/ui/templates/NC_mod_menu_panel.json",
+      ".NC/ui/templates/NC_slider.json",
+    //toggles
+      ".NC/ui/toggle/NC_exit_toggle.json",
+      ".NC/ui/toggle/NC_toggle.json",
+    //rest
+      ".NC/ui/NC_animation.json",
+      ".NC/ui/NC_common.json",
+      ".NC/ui/NC_list.json",
+      ".NC/ui/NC_textures.json",
+    //extensions
+      ".NC/ui/animations/NC_hud_anim.json",
+      ".NC/ui/screen/hud/NC_hud_animation.json"
+  ]
+}

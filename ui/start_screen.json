@@ -1,0 +1,34 @@
+{
+  "namespace": "start",
+  "start_screen": {
+    "$screen_content": "start.Nova_Client_start_screen"
+  },
+  "Nova_Client_start_screen": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@start.Nova_Client_start_content": {}
+      },
+      {
+        "2@Nova_Client_dialog.content": {
+          "$header_label": "Pocket ui",
+          "$dialog_version_text_ignored": true
+        }
+      },
+      {
+        "3@Nova_Client_dialog.content_lock": {
+          "$header_label": "Version outdated",
+          "$dialog_pocket_text_ignored": true
+        }
+      }
+    ]
+  },
+  "Nova_Client_start_content@Nova_Client_common.version_lock": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@Nova_client_start.content": {}
+      }
+    ]
+  }
+}

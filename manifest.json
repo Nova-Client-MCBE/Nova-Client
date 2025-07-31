@@ -1,0 +1,29 @@
+{
+   "format_version": 2,
+   "header": {
+     "name": "§l§6Nova §fClient§r",
+     "description": "Nova Client is a client that adds useful Modules\n\n§9Discord§r: llit_im_internet",
+     "uuid": "47af92e8-f6d5-459a-9521-946d6de0b1b8",
+     "version": [
+       1,
+       4,
+       0
+     ],
+     "min_engine_version": [
+       1,
+       21,
+       0
+     ]
+   },
+   "modules": [
+     {
+       "type": "resources",
+       "uuid": "136b5963-37a6-41c0-b72d-c3c0eef58101",
+       "version": [
+         1,
+         0,
+         0
+       ]
+     }
+   ]
+ }

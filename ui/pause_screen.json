@@ -1,0 +1,26 @@
+{
+  "namespace": "pause",
+  "pause_screen@common.base_screen": {
+    "$screen_content": "pause.Nova_Client_pause_content",
+    "cache_screen": true,
+    "$use_loading_bars": false,
+    "close_on_player_hurt": false,
+    "absorbs_input": false,
+    "variables": [],
+    "button_mappings": [],
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ]
+  },
+  "Nova_Client_pause_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@Nova_Client_pause_screen.content": {}
+      }
+    ]
+  }
+}
