@@ -454,6 +454,6 @@
   "just_some_vars": {
     "$NC_version": "1.4",
     "$NC_needed_version": "v1.21.94",
-    "$NC_gathering_event": false
+    "$NC_gathering_event": true
   }
 }
