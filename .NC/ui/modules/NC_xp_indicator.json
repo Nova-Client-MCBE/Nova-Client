@@ -1,0 +1,305 @@
+{
+  "namespace": "Nova_Client_xp_indicator",
+  "content@Nova_Client_common.external": {
+    "$NC_external": "hud_tip_text_background",
+    "layer": 1,
+    "alpha": 0.5,
+    "size": [
+      "100%c + 3px",
+      20
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "xp_panel_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "exp_calculator_opacity",
+        "source_property_name": "(#slider_value / 10)",
+        "target_property_name": "#alpha"
+      }
+    ],
+    "controls": [
+      {
+        "1@Nova_Client_xp_indicator.calculator": {}
+      }
+    ]
+  },
+  "calculator": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%c",
+      "100%"
+    ],
+    "controls": [
+      {
+        "panel": {
+          "type": "panel",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "xp": {
+                "type": "image",
+                "texture": "textures/items/experience_bottle",
+                "offset": [
+                  0,
+                  3
+                ],
+                "size": [
+                  15,
+                  15
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "xp_point_calculator_icon_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "exp_point_caculator": {
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "xp_panel_point_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "global",
+              "binding_name": "#level_number"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#level_number * 1)",
+              "target_property_name": "#level_integer"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((2 * #level_integer + 7) * (#level_integer < 16))",
+              "target_property_name": "#next_level1"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((5 * #level_integer - 38) * ((#level_integer < 31) and (#level_integer > 15)))",
+              "target_property_name": "#next_level2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((9 * #level_integer - 158) * (#level_integer > 30))",
+              "target_property_name": "#next_level3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#next_level1 + #next_level2 + #next_level3)",
+              "target_property_name": "#exp_require"
+            },
+            {
+              "binding_type": "global",
+              "binding_name": "#exp_progress"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#exp_require * 100 + 10) * (1 - #exp_progress))",
+              "target_property_name": "#exp_point_calculation"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(10000000 * ((#exp_point_calculation > 19999999) + (#exp_point_calculation > 9999999)))",
+              "target_property_name": "#calculated_exp_point1"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#exp_point_calculation - #calculated_exp_point1)",
+              "target_property_name": "#calculated_exp_point_1"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(1000000 * ((#calculated_exp_point_1 > 1999999) + (#calculated_exp_point_1 > 2999999) + (#calculated_exp_point_1 > 3999999) + (#calculated_exp_point_1 > 4999999) + (#calculated_exp_point_1 > 5999999) + (#calculated_exp_point_1 > 6999999) + (#calculated_exp_point_1 > 7999999) + (#calculated_exp_point_1 > 8999999) + (#calculated_exp_point_1 > 999999)))",
+              "target_property_name": "#calculated_exp_point2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#calculated_exp_point_1 - #calculated_exp_point2)",
+              "target_property_name": "#calculated_exp_point_2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(100000 * ((#calculated_exp_point_2 > 199999) + (#calculated_exp_point_2 > 299999) + (#calculated_exp_point_2 > 399999) + (#calculated_exp_point_2 > 499999) + (#calculated_exp_point_2 > 599999) + (#calculated_exp_point_2 > 699999) + (#calculated_exp_point_2 > 799999) + (#calculated_exp_point_2 > 899999) + (#calculated_exp_point_2 > 99999)))",
+              "target_property_name": "#calculated_exp_point3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#calculated_exp_point_2 - #calculated_exp_point3)",
+              "target_property_name": "#calculated_exp_point_3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(10000 * ((#calculated_exp_point_3 > 19999) + (#calculated_exp_point_3 > 29999) + (#calculated_exp_point_3 > 39999) + (#calculated_exp_point_3 > 49999) + (#calculated_exp_point_3 > 59999) + (#calculated_exp_point_3 > 69999) + (#calculated_exp_point_3 > 79999) + (#calculated_exp_point_3 > 89999) + (#calculated_exp_point_3 > 9999)))",
+              "target_property_name": "#calculated_exp_point4"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#calculated_exp_point_3 - #calculated_exp_point4)",
+              "target_property_name": "#calculated_exp_point_4"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(1000 * ((#calculated_exp_point_4 > 1999) + (#calculated_exp_point_4 > 2999) + (#calculated_exp_point_4 > 3999) + (#calculated_exp_point_4 > 4999) + (#calculated_exp_point_4 > 5999) + (#calculated_exp_point_4 > 6999) + (#calculated_exp_point_4 > 7999) + (#calculated_exp_point_4 > 8999) + (#calculated_exp_point_4 > 999)))",
+              "target_property_name": "#calculated_exp_point5"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#calculated_exp_point_4 - #calculated_exp_point5)",
+              "target_property_name": "#calculated_exp_point_5"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(100 * ((#calculated_exp_point_5 > 199) + (#calculated_exp_point_5 > 299) + (#calculated_exp_point_5 > 399) + (#calculated_exp_point_5 > 499) + (#calculated_exp_point_5 > 599) + (#calculated_exp_point_5 > 699) + (#calculated_exp_point_5 > 799) + (#calculated_exp_point_5 > 899) + (#calculated_exp_point_5 > 99)))",
+              "target_property_name": "#calculated_exp_point6"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#calculated_exp_point1 + #calculated_exp_point2 + #calculated_exp_point3 + #calculated_exp_point4 + #calculated_exp_point5 + #calculated_exp_point6) / 100)",
+              "target_property_name": "#current_point"
+            }
+          ],
+          "controls": [
+            {
+              "label": {
+                "type": "label",
+                "text": "#text",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  6
+                ],
+                "size": [
+                  "default",
+                  18
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "exp_point_caculator",
+                    "source_property_name": "('§z' + #current_point + '/' + #exp_require)",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel2": {
+          "type": "panel",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "xp_level_percent": {
+                "type": "label",
+                "text": " | ",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  6
+                ],
+                "size": [
+                  "default",
+                  18
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "xp_panel_buffer",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "xp_panel_buffer",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel3": {
+          "type": "panel",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "xp_panel_level_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "xp_level_number": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  6
+                ],
+                "size": [
+                  "default",
+                  18
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

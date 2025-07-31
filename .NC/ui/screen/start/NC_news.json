@@ -1,0 +1,87 @@
+{
+    "namespace": "Nova_Client_start_news",
+    "left_panel@Nova_Client_common.internal": {
+        "$NC_internal": "background/White",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "layer": 1,
+        "color": [
+            0.105,
+            0.105,
+            0.109
+        ],
+        "offset": [
+            "4%",
+            0
+        ],
+        "size": [
+            "70",
+            "95%"
+        ],
+        "controls": [
+            {
+                "main_background@Nova_Client_common.internal": {
+                    "$NC_internal": "background/White",
+                    "layer": 2,
+                    "color": [
+                        0.192,
+                        0.196,
+                        0.2
+                    ],
+                    "size": [
+                        "98%",
+                        "98%"
+                    ],
+                    "controls": [
+                        {
+                            "header": {
+                                "type": "label",
+                                "text": "welcome to Nova Client",
+                                "font_type": "MinecraftTen",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [
+                                    0,
+                                    5
+                                ],
+                                "size": [
+                                    "default",
+                                    25
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "right_panel@Nova_Client_common.internal": {
+        "$NC_internal": "background/White",
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "color": [
+            0.105,
+            0.105,
+            0.109
+        ],
+        "offset": [
+            "-4%",
+            0
+        ],
+        "size": [
+            "70%",
+            "95%"
+        ]
+    },
+    "content": {
+        "type": "panel",
+        "controls": [
+            {
+                "1@Nova_Client_start_news.left_panel": {}
+            },
+            {
+                "2@Nova_Client_start_news.right_panel": {}
+            }
+        ]
+    }
+}

@@ -1,0 +1,515 @@
+{
+  "namespace": "Nova_Client_slot_counter",
+  "empty_slot_template": {
+    "type": "panel",
+    "collection_index": "$inv_slot_id",
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection",
+        "binding_collection_name": "hotbar_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#item_id_aux = -1))",
+        "target_property_name": "('#inv_slot_' + $inv_slot_id)"
+      }
+    ]
+  },
+  "content@Nova_Client_common.external": {
+    "$NC_external": "hud_tip_text_background",
+    "alpha": 0.5,
+    "size": [
+      "100%c + 3px",
+      20
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_slot_counter_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inv_slot_opacity",
+        "source_property_name": "(#slider_value / 10)",
+        "target_property_name": "#alpha"
+      }
+    ],
+    "controls": [
+      {
+        "1@Nova_Client_slot_counter.emptyslot_content": {}
+      }
+    ]
+  },
+  "emptyslot_content": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      16
+    ],
+    "layer": 2,
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/inventory_icon",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [
+            15,
+            15
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_slot_counter_icon_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "renderer": {
+          "type": "label",
+          "text": "#invslot_text",
+          "text_alignment": "center",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "size": [
+            "default",
+            18
+          ],
+          "offset": [
+            0,
+            5
+          ],
+          "controls": [
+            {
+              "collection_item": {
+                "type": "collection_panel",
+                "size": [
+                  0,
+                  0
+                ],
+                "collection_name": "hotbar_items",
+                "controls": [
+                  {
+                    "inv_slot_0@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 0
+                    }
+                  },
+                  {
+                    "inv_slot_1@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 1
+                    }
+                  },
+                  {
+                    "inv_slot_2@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 2
+                    }
+                  },
+                  {
+                    "inv_slot_3@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 3
+                    }
+                  },
+                  {
+                    "inv_slot_4@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 4
+                    }
+                  },
+                  {
+                    "inv_slot_5@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 5
+                    }
+                  },
+                  {
+                    "inv_slot_6@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 6
+                    }
+                  },
+                  {
+                    "inv_slot_7@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 7
+                    }
+                  },
+                  {
+                    "inv_slot_8@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 8
+                    }
+                  },
+                  {
+                    "inv_slot_9@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 9
+                    }
+                  },
+                  {
+                    "inv_slot_10@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 10
+                    }
+                  },
+                  {
+                    "inv_slot_11@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 11
+                    }
+                  },
+                  {
+                    "inv_slot_12@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 12
+                    }
+                  },
+                  {
+                    "inv_slot_13@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 13
+                    }
+                  },
+                  {
+                    "inv_slot_14@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 14
+                    }
+                  },
+                  {
+                    "inv_slot_15@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 15
+                    }
+                  },
+                  {
+                    "inv_slot_16@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 16
+                    }
+                  },
+                  {
+                    "inv_slot_17@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 17
+                    }
+                  },
+                  {
+                    "inv_slot_18@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 18
+                    }
+                  },
+                  {
+                    "inv_slot_19@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 19
+                    }
+                  },
+                  {
+                    "inv_slot_20@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 20
+                    }
+                  },
+                  {
+                    "inv_slot_21@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 21
+                    }
+                  },
+                  {
+                    "inv_slot_22@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 22
+                    }
+                  },
+                  {
+                    "inv_slot_23@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 23
+                    }
+                  },
+                  {
+                    "inv_slot_24@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 24
+                    }
+                  },
+                  {
+                    "inv_slot_25@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 25
+                    }
+                  },
+                  {
+                    "inv_slot_26@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 26
+                    }
+                  },
+                  {
+                    "inv_slot_27@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 27
+                    }
+                  },
+                  {
+                    "inv_slot_28@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 28
+                    }
+                  },
+                  {
+                    "inv_slot_29@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 29
+                    }
+                  },
+                  {
+                    "inv_slot_30@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 30
+                    }
+                  },
+                  {
+                    "inv_slot_31@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 31
+                    }
+                  },
+                  {
+                    "inv_slot_32@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 32
+                    }
+                  },
+                  {
+                    "inv_slot_33@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 33
+                    }
+                  },
+                  {
+                    "inv_slot_34@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 34
+                    }
+                  },
+                  {
+                    "inv_slot_35@Nova_Client_slot_counter.empty_slot_template": {
+                      "$inv_slot_id": 35
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_0",
+              "source_property_name": "#inv_slot_0",
+              "target_property_name": "#inv_slot_0"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_1",
+              "source_property_name": "#inv_slot_1",
+              "target_property_name": "#inv_slot_1"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_2",
+              "source_property_name": "#inv_slot_2",
+              "target_property_name": "#inv_slot_2"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_3",
+              "source_property_name": "#inv_slot_3",
+              "target_property_name": "#inv_slot_3"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_4",
+              "source_property_name": "#inv_slot_4",
+              "target_property_name": "#inv_slot_4"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_5",
+              "source_property_name": "#inv_slot_5",
+              "target_property_name": "#inv_slot_5"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_6",
+              "source_property_name": "#inv_slot_6",
+              "target_property_name": "#inv_slot_6"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_7",
+              "source_property_name": "#inv_slot_7",
+              "target_property_name": "#inv_slot_7"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_8",
+              "source_property_name": "#inv_slot_8",
+              "target_property_name": "#inv_slot_8"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_9",
+              "source_property_name": "#inv_slot_9",
+              "target_property_name": "#inv_slot_9"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_10",
+              "source_property_name": "#inv_slot_10",
+              "target_property_name": "#inv_slot_10"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_11",
+              "source_property_name": "#inv_slot_11",
+              "target_property_name": "#inv_slot_11"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_12",
+              "source_property_name": "#inv_slot_12",
+              "target_property_name": "#inv_slot_12"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_13",
+              "source_property_name": "#inv_slot_13",
+              "target_property_name": "#inv_slot_13"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_14",
+              "source_property_name": "#inv_slot_14",
+              "target_property_name": "#inv_slot_14"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_15",
+              "source_property_name": "#inv_slot_15",
+              "target_property_name": "#inv_slot_15"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_16",
+              "source_property_name": "#inv_slot_16",
+              "target_property_name": "#inv_slot_16"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_17",
+              "source_property_name": "#inv_slot_17",
+              "target_property_name": "#inv_slot_17"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_18",
+              "source_property_name": "#inv_slot_18",
+              "target_property_name": "#inv_slot_18"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_19",
+              "source_property_name": "#inv_slot_19",
+              "target_property_name": "#inv_slot_19"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_20",
+              "source_property_name": "#inv_slot_20",
+              "target_property_name": "#inv_slot_20"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_21",
+              "source_property_name": "#inv_slot_21",
+              "target_property_name": "#inv_slot_21"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_22",
+              "source_property_name": "#inv_slot_22",
+              "target_property_name": "#inv_slot_22"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_23",
+              "source_property_name": "#inv_slot_23",
+              "target_property_name": "#inv_slot_23"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_24",
+              "source_property_name": "#inv_slot_24",
+              "target_property_name": "#inv_slot_24"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_25",
+              "source_property_name": "#inv_slot_25",
+              "target_property_name": "#inv_slot_25"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_26",
+              "source_property_name": "#inv_slot_26",
+              "target_property_name": "#inv_slot_26"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_27",
+              "source_property_name": "#inv_slot_27",
+              "target_property_name": "#inv_slot_27"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_28",
+              "source_property_name": "#inv_slot_28",
+              "target_property_name": "#inv_slot_28"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_29",
+              "source_property_name": "#inv_slot_29",
+              "target_property_name": "#inv_slot_29"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_30",
+              "source_property_name": "#inv_slot_30",
+              "target_property_name": "#inv_slot_30"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_31",
+              "source_property_name": "#inv_slot_31",
+              "target_property_name": "#inv_slot_31"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_32",
+              "source_property_name": "#inv_slot_32",
+              "target_property_name": "#inv_slot_32"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_33",
+              "source_property_name": "#inv_slot_33",
+              "target_property_name": "#inv_slot_33"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_34",
+              "source_property_name": "#inv_slot_34",
+              "target_property_name": "#inv_slot_34"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inv_slot_35",
+              "source_property_name": "#inv_slot_35",
+              "target_property_name": "#inv_slot_35"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#inv_slot_0 + #inv_slot_1 + #inv_slot_2 + #inv_slot_3 + #inv_slot_4 + #inv_slot_5 + #inv_slot_6 + #inv_slot_7 + #inv_slot_8 + #inv_slot_9 + #inv_slot_10 + #inv_slot_11 + #inv_slot_12 + #inv_slot_13 + #inv_slot_14 + #inv_slot_15 + #inv_slot_16 + #inv_slot_17 + #inv_slot_18 + #inv_slot_19 + #inv_slot_20 + #inv_slot_21 + #inv_slot_22 + #inv_slot_23 + #inv_slot_24 + #inv_slot_25 + #inv_slot_26 + #inv_slot_27 + #inv_slot_28 + #inv_slot_29 + #inv_slot_30 + #inv_slot_31 + #inv_slot_32 + #inv_slot_33 + #inv_slot_34 + #inv_slot_35)",
+              "target_property_name": "#invslot_total"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§z' + #invslot_total + '/36')",
+              "target_property_name": "#invslot_text"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

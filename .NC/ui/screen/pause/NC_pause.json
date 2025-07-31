@@ -1,0 +1,586 @@
+{
+  "namespace": "Nova_Client_pause_screen",
+  "main_buttons_and_title": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 0,
+    "controls": [
+      {
+        "title": {
+          "type": "image",
+          "texture": "textures/ui/title",
+          "layer": 1,
+          "offset": [
+            0,
+            "-30%"
+          ],
+          "size": [
+            "45%",
+            "25%"
+          ]
+        }
+      },
+      {
+        "resume_button@Nova_client_button.green_button": {
+          "size": [
+            250,
+            35
+          ],
+          "offset": [
+            0,
+            -35
+          ],
+          "$pressed_button_name": "button.menu_continue",
+          "$button_text": "menu.returnToGame",
+          "$text_color": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "settings_button@Nova_client_button.ore_ui_button": {
+          "size": [
+            250,
+            25
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "$pressed_button_name": "button.menu_settings",
+          "$button_text": "menu.settings"
+        }
+      },
+      {
+        "skins_button@Nova_client_button.ore_ui_button": {
+          "size": [
+            250,
+            25
+          ],
+          "offset": [
+            0,
+            30
+          ],
+          "$focus_id": "profile_button",
+          "$pressed_button_name": "button.to_profile_or_skins_screen",
+          "$button_text": "profileScreen.header"
+        }
+      },
+      {
+        "open_sidebar@Nova_client_toggles.Nova_client_toggle": {
+          "size": [
+            250,
+            25
+          ],
+          "offset": [
+            0,
+            60
+          ],
+          "$toggle_view_binding_name": "toggle_sidebar",
+          "$button_text": "More"
+        }
+      },
+      {
+        "quit_button@Nova_client_button.red_button": {
+          "size": [
+            112.5,
+            25
+          ],
+          "offset": [
+            68,
+            90
+          ],
+          "$pressed_button_name": "button.menu_quit",
+          "$button_text": "menu.quit",
+          "$text_color": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ]
+  },
+  "sidebar": {
+    "type": "image",
+    "texture": ".NC/textures/background/White",
+    "color": [
+      0.192,
+      0.196,
+      0.2
+    ],
+    "size": [
+      150,
+      "100%"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "stacker": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "store_button@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_icon",
+                "$pressed_button_name": "button.menu_store",
+                "$NC_button_text": "menu.store",
+                "$NC_icon": "marketplace"
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {}
+            },
+            {
+              "achievements_button@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_icon",
+                "$pressed_button_name": "button.menu_achievements",
+                "$NC_button_text": "menu.achievements",
+                "$NC_icon": "my_content"
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {}
+            },
+            {
+              "invite_peopel@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_icon",
+                "$pressed_button_name": "button.menu_invite_players",
+                "$NC_button_text": "pauseScreen.invite",
+                "$NC_icon": "featured"
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {}
+            },
+            {
+              "invite_peopel@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_icon",
+                "$pressed_button_name": "button.menu_permission",
+                "$NC_button_text": "realmsSettingsScreen.playersSectionTitle",
+                "$NC_icon": "people",
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "players_collection"
+                  }
+                ]
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {}
+            },
+            {
+              "screenshot_button@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_icon",
+                "$pressed_button_name": "button.screenshot",
+                "$NC_button_text": "key.screenshot",
+                "$NC_icon": "star"
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {}
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {}
+            },
+            {
+              "profile_screen@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_icon",
+                "$pressed_button_name": "button.menu_profile",
+                "$NC_button_text": "menu.profile",
+                "$NC_icon": "genre"
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {}
+            },
+            {
+              "feedback_button@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_hover_text",
+                "$button_content_hover_text": "Nova_client_button.label_icon",
+                "$NC_hover_text": "§cWarning§r: Opens the Browser",
+                "$pressed_button_name": "button.menu_open_uri",
+                "$NC_button_text": "Feedback",
+                "$NC_icon": "my_characters",
+                "property_bag": {
+                  "#hyperlink": "https://aka.ms/minecraftfb"
+                },
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "players_collection"
+                  }
+                ]
+              }
+            },
+            {
+              "account_button@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_hover_text",
+                "$button_content_hover_text": "Nova_client_button.label_icon",
+                "$NC_hover_text": "§cWarning§r: Opens the Browser",
+                "$pressed_button_name": "button.menu_open_uri",
+                "$NC_button_text": "options.manageAccount",
+                "$NC_icon": "chest",
+                "property_bag": {
+                  "#hyperlink": "https://account.xbox.com/Settings"
+                },
+                "bindings": [
+                  {
+                    "binding_name": "(not #sign_in_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #sign_in_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "realms_stories_button_panel": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  25
+                ],
+                "controls": [
+                  {
+                    "realms_stories_button@Nova_Client_pause_screen.realms_stories_button": {}
+                  },
+                  {
+                    "unread_story_count_panel@pause.unread_story_count_panel": {}
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#in_realm_with_stories",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "spacer@Nova_Client_common.spacer": {
+                "bindings": [
+                  {
+                    "binding_name": "#in_realm_with_stories",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "info_button@Nova_client_button.gray_button": {
+                "size": [
+                  "100%",
+                  25
+                ],
+                "$gray_button_alpha": 0,
+                "$custom_content": "Nova_client_button.label_icon",
+                "$pressed_button_name": "button.menu_buy_game",
+                "$NC_button_text": "Nova Client",
+                "$NC_icon": "worlds2"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "realms_stories_button@Nova_client_button.gray_button": {
+    "ignored": "$is_secondary_client",
+    "$gray_button_alpha": 0,
+    "$custom_content": "Nova_client_button.label_icon",
+    "$pressed_button_name": "button.menu_feed",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "$NC_button_text": "pauseScreen.realmsStories"
+  },
+  "mod_menu_button": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 0,
+    "controls": [
+      {
+        "open_mods@Nova_client_toggles.Nova_client_toggle": {
+          "$button_text": "Mods",
+          "$NC_toggle_sound_name": "NC.click",
+          "$toggle_view_binding_name": "modules_menu_toggle",
+          "$button_content": "Nova_client_toggles.label_hover_text",
+          "$NC_hover_text": "Press §c2x§r to open the menu",
+          "$focus_id": "mod_open",
+          "$focus_override_up": "resume_game",
+          "$toggle_group_forced_index": 2,
+          "$button_default_texture": ".NC/textures/buttons/pink/button_default",
+          "$button_hover_texture": ".NC/textures/buttons/pink/button_hover",
+          "$button_pressed_texture": ".NC/textures/buttons/pink/button_pressed",
+          "$button_pressed_hover_texture": ".NC/textures/buttons/pink/button_pressed_hover",
+          "size": [
+            112.5,
+            25
+          ],
+          "offset": [
+            -68,
+            90
+          ],
+          "$default_text_color": [
+            1,
+            1,
+            1
+          ],
+          "$hover_text_color": [
+            1,
+            1,
+            1
+          ],
+          "$button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "mapping_type": "double_pressed",
+              "to_button_id": "button.open_mods"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "mapping_type": "double_pressed",
+              "to_button_id": "button.open_mods"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "modules_menu_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "continue": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [
+      "60%",
+      "80%"
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "return@Nova_Client_exit_toggle.Nova_client_toggle": {
+          "$button_text": "<",
+          "$tab_view_binding_name": "modules_menu_toggle",
+          "$toggle_group_forced_index": 131,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$button_default_texture": "textures/ui/hud_tip_text_background",
+          "$default_alpha": 0,
+          "$button_hover_texture": "textures/ui/hud_tip_text_background",
+          "$hover_alpha": 0.5,
+          "$button_pressed_texture": "textures/ui/hud_tip_text_background",
+          "$pressed_alpha": 0,
+          "$button_pressed_hover_texture": "textures/ui/hud_tip_text_background",
+          "$pressed_hover_alpha": 0.5,
+          "$default_text_color|default": [
+            0,
+            0,
+            0
+          ],
+          "$pressed_text_color|default": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            20,
+            20
+          ],
+          "offset": [
+            2,
+            1
+          ],
+          "$button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "ignored": "$game_pad",
+              "mapping_type": "pressed",
+              "to_button_id": "button.menu_ok"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "ignored": "$game_pad",
+              "mapping_type": "pressed",
+              "to_button_id": "button.menu_ok"
+            },
+            {
+              "from_button_id": "button.menu_cancel",
+              "mapping_type": "global",
+              "to_button_id": "button.menu_ok"
+            },
+            {
+              "from_button_id": "button.menu_exit",
+              "mapping_type": "global",
+              "to_button_id": "button.menu_ok"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "modules_menu_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "main_pause": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "modules_menu_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "main_buttons_and_title@Nova_Client_pause_screen.main_buttons_and_title": {}
+      },
+      {
+        "sidebar@Nova_Client_pause_screen.sidebar": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_sidebar",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "game_paused@Nova_Client_common.external": {
+    "$NC_external": "hud_tip_text_background",
+    "$NC_anchor": "bottom_middle",
+    "alpha": 0.5,
+    "offset": [
+      0,
+      -7
+    ],
+    "size": [
+      "100%c + 7px",
+      10
+    ],
+    "bindings": [
+      {
+        "binding_name": "#pause_annoucement_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "modules_menu_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "label@Nova_Client_common.element": {
+          "type": "label",
+          "text": "pauseScreen.gameIsPaused"
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@Nova_Client_pause_screen.main_pause": {}
+      },
+      {
+        "2@Nova_Client_pause_screen.mod_menu_button": {}
+      },
+      {
+        "3@Nova_Client_pause_screen.continue": {}
+      },
+      {
+        "4@Nova_Client_pause_screen.game_paused": {}
+      }
+    ]
+  }
+}

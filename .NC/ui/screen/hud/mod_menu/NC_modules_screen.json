@@ -1,0 +1,64 @@
+{
+    "namespace": "Nova_Client_modules_screen",
+    "content@common.scrolling_panel": {
+      "$show_background": false,
+      "$always_handle_scrolling": true,
+      "layer": 18,
+      "$scroll_size": [
+        3,
+        "100%"
+      ],
+      "$scroll_bar_left_padding_size": [
+        5,
+        5
+      ],
+      "size": [
+        "100%",
+        "100%"
+      ],
+      "anchor_from": "bottom_middle",
+      "anchor_to": "bottom_middle",
+      "$scrolling_content": "Nova_Client_modules_screen.modules_scrolling_content"
+    },
+    "modules_scrolling_content": {
+      "type": "stack_panel",
+      "orientation": "vertical",
+      "layer": 6,
+      "size": [
+        "100%",
+        "100%c + 10px"
+      ],
+      "controls": [
+        {
+          "spacer1@Nova_Client_common.spacer": {}
+        },
+        {
+          "1@Nova_Client_modules_row_one.content": {}
+        },
+        {
+          "spacer2@Nova_Client_common.spacer": {}
+        },
+        {
+          "2@Nova_Client_modules_row_two.content": {}
+        },
+        {
+          "spacer3@Nova_Client_common.spacer": {}
+        },
+        {
+          "3@Nova_Client_modules_row_three.content": {}
+        },
+        {
+          "spacer4@Nova_Client_common.spacer": {}
+        },
+        {
+          "4@Nova_Client_modules_row_four.content": {}
+        },
+        {
+          "spacer5@Nova_Client_common.spacer": {}
+        },
+        {
+          "5@Nova_Client_modules_row_five.content": {}
+        }
+      ]
+    }
+  }

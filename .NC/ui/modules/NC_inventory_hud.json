@@ -1,0 +1,124 @@
+{
+  "namespace": "Nova_Client_inventory_hud",
+  "content": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "size": [
+      144,
+      48
+    ],
+    "offset": [
+      -10,
+      -25
+    ],
+    "$durability_bar_required|default": true,
+    "$stack_count_required|default": true,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_hud_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "inventory_hud_panel": {
+          "type": "panel",
+          "clips_children": true,
+          "controls": [
+            {
+              "inventory_grid": {
+                "type": "grid",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "collection_name": "hotbar_items",
+                "grid_dimensions": [
+                  9,
+                  4
+                ],
+                "grid_item_template": "Nova_Client_inventory_hud.inventory_hud_grid",
+                "offset": [
+                  0,
+                  -16
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "inventory_hud_grid": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [
+      16,
+      16
+    ],
+    "controls": [
+      {
+        "inventory_hud_grid_item@Nova_Client_inventory_hud.inventory_hud_grid_item": {}
+      },
+      {
+        "slot": {
+          "type": "image",
+          "texture": "textures/ui/hud_tip_text_background",
+          "alpha": 0.5,
+          "size": [
+            "100% - 1px",
+            "100% - 1px"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventoryhud_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_collection_name": "hotbar_items",
+        "binding_type": "collection_details"
+      }
+    ]
+  },
+  "inventory_hud_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      16,
+      16
+    ],
+    "$durability_bar_required": true,
+    "$item_collection_name": "hotbar_items",
+    "$stack_count_required": true,
+    "controls": [
+      {
+        "stack_count@common.stack_count_label": {
+          "layer": 3
+        }
+      },
+      {
+        "2@common.item_renderer": {
+          "layer": 1,
+          "size": [
+            12,
+            12
+          ]
+        }
+      },
+      {
+        "durability@common.durability_bar": {
+          "layer": 2
+        }
+      }
+    ]
+  }
+}

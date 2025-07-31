@@ -1,0 +1,81 @@
+{
+    "namespace": "Nova_client_modules_menu_tabs",
+    "tab_sidebar@Nova_Client_common.internal": {
+      "$NC_internal": "background/White",
+      "color": [
+        0.192,
+        0.196,
+        0.2
+      ],
+      "size": [
+        "25%",
+        "100%"
+      ],
+      "controls": [
+        {
+          "button_stack_panel@Nova_Client_common.element": {
+            "type": "stack_panel",
+            "orientation": "vertical",
+            "$NC_anchor": "top_middle",
+            "size": [
+              "100%",
+              "100%"
+            ],
+            "controls": [
+              {
+                "modules@Nova_client_toggles.Nova_client_tab_toggle": {
+                  "$toggle_view_binding_name": "Nova_Client_modules",
+                  "$toggle_group_forced_index": 0,
+                  "$NC_button_text": "Modules",
+                  "$NC_icon": "shulker",
+                  "$button_content": "Nova_client_toggles.label_icon",
+                  "$button_default_texture": ".NC/textures/invis",
+                  "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
+                  "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "size": [
+                    "100%",
+                    25
+                  ]
+                }
+              },
+              {
+                "elements@Nova_client_toggles.Nova_client_tab_toggle": {
+                  "$toggle_view_binding_name": "Nova_Client_elements",
+                  "$toggle_group_forced_index": 10,
+                  "$NC_button_text": "Elements",
+                  "$NC_icon": "chest",
+                  "$button_content": "Nova_client_toggles.label_icon",
+                  "$button_default_texture": ".NC/textures/invis",
+                  "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
+                  "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "size": [
+                    "100%",
+                    25
+                  ]
+                }
+              },
+              {
+                "idk_something@Nova_client_toggles.Nova_client_tab_toggle": {
+                  "$toggle_view_binding_name": "Nova_Client_info",
+                  "$toggle_group_forced_index": 20,
+                  "$NC_button_text": "Information",
+                  "$NC_icon": "people",
+                  "$button_content": "Nova_client_toggles.label_icon",
+                  "$button_default_texture": ".NC/textures/invis",
+                  "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
+                  "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "size": [
+                    "100%",
+                    25
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

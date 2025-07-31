@@ -1,0 +1,284 @@
+{
+  "namespace": "Nova_Client_main_hand_screen",
+  "content@Nova_Client_common.screen_template": {
+    "$NC_sreen_button_name": "main_hand_out",
+    "anims": [
+      "@Nova_Client_animations.main_hand_screen",
+      "@Nova_Client_animations.screen_page_out"
+    ],
+    "controls": [
+      {
+        "background@Nova_Client_common.external": {
+          "$NC_external": "Black",
+          "alpha": 0.4,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "2@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "mainhand_item_toggle",
+          "$toggle_tags": "$mainhand_item",
+          "$NC_dialog_toggle_text": "Item",
+          "$NC_dialog_toggle_anchor": "top_middle"
+        }
+      },
+      {
+        "3@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "mainhand_stack_toggle",
+          "$toggle_tags": "$mainhand_stack",
+          "$NC_dialog_toggle_text": "Amount",
+          "$NC_dialog_toggle_anchor": "top_middle",
+          "offset": [
+            0,
+            25
+          ]
+        }
+      },
+      {
+        "4@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "mainhand_durability_toggle",
+          "$toggle_tags": "$mainhand_durability",
+          "$NC_dialog_toggle_text": "Durability",
+          "$NC_dialog_toggle_anchor": "top_middle",
+          "offset": [
+            0,
+            50
+          ]
+        }
+      },
+      {
+        "opacity_slider_slot": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "offset": [
+            0,
+            75
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [
+            "90%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_common.spacer": {}
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.0",
+                "$slider_value": 0
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.1",
+                "$slider_value": 1
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.2",
+                "$slider_value": 2
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.3",
+                "$slider_value": 3
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.4",
+                "$slider_value": 4
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.5",
+                "$slider_value": 5
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.6",
+                "$slider_value": 6
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.7",
+                "$slider_value": 7
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.8",
+                "$slider_value": 8
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r0.9",
+                "$slider_value": 9
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_slot_opacity",
+                "$NC_slider_text": "Slot Opacity: §r1.0",
+                "$slider_value": 10
+              }
+            },
+            {
+              "2@Nova_Client_common.spacer": {}
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_panel": {
+                "size": [
+                  "100%",
+                  18
+                ],
+                "$Nova_Client_slider_steps": 11,
+                "$Nova_Client_slider_toggle_tags": "$mainhand_slot_opacity",
+                "$Nova_Client_slider_binding_controls_name": "mainhand_slot_opacity"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "opacity_slider": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "offset": [
+            0,
+            100
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [
+            "90%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_common.spacer": {}
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.0",
+                "$slider_value": 0
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.1",
+                "$slider_value": 1
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.2",
+                "$slider_value": 2
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.3",
+                "$slider_value": 3
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.4",
+                "$slider_value": 4
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.5",
+                "$slider_value": 5
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.6",
+                "$slider_value": 6
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.7",
+                "$slider_value": 7
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.8",
+                "$slider_value": 8
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.9",
+                "$slider_value": 9
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "mainhand_percent_opacity",
+                "$NC_slider_text": "Background Opacity: §r1.0",
+                "$slider_value": 10
+              }
+            },
+            {
+              "2@Nova_Client_common.spacer": {}
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_panel": {
+                "size": [
+                  "100%",
+                  18
+                ],
+                "$Nova_Client_slider_steps": 11,
+                "$Nova_Client_slider_toggle_tags": "$mainhand_durability_opacity",
+                "$Nova_Client_slider_binding_controls_name": "mainhand_percent_opacity"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "close_button@Nova_Client_dialog_toggle_template.close_button": {
+          "$pressed_button_name": "button.main_hand_out",
+          "$button_text": "Close"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+	"namespace": "Nova_Client_chest_screen",
+	"quick_craft_button@Nova_client_button.ore_ui_button": {
+	  "size": [
+		18,
+		18
+	  ],
+	  "offset": [
+		1,
+		2
+	  ],
+	  "anchor_from": "bottom_right",
+	  "anchor_to": "bottom_right",
+	  "$custom_content": "Nova_client_button.button_icon",
+	  "$button_icon": ".NC/textures/buttons/book",
+	  "$button_icon_size": [
+		14,
+		14
+	  ],
+	  "property_bag": {
+		"#collection_name": "crafting_output_items",
+		"#collection_index": 0
+	  },
+	  "button_mappings": [
+		{
+		  "from_button_id": "button.menu_select",
+		  "to_button_id": "button.crafting_output_tertiary",
+		  "mapping_type": "pressed"
+		}
+	  ]
+	},
+	"stonecutter_quick_craft_button@quick_craft_button": {
+	  "property_bag": {
+		"#collection_name": "stonecutter_result_items"
+	  },
+	  "button_mappings": [
+		{
+		  "from_button_id": "button.menu_select",
+		  "to_button_id": "button.container_auto_place",
+		  "mapping_type": "pressed"
+		}
+	  ]
+	}
+  }

@@ -1,0 +1,178 @@
+{
+    "namespace": "Nova_Client_slider",
+    "Nova_Client_slider@common.slider": {
+        "$option_enabled_binding_name": "slider_enabled",
+        "$slider_name": "Nova_Client_slider",
+        "$slider_box_layout": "Nova_Client_slider.Nova_Client_slider_button_default",
+        "$slider_box_hover_layout": "Nova_Client_slider.Nova_Client_slider_button_hover",
+        "$slider_box_indent_layout": "Nova_Client_slider.Nova_Client_slider_button_default",
+        "$slider_box_locked_layout": "Nova_Client_slider.Nova_Client_slider_button_default",
+        "$option_label": "",
+        "$Nova_Client_slider_toggle_tags|default": 0,
+        "$Nova_Client_slider_steps|default": 1,
+        "$Nova_Client_slider_value_bindings|default": "(((#slider_steps * 0) + $Nova_Client_slider_toggle_tags) * 10)",
+        "property_bag": {
+            "#slider_steps": "$Nova_Client_slider_steps"
+        },
+        "bindings": [
+            {
+                "binding_name": "#slider_steps"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "$Nova_Client_slider_value_bindings",
+                "target_property_name": "#slider_value"
+            }
+        ],
+        "factory": "$NC_factory",
+        "$NC_factory|default": {
+            "name": "slider_step_factory",
+            "control_ids": {
+                "slider_step": "@Nova_Client_slider.NC_step",
+                "slider_step_hover": "@Nova_Client_slider.NC_step",
+                "slider_step_progress": "@Nova_Client_slider.NC_step",
+                "slider_step_progress_hover": "@Nova_Client_slider.NC_step"
+            }
+        },
+        "controls": [
+            {
+                "slider_box@common.slider_box": {}
+            },
+            {
+                "slider_bar_default@Nova_Client_slider.Nova_Client_slider_bar_default": {}
+            },
+            {
+                "slider_bar_hover@Nova_Client_slider.Nova_Client_slider_bar_hover": {}
+            }
+        ]
+    },
+    "Nova_Client_slider_background": {
+        "type": "image",
+        "layer": 1,
+        "size": [
+            "100%",
+            7
+        ],
+        "texture": ".NC/textures/slider/background"
+    },
+    "NC_step": {
+        "type": "image",
+        "size": [
+            1,
+            6
+        ],
+        "layer": 3,
+        "offset": "$step_offset",
+        "texture": ".NC/textures/background/White",
+        "color": [
+            0.12,
+            0.12,
+            0.124
+        ]
+    },
+    "Nova_Client_slider_progress": {
+        "type": "image",
+        "layer": 2,
+        "size": [
+            "100%",
+            7
+        ],
+        "texture": ".NC/textures/slider/progress"
+    },
+    "Nova_Client_slider_button_default": {
+        "type": "image",
+        "texture": ".NC/textures/buttons/common/button_default",
+        "layer": 10,
+        "size": [
+            15,
+            15
+        ]
+    },
+    "Nova_Client_slider_button_hover": {
+        "type": "image",
+        "texture": ".NC/textures/buttons/common/button_hover",
+        "layer": 100,
+        "size": [
+            15,
+            15
+        ]
+    },
+    "Nova_Client_slider_panel": {
+        "type": "panel",
+        "layer": 100,
+        "clips_children": false,
+        "controls": [
+            {
+                "$Nova_Client_slider_binding_controls_name@Nova_Client_slider": {
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ]
+                }
+            }
+        ]
+    },
+    "Nova_Client_slider_bar_default@Nova_Client_slider_bar": {
+        "color": "$slider_hover_border_color",
+        "$background_control": "Nova_Client_slider.Nova_Client_slider_background",
+        "$progress_control": "Nova_Client_slider.Nova_Client_slider_progress",
+        "$background_control_name": "slider_background",
+        "$progress_control_name": "slider_progress"
+    },
+    "Nova_Client_slider_bar_hover@Nova_Client_slider_bar": {
+        "color": "$slider_hover_border_color",
+        "$background_control": "Nova_Client_slider.Nova_Client_slider_background",
+        "$progress_control": "Nova_Client_slider.Nova_Client_slider_progress",
+        "$background_control_name": "slider_background_hover",
+        "$progress_control_name": "slider_progress_hover"
+    },
+    "Nova_Client_slider_bar": {
+        "type":"panel",
+        "controls": [
+            {
+                "sizing_panel": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "$background_control_name@$background_control": {
+                                "layer": 1
+                            }
+                        },
+                        {
+                            "$progress_control_name@$progress_control": {
+                                "layer": 3,
+                                "clip_direction": "left",
+                                "clip_pixelperfect": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "Nova_Client_slider_text": {
+        "type":"panel",
+        "size": [
+            "100%",
+            "100%cm"
+        ],
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "text": "$NC_slider_text",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "$slider_name_controls",
+                            "source_property_name": "(#slider_value = $slider_value)",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

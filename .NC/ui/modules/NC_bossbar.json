@@ -1,0 +1,101 @@
+{
+    "namespace": "Nova_Client_bossbar",
+    "bossbar_percent_content": {
+        "type": "image",
+        "texture": "textures/ui/hud_tip_text_background",
+        "alpha": 0.5,
+        "size": [
+            "100%c +2px",
+            "100%cm +2px"
+        ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [
+            35,
+            2
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "bossbar_percent_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "bossbar_opacity",
+                "source_property_name": "(#slider_value / 10)",
+                "target_property_name": "#alpha"
+            }
+        ],
+        "controls": [
+            {
+                "text": {
+                    "type": "label",
+                    "text": "#text",
+                    "layer": 5,
+                    "shadow": true,
+                    "$color": "$d_color_format",
+                    "$font": "Mojangles",
+                    "bindings": [
+                        {
+                            "binding_name": "#progress_percentage",
+                            "binding_type": "collection",
+                            "binding_collection_name": "boss_bars"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(100000 - #progress_percentage * 100000)",
+                            "target_property_name": "#bossbar_percentage"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(10000 * ((#bossbar_percentage > 10000) + (#bossbar_percentage > 20000) + (#bossbar_percentage > 30000) + (#bossbar_percentage > 40000) + (#bossbar_percentage > 50000) + (#bossbar_percentage > 60000) + (#bossbar_percentage > 70000) + (#bossbar_percentage > 80000) + (#bossbar_percentage > 90000)))",
+                            "target_property_name": "#bossbar_percentage_1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#bossbar_percentage - #bossbar_percentage_1)",
+                            "target_property_name": "#bossbar_percentage1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(1000 * ((#bossbar_percentage1 > 1000) + (#bossbar_percentage1 > 2000) + (#bossbar_percentage1 > 3000) + (#bossbar_percentage1 > 4000) + (#bossbar_percentage1 > 5000) + (#bossbar_percentage1 > 6000) + (#bossbar_percentage1 > 7000) + (#bossbar_percentage1 > 8000) + (#bossbar_percentage1 > 9000)))",
+                            "target_property_name": "#bossbar_percentage_2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#bossbar_percentage1 - #bossbar_percentage_2)",
+                            "target_property_name": "#bossbar_percentage2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(100 * ((#bossbar_percentage2 > 100) + (#bossbar_percentage2 > 200) + (#bossbar_percentage2 > 300) + (#bossbar_percentage2 > 400) + (#bossbar_percentage2 > 500) + (#bossbar_percentage2 > 600) + (#bossbar_percentage2 > 700) + (#bossbar_percentage2 > 800) + (#bossbar_percentage2 > 900)))",
+                            "target_property_name": "#bossbar_percentage_3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#bossbar_percentage2 - #bossbar_percentage_3)",
+                            "target_property_name": "#bossbar_percentage3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(10 * ((#bossbar_percentage3 > 10) + (#bossbar_percentage3 > 20) + (#bossbar_percentage3 > 30) + (#bossbar_percentage3 > 40) + (#bossbar_percentage3 > 50) + (#bossbar_percentage3 > 60) + (#bossbar_percentage3 > 70) + (#bossbar_percentage3 > 80) + (#bossbar_percentage3 > 90)))",
+                            "target_property_name": "#bossbar_percentage_4"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#bossbar_percentage_1 + #bossbar_percentage_2 + #bossbar_percentage_3 + #bossbar_percentage_4) / 10 + 1)",
+                            "target_property_name": "#current_health"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "('§z' + (#current_health / 100) + '.' + (#current_health - #current_health / 100 * 100) + '%%')",
+                            "target_property_name": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,204 @@
+{
+  "namespace": "Nova_Client_dialog",
+  "bg@Nova_Client_common.internal": {
+    "$NC_internal": "background/White",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 10,
+    "color": [
+      0.105,
+      0.105,
+      0.109
+    ],
+    "size": [
+      152,
+      202.5
+    ]
+  },
+  "basic_dialog_screen": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [
+      150,
+      200
+    ],
+    "layer": 11,
+    "controls": [
+      {
+        "grey_image@Nova_Client_common.internal": {
+          "$NC_internal": "background/White",
+          "layer": 11,
+          "color": [
+            0.192,
+            0.196,
+            0.2
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "title_image@Nova_Client_common.internal": {
+                "$NC_internal": "background/pop_up/title",
+                "$NC_anchor": "top_middle",
+                "layer": 12,
+                "size": [
+                  "100%",
+                  20
+                ],
+                "controls": [
+                  {
+                    "header_label": {
+                      "type": "label",
+                      "text": "$header_label",
+                      "font_type": "MinecraftTen",
+                      "text_alignment": "center",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "offset": [
+                        0,
+                        3
+                      ],
+                      "size": [
+                        "default",
+                        18
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "hbui_image@Nova_Client_common.external": {
+                "$NC_external": "csb_purchase_error",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 12,
+                "offset": [
+                  0,
+                  25
+                ],
+                "size": [
+                  130,
+                  65
+                ]
+              }
+            },
+            {
+              "version_text@Nova_Client_common.just_some_vars": {
+                "type": "label",
+                "text": "#text",
+                "font_type": "smooth",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "ignored": "$dialog_version_text_ignored",
+                "$dialog_version_text_ignored|default": false,
+                "layer": 12,
+                "offset": [
+                  0,
+                  100
+                ],
+                "size": [
+                  130,
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#version"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('Nova Client version ' + $NC_version + ', only supports version ' + $NC_needed_version + '.\nYour version is: ' + #version + '\nCheck for the latest updates at §9discord.gg/hu6ftWcsbU')",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }
+            },
+            {
+              "pocket_text@Nova_Client_common.element": {
+                "type": "label",
+                "text": "Pocket UI is not supported!\nPlease disable it in the settings\nRestart the game after applying changes!\n\n§9discord.gg/hu6ftWcsbU",
+                "font_type": "smooth",
+                "$NC_anchor": "top_middle",
+                "ignored": "$dialog_pocket_text_ignored",
+                "$dialog_pocket_text_ignored|default": false,
+                "layer": 12,
+                "offset": [
+                  0,
+                  100
+                ],
+                "size": [
+                  130,
+                  "default"
+                ]
+              }
+            },
+            {
+              "fotter_image@Nova_Client_common.internal": {
+                "$NC_internal": "background/pop_up/bottom",
+                "$NC_anchor": "bottom_middle",
+                "layer": 12,
+                "size": [
+                  "100%",
+                  25
+                ],
+                "controls": [
+                  {
+                    "close_button@Nova_client_button.red_button": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$font_type": "MinecraftTen",
+                      "$pressed_button_name": "button.menu_settings",
+                      "$button_text": "menu.settings",
+                      "layer": 12,
+                      "$text_color": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "size": [
+                        "98%",
+                        23
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content_lock@Nova_Client_common.also_version_lock": {
+    "type": "panel",
+    "controls": [
+      {
+        "background@Nova_Client_dialog.bg": {}
+      },
+      {
+        "background_alpha@Nova_Client_common.black": {}
+      },
+      {
+        "screen@Nova_Client_dialog.basic_dialog_screen": {}
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "ignored": "$desktop_screen",
+    "controls": [
+      {
+        "background@Nova_Client_dialog.bg": {}
+      },
+      {
+        "background_alpha@Nova_Client_common.black": {}
+      },
+      {
+        "screen@Nova_Client_dialog.basic_dialog_screen": {}
+      }
+    ]
+  }
+}

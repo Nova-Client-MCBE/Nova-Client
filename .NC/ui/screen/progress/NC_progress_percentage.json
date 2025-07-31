@@ -1,0 +1,63 @@
+{
+    "namespace": "Nova_Client_progress_percentage",
+    "content": {
+        "type": "label",
+        "text": "#text",
+        "layer": 5,
+        "property_bag": {
+            "#hundred_0": 0,
+            "#hundred_1": 100,
+            "#hundred_2": 200,
+            "#hundred_3": 300,
+            "#hundred_4": 400,
+            "#hundred_5": 500,
+            "#hundred_6": 600,
+            "#hundred_7": 700,
+            "#hundred_8": 800,
+            "#hundred_9": 900,
+            "#ten_0": 0,
+            "#ten_1": 10,
+            "#ten_2": 20,
+            "#ten_3": 30,
+            "#ten_4": 40,
+            "#ten_5": 50,
+            "#ten_6": 60,
+            "#ten_7": 70,
+            "#ten_8": 80,
+            "#ten_9": 90,
+            "#ten_10": 100
+        },
+        "bindings": [
+            {
+                "binding_name": "#loading_bar_current_amount"
+            },
+            {
+                "binding_name": "#loading_bar_total_amount"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#loading_bar_current_amount / #loading_bar_total_amount) * 1000)",
+                "target_property_name": "#percentage_raw",
+                "binding_condition": "always_when_visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('#hundred_' + ((#percentage_raw > 99) + (#percentage_raw > 199) + (#percentage_raw > 299) + (#percentage_raw > 399) + (#percentage_raw > 499) + (#percentage_raw > 599) + (#percentage_raw > 699) + (#percentage_raw > 799) + (#percentage_raw > 899)))",
+                "target_property_name": "#hundreds",
+                "binding_condition": "always_when_visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('#ten_' + (((#percentage_raw - #hundreds) > 0) + ((#percentage_raw - #hundreds) > 9) + ((#percentage_raw - #hundreds) > 19) + ((#percentage_raw - #hundreds) > 29) + ((#percentage_raw - #hundreds) > 39) + ((#percentage_raw - #hundreds) > 49) + ((#percentage_raw - #hundreds) > 59) + ((#percentage_raw - #hundreds) > 69) + ((#percentage_raw - #hundreds) > 79) + ((#percentage_raw - #hundreds) > 89)))",
+                "target_property_name": "#tens",
+                "binding_condition": "always_when_visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(('%.' + ((#loading_bar_total_amount > 0) * 10) + 's') * ('§z' + ((#hundreds + #tens) / 10) + '%%'))",
+                "target_property_name": "#text"
+            }
+        ]
+    }
+    
+}

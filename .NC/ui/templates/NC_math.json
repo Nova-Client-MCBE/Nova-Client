@@ -1,0 +1,115 @@
+{
+    "namespace": "Nova_Client_math",
+    "mather": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "size": [
+        "100%",
+        20
+      ],
+      "controls": [
+        {
+          "decreased_button@common_toggles.light_text_toggle": {
+            "$button_text": "-",
+            "$toggle_view_binding_name": "decreased",
+            "size": [
+              "20px",
+              "default"
+            ]
+          }
+        },
+        {
+          "padding": {
+            "type": "panel",
+            "size": [
+              2,
+              2
+            ]
+          }
+        },
+        {
+          "label": {
+            "type": "label",
+            "layer": 3,
+            "shadow": true,
+            "text": "#math_text",
+            "property_bag": {
+              "#increased_numbers": 0,
+              "#decreased_numbers": 0
+            },
+            "controls": [
+              {
+                "background": {
+                  "type": "image",
+                  "layer": -1,
+                  "size": [
+                    "100% + 2px",
+                    "100% + 2px"
+                  ],
+                  "texture": "textures/ui/Black"
+                }
+              }
+            ],
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "decreased",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#negative_numbers"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(((#negative_numbers*0)+1)+#decreased_numbers)",
+                "target_property_name": "#decreased_numbers",
+                "binding_condition": "visibility_changed"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "increased",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#pos"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(((0*#pos)+1)+#increased_numbers)",
+                "target_property_name": "#increased_numbers",
+                "binding_condition": "visibility_changed"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "('numbers: ' + ((#increased_numbers/19) - (#decreased_numbers/19)))",
+                "target_property_name": "#math_text"
+              }
+            ]
+          }
+        },
+        {
+          "padding2": {
+            "type": "panel",
+            "size": [
+              2,
+              2
+            ]
+          }
+        },
+        {
+          "increased_button@common_toggles.light_text_toggle": {
+            "$button_text": "+",
+            "$toggle_view_binding_name": "increased",
+            "size": [
+              24,
+              24
+            ]
+          }
+        }
+      ]
+    },
+    "content": {
+      "type": "panel",
+      "controls": [
+        {
+          "1@Nova_Client_math.mather": {}
+        }
+      ]
+    }
+  }

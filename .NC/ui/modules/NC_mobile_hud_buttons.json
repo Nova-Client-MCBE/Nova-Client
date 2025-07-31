@@ -1,0 +1,70 @@
+{
+  "namespace": "Nova_Client_hud_buttons",
+  "f1_button@Nova_client_button.ore_ui_button": {
+    "$pressed_button_name": "button.hide_gui_all",
+    "$button_text": "F1",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+    "prevent_touch_input": true,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [
+      40,
+      0
+    ],
+    "size": [
+      20,
+      20
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "f1_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "player_list@Nova_client_toggles.Nova_client_toggle": {
+    "$toggle_view_binding_name": "player_list_mobile_hud_button_toggle",
+    "$button_text": "P",
+    "type": "input_panel",
+    "prevent_touch_input": true,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [
+      60,
+      0
+    ],
+    "size": [
+      20,
+      20
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "player_list_mobile_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_condition": "always",
+        "binding_name": "#inventory_touch_button",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "f1@f1_button": {}
+      },
+      {
+        "P@player_list": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "namespace": "Nova_client_module_list",
+  "content": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "#hud_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "1@Nova_Client_brightness.content": {}
+      },
+      {
+        "2@Nova_Client_chunk_cords.content": {}
+      },
+      {
+        "3@Nova_Client_chat.content": {}
+      },
+      {
+        "4@Nova_Client_clock_and_compass.content": {}
+      },
+      {
+        "5@Nova_Client_crosshair.content": {}
+      },
+      {
+        "6@Nova_Client_inventory_hud.content": {}
+      },
+      {
+        "7@Nova_Client_ip_display.content": {}
+      },
+      {
+        "8@Nova_Client_item_counters.content": {}
+      },
+      {
+        "9@Nova_Client_mainhand.content": {}
+      },
+      {
+        "10@Nova_Client_player_list.content": {}
+      },
+      {
+        "stack_bottom_left": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [
+            10,
+            -5
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_slot_counter.content": {}
+            },
+            {
+              "2@Nova_Client_common.spacer": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_slot_counter_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "3@Nova_Client_xp_indicator.content": {}
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

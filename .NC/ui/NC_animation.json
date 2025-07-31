@@ -1,0 +1,166 @@
+{
+    "namespace": "Nova_Client_animations",
+    "title_start": {
+        "anim_type": "offset",
+        "easing": "out_cubic",
+        "duration": 2,
+        "from": [
+            0,
+            "-100%"
+        ],
+        "to": [
+            0,
+            "-30%"
+        ]
+    },
+    "start_buttons_wait": {
+        "anim_type": "wait",
+        "duration": 1.5,
+        "next": "@Nova_Client_animations.start_buttons_end"
+    },
+    "start_buttons_end": {
+        "anim_type": "offset",
+        "easing": "out_cubic",
+        "duration": 1,
+        "from": [
+            0,
+            "100%"
+        ],
+        "to": [
+            0,
+            0
+        ]
+    },
+    "inventory_hud_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "inventory_hud_screen"
+    },
+    "world_name_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "world_name_screen"
+    },
+    "main_hand_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "main_hand_screen"
+    },
+    "item_counter_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "item_counter_screen"
+    },
+    "clock_and_compass_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "clock_and_compass_screen"
+    },
+    "day_counter_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "day_counter_screen"
+    },
+    "coordinates_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "coordinates_screen"
+    },
+    "crosshair_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "crosshair_screen"
+    },
+    "inventory_slot_counter_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "inventory_slot_counter_screen"
+    },
+    "paperdoll_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "paperdoll_screen"
+    },
+    "item_info_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "item_info_screen"
+    },
+    "brightness_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "brightness_screen"
+    },
+    "xp_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "xp_calculator_screen"
+    },
+    "playerlist_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "playerlist_screen"
+    },
+    "bossbar_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "bossbar_screen"
+    },
+    "scoreboard_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "scoreboard_screen"
+    },
+    "chat_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "chat_screen"
+    },
+    "moon_phase_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "moon_phase_screen"
+    },
+    "screen_page_in_template": {
+        "anim_type":"offset",
+        "easing": "linear",
+        "play_event": "('button.' + $NC_sreen_button_name)",
+        "duration": 0.3,
+        "from":[
+            150,
+            0
+        ],
+        "to":[
+            0,
+            0
+        ]
+    },
+    "screen_page_out": {
+        "anim_type":"offset",
+        "easing": "linear",
+        "duration": 0.3,
+        "from":[
+            0,
+            0
+        ],
+        "to":[
+            150,
+            0
+        ]
+    },
+    "rgb1": {
+        "anim_type": "color",
+        "duration": 2,
+        "next": "rgb@Nova_Client_animations.rgb2",
+        "from": [
+            1,
+            0,
+            0,
+            1
+        ],
+        "to": [
+            0,
+            1,
+            0,
+            1
+        ]
+    },
+    "rgb2": {
+        "anim_type": "color",
+        "duration": 2,
+        "next": "rgb@Nova_Client_animations.rgb3",
+        "from": [
+            0,
+            1,
+            0,
+            1
+        ],
+        "to": [
+            0,
+            0,
+            1,
+            1
+        ]
+    },
+    "rgb3": {
+        "anim_type": "color",
+        "duration": 2,
+        "next": "rgb@Nova_Client_animations.rgb1",
+        "from": [
+            0,
+            0,
+            1,
+            1
+        ],
+        "to": [
+            1,
+            0,
+            0,
+            1
+        ]
+    }
+}

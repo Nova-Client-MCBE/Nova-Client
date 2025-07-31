@@ -1,0 +1,160 @@
+{
+  "namespace": "Nova_Client_coordinates_screen",
+  "content@Nova_Client_common.screen_template": {
+    "$NC_sreen_button_name": "coordinates_out",
+    "anims": [
+      "@Nova_Client_animations.coordinates_screen",
+      "@Nova_Client_animations.screen_page_out"
+    ],
+    "controls": [
+      {
+        "background@Nova_Client_common.external": {
+          "$NC_external": "Black",
+          "alpha": 0.4,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "1@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "default_coords_toggle",
+          "$toggle_tags": "$default_coordinates",
+          "$NC_dialog_toggle_text": "Coordinates",
+          "$NC_dialog_toggle_anchor": "top_middle"
+        }
+      },
+      {
+        "3@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "chunk_coords_toggle",
+          "$toggle_tags": "$chunk_coordinates",
+          "$NC_dialog_toggle_text": "Chunk",
+          "$NC_dialog_toggle_anchor": "top_middle",
+          "offset": [
+            0,
+            25
+          ]
+        }
+      },
+      {
+        "opacity_slider": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "offset": [
+            0,
+            50
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [
+            "90%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "12@Nova_Client_common.spacer": {}
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.0",
+                "$slider_value": 0
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.1",
+                "$slider_value": 1
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.2",
+                "$slider_value": 2
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.3",
+                "$slider_value": 3
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.4",
+                "$slider_value": 4
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.5",
+                "$slider_value": 5
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.6",
+                "$slider_value": 6
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.7",
+                "$slider_value": 7
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.8",
+                "$slider_value": 8
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r0.9",
+                "$slider_value": 9
+              }
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_text": {
+                "$slider_name_controls": "coords_opacity",
+                "$NC_slider_text": "Background Opacity: §r1.0",
+                "$slider_value": 10
+              }
+            },
+            {
+              "12@Nova_Client_common.spacer": {}
+            },
+            {
+              "@Nova_Client_slider.Nova_Client_slider_panel": {
+                "size": [
+                  "100%",
+                  18
+                ],
+                "$Nova_Client_slider_steps": 11,
+                "$Nova_Client_slider_toggle_tags": "$coordinates_opacity",
+                "$Nova_Client_slider_binding_controls_name": "coords_opacity"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "close_button@Nova_Client_dialog_toggle_template.close_button": {
+          "$pressed_button_name": "button.coordinates_out",
+          "$button_text": "Close"
+        }
+      }
+    ]
+  }
+}

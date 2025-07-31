@@ -1,0 +1,68 @@
+{
+  "namespace": "Nova_Client_brightness",
+  "base": {
+    "type": "image",
+    "texture": ".NC/textures/background/White",
+    "fill": true,
+    "alpha": 0.5,
+    "layer": 0,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "brightness_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "white@Nova_Client_brightness.base": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "night_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "brightness_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ]
+        }
+      },
+      {
+        "night@Nova_Client_brightness.base": {
+          "color": [
+            1,
+            0.784,
+            0.188
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "night_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "brightness_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

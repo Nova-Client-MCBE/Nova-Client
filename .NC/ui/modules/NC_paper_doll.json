@@ -1,0 +1,91 @@
+{
+  "namespace": "Nova_Client_paperdoll",
+  "content": {
+    "type": "panel",
+    "layer": 2,
+    "controls": [
+      {
+        "3d": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "2d_paper_doll_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "hud_player": {
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "3d_paper_doll_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "layer": 1,
+                "renderer": "hud_player_renderer",
+                "type": "custom"
+              }
+            }
+          ],
+          "size": [
+            15,
+            15
+          ],
+          "type": "panel"
+        }
+      },
+      {
+        "2d": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "3d_paper_doll_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "hud_player": {
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "2d_paper_doll_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "layer": 1,
+                "renderer": "live_player_renderer",
+                "type": "custom"
+              }
+            }
+          ],
+          "size": [
+            15,
+            15
+          ],
+          "type": "panel"
+        }
+      }
+    ]
+  }
+}

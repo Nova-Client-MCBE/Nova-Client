@@ -1,0 +1,138 @@
+{
+    "namespace": "Nova_Client_info_screen",
+    "content@common.scrolling_panel": {
+      "$show_background": false,
+      "$always_handle_scrolling": true,
+      "layer": 18,
+      "$scroll_size": [
+        3,
+        "100%"
+      ],
+      "$scroll_bar_left_padding_size": [
+        5,
+        5
+      ],
+      "size": [
+        "100%",
+        "100%"
+      ],
+      "anchor_from": "bottom_middle",
+      "anchor_to": "bottom_middle",
+      "$scrolling_content": "Nova_Client_info_screen.modules_scrolling_content"
+    },
+    "modules_scrolling_content": {
+      "type": "stack_panel",
+      "orientation": "vertical",
+      "layer": 6,
+      "size": [
+        "100%",
+        "100%c + 10px"
+      ],
+      "controls": [
+        {
+          "spacer1@Nova_Client_common.spacer": {}
+        },
+        {
+          "1@Nova_Client_info_screen.info_label_template": {
+            "$info_label_template_text": "Join the Nova Client Discord to never miss out on the latest update! Discord: §9discord.gg/hu6ftWcsbU"
+          }
+        },
+        {
+          "spacer2@Nova_Client_common.spacer": {}
+        },
+        {
+          "buffer_label1": {
+            "type": "panel",
+            "size": [
+              "96%",
+              20
+            ],
+            "controls": [
+              {
+                "label@Nova_Client_common.element": {
+                  "type": "label",
+                  "text": "This client has been developed mainly by lliT with the help of:",
+                  "text_alignment": "left",
+                  "$NC_anchor": "center",
+                  "font_type": "MinecraftTen",
+                  "size": [
+                    "default",
+                    20
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "spacer3@Nova_Client_common.spacer": {}
+        },
+        {
+          "3@Nova_Client_info_screen.info_label_template": {
+            "$info_label_template_text": "§9Pepe§r. Thanks to Pepe for helping me fix bugs, develop mods and work on some screens. Discord: §9discord.gg/t9BgvskwJ2"
+          }
+        },
+        {
+          "spacer4@Nova_Client_common.spacer": {}
+        },
+        {
+          "4@Nova_Client_info_screen.info_label_template": {
+            "$info_label_template_text": "§dDari§r. For making the mod menu scrollable. Discord: §9proplam"
+          }
+        },
+        {
+          "spacer5@Nova_Client_common.spacer": {}
+        },
+        {
+          "5@Nova_Client_info_screen.info_label_template": {
+            "$info_label_template_text": "§cmy Friends§r. Thanks to my friends for supporting me throughout this project!"
+          }
+        },
+        {
+          "spacer5@Nova_Client_common.spacer": {}
+        },
+        {
+          "5@Nova_Client_info_screen.info_label_template": {
+            "$info_label_template_text": "§3you§r. Big thanks to you for downloading this project :D\nHave a great time!"
+          }
+        }
+      ]
+    },
+    "info_label_template": {
+      "type": "panel",
+      "size": [
+        "96%",
+        30
+      ],
+      "controls": [
+        {
+          "background@Nova_Client_common.black": {
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "offset":[
+              5,
+              0
+            ],
+            "controls": [
+              {
+                "label": {
+                  "type": "label",
+                  "text": "$info_label_template_text",
+                  "$info_label_template_text|default": "§cMissing Text",
+                  "text_alignment": "left",
+                  "offset": [
+                    2,
+                    2
+                  ],
+                  "size": [
+                    "100%",
+                    "100%"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

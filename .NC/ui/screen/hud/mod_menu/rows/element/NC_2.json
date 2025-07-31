@@ -1,0 +1,71 @@
+{
+    "namespace": "Nova_Client_element_row_two",
+    "content": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "size": [
+        "100%",
+        75
+      ],
+      "controls": [
+        {
+          "spacer1@Nova_Client_common.spacer": {}
+        },
+        {
+          "vignette@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/blindness_effect",
+            "$toggle_view_binding_name": "vignette_toggle",
+            "$toggle_tags": "$vignette",
+            "$modules_template_toggle_text": "Vignette",
+            "$modules_template_toggle_size": [
+              "100%",
+              20
+            ],
+            "$modules_template_button_size": [
+              0,
+              0
+            ],
+            "$button_icon_size": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "spacer2@Nova_Client_common.spacer": {}
+        },
+        {
+          "chat@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/chat_send",
+            "$toggle_view_binding_name": "chat_toggle",
+            "$toggle_tags": "$chat",
+            "$modules_template_toggle_text": "Chat",
+            "$modules_template_button_name": "button.chat_screen"
+          }
+        },
+        {
+          "spacer3@Nova_Client_common.spacer": {}
+        },
+        {
+          "title@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/text_color_paintbrush",
+            "$toggle_view_binding_name": "title_toggle",
+            "$toggle_tags": "$title",
+            "$modules_template_toggle_text": "Title",
+            "$modules_template_toggle_size": [
+              "100%",
+              20
+            ],
+            "$modules_template_button_size": [
+              0,
+              0
+            ],
+            "$button_icon_size": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  }

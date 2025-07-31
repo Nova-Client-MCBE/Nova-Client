@@ -1,0 +1,44 @@
+{
+    "namespace": "Nova_Client_ip_template",
+    "content": {
+      "type": "image",
+      "texture": "textures/ui/hud_tip_text_background",
+      "alpha": 0.5,
+      "size": [
+        "100%c + 6px",
+        16
+      ],
+      "anchor_from": "bottom_right",
+      "anchor_to": "bottom_right",
+      "bindings": [
+        {
+          "binding_name": "#player_list_title"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "$server_name",
+          "target_property_name": "#visible"
+        },
+        {
+          "binding_type": "view",
+          "source_control_name": "ipdisplay_opacity",
+          "source_property_name": "(#slider_value / 10)",
+          "target_property_name": "#alpha"
+        }
+      ],
+      "controls": [
+        {
+          "label": {
+            "type": "label",
+            "text": "$server_ip",
+            "layer": 12,
+            "ignored": "$world_name",
+            "offset": [
+              2,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  }

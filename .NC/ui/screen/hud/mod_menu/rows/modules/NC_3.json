@@ -1,0 +1,49 @@
+{
+    "namespace": "Nova_Client_modules_row_three",
+    "content": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "size": [
+        "100%",
+        75
+      ],
+      "controls": [
+        {
+          "spacer1@Nova_Client_common.spacer": {}
+        },
+        {
+          "coords@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/xyz_axis",
+            "$toggle_view_binding_name": "coords_toggle",
+            "$toggle_tags": "$coordinates",
+            "$modules_template_toggle_text": "Coordinates",
+            "$modules_template_button_name": "button.coordinates_screen"
+          }
+        },
+        {
+          "spacer2@Nova_Client_common.spacer": {}
+        },
+        {
+          "crosshair@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": ".NC/textures/modules/crosshair",
+            "$toggle_view_binding_name": "crosshair_toggle",
+            "$toggle_tags": "$crosshair",
+            "$modules_template_toggle_text": "Crosshair",
+            "$modules_template_button_name": "button.crosshair_screen"
+          }
+        },
+        {
+          "spacer3@Nova_Client_common.spacer": {}
+        },
+        {
+          "inventory_slot@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/inventory_icon",
+            "$toggle_view_binding_name": "inventory_slot_counter_toggle",
+            "$toggle_tags": "$inventory_slot_counter",
+            "$modules_template_toggle_text": "Inventory Slots",
+            "$modules_template_button_name": "button.inventory_slot_counter_screen"
+          }
+        }
+      ]
+    }
+  }

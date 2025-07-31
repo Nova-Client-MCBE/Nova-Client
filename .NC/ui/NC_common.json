@@ -1,0 +1,459 @@
+{
+  "namespace": "Nova_Client_common",
+  "spacer": {
+    "type": "panel",
+    "size": "$NC_spacer_size",
+    "$NC_spacer_size|default": [
+      2,
+      2
+    ]
+  },
+  "external@Nova_Client_common.element": {
+    "type": "image",
+    "texture": "('textures/ui/' + $NC_external)",
+    "$NC_external|default": "background/White"
+  },
+  "internal@Nova_Client_common.element": {
+    "type": "image",
+    "texture": "('.NC/textures/' + $NC_internal)",
+    "$NC_internal|default": "background/White"
+  },
+  "element": {
+    "anchor_from": "$NC_anchor",
+    "anchor_to": "$NC_anchor",
+    "$NC_anchor|default": "center"
+  },
+  "screen_template@Nova_Client_common.100_panel": {
+    "size": "$NC_screen_size",
+    "$NC_anchor": "bottom_right",
+    "layer": 50,
+    "$NC_screen_size|default": [
+      150,
+      "100% - 25px"
+    ],
+    "offset": [
+      150,
+      0
+    ],
+    "animation_reset_name": "('button.' + $NC_sreen_button_name)"
+  },
+  "100_panel@Nova_Client_common.element": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "100c_panel@Nova_Client_common.element": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      "100%c"
+    ]
+  },
+  "information_label@Nova_Client_common.element": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%c",
+      16
+    ],
+    "controls": [
+      {
+        "arrow": {
+          "type": "label",
+          "text": "$NC_information_label_starter",
+          "$NC_information_label_starter|default": "§l§2»",
+          "shadow": false
+        }
+      },
+      {
+        "1@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            3,
+            3
+          ]
+        }
+      },
+      {
+        "label": {
+          "type": "label",
+          "text": "$NC_information_label",
+          "$NC_information_label|default": "§cMissing Information Label!",
+          "shadow": false
+        }
+      }
+    ]
+  },
+  "version_lock@Nova_Client_common.just_some_vars": {
+    "ignored": "(not $desktop_screen)",
+    "bindings": [
+      {
+        "binding_name": "#version"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#version - ($NC_needed_version)) = not #version",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "also_version_lock@Nova_Client_common.just_some_vars": {
+    "bindings": [
+      {
+        "binding_name": "#version"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#version - ($NC_needed_version) = #version)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "tab_content_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "content@$scroll_tab_content": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [
+            "100%",
+            "100% - 5px"
+          ],
+          "offset": [
+            0,
+            10
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$visible_bind_toggle_source_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "changelog_template": {
+    "type": "stack_panel",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "$NC_changelog_toggle|default": "v1",
+    "$NC_changelog_content|default": [],
+    "controls": [
+      {
+        "1@Nova_client_toggles.Nova_client_toggle": {
+          "$button_content": "Nova_Client_common.changelog_button_content",
+          "$toggle_view_binding_name": "$NC_changelog_toggle",
+          "$button_type_panel": "common_buttons.button_content_panel",
+          "size": [
+            "100%",
+            20
+          ]
+        }
+      },
+      {
+        "2@Nova_Client_common.external": {
+          "$NC_external": "hud_tip_text_background",
+          "alpha": 0.5,
+          "size": [
+            "100%",
+            "100%c + 8px"
+          ],
+          "controls": [
+            {
+              "stack": {
+                "type": "stack_panel",
+                "layer": 1,
+                "size": [
+                  "100% - 12px",
+                  "100%c"
+                ],
+                "controls": "$NC_changelog_content"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$NC_changelog_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "padding_2": {
+          "type": "panel",
+          "size": [
+            0,
+            3
+          ]
+        }
+      }
+    ]
+  },
+  "changelog_button_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "label_core": {
+          "type": "stack_panel",
+          "size": [
+            "100%",
+            10
+          ],
+          "offset": [
+            2,
+            0
+          ],
+          "orientation": "horizontal",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$NC_changelog_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "changelog_label": {
+                "type": "label",
+                "text": "Nova Client - ",
+                "color": [
+                  0.3,
+                  0.3,
+                  0.3
+                ]
+              }
+            },
+            {
+              "versions": {
+                "type": "label",
+                "text": "$NC_changelog_version",
+                "color": [
+                  0.3,
+                  0.3,
+                  0.3
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label_core_pressed": {
+          "type": "stack_panel",
+          "size": [
+            "100%",
+            10
+          ],
+          "offset": [
+            3,
+            0
+          ],
+          "orientation": "horizontal",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$NC_changelog_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "changelog_label": {
+                "type": "label",
+                "text": "Nova Client - ",
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "versions": {
+                "type": "label",
+                "text": "$NC_changelog_version",
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "dropdown_chevron_icon": {
+          "type": "panel",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [
+            -5,
+            0
+          ],
+          "size": [
+            11,
+            11
+          ],
+          "controls": [
+            {
+              "down_arrow": {
+                "type": "image",
+                "texture": "textures/ui/chevron_white_down",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "offset": [
+                  1,
+                  0
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$NC_changelog_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "up_arrow": {
+                "type": "image",
+                "texture": "textures/ui/chevron_white_up",
+                "color": [
+                  0.3,
+                  0.3,
+                  0.3
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$NC_changelog_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hover_text_template": {
+    "type": "custom",
+    "renderer": "hover_text_renderer",
+    "allow_clipping": false,
+    "ignored": "(not $hover)",
+    "layer": 50,
+    "$NC_hover_text|default": "§cInvalid Hover Text",
+    "property_bag": {
+      "#hover_text": "$NC_hover_text"
+    }
+  },
+  "config_helper@Nova_client_button.white_border": {
+    "size": [
+      "100%",
+      15
+    ],
+    "$custom_content": "Nova_client_button.label_hover_text",
+    "variables": [
+      {
+        "requires": "$mod_enabled",
+        "$button_text": "($module_name + ': §atrue')"
+      },
+      {
+        "requires": "$mod_disabled",
+        "$button_text": "($module_name + ': §cfalse')"
+      }
+    ]
+  },
+  "header@Nova_Client_common.internal": {
+    "$NC_internal": "background/header",
+    "$NC_anchor": "top_middle",
+    "layer": 2,
+    "size": [
+      "100%",
+      25
+    ],
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "text": "$header_label",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 1.3,
+          "layer": 3,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            "default",
+            23
+          ]
+        }
+      },
+      {
+        "exit_button@Nova_client_button.clear_button": {
+          "$button_text": "<",
+          "$pressed_button_name": "button.menu_exit",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 3,
+          "size": [
+            21,
+            21
+          ],
+          "offset": [
+            1,
+            1
+          ]
+        }
+      }
+    ]
+  },
+  "black@Nova_Client_common.internal": {
+      "$NC_inernal": "background/White",
+      "fill": true,
+      "alpha": 0.5,
+      "layer": 0,
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "size": "$black_size",
+      "$black_size|default": [
+        "100%",
+        "100%"
+      ]
+    },
+  "just_some_vars": {
+    "$NC_version": "1.4",
+    "$NC_needed_version": "v1.21.71",
+    "$NC_gathering_event": false
+  }
+}

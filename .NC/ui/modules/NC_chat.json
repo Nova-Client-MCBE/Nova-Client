@@ -1,0 +1,273 @@
+{
+  "namespace": "Nova_Client_chat",
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "chat": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "max_size": [
+            "100%",
+            "50%"
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chat_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "chat_panel@Nova_Client_chat.chat_panel": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "bottom_chat_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_chat": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "max_size": [
+            "100%",
+            "50%"
+          ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [
+            0,
+            -50
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chat_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "chat_panel@Nova_Client_chat.bottom_chat_panel": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "bottom_chat_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chat_panel": {
+    "type": "panel",
+    "clips_children": true,
+    "size": [
+      "40%",
+      "100%c"
+    ],
+    "max_size": [
+      "40%",
+      140
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 50,
+            "control_ids": {
+              "chat_item": "chat_item@Nova_Client_chat.chat_grid_item"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "bottom_chat_panel": {
+    "type": "panel",
+    "clips_children": true,
+    "size": [
+      "40%",
+      "100%c"
+    ],
+    "max_size": [
+      "40%",
+      140
+    ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 50,
+            "control_ids": {
+              "chat_item": "chat_item@Nova_Client_chat.bottom_chat_grid_item"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "chat_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "controls": [
+      {
+        "chat_messages_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.5,
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "anims": [
+            "@Nova_Client_chat.chat_animation_in"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chat_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ],
+          "controls": [
+            {
+              "chat_text@hud.chat_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "line_padding": -1,
+                "offset": [
+                  2,
+                  0.5
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "bottom_chat_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "chat_messages_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.5,
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "anims": [
+            "@Nova_Client_chat.chat_animation_in"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chat_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ],
+          "controls": [
+            {
+              "chat_text@hud.chat_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "line_padding": -1,
+                "offset": [
+                  2,
+                  0.5
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chat_animation_in": {
+    "anim_type": "offset",
+    "easing": "out_quad",
+    "duration": 0.3,
+    "from": [
+      "-100%",
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "next": "@Nova_Client_chat.chat_animation_stay"
+  },
+  "chat_animation_stay": {
+    "anim_type": "wait",
+    "duration": 2.8,
+    "next": "@Nova_Client_chat.chat_animation_out"
+  },
+  "chat_animation_out": {
+    "anim_type": "offset",
+    "easing": "in_quad",
+    "duration": 0.2,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      "-100%",
+      0
+    ],
+    "destroy_at_end": "chat_grid_item"
+  }
+}

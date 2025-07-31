@@ -1,0 +1,82 @@
+{
+    "namespace": "Nova_Client_element_row_three",
+    "content": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "size": [
+        "100%",
+        75
+      ],
+      "controls": [
+        {
+          "spacer1@Nova_Client_common.spacer": {}
+        },
+        {
+          "action_bar@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/text_color_paintbrush",
+            "$toggle_view_binding_name": "action_bar_toggle",
+            "$toggle_tags": "$action_bar",
+            "$modules_template_toggle_text": "Action Bar",
+            "$modules_template_toggle_size": [
+              "100%",
+              20
+            ],
+            "$modules_template_button_size": [
+              0,
+              0
+            ],
+            "$button_icon_size": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "spacer2@Nova_Client_common.spacer": {}
+        },
+        {
+          "subtitle@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/text_color_paintbrush",
+            "$toggle_view_binding_name": "subtitle_toggle",
+            "$toggle_tags": "$subtitle",
+            "$modules_template_toggle_text": "Subtitle",
+            "$modules_template_toggle_size": [
+              "100%",
+              20
+            ],
+            "$modules_template_button_size": [
+              0,
+              0
+            ],
+            "$button_icon_size": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "spacer3@Nova_Client_common.spacer": {}
+        },
+        {
+          "jukebox@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/blocks/jukebox_side",
+            "$toggle_view_binding_name": "jukebox_toggle",
+            "$toggle_tags": "$jukebox_text",
+            "$modules_template_toggle_text": "Jukebox Text",
+            "$modules_template_toggle_size": [
+              "100%",
+              20
+            ],
+            "$modules_template_button_size": [
+              0,
+              0
+            ],
+            "$button_icon_size": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  }

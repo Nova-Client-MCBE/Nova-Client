@@ -1,0 +1,1659 @@
+{
+  "namespace": "Nova_Client_Nova_screen",
+  "custom_background": {
+    "type": "custom",
+    "renderer": "panorama_renderer",
+    "fill": true,
+    "layer": -1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "1@Nova_Client_common.black": {}
+      }
+    ]
+  },
+  "extra_background@Nova_Client_common.external": {
+    "$NC_external": "Black",
+    "$NC_anchor": "top_middle",
+    "offset": [
+      0,
+      25
+    ],
+    "alpha": 0.3,
+    "layer": 1,
+    "size": [
+      300,
+      "100% - 29px"
+    ],
+    "controls": [
+      {
+        "information@common.scrolling_panel": {
+          "$show_background": false,
+          "layer": 2,
+          "$scroll_size": [
+            3,
+            "100%"
+          ],
+          "$scroll_bar_left_padding_size": [
+            5,
+            5
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "$scrolling_content": "Nova_Client_Nova_screen.information_stacker"
+        }
+      },
+      {
+        "changelog@common.scrolling_panel": {
+          "$show_background": false,
+          "layer": 2,
+          "$scroll_size": [
+            3,
+            "100%"
+          ],
+          "$scroll_bar_left_padding_size": [
+            5,
+            5
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "$scrolling_content": "Nova_Client_Nova_screen.changelog_stacker"
+        }
+      },
+      {
+        "config@common.scrolling_panel": {
+          "$show_background": false,
+          "layer": 2,
+          "$scroll_size": [
+            3,
+            "100%"
+          ],
+          "$scroll_bar_left_padding_size": [
+            5,
+            5
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "$scrolling_content": "Nova_Client_Nova_screen.config_stacker"
+        }
+      }
+    ]
+  },
+  "information_stacker": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "layer": 2,
+    "size": [
+      "100%",
+      "100%c + 35px"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Nova_Client_info",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "paperdoll_panel": {
+          "type": "input_panel",
+          "size": [
+            "100%",
+            100
+          ],
+          "gesture_tracking_button": "button.turn_doll",
+          "tts_ignore_count": true,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.turn_doll",
+              "mapping_type": "pressed",
+              "button_up_right_of_first_refusal": true
+            }
+          ],
+          "controls": [
+            {
+              "renderer@Nova_Client_common.element": {
+                "type": "custom",
+                "renderer": "paper_doll_renderer",
+                "camera_tilt_degrees": -10,
+                "starting_rotation": 30,
+                "rotation": "gesture_x",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "viewer_panel",
+                    "source_property_name": "#gesture_delta_source",
+                    "target_property_name": "#gesture_delta_source"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "viewer_panel",
+                    "source_property_name": "#gesture_mouse_delta_x",
+                    "target_property_name": "#gesture_mouse_delta_x"
+                  },
+                  {
+                    "binding_name": "#is_appearance_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "spacer1@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            10,
+            10
+          ]
+        }
+      },
+      {
+        "version_information@Nova_Client_common.element": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "nc_version@Nova_Client_common.just_some_vars": {
+                "type": "label",
+                "text": "('§l§2» §rNova Client Version: ' + $NC_version)",
+                "size": [
+                  "default",
+                  15
+                ]
+              }
+            },
+            {
+              "mc_version@Nova_Client_common.just_some_vars": {
+                "type": "label",
+                "text": "('§l§2» §rRequired Minecraft Version: ' + $NC_needed_version)",
+                "size": [
+                  "default",
+                  15
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "spacer2@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            10,
+            10
+          ]
+        }
+      },
+      {
+        "label_panel1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            20
+          ],
+          "controls": [
+            {
+              "label@Nova_Client_common.element": {
+                "type": "label",
+                "text": "Developers",
+                "$NC_anchor": "center",
+                "font_type": "MinecraftTen",
+                "size": [
+                  "default",
+                  20
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "llit@Nova_Client_common.information_label": {
+          "$NC_information_label": "lliT (Discord: llit_im_internet)"
+        }
+      },
+      {
+        "pepe@Nova_Client_common.information_label": {
+          "$NC_information_label": "Pepe (Discord: pepeyt)"
+        }
+      },
+      {
+        "dari@Nova_Client_common.information_label": {
+          "$NC_information_label": "Dari (Discord: proplam)"
+        }
+      },
+      {
+        "label_panel2": {
+          "type": "panel",
+          "size": [
+            "100%",
+            20
+          ],
+          "controls": [
+            {
+              "label@Nova_Client_common.element": {
+                "type": "label",
+                "text": "Discord",
+                "$NC_anchor": "center",
+                "font_type": "MinecraftTen",
+                "size": [
+                  "default",
+                  20
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "link@Nova_Client_common.information_label": {
+          "$NC_information_label": "discord.gg/5N6EMTJkDr"
+        }
+      },
+      {
+        "label_panel3": {
+          "type": "panel",
+          "size": [
+            "100%",
+            20
+          ],
+          "controls": [
+            {
+              "label@Nova_Client_common.element": {
+                "type": "label",
+                "text": "extensions",
+                "$NC_anchor": "center",
+                "font_type": "MinecraftTen",
+                "size": [
+                  "default",
+                  20
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "changelog_stacker": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "layer": 2,
+    "size": [
+      "100%",
+      "100%c + 35px"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Nova_Client_changelog",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "1.4@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_4",
+          "$NC_changelog_version": "1.4",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added information screen"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "advanced coordinates mod"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "advanced mainhand mod"
+              }
+            },
+            {
+              "4@Nova_Client_common.information_label": {
+                "$NC_information_label": "added friends button"
+              }
+            },
+            {
+              "5@Nova_Client_common.information_label": {
+                "$NC_information_label": "added game is paused indicator"
+              }
+            },
+            {
+              "6@Nova_Client_common.information_label": {
+                "$NC_information_label": "code and bug fixes"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.9@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_9",
+          "$NC_changelog_version": "1.3.9",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label_starter": "§l§c»",
+                "$NC_information_label": "paused Nova Client development"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "removed version lock"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.81"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.8@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_8",
+          "$NC_changelog_version": "1.3.8",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.73"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.7@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_7",
+          "$NC_changelog_version": "1.3.7",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.71"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.6@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_6",
+          "$NC_changelog_version": "1.3.6",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.70"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.5@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_5",
+          "$NC_changelog_version": "1.3.5",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "enabled the gathering button"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.4@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_4",
+          "$NC_changelog_version": "1.3.4",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "minor fixes and improvements"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.3@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_3",
+          "$NC_changelog_version": "1.3.3",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.62"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.2@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_2",
+          "$NC_changelog_version": "1.3.2",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.61"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "super mini code fix"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3.1@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3_1",
+          "$NC_changelog_version": "1.3.1",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.60"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.3@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_3",
+          "$NC_changelog_version": "1.3",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "finally breaking the 1.2.x update streak"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "rewrote legacy code"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "reworked the mod menu design"
+              }
+            },
+            {
+              "4@Nova_Client_common.information_label": {
+                "$NC_information_label": "changed the play screen (thanks pepe <3)"
+              }
+            },
+            {
+              "5@Nova_Client_common.information_label": {
+                "$NC_information_label": "fixed playerlist mod for mobile players"
+              }
+            },
+            {
+              "6@Nova_Client_common.information_label": {
+                "$NC_information_label": "added moon phase mod"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.14@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_14",
+          "$NC_changelog_version": "1.2.14",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "disabled the gathering button"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "fixed a bug where the pocket UI lock was bugged"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "added a helper for extensions"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.13@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_13",
+          "$NC_changelog_version": "1.2.13",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.51"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "§6Warning§r: in the future the play screen will be removed"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.12@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_12",
+          "$NC_changelog_version": "1.2.12",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "enabled the gathering button"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.11@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_11",
+          "$NC_changelog_version": "1.2.11",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.50"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.10@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_10",
+          "$NC_changelog_version": "1.2.10",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "reverted the october changes"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.44"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.9@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_9",
+          "$NC_changelog_version": "1.2.9",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.43"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.8@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_8",
+          "$NC_changelog_version": "1.2.8",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "uppdated discord link"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "fixed clock and compass mod"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.41"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.7@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_7",
+          "$NC_changelog_version": "1.2.7",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.40"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.6@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_6",
+          "$NC_changelog_version": "1.2.6",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "adjusted some textures for october"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.31"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.5@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_5",
+          "$NC_changelog_version": "1.2.5",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.30"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.4@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_4",
+          "$NC_changelog_version": "1.2.4",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "mouse support in the mod menu (thank you Dari!!!)"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.3@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_3",
+          "$NC_changelog_version": "1.2.3",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.23"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "fixed clock and compass mod"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.2@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_2",
+          "$NC_changelog_version": "1.2.2",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "adjustments for extensions"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2.1@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2_1",
+          "$NC_changelog_version": "1.2.1",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "manifest.json update (smallest update yet)"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.2@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_2",
+          "$NC_changelog_version": "1.2",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added controller support"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added extension support"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "minor fixes and improvements"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.1.2@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_1_2",
+          "$NC_changelog_version": "1.1.2",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.21"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.1.1@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_1_1",
+          "$NC_changelog_version": "1.1.1",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "made the version blocker a little more helpful"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1.1@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_1",
+          "$NC_changelog_version": "1.1",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added exp_calculator"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added information section"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added changelog section"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added config section"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "moved the creeper hud animation to an extension"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "reworked the play screen"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "reworked the sidbar"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "recoded some code"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "made the pack a little smaller"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "new pack icon"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_0",
+          "$NC_changelog_version": "1",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "Released Nova Client :D"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added a new start screen"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added a new play screen"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added a new loading screen"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added 12 new mods"
+              }
+            },
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added the option to toggle in-game elements"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "config_stacker@config.1": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "layer": 2,
+    "size": [
+      "100%",
+      "100%c + 35px"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Nova_Client_config",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "buffer_label1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            20
+          ],
+          "controls": [
+            {
+              "label@Nova_Client_common.element": {
+                "type": "label",
+                "text": "Modules",
+                "$NC_anchor": "center",
+                "font_type": "MinecraftTen",
+                "size": [
+                  "default",
+                  20
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1@Nova_Client_common.spacer": {}
+      },
+      {
+        "2@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays your inventory in the HUD",
+          "$mod_enabled": "($inventoryhud)",
+          "$mod_disabled": "(not $inventoryhud)",
+          "$module_name": "inventoryhud"
+        }
+      },
+      {
+        "3@Nova_Client_common.spacer": {}
+      },
+      {
+        "4@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays your world name\nor registered server IP in the HUD",
+          "$mod_enabled": "($world_name)",
+          "$mod_disabled": "(not $world_name)",
+          "$module_name": "world_name"
+        }
+      },
+      {
+        "5@Nova_Client_common.spacer": {}
+      },
+      {
+        "6@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays what you are holding in your hand and its durability",
+          "$mod_enabled": "($mainhand)",
+          "$mod_disabled": "(not $mainhand)",
+          "$module_name": "mainhand"
+        }
+      },
+      {
+        "6.2@Nova_Client_common.spacer": {}
+      },
+      {
+        "6.3@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the item you are currently holding\n§crequiers mainhand to be enabled",
+          "$mod_enabled": "($mainhand_item)",
+          "$mod_disabled": "(not $mainhand_item)",
+          "$module_name": "mainhand_item"
+        }
+      },
+      {
+        "7@Nova_Client_common.spacer": {}
+      },
+      {
+        "8@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the amount of an item you are currently holding\n§crequiers mainhand and mainhand_stack to be enabled",
+          "$mod_enabled": "($mainhand_stack)",
+          "$mod_disabled": "(not $mainhand_stack)",
+          "$module_name": "mainhand_stack"
+        }
+      },
+      {
+        "9@Nova_Client_common.spacer": {}
+      },
+      {
+        "10@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the durability of the item in your hand exactly\n§crequiers mainhand to be enabled",
+          "$mod_enabled": "($mainhand_durability)",
+          "$mod_disabled": "(not $mainhand_durability)",
+          "$module_name": "mainhand_durability"
+        }
+      },
+      {
+        "11@Nova_Client_common.spacer": {}
+      },
+      {
+        "12@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the amount of arrows, potions and totems\nin a counter on the HUD",
+          "$mod_enabled": "($item_counter)",
+          "$mod_disabled": "(not $item_counter)",
+          "$module_name": "item_counter"
+        }
+      },
+      {
+        "13@Nova_Client_common.spacer": {}
+      },
+      {
+        "14@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the amount of arrows in a counter on the HUD\n§crequiers item_counter to be enabled",
+          "$mod_enabled": "($arrow_counter)",
+          "$mod_disabled": "(not $arrow_counter)",
+          "$module_name": "arrow_counter"
+        }
+      },
+      {
+        "15@Nova_Client_common.spacer": {}
+      },
+      {
+        "16@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the amount of potions in a counter on the HUD\n§crequiers item_counter to be enabled",
+          "$mod_enabled": "($potion_counter)",
+          "$mod_disabled": "(not $potion_counter)",
+          "$module_name": "potion_counter"
+        }
+      },
+      {
+        "17@Nova_Client_common.spacer": {}
+      },
+      {
+        "18@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the amount of totems in a counter on the HUD\n§crequiers item_counter to be enabled",
+          "$mod_enabled": "($totem_counter)",
+          "$mod_disabled": "(not $totem_counter)",
+          "$module_name": "totem_counter"
+        }
+      },
+      {
+        "19@Nova_Client_common.spacer": {}
+      },
+      {
+        "20@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the Clock and the Compass in the HUD",
+          "$mod_enabled": "($clock_and_compass)",
+          "$mod_disabled": "(not $clock_and_compass)",
+          "$module_name": "clock_and_compass"
+        }
+      },
+      {
+        "21@Nova_Client_common.spacer": {}
+      },
+      {
+        "22@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the Compass in the HUD\n§crequiers clock_and_compass to be enabled",
+          "$mod_enabled": "($compass)",
+          "$mod_disabled": "(not $compass)",
+          "$module_name": "compass"
+        }
+      },
+      {
+        "23@Nova_Client_common.spacer": {}
+      },
+      {
+        "24@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the Clock in the HUD\n§crequiers clock_and_compass to be enabled",
+          "$mod_enabled": "($clock)",
+          "$mod_disabled": "(not $clock)",
+          "$module_name": "clock"
+        }
+      },
+      {
+        "25@Nova_Client_common.spacer": {}
+      },
+      {
+        "26@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the Recovery Compass in the HUD\n§cmay crash on servers\nrequiers clock_and_compass to be enabled",
+          "$mod_enabled": "($recovery_compass)",
+          "$mod_disabled": "(not $recovery_compass)",
+          "$module_name": "recovery_compass"
+        }
+      },
+      {
+        "27@Nova_Client_common.spacer": {}
+      },
+      {
+        "28@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays a Day Counter\n§cday counter needs to be enabled in the world settings",
+          "$mod_enabled": "($day_counter)",
+          "$mod_disabled": "(not $day_counter)",
+          "$module_name": "day_counter"
+        }
+      },
+      {
+        "29@Nova_Client_common.spacer": {}
+      },
+      {
+        "30@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the Coordinates\n§ccoordinates needs to be enabled in the world settings",
+          "$mod_enabled": "($coordinates)",
+          "$mod_disabled": "(not $coordinates)",
+          "$module_name": "coordinates"
+        }
+      },
+      {
+        "31@Nova_Client_common.spacer": {}
+      },
+      {
+        "32@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the default Coordiantes\n§crequiers coordinates to be enabled",
+          "$mod_enabled": "($default_coordinates)",
+          "$mod_disabled": "(not $default_coordinates)",
+          "$module_name": "default_coordinates"
+        }
+      },
+      {
+        "33@Nova_Client_common.spacer": {}
+      },
+      {
+        "34@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the chunk you are in\n§crequiers coordinates to be enabled",
+          "$mod_enabled": "($chunk_coordinates)",
+          "$mod_disabled": "(not $chunk_coordinates)",
+          "$module_name": "chunk_coordinates"
+        }
+      },
+      {
+        "35@Nova_Client_common.spacer": {}
+      },
+      {
+        "36@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the crossair\n§6pvp-pack support",
+          "$mod_enabled": "($crosshair)",
+          "$mod_disabled": "(not $crosshair)",
+          "$module_name": "crosshair"
+        }
+      },
+      {
+        "37@Nova_Client_common.spacer": {}
+      },
+      {
+        "38@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the crossair even in third person\n§crequiers crosshair to be enabled",
+          "$mod_enabled": "($third_person_crosshair)",
+          "$mod_disabled": "(not $third_person_crosshair)",
+          "$module_name": "third_person_crosshair"
+        }
+      },
+      {
+        "39@Nova_Client_common.spacer": {}
+      },
+      {
+        "40@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Colors the third_person_crosshair in rgb colors\n§crequiers crosshair and third_person_crosshair to be enabled",
+          "$mod_enabled": "($rgb_crosshair)",
+          "$mod_disabled": "(not $rgb_crosshair)",
+          "$module_name": "rgb_crosshair"
+        }
+      },
+      {
+        "41@Nova_Client_common.spacer": {}
+      },
+      {
+        "42@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays how many inventory slots are used",
+          "$mod_enabled": "($inventory_slot_counter)",
+          "$mod_disabled": "(not $inventory_slot_counter)",
+          "$module_name": "inventory_slot_counter"
+        }
+      },
+      {
+        "43@Nova_Client_common.spacer": {}
+      },
+      {
+        "44@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Toggles the chest icon in the inventory_slot_counter\n§crequiers inventory_slot_counter to be enabled",
+          "$mod_enabled": "($inventory_slot_counter_icon)",
+          "$mod_disabled": "(not $inventory_slot_counter_icon)",
+          "$module_name": "inventory_slot_counter_icon"
+        }
+      },
+      {
+        "45@Nova_Client_common.spacer": {}
+      },
+      {
+        "46@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the paperdoll\n§crequiers the paperdoll to be enabled in the settings",
+          "$mod_enabled": "($paperdoll)",
+          "$mod_disabled": "(not $paperdoll)",
+          "$module_name": "paperdoll"
+        }
+      },
+      {
+        "47@Nova_Client_common.spacer": {}
+      },
+      {
+        "48@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays a 2d paperdoll\n§crequiers paperdoll to be enabled",
+          "$mod_enabled": "($2d_paperdoll)",
+          "$mod_disabled": "(not $2d_paperdoll)",
+          "$module_name": "2d_paperdoll"
+        }
+      },
+      {
+        "49@Nova_Client_common.spacer": {}
+      },
+      {
+        "50@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays some infos about the item you are holding",
+          "$mod_enabled": "($item_info)",
+          "$mod_disabled": "(not $item_info)",
+          "$module_name": "item_info"
+        }
+      },
+      {
+        "51@Nova_Client_common.spacer": {}
+      },
+      {
+        "52@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the item name\n§crequiers item_info to be enabled",
+          "$mod_enabled": "($item_info_item_name)",
+          "$mod_disabled": "(not $item_info_item_name)",
+          "$module_name": "item_info_item_name"
+        }
+      },
+      {
+        "53@Nova_Client_common.spacer": {}
+      },
+      {
+        "54@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the item aux id\n§crequiers item_info to be enabled",
+          "$mod_enabled": "($item_aux_id)",
+          "$mod_disabled": "(not $item_aux_id)",
+          "$module_name": "item_aux_id"
+        }
+      },
+      {
+        "55@Nova_Client_common.spacer": {}
+      },
+      {
+        "56@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the item id\n§crequiers item_info to be enabled",
+          "$mod_enabled": "($item_id)",
+          "$mod_disabled": "(not $item_id)",
+          "$module_name": "item_id"
+        }
+      },
+      {
+        "57@Nova_Client_common.spacer": {}
+      },
+      {
+        "58@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Makes the screen a little brighter",
+          "$mod_enabled": "($brightness)",
+          "$mod_disabled": "(not $brightness)",
+          "$module_name": "brightness"
+        }
+      },
+      {
+        "59@Nova_Client_common.spacer": {}
+      },
+      {
+        "60@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Makes brihtnees section more bearable at night\n§crequiers brightness to be enabled",
+          "$mod_enabled": "($night_shift)",
+          "$mod_disabled": "(not $night_shift)",
+          "$module_name": "night_shift"
+        }
+      },
+      {
+        "61@Nova_Client_common.spacer": {}
+      },
+      {
+        "62@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays some information about your experience level",
+          "$mod_enabled": "($exp_calculator)",
+          "$mod_disabled": "(not $exp_calculator)",
+          "$module_name": "exp_calculator"
+        }
+      },
+      {
+        "63@Nova_Client_common.spacer": {}
+      },
+      {
+        "64@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the xp bottle icon in the exp_calculator\n§crequiers exp_calculator to be enabled",
+          "$mod_enabled": "($exp_panel_icon)",
+          "$mod_disabled": "(not $exp_panel_icon)",
+          "$module_name": "exp_panel_icon"
+        }
+      },
+      {
+        "65@Nova_Client_common.spacer": {}
+      },
+      {
+        "66@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays how many experience poins you have\n§crequiers exp_calculator to be enabled",
+          "$mod_enabled": "($exp_points)",
+          "$mod_disabled": "(not $exp_points)",
+          "$module_name": "exp_points"
+        }
+      },
+      {
+        "67@Nova_Client_common.spacer": {}
+      },
+      {
+        "68@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays your experience level\n§crequiers exp_calculator to be enabled",
+          "$mod_enabled": "($exp_level)",
+          "$mod_disabled": "(not $exp_level)",
+          "$module_name": "exp_level"
+        }
+      },
+      {
+        "69@Nova_Client_common.spacer": {}
+      },
+      {
+        "70@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Shows the list of players on screen",
+          "$mod_enabled": "($playerlist)",
+          "$mod_disabled": "(not $playerlist)",
+          "$module_name": "playerlist"
+        }
+      },
+      {
+        "71@Nova_Client_common.spacer": {}
+      },
+      {
+        "72@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the profile icon on the playerlist",
+          "$mod_enabled": "($playerlist_icon)",
+          "$mod_disabled": "(not $playerlist_icon)",
+          "$module_name": "playerlist_icon"
+        }
+      },
+      {
+        "73@Nova_Client_common.spacer": {}
+      },
+      {
+        "74@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the playerlist when you hold Tab\n§rPC only",
+          "$mod_enabled": "($playerlist_pc_tab)",
+          "$mod_disabled": "(not $playerlist_pc_tab)",
+          "$module_name": "playerlist_pc_tab"
+        }
+      },
+      {
+        "75@Nova_Client_common.spacer": {}
+      },
+      {
+        "76@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays a button on the HUD to toggle the playerlist\n§cMobile only",
+          "$mod_enabled": "($playlist_mobile_hud_toggle)",
+          "$mod_disabled": "(not $playlist_mobile_hud_toggle)",
+          "$module_name": "playlist_mobile_hud_toggle"
+        }
+      },
+      {
+        "moon_spacer1@Nova_Client_common.spacer": {}
+      },
+      {
+        "moon_phase@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the current moon phase\n§cday counter needs to be enabled in the world settings",
+          "$mod_enabled": "($moon_phase)",
+          "$mod_disabled": "(not $moon_phase)",
+          "$module_name": "moon_phase"
+        }
+      },
+      {
+        "moon_spacer2@Nova_Client_common.spacer": {}
+      },
+      {
+        "74@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Displays the state of the moon phase in a number\n§crequiers moon_phase_toggle to be enabled",
+          "$mod_enabled": "($moon_phase_text)",
+          "$mod_disabled": "(not $moon_phase_text)",
+          "$module_name": "moon_phase_text"
+        }
+      },
+      {
+        "moon_spacer3@Nova_Client_common.spacer": {}
+      },
+      {
+        "76@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the state of the moon phase in an icon\n§crequiers moon_phase_toggle to be enabled",
+          "$mod_enabled": "($moon_phase_icon)",
+          "$mod_disabled": "(not $moon_phase_icon)",
+          "$module_name": "moon_phase_icon"
+        }
+      },
+      {
+        "moon_spacer4@Nova_Client_common.spacer": {}
+      },
+      {
+        "buffer_label2": {
+          "type": "panel",
+          "size": [
+            "100%",
+            20
+          ],
+          "controls": [
+            {
+              "label@Nova_Client_common.element": {
+                "type": "label",
+                "text": "Elements",
+                "font_type": "MinecraftTen",
+                "$NC_anchor": "center",
+                "size": [
+                  "default",
+                  20
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "78@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the bossbar",
+          "$mod_enabled": "($bossbar)",
+          "$mod_disabled": "(not $bossbar)",
+          "$module_name": "bossbar"
+        }
+      },
+      {
+        "79@Nova_Client_common.spacer": {}
+      },
+      {
+        "80@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the percent of how much of the bossbar is left\n§crequiers bossbar to be enabled",
+          "$mod_enabled": "($bossbar_percent)",
+          "$mod_disabled": "(not $bossbar_percent)",
+          "$module_name": "bossbar_percent"
+        }
+      },
+      {
+        "81@Nova_Client_common.spacer": {}
+      },
+      {
+        "82@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the effects",
+          "$mod_enabled": "($mob_effects)",
+          "$mod_disabled": "(not $mob_effects)",
+          "$module_name": "mob_effects"
+        }
+      },
+      {
+        "83@Nova_Client_common.spacer": {}
+      },
+      {
+        "84@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the scoreboard",
+          "$mod_enabled": "($scoreboard)",
+          "$mod_disabled": "(not $scoreboard)",
+          "$module_name": "scoreboard"
+        }
+      },
+      {
+        "85@Nova_Client_common.spacer": {}
+      },
+      {
+        "86@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the scoreboard numbers\n§crequiers scoreboard_numbers to be enabled",
+          "$mod_enabled": "($scoreboard_numbers)",
+          "$mod_disabled": "(not $scoreboard_numbers)",
+          "$module_name": "scoreboard_numbers"
+        }
+      },
+      {
+        "87@Nova_Client_common.spacer": {}
+      },
+      {
+        "88@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the vignette",
+          "$mod_enabled": "($vignette)",
+          "$mod_disabled": "(not $vignette)",
+          "$module_name": "vignette"
+        }
+      },
+      {
+        "89@Nova_Client_common.spacer": {}
+      },
+      {
+        "90@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the chat",
+          "$mod_enabled": "($chat)",
+          "$mod_disabled": "(not $chat)",
+          "$module_name": "chat"
+        }
+      },
+      {
+        "91@Nova_Client_common.spacer": {}
+      },
+      {
+        "92@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the chat in the bottom left corner\n§crequiers chat to be enabled",
+          "$mod_enabled": "($bottom_chat)",
+          "$mod_disabled": "(not $bottom_chat)",
+          "$module_name": "bottom_chat"
+        }
+      },
+      {
+        "93@Nova_Client_common.spacer": {}
+      },
+      {
+        "94@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the title",
+          "$mod_enabled": "($title)",
+          "$mod_disabled": "(not $title)",
+          "$module_name": "title"
+        }
+      },
+      {
+        "95@Nova_Client_common.spacer": {}
+      },
+      {
+        "96@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the action_bar",
+          "$mod_enabled": "($action_bar)",
+          "$mod_disabled": "(not $action_bar)",
+          "$module_name": "action_bar"
+        }
+      },
+      {
+        "97@Nova_Client_common.spacer": {}
+      },
+      {
+        "98@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the subtitle",
+          "$mod_enabled": "($subtitle)",
+          "$mod_disabled": "(not $subtitle)",
+          "$module_name": "subtitle"
+        }
+      },
+      {
+        "99@Nova_Client_common.spacer": {}
+      },
+      {
+        "100@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the jukebox_text",
+          "$mod_enabled": "($jukebox_text)",
+          "$mod_disabled": "(not $jukebox_text)",
+          "$module_name": "jukebox_text"
+        }
+      },
+      {
+        "101@Nova_Client_common.spacer": {}
+      },
+      {
+        "buffer_label3": {
+          "type": "panel",
+          "size": [
+            "100%",
+            20
+          ],
+          "controls": [
+            {
+              "label@Nova_Client_common.element": {
+                "type": "label",
+                "text": "Mobile Elements",
+                "font_type": "MinecraftTen",
+                "$NC_anchor": "center",
+                "size": [
+                  "default",
+                  20
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "102@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays a F1 button\n§cmobile only",
+          "$mod_enabled": "($f1_button)",
+          "$mod_disabled": "(not $f1_button)",
+          "$module_name": "f1_button"
+        }
+      }
+    ]
+  },
+  "navigation_buttons": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "layer": 1000,
+    "size": [
+      300,
+      30
+    ],
+    "controls": [
+      {
+        "info@Nova_client_toggles.Nova_client_tab_toggle": {
+          "size": [
+            100,
+            30
+          ],
+          "$toggle_view_binding_name": "Nova_Client_info",
+          "$radio_toggle_group": true,
+          "$toggle_group_forced_index": 0,
+          "$button_text": "Information"
+        }
+      },
+      {
+        "changelog@Nova_client_toggles.Nova_client_tab_toggle": {
+          "size": [
+            100,
+            30
+          ],
+          "$toggle_view_binding_name": "Nova_Client_changelog",
+          "$radio_toggle_group": true,
+          "$toggle_group_forced_index": 1,
+          "$button_text": "Changelog"
+        }
+      },
+      {
+        "config@Nova_client_toggles.Nova_client_tab_toggle": {
+          "size": [
+            100,
+            30
+          ],
+          "$toggle_view_binding_name": "Nova_Client_config",
+          "$radio_toggle_group": true,
+          "$toggle_group_forced_index": 2,
+          "$button_text": "Config"
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@Nova_Client_common.header": {
+          "$header_label": "Nova Client"
+        }
+      },
+      {
+        "2@Nova_Client_Nova_screen.extra_background": {}
+      },
+      {
+        "3@Nova_Client_Nova_screen.navigation_buttons": {}
+      }
+    ]
+  }
+}

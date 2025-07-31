@@ -1,0 +1,63 @@
+{
+    "namespace": "Nova_client_modules_menu_button_template",
+    "content": {
+        "type": "image",
+        "texture": "textures/ui/hud_tip_text_background",
+        "alpha": 0.6,
+        "layer": 2,
+        "size": [
+            "33%",
+            80
+        ],
+        "controls": [
+            {
+                "icon": {
+                    "type": "image",
+                    "texture": "$modules_template_texture",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": [
+                        "50%",
+                        "50%"
+                    ],
+                    "offset": [
+                        0,
+                        -5
+                    ]
+                }
+            },
+            {
+                "button@Nova_client_toggles.Nova_client_toggle": {
+                    "$button_text": "$modules_template_toggle_text",
+                    "$font_scale_factor": 0.5,
+                    "size": "$modules_template_toggle_size",
+                    "$modules_template_toggle_size|default": [
+                        "100% - 20px",
+                        20
+                    ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "$toggle_name": "nova_modules_toggle",
+                    "$toggle_tab_focus_binding_name": "#nova_modules_focus_precedence",
+                    "$toggle_tab_focus_binding_type": "global",
+                    "$toggle_on_hover_binding_type": "global",
+                    "$toggle_on_hover_binding_name": "#toggle_on_hover"
+                }
+            },
+            {
+                "cog@Nova_client_button.green_button": {
+                    "$custom_content": "Nova_client_button.button_icon",
+                    "$pressed_button_name": "$modules_template_button_name",
+                    "$button_icon": "textures/ui/gear",
+                    "size": "$modules_template_button_size",
+                    "$modules_template_button_size|default": [
+                        20,
+                        20
+                    ],
+                    "anchor_from": "bottom_right",
+                    "anchor_to": "bottom_right"
+                }
+            }
+        ]
+    }
+}

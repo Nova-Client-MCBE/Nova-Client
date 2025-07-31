@@ -1,0 +1,36 @@
+{
+    "namespace": "Nova_Client_paperdoll_screen",
+    "content@Nova_Client_common.screen_template": {
+      "$NC_sreen_button_name": "paperdoll_out",
+      "anims": [
+        "@Nova_Client_animations.paperdoll_screen",
+        "@Nova_Client_animations.screen_page_out"
+      ],
+      "controls": [
+        {
+          "background@Nova_Client_common.external": {
+            "$NC_external": "Black",
+            "alpha": 0.4,
+            "size": [
+              "100%",
+              "100%"
+            ]
+          }
+        },
+        {
+          "1@Nova_Client_dialog_toggle_template.content": {
+            "$toggle_view_binding_name": "2d_paper_doll_toggle",
+            "$toggle_tags": "$2d_paperdoll",
+            "$NC_dialog_toggle_text": "2d Paperdoll",
+            "$NC_dialog_toggle_anchor": "top_middle"
+          }
+        },
+        {
+          "close_button@Nova_Client_dialog_toggle_template.close_button": {
+            "$pressed_button_name": "button.paperdoll_out",
+            "$button_text": "Close"
+          }
+        }
+      ]
+    }
+  }

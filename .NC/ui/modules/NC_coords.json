@@ -1,0 +1,178 @@
+{
+  "namespace": "Nova_Client_coords",
+  "content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%c",
+      "100%c"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "coords_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "player_position": {
+          "type": "image",
+          "size": [
+            "100%c + 6px",
+            "100%c + 2px"
+          ],
+          "texture": "textures/ui/Black",
+          "alpha": 0.5,
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "default_coords_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "coords_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ],
+          "controls": [
+            {
+              "player_position_text": {
+                "type": "label",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 2,
+                "enable_profanity_filter": false,
+                "text": "#text",
+                "shadow": true,
+                "bindings": [
+                  {
+                    "binding_name": "#player_position_text",
+                    "binding_name_override": "#text",
+                    "binding_condition": "always_when_visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chunk": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.5,
+          "layer": 1,
+          "size": [
+            "100%c + 6px",
+            "100%c + 2px"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_coords_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "coords_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ],
+          "controls": [
+            {
+              "label": {
+                "text": "#chunk_text",
+                "type": "label",
+                "shadow": true,
+                "enable_profanity_filter": false,
+                "layer": 2,
+                "bindings": [
+                  {
+                     "binding_type": "view",
+                     "source_control_name": "player_position_text",
+                     "source_property_name": "#text",
+                     "target_property_name": "#raw_player_position_text"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#raw_player_position_text - '-0' - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
+                     "target_property_name": "#raw_1"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#raw_1 - '0' - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9')",
+                     "target_property_name": "#raw_2"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#raw_player_position_text - (#raw_2 - ' , , ' - ':'))",
+                     "target_property_name": "#raw_coords"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#raw_coords - ':')",
+                     "target_property_name": "#x_coord"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#raw_coords - (': ' + #x_coord + ','))",
+                     "target_property_name": "#y_coord"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#raw_coords - (': ' + #x_coord + ', ' + #y_coord + ','))",
+                     "target_property_name": "#z_coord"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "((#x_coord - (#x_coord < 0) * 15) / 16)",
+                     "target_property_name": "#x_chunk"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "((#y_coord - (#y_coord < 0) * 15) / 16)",
+                     "target_property_name": "#y_chunk"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "((#z_coord - (#z_coord < 0) * 15) / 16)",
+                     "target_property_name": "#z_chunk"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#x_coord - (#x_chunk * 16))",
+                     "target_property_name": "#x_pos_in_chunk"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#y_coord - (#y_chunk * 16))",
+                     "target_property_name": "#y_pos_in_chunk"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#z_coord - (#z_chunk * 16))",
+                     "target_property_name": "#z_pos_in_chunk"
+                  },
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "('§r' + #x_chunk + ', ' + #y_chunk + ', ' + #z_chunk + ' [' + #x_pos_in_chunk + ', ' + #y_pos_in_chunk + ', ' + #z_pos_in_chunk + ']')",
+                     "target_property_name": "#chunk_text"
+                  }
+               ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

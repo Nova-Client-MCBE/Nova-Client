@@ -1,0 +1,415 @@
+{
+    "namespace": "Nova_Client_mainhand",
+    "content@Nova_Client_common.element": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "$NC_anchor": "bottom_middle",
+      "offset": [
+        162,
+        -2
+      ],
+      "size": [
+        102,
+        22
+      ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "mainhand_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        {
+          "1@Nova_Client_mainhand.mainhand_hud_item": {}
+        },
+        {
+          "2@Nova_Client_common.spacer": {}
+        },
+        {
+          "spacer_stack_panel": {
+            "type": "stack_panel",
+            "size": [
+              "100%c",
+              22
+            ],
+            "controls": [
+              {
+                "spacer": {
+                  "type": "panel",
+                  "size": [
+                    3,
+                    3
+                  ]
+                }
+              },
+              {
+                "3@Nova_Client_mainhand.durability_viewer_collection_panel": {}
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "mainhand_hud_item": {
+      "type": "panel",
+      "size": [
+        22,
+        22
+      ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "mainhand_item_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        {
+          "inventory_grid": {
+            "type": "grid",
+            "grid_item_template": "Nova_Client_mainhand.mainhand_hud_item_panel",
+            "collection_name": "hotbar_items",
+            "grid_dimensions": [
+              9,
+              1
+            ],
+            "size": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    "mainhand_hud_item_panel": {
+      "type": "panel",
+      "offset": [
+        0,
+        3
+      ],
+      "bindings": [
+        {
+          "binding_collection_name": "hotbar_items",
+          "binding_name": "#slot_selected",
+          "binding_name_override": "#visible",
+          "binding_type": "collection"
+        }
+      ],
+      "controls": [
+        {
+          "mainhand_item_content@Nova_Client_common.internal": {
+            "$NC_internal": "modules/slot",
+            "$item_collection_name": "hotbar_items",
+            "$durability_bar_required": true,
+            "$stack_count_required": true,
+            "size": [
+              22,
+              22
+            ],
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "mainhand_slot_opacity",
+                "source_property_name": "(#slider_value / 10)",
+                "target_property_name": "#alpha"
+              },
+              {
+                "binding_collection_name": "hotbar_items",
+                "binding_name": "#item_id_aux",
+                "binding_type": "collection"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not (#item_id_aux = -1))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+              {
+                "mainhand_hud_item@common.item_renderer": {
+                  "layer": 1,
+                  "size": [
+                    14,
+                    14
+                  ]
+                }
+              },
+              {
+                "stack_count_label@Nova_Client_common.element": {
+                  "type": "label",
+                  "text": "#inventory_stack_count",
+                  "$NC_anchor": "bottom_right",
+                  "shadow": true,
+                  "layer": 7,
+                  "offset": [
+                    -1,
+                    -0.5
+                  ],
+                  "max_size": [
+                    22,
+                    22
+                  ],
+                  "bindings": [
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "mainhand_stack_toggle",
+                      "source_property_name": "#toggle_state",
+                      "target_property_name": "#visible"
+                    },
+                    {
+                      "binding_name": "#inventory_stack_count",
+                      "binding_type": "collection",
+                      "binding_collection_name": "hotbar_items"
+                    },
+                    {
+                      "binding_name": "#stack_count_visible",
+                      "binding_name_override": "#visible",
+                      "binding_type": "collection",
+                      "binding_collection_name": "#hotbar_items"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "durability_viewer_collection_panel": {
+      "type": "image",
+      "size": [
+        "100%c",
+        17
+      ],
+      "$hotbar_collection_name|default": "hotbar_items",
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "mainhand_durability_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        {
+          "durability_viewer_collection_panel_wrapper": {
+            "type": "panel",
+            "size": [
+              "100%c",
+              "100%"
+            ],
+            "controls": [
+              {
+                "durability_viewer_hotbar_collection@Nova_Client_mainhand.durability_viewer_hotbar_collection": {}
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "durability_viewer_hotbar_collection": {
+      "type": "stack_panel",
+      "size": [
+        "100%c",
+        10
+      ],
+      "collection_name": "$hotbar_collection_name",
+      "offset": [
+        0.5,
+        0
+      ],
+      "controls": [
+        {
+          "0@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 0
+          }
+        },
+        {
+          "1@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 1
+          }
+        },
+        {
+          "2@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 2
+          }
+        },
+        {
+          "3@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 3
+          }
+        },
+        {
+          "4@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 4
+          }
+        },
+        {
+          "5@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 5
+          }
+        },
+        {
+          "6@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 6
+          }
+        },
+        {
+          "7@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 7
+          }
+        },
+        {
+          "8@Nova_Client_mainhand.durability_viewer_grid": {
+            "collection_index": 8
+          }
+        }
+      ]
+    },
+    "durability_viewer_grid": {
+      "type": "panel",
+      "layer": 10,
+      "size": [
+        "100%c",
+        0
+      ],
+      "$item_collection_name": "$hotbar_collection_name",
+      "controls": [
+        {
+          "durability_viewer_background": {
+            "type": "image",
+            "offset": [
+              0,
+              5
+            ],
+            "size": [
+              "100%c + 7px",
+              17
+            ],
+            "texture": "textures/ui/hud_tip_text_background",
+            "alpha": 0.65,
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "mainhand_percent_opacity",
+                "source_property_name": "(#slider_value / 10)",
+                "target_property_name": "#alpha"
+              },
+              {
+                "binding_name": "#item_durability_total_amount",
+                "binding_type": "collection",
+                "binding_collection_name": "hotbar_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#item_durability_total_amount > 0)",
+                "target_property_name": "#condition1"
+              },
+              {
+                "binding_name": "#slot_selected",
+                "binding_name_override": "#condition2",
+                "binding_type": "collection",
+                "binding_collection_name": "hotbar_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#condition1 and #condition2)",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+              {
+                "durability_viewer_background_content@Nova_Client_mainhand.durability_viewer_background_content": {}
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "durability_viewer_background_content": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "layer": 10,
+      "size": [
+        "100%c",
+        10
+      ],
+      "controls": [
+        {
+          "1@Nova_Client_common.spacer": {}
+        },
+        {
+          "durability_viewer_current_label": {
+            "shadow": false,
+            "type": "label",
+            "text": "#text",
+            "bindings": [
+              {
+                "binding_name": "#slot_selected",
+                "binding_name_override": "#visible",
+                "binding_type": "collection",
+                "binding_collection_name": "$hotbar_collection_name"
+              },
+              {
+                "binding_name": "#item_durability_current_amount",
+                "binding_type": "collection",
+                "binding_collection_name": "hotbar_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "((#current_value < #item_durability_current_amount) - (#current_value > #item_durability_current_amount) + #current_value)",
+                "target_property_name": "#current_value"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "('§z' + #current_value)",
+                "target_property_name": "#text"
+              }
+            ]
+          }
+        },
+        {
+          "durability_view_total_label": {
+            "type": "label",
+            "shadow": false,
+            "text": "#text",
+            "bindings": [
+              {
+                "binding_name": "#slot_selected",
+                "binding_name_override": "#visible",
+                "binding_type": "collection",
+                "binding_collection_name": "$hotbar_collection_name"
+              },
+              {
+                "binding_name": "#item_durability_total_amount",
+                "binding_type": "collection",
+                "binding_collection_name": "hotbar_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "((#total_value < #item_durability_total_amount) - (#total_value > #item_durability_total_amount) + #total_value)",
+                "target_property_name": "#total_value"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "('§r/' + #total_value)",
+                "target_property_name": "#text"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "durability_viewer_total_text",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "2@Nova_Client_common.spacer": {}
+        }
+      ]
+    }
+  }

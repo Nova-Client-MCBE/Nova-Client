@@ -1,0 +1,56 @@
+{
+  "namespace": "Nova_Client_crosshair_screen",
+  "content@Nova_Client_common.screen_template": {
+    "$NC_sreen_button_name": "crosshair_out",
+    "anims": [
+      "@Nova_Client_animations.crosshair_screen",
+      "@Nova_Client_animations.screen_page_out"
+    ],
+    "controls": [
+      {
+        "background@Nova_Client_common.external": {
+          "$NC_external": "Black",
+          "alpha": 0.4,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "1@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "third_person_crosshair",
+          "$toggle_tags": "$third_person_crosshair",
+          "$NC_dialog_toggle_text": "Third Person Crosshair",
+          "$NC_dialog_toggle_anchor": "top_middle"
+        }
+      },
+      {
+        "2@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "rgb_crosshair",
+          "$toggle_tags": "$rgb_crosshair",
+          "$NC_dialog_toggle_text": "RGB Crosshair",
+          "$NC_dialog_toggle_anchor": "top_middle",
+          "offset": [
+            0,
+            25
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "third_person_crosshair",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "close_button@Nova_Client_dialog_toggle_template.close_button": {
+          "$pressed_button_name": "button.crosshair_out",
+          "$button_text": "Close"
+        }
+      }
+    ]
+  }
+}

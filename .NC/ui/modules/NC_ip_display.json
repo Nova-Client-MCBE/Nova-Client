@@ -1,0 +1,140 @@
+{
+  "namespace": "Nova_Client_ip_display",
+  "content": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      "100%c"
+    ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [
+      -10,
+      -5
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "ip_display_hud_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "world_name": {
+          "type": "image",
+          "texture": "textures/ui/hud_tip_text_background",
+          "alpha": 0.5,
+          "size": [
+            "100%c + 6px",
+            16
+          ],
+          "ignored": "$is_on_3p_server",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "ipdisplay_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ],
+          "controls": [
+            {
+              "label": {
+                "type": "label",
+                "text": "#text",
+                "layer": 12,
+                "offset": [
+                  2,
+                  0
+                ],
+                "shadow": false,
+                "bindings": [
+                  {
+                    "binding_name": "#player_list_title"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "#player_list_title",
+                    "target_property_name": "#text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#player_list_title - ('Hive Games' + 'CubeCraft Games'  + 'Galaxite'  + 'Mineville City'  + 'Lifeboard Network'  + 'Zeqa Network' + 'NetherGames Network' + 'Hyperlands Network' + 'Enchanted') = #player_list_title)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hive_games@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'Hive Games')",
+          "ignored": "(not $is_on_3p_server)",
+          "$server_ip": "IP: geo.§6hivebedrock§f.network"
+        }
+      },
+      {
+        "cubecraft@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'CubeCraft Games')",
+          "ignored": "(not $is_on_3p_server)",
+          "$server_ip": "IP: play.§bcubecraft§f.net"
+        }
+      },
+      {
+        "galaxite@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'Galaxite')",
+          "ignored": "(not $is_on_3p_server)",
+          "$server_ip": "IP: play.§5galaxite§f.net"
+        }
+      },
+      {
+        "mineville@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'Mineville City')",
+          "ignored": "(not $is_on_3p_server)",
+          "$server_ip": "IP: play.§dinpvp§f.net"
+        }
+      },
+      {
+        "lifeboat@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'Lifeboard Network')",
+          "ignored": "(not $is_on_3p_server)",
+          "$server_ip": "IP: mco.§4lbsg§f.net"
+        }
+      },
+      {
+        "zeqa@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'Zeqa Network')",
+          "ignored": "$is_on_3p_server",
+          "$server_ip": "IP: §ezeqa§f.net"
+        }
+      },
+      {
+        "nethergames@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'NetherGames Network')",
+          "ignored": "$is_on_3p_server",
+          "$server_ip": "IP: play.§cnethergames§f.org"
+        }
+      },
+      {
+        "hyperlands@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'Hyperlands Network')",
+          "ignored": "$is_on_3p_server",
+          "$server_ip": "play.hyperlandsmc.net"
+        }
+      },
+      {
+        "p2p_server@Nova_Client_ip_template.content": {
+          "$server_name": "(#player_list_title = 'Enchanted')",
+          "ignored": "$is_on_3p_server",
+          "$server_ip": "play.enchanted.gg"
+        }
+      }
+    ]
+  }
+}

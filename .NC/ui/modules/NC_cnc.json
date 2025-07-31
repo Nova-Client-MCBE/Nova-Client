@@ -1,0 +1,95 @@
+{
+  "namespace": "Nova_Client_clock_and_compass",
+  "content": {
+    "type": "image",
+    "texture": "textures/ui/hud_tip_text_background",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "alpha": 0.5,
+    "size": [
+      "100%c +3px",
+      "100%c +3px"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "cnc_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "clock_and_compass_opacity",
+        "source_property_name": "(#slider_value / 10)",
+        "target_property_name": "#alpha"
+      }
+    ],
+    "controls": [
+      {
+        "clock_and_compass": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%c",
+            16
+          ],
+          "controls": [
+            {
+              "compass@Nova_Client_clock_and_compass.item": {
+                "property_bag": {
+                  "#item_id_aux": 22609920
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "compass_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "clock@Nova_Client_clock_and_compass.item": {
+                "property_bag": {
+                  "#item_id_aux": 22740992
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "clock_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "recovery@Nova_Client_clock_and_compass.item": {
+                "property_bag": {
+                  "#item_id_aux": 44761088
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "recovery_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "item": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [
+      16,
+      16
+    ]
+  }
+}

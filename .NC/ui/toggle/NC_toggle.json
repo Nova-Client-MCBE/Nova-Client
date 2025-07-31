@@ -1,0 +1,326 @@
+{
+  "namespace": "Nova_client_toggles",
+  "toggle_template@common.toggle": {
+    "$unchecked_locked_control|default": "Nova_client_toggles.toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "Nova_client_toggles.toggle_checked",
+    "$checked_locked_control|default": "Nova_client_toggles.toggle_checked",
+    "$checked_locked_hover_control|default": "Nova_client_toggles.toggle_checked",
+    "$unchecked_control|default": "Nova_client_toggles.toggle_unchecked",
+    "$checked_control|default": "Nova_client_toggles.toggle_checked",
+    "$unchecked_hover_control|default": "Nova_client_toggles.toggle_unchecked_hover",
+    "$checked_hover_control|default": "Nova_client_toggles.toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_color": "$Nova_Client_border_toggle_default_color",
+    "$default_border_visible|default": false,
+    "$default_checked_glyph_color|default": "$Nova_Client_glyph_toggle_checked_default_color",
+    "$default_checked_text_color|default": "$Nova_Client_toggle_checked_default_text_color",
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_glyph_color|default": "$Nova_Client_glyph_toggle_default_color",
+    "$default_state|default": false,
+    "$default_text_color|default": "$Nova_Client_toggle_default_text_color",
+    "$default_texture_alpha|default": 1,
+    "$default_texture_color|default": "$f_color_format",
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "toggle_unchecked@Nova_client_toggles.toggle_content": {
+    "type": "image",
+    "$default": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 1,
+    "texture": "$button_default_texture",
+    "$button_default_texture|default": ".NC/textures/buttons/common/button_default",
+    "alpha": "$default_alpha",
+    "$default_alpha|default": 1,
+    "$text_color": "$default_text_color",
+    "$default_text_color|default": [
+      0.3,
+      0.3,
+      0.3
+    ]
+  },
+  "toggle_unchecked_hover@Nova_client_toggles.toggle_content": {
+    "type": "image",
+    "$hover": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 1,
+    "texture": "$button_hover_texture",
+    "$button_hover_texture|default": ".NC/textures/buttons/common/button_hover",
+    "alpha": "$hover_alpha",
+    "$hover_alpha|default": 1,
+    "$text_color": "$hover_text_color",
+    "$hover_text_color|default": [
+      0.3,
+      0.3,
+      0.3
+    ]
+  },
+  "toggle_checked@Nova_client_toggles.toggle_content": {
+    "type": "image",
+    "$pressed": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 1,
+    "texture": "$button_pressed_texture",
+    "$button_pressed_texture|default": ".NC/textures/buttons/common/button_pressed",
+    "alpha": "$pressed_alpha",
+    "$pressed_alpha|default": 1,
+    "$text_color": "$pressed_text_color",
+    "$pressed_text_color|default": [
+      1,
+      1,
+      1
+    ],
+    "$button_text_offset": [
+      0,
+      1
+    ]
+  },
+  "toggle_checked_hover@Nova_client_toggles.toggle_content": {
+    "type": "image",
+    "$hover": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 1,
+    "texture": "$button_pressed_hover_texture",
+    "$button_pressed_hover_texture|default": ".NC/textures/buttons/common/button_pressed_hover",
+    "alpha": "$pressed_hover_alpha",
+    "$default_hover_alpha|default": 1,
+    "$text_color": "$pressed_hover_text_color",
+    "$pressed_hover_text_color|default": [
+      1,
+      1,
+      1
+    ],
+    "$button_text_offset": [
+      0,
+      1
+    ]
+  },
+  "toggle_content": {
+    "type": "panel",
+    "$default|default": false,
+    "$hover|default": false,
+    "$pressed|default": false,
+    "$button_content|default": "Nova_client_toggles.button_text",
+    "layer": 30,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "button_content@$button_content": {
+          "layer": 5
+        }
+      }
+    ]
+  },
+  "button_text": {
+    "type": "label",
+    "shadow": false,
+    "font_scale_factor": "$font_scale_factor",
+    "font_type": "$font_type",
+    "$font_type|default": "default",
+    "size": [
+      "default",
+      "default"
+    ],
+    "color": "$text_color",
+    "offset": "$button_text_offset",
+    "$button_text_offset|default": [
+      0,
+      0
+    ],
+    "text": "$button_text",
+    "bindings": [
+      {
+        "binding_name": "$button_text"
+      }
+    ]
+  },
+  "label_icon": {
+    "type": "panel",
+    "layer": 15,
+    "$NC_icon|default": "realms",
+    "$NC_button_text|default": "§cMissing Text",
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "('textures/ui/sidebar_icons/' + $NC_icon)",
+          "layer": 13,
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [
+            16,
+            16
+          ],
+          "offset": [
+            3,
+            1
+          ]
+        }
+      },
+      {
+        "label": {
+          "type": "label",
+          "text": "$NC_button_text",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 13,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "offset": [
+            24,
+            1.3
+          ]
+        }
+      }
+    ]
+  },
+  "label_hover_text": {
+    "type": "panel",
+    "$button_content_hover_text|default": "Nova_client_toggles.button_text",
+    "controls": [
+      {
+        "1@Nova_Client_common.hover_text_template": {}
+      },
+      {
+        "2@$button_content_hover_text": {}
+      }
+    ]
+  },
+  "Nova_client_tab_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$toggle_view_binding_name|default": "this_toggle",
+    "$template_toggle|default": "Nova_client_toggles.toggle_template",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 0,
+    "$toggle_name": "categories_toggle",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+  "Nova_client_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$toggle_view_binding_name|default": "this_toggle",
+    "$template_toggle|default": "Nova_client_toggles.toggle_template",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+    "namespace": "Nova_Client_element_row_one",
+    "content": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "size": [
+        "100%",
+        75
+      ],
+      "controls": [
+        {
+          "spacer1@Nova_Client_common.spacer": {}
+        },
+        {
+          "bossbar@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/gui/newgui/Realms",
+            "$toggle_view_binding_name": "boss_bar_toggle",
+            "$toggle_tags": "$bossbar",
+            "$modules_template_toggle_text": "Bossbar",
+            "$modules_template_button_name": "button.bossbar_screen"
+          }
+        },
+        {
+          "spacer2@Nova_Client_common.spacer": {}
+        },
+        {
+          "effects@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/absorption_effect",
+            "$toggle_view_binding_name": "mob_effect_toggle",
+            "$toggle_tags": "$mob_effects",
+            "$modules_template_toggle_text": "Mob effects",
+            "$modules_template_toggle_size": [
+              "100%",
+              20
+            ],
+            "$modules_template_button_size": [
+              0,
+              0
+            ],
+            "$button_icon_size": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "spacer3@Nova_Client_common.spacer": {}
+        },
+        {
+          "scoreboard@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/blue_info_glyph",
+            "$toggle_view_binding_name": "scoreboard_toggle",
+            "$toggle_tags": "$scoreboard",
+            "$modules_template_toggle_text": "Scoreboard",
+            "$modules_template_button_name": "button.scoreboard_screen"
+          }
+        }
+      ]
+    }
+  }

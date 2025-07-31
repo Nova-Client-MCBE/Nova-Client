@@ -1,0 +1,670 @@
+{
+  "namespace": "Nova_Client_play",
+  "base_screen": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "black@Nova_Client_common.black": {}
+      },
+      {
+        "sidebar@Nova_Client_common.internal": {
+          "$NC_internal": "background/White",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "color": [
+            0.192,
+            0.196,
+            0.2
+          ],
+          "size": [
+            150,
+            "100%"
+          ],
+          "offset": [
+            0,
+            25
+          ],
+          "layer": 2,
+          "controls": [
+            {
+              "stacker": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "spacer@Nova_Client_common.spacer": {}
+                  },
+                  {
+                    "worlds_tab@Nova_client_toggles.Nova_client_tab_toggle": {
+                      "size": [
+                        "100%",
+                        25
+                      ],
+                      "$toggle_view_binding_name": "Nova_Client_worlds",
+                      "$radio_toggle_group": true,
+                      "$toggle_group_forced_index": 0,
+                      "$NC_button_text": "playscreen.worlds",
+                      "$NC_icon": "worlds",
+                      "$button_content": "Nova_client_toggles.label_icon",
+                      "$button_default_texture": ".NC/textures/invis",
+                      "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
+                      "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+                      "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed"
+                    }
+                  },
+                  {
+                    "spacer@Nova_Client_common.spacer": {}
+                  },
+                  {
+                    "friends_tab@Nova_client_toggles.Nova_client_tab_toggle": {
+                      "size": [
+                        "100%",
+                        25
+                      ],
+                      "$toggle_view_binding_name": "Nova_Client_friends",
+                      "$radio_toggle_group": true,
+                      "$toggle_group_forced_index": 1,
+                      "$NC_button_text": "selectWorld.tab.friends",
+                      "$button_content": "Nova_client_toggles.label_icon",
+                      "$button_default_texture": ".NC/textures/invis",
+                      "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
+                      "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+                      "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed"
+                    }
+                  },
+                  {
+                    "spacer@Nova_Client_common.spacer": {}
+                  },
+                  {
+                    "server_tab@Nova_client_toggles.Nova_client_tab_toggle": {
+                      "size": [
+                        "100%",
+                        25
+                      ],
+                      "$toggle_view_binding_name": "Nova_Client_server",
+                      "$radio_toggle_group": true,
+                      "$toggle_group_forced_index": 2,
+                      "$NC_button_text": "menu.serverGenericName",
+                      "$NC_icon": "worlds2",
+                      "$button_content": "Nova_client_toggles.label_icon",
+                      "$button_default_texture": ".NC/textures/invis",
+                      "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
+                      "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+                      "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed"
+                    }
+                  },
+                  {
+                    "spacer@Nova_Client_common.spacer": {}
+                  },
+                  {
+                    "featured_tab@Nova_client_toggles.Nova_client_tab_toggle": {
+                      "size": [
+                        "100%",
+                        25
+                      ],
+                      "$toggle_view_binding_name": "Nova_Client_featured",
+                      "$radio_toggle_group": true,
+                      "$toggle_group_forced_index": 3,
+                      "$NC_button_text": "sidebar.featured",
+                      "$NC_icon": "server",
+                      "$button_content": "Nova_client_toggles.label_icon",
+                      "$button_default_texture": ".NC/textures/invis",
+                      "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
+                      "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+                      "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "header@Nova_Client_common.internal": {
+          "$NC_internal": "background/header",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [
+            "100%",
+            25
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "header_label": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "color": "black",
+                "layer": 1,
+                "font_type": "MinecraftTen",
+                "text": "Play",
+                "font_scale_factor": 1.5,
+                "type": "label"
+              }
+            },
+            {
+              "exit@Nova_client_button.clear_button": {
+                "size": [
+                  20,
+                  20
+                ],
+                "$clear_button_alpha": 0,
+                "$custom_content": "Nova_client_button.button_label",
+                "$pressed_button_name": "button.menu_exit",
+                "$button_text": "x",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [
+                  -2,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "worlds_tab@Nova_Client_common.tab_content_panel": {
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "$visible_bind_toggle_source_control": "world_navigation_tab_toggle",
+          "$scroll_tab_content": "play.worlds_scroll_content",
+          "size": [
+            "100% - 150px",
+            "100% - 25px"
+          ],
+          "$always_handle_scrolling": true,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "Nova_Client_worlds",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "friends_tab@Nova_Client_common.tab_content_panel": {
+          "$visible_bind_toggle_source_control": "friends_navigation_tab_toggle",
+          "$scroll_tab_content": "play.friends_scroll_content",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "$always_handle_scrolling": true,
+          "size": [
+            "100% - 150px",
+            "100% - 25px"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "Nova_Client_friends",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "server@Nova_Client_common.tab_content_panel": {
+          "$visible_bind_toggle_source_control": "server_navigation_tab_toggle",
+          "$scroll_tab_content": "Nova_Client_play.servers_content",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            75,
+            0
+          ],
+          "$always_handle_scrolling": true,
+          "size": [
+            "100% - 160px",
+            "100% - 30px"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "Nova_Client_server",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "featured_tab@Nova_Client_common.tab_content_panel": {
+          "$visible_bind_toggle_source_control": "server_navigation_tab_toggle",
+          "$scroll_tab_content": "Nova_Client_play.featured_content",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            75,
+            0
+          ],
+          "$always_handle_scrolling": true,
+          "size": [
+            "100% - 160px",
+            "100% - 30px"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "Nova_Client_featured",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "featured_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100%",
+            "100% - 30px"
+          ],
+          "controls": [
+            {
+              "featured_server_grid": {
+                "type": "grid",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "grid_item_template": "Nova_Client_play.featured_server_world_item",
+                "grid_dimension_binding": "#third_party_featured_item_grid_dimension",
+                "collection_name": "third_party_server_network_worlds",
+                "$collection_name": "third_party_server_network_worlds",
+                "$toggle_index_binding_name": "#third_party_toggle_index",
+                "bindings": [
+                  {
+                    "binding_name": "#third_party_featured_item_grid_dimension"
+                  },
+                  {
+                    "binding_name": "#featured_servers_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "servers_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100%",
+            "100% - 30px"
+          ],
+          "controls": [
+            {
+              "add_server@common_toggles.light_text_toggle": {
+                "$default_texture": ".NC/textures/buttons/common/button_default",
+                "$hover_texture": ".NC/textures/buttons/common/button_pressed",
+                "$pressed_texture": ".NC/textures/buttons/common/button_hover",
+                "$pressed_no_hover_texture": ".NC/textures/buttons/common/button_pressed_hover",
+                "$button_text": "networkWorld.add_server",
+                "$radio_toggle_group": true,
+                "$toggle_name": "server_navigation_toggle",
+                "$toggle_view_binding_name": "add_server_toggle_button",
+                "$toggle_state_binding_name": "#toggle_state",
+                "$toggle_on_hover_binding_name": "none",
+                "$toggle_tab_focus_binding_type": "global",
+                "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
+                "$toggle_group_forced_index": 100,
+                "$focus_override_up": "left_panel",
+                "visible": "(not $ignore_add_servers)",
+                "bindings": [
+                  {
+                    "binding_name": "#add_server_enabled",
+                    "binding_name_override": "#enabled"
+                  }
+                ],
+                "size": [
+                  "100%",
+                  30
+                ]
+              }
+            },
+            {
+              "2@Nova_Client_common.spacer": {
+                "$NC_spacer_size": [
+                  3,
+                  3
+                ]
+              }
+            },
+            {
+              "1@common.scrolling_panel": {
+                "type": "panel",
+                "$show_background": false,
+                "$scroll_size": [
+                  5,
+                  "100%"
+                ],
+                "$scroll_bar_left_padding_size": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "100%",
+                  "50% - 6.5px"
+                ],
+                "$always_handle_scrolling": true,
+                "layer": 20,
+                "$scrolling_content": "Nova_Client_play.third_party_servers_grid"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "featured_server_world_item@Nova_client_button.gray_button": {
+    "size": [
+      "100%",
+      29
+    ],
+    "$button_text": " ",
+    "layer": 21,
+    "$pressed_button_name": "button.menu_network_world_item",
+    "$custom_content": "Nova_Client_play.featured_server_position_panel",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$collection_name"
+      },
+      {
+        "binding_name": "#cross_platform_enabled",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_type": "collection",
+        "binding_name": "#is_server_info_available_collection",
+        "binding_name_override": "#enabled",
+        "binding_collection_name": "$collection_name"
+      },
+      {
+        "binding_type": "collection",
+        "binding_name": "$toggle_index_binding_name",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+  "featured_server_position_panel": {
+    "type": "panel",
+    "size": [
+      "100%",
+      29
+    ],
+    "controls": [
+      {
+        "@Nova_Client_play.featured_server_item_content": {}
+      }
+    ]
+  },
+  "featured_server_item_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      25
+    ],
+    "layer": 22,
+    "offset": [
+      0,
+      -1
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      },
+      {
+        "server_logo@Nova_Client_common.internal": {
+          "$NC_internal": "",
+          "size": [
+            42,
+            20
+          ],
+          "fill": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_name": "#third_party_screenshot_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_name"
+            },
+            {
+              "binding_name": "#third_party_server_logo_texture_path",
+              "binding_type": "collection",
+              "binding_name_override": "#texture",
+              "binding_collection_name": "$collection_name"
+            },
+            {
+              "binding_name": "#third_party_server_logo_resource_location",
+              "binding_type": "collection",
+              "binding_name_override": "#texture_file_system",
+              "binding_collection_name": "$collection_name"
+            },
+            {
+              "binding_name": "#third_party_server_logo_resource_location",
+              "binding_name_override": "#texture_file_system"
+            }
+          ]
+        }
+      },
+      {
+        "@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      },
+      {
+        "server_name": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            50,
+            "100%c"
+          ],
+          "controls": [
+            {
+              "local_world_name": {
+                "type": "label",
+                "text": "#third_party_server_name",
+                "bindings": [
+                  {
+                    "binding_name": "#third_party_server_name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_name"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "#is_server_info_available_collection",
+                    "binding_name_override": "#visible",
+                    "binding_collection_name": "third_party_server_network_worlds"
+                  }
+                ]
+              }
+            },
+            {
+              "local_world_game_mode@play.local_world_game_mode": {
+                "text": "#third_party_server_message",
+                "bindings": [
+                  {
+                    "binding_name": "#third_party_server_message",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_name"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "(not #is_network_available)",
+                    "binding_name_override": "#visible",
+                    "binding_collection_name": "third_party_server_network_worlds"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "third_party_servers_grid": {
+    "type": "grid",
+    "size": [
+      "100%",
+      "default"
+    ],
+    "grid_item_template": "Nova_Client_play.third_party_servers_world_item",
+    "grid_dimension_binding": "#servers_network_world_item_grid_dimension",
+    "collection_name": "servers_network_worlds",
+    "$collection_name": "servers_network_worlds",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$toggle_index_binding_name": "#additional_server_toggle_index",
+    "bindings": [
+      {
+        "binding_name": "#servers_network_world_item_grid_dimension"
+      }
+    ]
+  },
+  "third_party_servers_world_item@Nova_client_button.gray_button": {
+    "size": [
+      "100%",
+      29
+    ],
+    "$button_text": " ",
+    "layer": 21,
+    "$pressed_button_name": "button.menu_network_world_item",
+    "$custom_content": "Nova_Client_play.third_party_servers_position_panel",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+  "third_party_servers_position_panel": {
+    "type": "panel",
+    "size": [
+      "100%",
+      29
+    ],
+    "controls": [
+      {
+        "@Nova_Client_play.third_party_servers_item_content": {}
+      }
+    ]
+  },
+  "third_party_servers_item_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      25
+    ],
+    "layer": 22,
+    "offset": [
+      0,
+      -1
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            50,
+            "100%c"
+          ],
+          "controls": [
+            {
+              "local_world_name": {
+                "type": "label",
+                "text": "#network_world_header",
+                "bindings": [
+                  {
+                    "binding_name": "#network_world_header",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_name"
+                  }
+                ]
+              }
+            },
+            {
+              "local_world_game_mode@play.local_world_game_mode": {
+                "text": "#network_world_details",
+                "bindings": [
+                  {
+                    "binding_name": "#network_world_details",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "screen@Nova_Client_play.base_screen": {}
+      }
+    ]
+  }
+}

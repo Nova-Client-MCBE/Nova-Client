@@ -1,0 +1,107 @@
+{
+  "namespace": "Nova_Client_dialog_toggle_template",
+  "content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 10,
+    "size": [
+      "100%c",
+      25
+    ],
+    "anchor_from": "$NC_dialog_toggle_anchor",
+    "anchor_to": "$NC_dialog_toggle_anchor",
+    "controls": [
+      {
+        "toggle@Nova_client_toggles.Nova_client_toggle": {
+          "$button_text": "",
+          "$button_default_texture": ".NC/textures/toggle/toggle_off",
+          "$button_hover_texture": ".NC/textures/toggle/toggle_off_hover",
+          "$button_pressed_texture": ".NC/textures/toggle/toggle_on",
+          "$button_pressed_hover_texture": ".NC/textures/toggle/toggle_on_hover",
+          "$toggle_name": "nova_modules_toggle",
+          "$toggle_tab_focus_binding_name": "#nova_modules_focus_precedence",
+          "$toggle_tab_focus_binding_type": "global",
+          "$toggle_on_hover_binding_type": "global",
+          "$toggle_on_hover_binding_name": "#toggle_on_hover",
+          "size": [
+            25,
+            25
+          ]
+        }
+      },
+      {
+        "spacer@Nova_Client_common.spacer": {}
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "text": {
+                "type": "label",
+                "text": "$NC_dialog_toggle_text",
+                "alignment": "center",
+                "size": [
+                  "default",
+                  15
+                ],
+                "offset": [
+                  0,
+                  "12.5%"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "close_button@Nova_client_button.red_button": {
+    "layer": 12,
+    "size": [
+      "100%",
+      25
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$font_type": "MinecraftTen",
+    "$pressed_button_name": "$NC_dialog_red_pressed_button_name",
+    "$button_text": "$NC_dialog_red_button_text",
+    "$text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+    "title_image": {
+      "type": "image",
+      "texture": ".NC/textures/background/pop_up/title",
+      "layer": 12,
+      "size": [
+        "100%",
+        20
+      ],
+      "anchor_from": "top_middle",
+      "anchor_to": "top_middle",
+      "controls": [
+        {
+          "header_label": {
+            "type": "label",
+            "text": "$NC_dialog_toggle_header",
+            "font_type": "MinecraftTen",
+            "text_alignment": "center",
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "offset": [
+              0,
+              5
+            ],
+            "size": [
+              "default",
+              18
+            ]
+          }
+        }
+      ]
+    }
+}

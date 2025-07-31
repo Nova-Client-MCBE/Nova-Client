@@ -1,0 +1,143 @@
+{
+    "namespace": "Nova_Client_moon_phase",
+    "content@Nova_Client_common.external": {
+      "$NC_external": "Black",
+      "layer": 1,
+      "alpha": 0.5,
+      "size": [
+        "100%c + 6px",
+        "100%cm + 2px"
+      ],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "moon_phase_opacity",
+          "source_property_name": "(#slider_value / 10)",
+          "target_property_name": "#alpha"
+        },
+        {
+          "binding_type": "view",
+          "source_control_name": "moon_phase_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        },
+        {
+          "binding_type": "view",
+          "source_control_name": "NC_days_played",
+          "source_property_name": "#number_of_days_played_visible",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+        {
+          "left_label@Nova_Client_common.element": {
+            "type": "label",
+            "text": "#text",
+            "shadow": true,
+            "$NC_anchor": "left_middle",
+            "layer": 2,
+            "size": [
+              "default",
+              "default"
+            ],
+            "offset": [
+              2,
+              0
+            ],
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "moon_phase_text_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+              },
+              {
+                "binding_name": "#number_of_days_played_text",
+                "binding_condition": "always",
+                "binding_type": "global"
+              },
+              {
+                "binding_name": "#number_of_days_played_visible",
+                "binding_condition": "always",
+                "binding_type": "global"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#number_of_days_played_text - '0' - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9')",
+                "target_property_name": "#days_played_tips_text"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "((#number_of_days_played_text - #days_played_tips_text) * 1)",
+                "target_property_name": "#days_played"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#days_played - #days_played / 8 * 8)",
+                "target_property_name": "#moon_phases_index"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "('Moon Phase ' + #moon_phases_index)",
+                "target_property_name": "#text"
+              }
+            ]
+          }
+        },
+        {
+          "image@Nova_Client_common.element": {
+            "type": "image",
+            "texture": "#texture",
+            "$NC_anchor": "right_middle",
+            "layer": 2,
+            "size": [
+              8,
+              8
+            ],
+            "offset": [
+              -2,
+              0
+            ],
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "moon_phase_icon_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+              },
+              {
+                "binding_name": "#number_of_days_played_text",
+                "binding_condition": "always",
+                "binding_type": "global"
+              },
+              {
+                "binding_name": "#number_of_days_played_visible",
+                "binding_condition": "always",
+                "binding_type": "global"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#number_of_days_played_text - '0' - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9')",
+                "target_property_name": "#days_played_tips_text"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "((#number_of_days_played_text - #days_played_tips_text) * 1)",
+                "target_property_name": "#days_played"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#days_played - #days_played / 8 * 8)",
+                "target_property_name": "#moon_phases_index"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "('.NC/textures/modules/moon/moon_phase_' + #moon_phases_index)",
+                "target_property_name": "#texture"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

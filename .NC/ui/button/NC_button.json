@@ -1,0 +1,433 @@
+{
+  "namespace": "Nova_client_button",
+  "ore_ui_button@common.button": {
+    "locked_control": "locked",
+    "controls": [
+      {
+        "default@Nova_client_button.default": {
+          "$default_texture": ".NC/textures/buttons/common/button_default"
+        }
+      },
+      {
+        "hover@Nova_client_button.hover": {
+          "$hover_texture": ".NC/textures/buttons/common/button_hover"
+        }
+      },
+      {
+        "pressed@Nova_client_button.pressed": {
+          "$pressed_texture": ".NC/textures/buttons/common/button_pressed",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "locked@Nova_client_button.locked": {
+          "$locked_texture": ".NC/textures/buttons/common/button_pressed_hover",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      }
+    ]
+  },
+  "red_button@common.button": {
+    "sound_name": "NC.click",
+    "locked_control": "locked",
+    "controls": [
+      {
+        "default@Nova_client_button.default": {
+          "$default_texture": ".NC/textures/buttons/red/button_default"
+        }
+      },
+      {
+        "hover@Nova_client_button.hover": {
+          "$hover_texture": ".NC/textures/buttons/red/button_hover"
+        }
+      },
+      {
+        "pressed@Nova_client_button.pressed": {
+          "$pressed_texture": ".NC/textures/buttons/red/button_pressed",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "locked@Nova_client_button.locked": {
+          "$locked_texture": ".NC/textures/buttons/red/button_pressed",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      }
+    ]
+  },
+  "green_button@common.button": {
+    "sound_name": "NC.click",
+    "locked_control": "locked",
+    "controls": [
+      {
+        "default@Nova_client_button.default": {
+          "$default_texture": ".NC/textures/buttons/green/button_default",
+          "$font_type": "MinecraftTen"
+        }
+      },
+      {
+        "hover@Nova_client_button.hover": {
+          "$hover_texture": ".NC/textures/buttons/green/button_hover",
+          "$font_type": "MinecraftTen"
+        }
+      },
+      {
+        "pressed@Nova_client_button.pressed": {
+          "$pressed_texture": ".NC/textures/buttons/green/button_pressed",
+          "$font_type": "MinecraftTen",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "locked@Nova_client_button.locked": {
+          "$locked_texture": ".NC/textures/buttons/green/button_pressed",
+          "$font_type": "MinecraftTen",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      }
+    ]
+  },
+  "pink_button@common.button": {
+    "sound_name": "NC.click",
+    "locked_control": "locked",
+    "controls": [
+      {
+        "default@Nova_client_button.default": {
+          "$default_texture": ".NC/textures/buttons/pink/button_default"
+        }
+      },
+      {
+        "hover@Nova_client_button.hover": {
+          "$hover_texture": ".NC/textures/buttons/pink/button_hover"
+        }
+      },
+      {
+        "pressed@Nova_client_button.pressed": {
+          "$pressed_texture": ".NC/textures/buttons/pink/button_pressed",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "locked@Nova_client_button.locked": {
+          "$locked_texture": ".NC/textures/buttons/pink/button_pressed",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      }
+    ]
+  },
+  "gray_button@common.button": {
+    "locked_control": "locked",
+    "controls": [
+      {
+        "default@Nova_client_button.default": {
+          "$default_texture": ".NC/textures/buttons/gray/button_default",
+          "alpha": "$gray_button_alpha",
+          "$gray_button_alpha|default": 1
+        }
+      },
+      {
+        "hover@Nova_client_button.hover": {
+          "$hover_texture": ".NC/textures/buttons/gray/button_hover"
+        }
+      },
+      {
+        "pressed@Nova_client_button.pressed": {
+          "$pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "locked@Nova_client_button.locked": {
+          "$locked_texture": ".NC/textures/buttons/gray/button_pressed",
+          "$button_text_offset": [
+            0,
+            1
+          ]
+        }
+      }
+    ]
+  },
+  "clear_button@common.button": {
+    "locked_control": "locked",
+    "controls": [
+      {
+        "default@Nova_client_button.default": {
+          "$default_texture": "textures/ui/hud_tip_text_background",
+          "alpha": 0
+        }
+      },
+      {
+        "hover@Nova_client_button.hover": {
+          "$hover_texture": "textures/ui/hud_tip_text_background",
+          "alpha": 0.6,
+          "$text_color": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "pressed@Nova_client_button.pressed": {
+          "$pressed_texture": "textures/ui/Black",
+          "alpha": 0.6,
+          "$text_color": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "locked@Nova_client_button.locked": {
+          "$locked_texture": "textures/ui/Black",
+          "alpha": 0.6
+        }
+      }
+    ]
+  },
+  "white_border@common.button": {
+    "locked_control": "locked",
+    "sound_volume": 0.0,
+    "controls": [
+      {
+        "default@Nova_client_button.default": {
+          "$default_texture": "textures/ui/Black",
+          "alpha": 0.4,
+          "$text_color": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hover@Nova_client_button.hover": {
+          "$hover_texture": "textures/ui/focus_border_white",
+          "$text_color": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "pressed@Nova_client_button.pressed": {
+          "$pressed_texture": "textures/ui/focus_border_white",
+          "$text_color": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "locked@Nova_client_button.locked": {
+          "$locked_texture": "textures/ui/Black",
+          "alpha": 0.2,
+          "$text_color": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ]
+  },
+  "default@Nova_client_button.button_content": {
+    "$default": true,
+    "texture": "$default_texture"
+  },
+  "hover@Nova_client_button.button_content": {
+    "$hover": true,
+    "texture": "$hover_texture"
+  },
+  "pressed@Nova_client_button.button_content": {
+    "$pressed": true,
+    "texture": "$pressed_texture"
+  },
+  "locked@Nova_client_button.button_content": {
+    "$locked": true,
+    "texture": "$locked_texture"
+  },
+  "button_content": {
+    "type": "image",
+    "$default|default": false,
+    "$hover|default": false,
+    "$pressed|default": false,
+    "$locked|default": false,
+    "$custom_content|default": "Nova_client_button.button_label",
+    "bindings": "$button_bindings",
+    "$button_bindings|default": [],
+    "button_mappings": "$NC_button_mappings",
+    "$NC_button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "mapping_type": "pressed",
+        "to_button_id": "button.menu_select"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "mapping_type": "focused",
+        "to_button_id": "button.menu_ok"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      }
+    ],
+    "controls": [
+      {
+        "custom_content@$custom_content": {}
+      }
+    ]
+  },
+  "button_content_icon": {
+    "type": "image",
+    "$default|default": false,
+    "$hover|default": false,
+    "$pressed|default": false,
+    "bindings": "$button_bindings",
+    "$button_bindings|default": [],
+    "controls": [
+      {
+        "label@Nova_client_button.label_icon": {}
+      }
+    ]
+  },
+  "label_icon": {
+    "type": "panel",
+    "layer": 15,
+    "$NC_icon|default": "realms",
+    "$NC_button_text|default": "§cMissing Text",
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "('textures/ui/sidebar_icons/' + $NC_icon)",
+          "layer": 13,
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [
+            16,
+            16
+          ],
+          "offset": [
+            3,
+            1
+          ]
+        }
+      },
+      {
+        "label": {
+          "type": "label",
+          "text": "$NC_button_text",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 13,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "offset": [
+            24,
+            1.3
+          ]
+        }
+      }
+    ]
+  },
+  "button_icon": {
+    "layer": 2,
+    "texture": "$button_icon",
+    "type": "image",
+    "size": "$button_icon_size",
+    "$button_icon_size|default": [
+      15,
+      15
+    ],
+    "bindings": "$button_bindings",
+    "$button_bindings|default": []
+  },
+  "button_label": {
+    "type": "label",
+    "text": "$button_text",
+    "shadow": "$shadow",
+    "$shadow|default": false,
+    "font_scale_factor": "$font_scale_factor",
+    "$font_scale_factor|default": 1,
+    "layer": 10,
+    "font_type": "$font_type",
+    "$font_type|default": "default",
+    "size": [
+      "default",
+      "default"
+    ],
+    "color": "$text_color",
+    "$text_color|default": [
+      0.3,
+      0.3,
+      0.3
+    ],
+    "offset": "$button_text_offset",
+    "$button_text_offset|default": [
+      0,
+      0
+    ]
+  },
+  "label_hover_text": {
+    "type": "panel",
+    "$button_content_hover_text|default": "Nova_client_button.button_label",
+    "controls": [
+      {
+        "1@Nova_Client_common.hover_text_template": {}
+      },
+      {
+        "2@$button_content_hover_text": {}
+      }
+    ]
+  }
+}

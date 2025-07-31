@@ -1,0 +1,246 @@
+{
+  "namespace": "Nova_Client_player_list",
+  "player_list_pc_content": {
+    "type": "button",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      {
+        "from_button_id": "button.scoreboard",
+        "to_button_id": "button.dummy",
+        "mapping_type": "global"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "player_list_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "default": {
+          "type": "input_panel",
+          "button_mappings": [
+            {
+              "from_button_id": "button.inventory_left",
+              "to_button_id": "button.hotbar_inventory_left",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.inventory_right",
+              "to_button_id": "button.hotbar_inventory_right",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "hover": {
+          "type": "input_panel",
+          "button_mappings": [
+            {
+              "from_button_id": "button.inventory_left",
+              "to_button_id": "button.hotbar_inventory_left",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.inventory_right",
+              "to_button_id": "button.hotbar_inventory_right",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "pressed@tab_list_content": {}
+      }
+    ]
+  },
+  "mobile_content@tab_list_content": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "player_list_mobile_hud_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "player_list_content@tab_list_content": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "player_list_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "tab_list_content": {
+    "type": "panel",
+    "size": [
+      "25%",
+      "85%"
+    ],
+    "layer": 1,
+    "offset": [
+      0,
+      3
+    ],
+    "controls": [
+      {
+        "player_list_grid": {
+          "type": "grid",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "collection_name": "players_collection",
+          "grid_dimension_binding": "#players_grid_dimension",
+          "grid_item_template": "Nova_Client_player_list.tab_list_grid",
+          "size": [
+            "90%",
+            "100%c"
+          ],
+          "offset": [
+            "-101% - 0.75px",
+            0
+          ],
+          "bindings": [
+            {
+              "binding_condition": "always",
+              "binding_name": "#players_grid_dimension"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tab_list_grid": {
+    "type": "panel",
+    "size": [
+      "25%",
+      11
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "background@Nova_Client_common.external": {
+          "alpha": 0.2,
+          "$NC_external": "hud_tip_text_background",
+          "size": [
+            "400% + 5px",
+            15
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "accent_background_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ],
+          "controls": [
+            {
+              "background@Nova_Client_common.external": {
+                "alpha": 0.5,
+                "$NC_external": "Black",
+                "size": [
+                  "100% - 4.1px",
+                  "100% - 3px"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "main_background_opacity",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                  }
+                ],
+                "controls": [
+                  {
+                    "grid_avatar": {
+                      "type": "image",
+                      "texture": "#texture",
+                      "texture_file_system": "#texture_source",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "layer": 2,
+                      "offset": [
+                        2,
+                        0
+                      ],
+                      "size": [
+                        8,
+                        8
+                      ],
+                      "bindings": [
+                        {
+                          "binding_collection_name": "players_collection",
+                          "binding_name": "#texture",
+                          "binding_type": "collection"
+                        },
+                        {
+                          "binding_collection_name": "players_collection",
+                          "binding_name": "#texture_source",
+                          "binding_name_override": "#texture_file_system",
+                          "binding_type": "collection"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "gamer_icon",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "player_gamertag": {
+                      "type": "label",
+                      "text": "#gamertag",
+                      "layer": 3,
+                      "size": [
+                        "default",
+                        10
+                      ],
+                      "font_scale_factor": 1,
+                      "bindings": [
+                        {
+                          "binding_name": "#gamertag",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@player_list_pc_content": {}
+      },
+      {
+        "2@mobile_content": {}
+      },
+      {
+        "3@player_list_content": {}
+      }
+    ]
+  }
+}

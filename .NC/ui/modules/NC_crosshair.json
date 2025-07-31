@@ -1,0 +1,104 @@
+{
+  "namespace": "Nova_Client_crosshair",
+  "third_person_crosshair": {
+    "type": "image",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/gui/icons",
+    "uv_size": [
+      16,
+      16
+    ],
+    "size": [
+      16,
+      16
+    ],
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "third_person_crosshair",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "default_crosshair": {
+    "type": "custom",
+    "size": [
+      16,
+      16
+    ],
+    "renderer": "cursor_renderer",
+    "layer": 4,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "third_person_crosshair",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "no_rgb": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "rgb_crosshair",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "1@Nova_Client_crosshair.third_person_crosshair": {}
+      },
+      {
+        "2@Nova_Client_crosshair.default_crosshair": {}
+      }
+    ]
+  },
+  "rgb": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "rgb_crosshair",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "1@Nova_Client_crosshair.third_person_crosshair": {
+          "anims": [
+            "@Nova_Client_animations.rgb1"
+          ]
+        }
+      },
+      {
+        "2@Nova_Client_crosshair.default_crosshair": {}
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "crosshair_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "1@Nova_Client_crosshair.no_rgb": {}
+      },
+      {
+        "2@Nova_Client_crosshair.rgb": {}
+      }
+    ]
+  }
+}

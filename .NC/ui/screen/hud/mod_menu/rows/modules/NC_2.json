@@ -1,0 +1,49 @@
+{
+  "namespace": "Nova_Client_modules_row_two",
+  "content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      75
+    ],
+    "controls": [
+      {
+        "spacer1@Nova_Client_common.spacer": {}
+      },
+      {
+        "item_counter@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/items/totem",
+          "$toggle_view_binding_name": "item_counter_toggle",
+          "$toggle_tags": "$item_counter",
+          "$modules_template_toggle_text": "Item Counter",
+          "$modules_template_button_name": "button.item_counter_screen"
+        }
+      },
+      {
+        "spacer2@Nova_Client_common.spacer": {}
+      },
+      {
+        "cnc@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/items/compass_item",
+          "$toggle_view_binding_name": "cnc_toggle",
+          "$toggle_tags": "$clock_and_compass",
+          "$modules_template_toggle_text": "Clock and Compass",
+          "$modules_template_button_name": "button.clock_and_compass_screen"
+        }
+      },
+      {
+        "spacer3@Nova_Client_common.spacer": {}
+      },
+      {
+        "day_counter@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/ui/filledStar",
+          "$toggle_view_binding_name": "day_counter_toggle",
+          "$toggle_tags": "$day_counter",
+          "$modules_template_toggle_text": "Day Counter",
+          "$modules_template_button_name": "button.day_counter_screen"
+        }
+      }
+    ]
+  }
+}
