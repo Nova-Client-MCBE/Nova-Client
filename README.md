@@ -9,3 +9,12 @@
 
 
 Nova Client is a client that adds useful Modules to Minecraft Bedrock Edition
+
+## Building
+
+Small tutorial on how to make an mcpack (if you somehow don't know)
+
+If you want to build this project, you should use [7-Zip](https://www.7-zip.org/)
+
+- Make the folder into a zip file
+- Rename the .zip to .mcpack and import it into the game
