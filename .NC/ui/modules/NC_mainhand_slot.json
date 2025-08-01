@@ -22,7 +22,14 @@
       ],
       "controls": [
         {
-          "1@Nova_Client_mainhand.mainhand_hud_item": {}
+          "1": {
+            "type": "panel",
+            "controls": [
+              {
+                "1@Nova_Client_mainhand.mainhand_hud_item": {}
+              }
+            ]
+          }
         },
         {
           "2@Nova_Client_common.spacer": {}
@@ -57,6 +64,10 @@
       "size": [
         22,
         22
+      ],
+      "offset": [
+        0,
+        10
       ],
       "bindings": [
         {
