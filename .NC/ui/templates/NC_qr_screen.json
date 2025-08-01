@@ -3,11 +3,16 @@
 
     "content@Nova_Client_common.external": {
         "$NC_external": "hud_tip_text_background",
+        "$NC_anchor": "left_middle",
         "alpha": 0.5,
         "layer": 10,
         "size": [
-            "50%",
+            "20%",
             "50%"
+        ],
+        "offset": [
+            -2,
+            0
         ],
         "bindings": [
             {
@@ -39,10 +44,11 @@
                 "qr_code@Nova_Client_common.element": {
                     "type": "custom",
                     "renderer": "qr_code_renderer",
+                    "$NC_anchor": "center",
                     "layer": 11,
                     "size": [
-                        "70%",
-                        "80%"
+                        "80%",
+                        "60%"
                     ],
                     "property_bag": {
                         "#qr_code_content": "$qr_code_link"
