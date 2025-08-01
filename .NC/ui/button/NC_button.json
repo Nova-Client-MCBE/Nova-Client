@@ -24,7 +24,7 @@
       },
       {
         "locked@Nova_client_button.locked": {
-          "$locked_texture": ".NC/textures/buttons/common/button_pressed_hover",
+          "$locked_texture": ".NC/textures/buttons/common/button_pressed",
           "$button_text_offset": [
             0,
             1
