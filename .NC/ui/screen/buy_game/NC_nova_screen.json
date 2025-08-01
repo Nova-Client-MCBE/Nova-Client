@@ -404,34 +404,6 @@
             {
               "label@Nova_Client_common.element": {
                 "type": "label",
-                "text": "Discord",
-                "$NC_anchor": "center",
-                "font_type": "MinecraftTen",
-                "size": [
-                  "default",
-                  20
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "link@Nova_Client_common.information_label": {
-          "$NC_information_label": "discord.gg/5N6EMTJkDr"
-        }
-      },
-      {
-        "label_panel3": {
-          "type": "panel",
-          "size": [
-            "100%",
-            20
-          ],
-          "controls": [
-            {
-              "label@Nova_Client_common.element": {
-                "type": "label",
                 "text": "extensions",
                 "$NC_anchor": "center",
                 "font_type": "MinecraftTen",
