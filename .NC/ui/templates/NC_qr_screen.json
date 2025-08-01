@@ -4,7 +4,7 @@
     "content@Nova_Client_common.external": {
         "$NC_external": "hud_tip_text_background",
         "$NC_anchor": "left_middle",
-        "alpha": 0.5,
+        "alpha": 0.3,
         "layer": 10,
         "size": [
             "20%",
