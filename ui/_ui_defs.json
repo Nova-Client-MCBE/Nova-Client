@@ -78,6 +78,7 @@
       ".NC/ui/templates/NC_math.json",
       ".NC/ui/templates/NC_screen_offset_display.json",
       ".NC/ui/templates/NC_mod_menu_panel.json",
+      ".NC/ui/templates/NC_qr_screen.json",
       ".NC/ui/templates/NC_slider.json",
     //toggles
       ".NC/ui/toggle/NC_exit_toggle.json",

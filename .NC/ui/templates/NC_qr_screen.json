@@ -1,0 +1,59 @@
+{
+    "namespace": "Nova_Client_qr_screen",
+
+    "content@Nova_Client_common.external": {
+        "$NC_external": "hud_tip_text_background",
+        "alpha": 0.5,
+        "layer": 10,
+        "size": [
+            "50%",
+            "50%"
+        ],
+        "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$qr_toggle_name",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "header@Nova_Client_common.element": {
+                    "type": "label",
+                    "text": "$qr_text",
+                    "font_type": "MinecraftTen",
+                    "$qr_text|default": "§cMissing QR code header",
+                    "$NC_anchor": "top_middle",
+                    "size": [
+                        "default",
+                        50
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ]
+                }
+            },
+            {
+                "qr_code@Nova_Client_common.element": {
+                    "type": "custom",
+                    "renderer": "qr_code_renderer",
+                    "layer": 11,
+                    "size": [
+                        "70%",
+                        "80%"
+                    ],
+                    "property_bag": {
+                        "#qr_code_content": "$qr_code_link"
+                    },
+                    "bindings": [
+                        {
+                            "binding_name": "#qr_code_content"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

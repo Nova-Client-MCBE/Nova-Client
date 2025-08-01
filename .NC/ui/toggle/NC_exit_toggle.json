@@ -48,7 +48,7 @@
       "texture": "$button_pressed_hover_texture",
       "$button_pressed_hover_texture|default": ".NC/textures/buttons/common/button_pressed_hover",
       "alpha": "$pressed_hover_alpha",
-      "$default_hover_alpha|default": 1,
+      "$pressed_hover_alpha|default": 1,
       "$text_color": "$pressed_hover_text_color",
       "$pressed_hover_text_color|default": [
         1,

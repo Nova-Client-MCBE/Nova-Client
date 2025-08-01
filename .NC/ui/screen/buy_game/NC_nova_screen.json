@@ -173,6 +173,149 @@
         }
       },
       {
+        "social_panel@Nova_Client_common.element": {
+          "type": "panel",
+          "size": [
+            "100%",
+            30
+          ],
+          "controls": [
+            {
+              "social_buttons@Nova_Client_common.element": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%",
+                  30
+                ],
+                "offset": [
+                  "50% - 30px",
+                  0
+                ],
+                "controls": [
+                  {
+                    "discord@Nova_client_toggles.Nova_client_toggle": {
+                      "$toggle_view_binding_name": "toggle_discord",
+                      "$button_content": "Nova_client_button.button_icon",
+                      "$button_icon": ".NC/textures/icons/discord",
+                      "$button_default_texture": "textures/ui/hud_tip_text_background",
+                      "$button_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$button_pressed_texture": "textures/ui/hud_tip_text_background",
+                      "$button_pressed_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$default_alpha": 0.5,
+                      "$hover_alpha": 0.3,
+                      "$pressed_alpha": 0.5,
+                      "$pressed_hover_alpha": 0.3,
+                      "$button_icon_size": [
+                        15,
+                        15
+                      ],
+                      "size": [
+                        20,
+                        20
+                      ]
+                    }
+                  },
+                  {
+                    "spacer1@Nova_Client_common.spacer": {
+                      "$NC_spacer_size": [
+                        2,
+                        2
+                      ]
+                    }
+                  },
+                  {
+                    "github@Nova_client_toggles.Nova_client_toggle": {
+                      "$toggle_view_binding_name": "toggle_github",
+                      "$button_content": "Nova_client_button.button_icon",
+                      "$button_icon": ".NC/textures/icons/github",
+                      "$button_default_texture": "textures/ui/hud_tip_text_background",
+                      "$button_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$button_pressed_texture": "textures/ui/hud_tip_text_background",
+                      "$button_pressed_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$default_alpha": 0.5,
+                      "$hover_alpha": 0.3,
+                      "$pressed_alpha": 0.5,
+                      "$pressed_hover_alpha": 0.3,
+                      "$button_icon_size": [
+                        15,
+                        15
+                      ],
+                      "size": [
+                        20,
+                        20
+                      ]
+                    }
+                  },
+                  {
+                    "spacer2@Nova_Client_common.spacer": {
+                      "$NC_spacer_size": [
+                        2,
+                        2
+                      ]
+                    }
+                  },
+                  {
+                    "youtube@Nova_client_toggles.Nova_client_toggle": {
+                      "$toggle_view_binding_name": "toggle_youtube",
+                      "$button_content": "Nova_client_button.button_icon",
+                      "$button_icon": ".NC/textures/icons/youtube",
+                      "$button_default_texture": "textures/ui/hud_tip_text_background",
+                      "$button_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$button_pressed_texture": "textures/ui/hud_tip_text_background",
+                      "$button_pressed_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$default_alpha": 0.5,
+                      "$hover_alpha": 0.3,
+                      "$pressed_alpha": 0.5,
+                      "$pressed_hover_alpha": 0.3,
+                      "$button_icon_size": [
+                        15,
+                        15
+                      ],
+                      "size": [
+                        20,
+                        20
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "spacer1.1@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "label_panel0": {
+          "type": "panel",
+          "size": [
+            "100%",
+            20
+          ],
+          "controls": [
+            {
+              "label@Nova_Client_common.element": {
+                "type": "label",
+                "text": "Version",
+                "$NC_anchor": "center",
+                "font_type": "MinecraftTen",
+                "size": [
+                  "default",
+                  20
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
         "version_information@Nova_Client_common.element": {
           "type": "stack_panel",
           "orientation": "vertical",
@@ -1640,6 +1783,33 @@
       }
     ]
   },
+  "qr_panel@Nova_Client_common.element": {
+    "type": "panel",
+    "$NC_anchor": "center",
+    "controls": [
+      {
+        "discord@Nova_Client_qr_screen.content": {
+          "$qr_text": "DISCORD",
+          "$qr_code_link": "https://discord.gg/hu6ftWcsbU",
+          "$qr_toggle_name": "toggle_discord"
+        }
+      },
+      {
+        "github@Nova_Client_qr_screen.content": {
+          "$qr_text": "GITHUB",
+          "$qr_code_link": "https://github.com/Nova-Client-MCBE/Nova-Client",
+          "$qr_toggle_name": "toggle_github"
+        }
+      },
+      {
+        "youtube@Nova_Client_qr_screen.content": {
+          "$qr_text": "YOUTUBE",
+          "$qr_code_link": "https://www.youtube.com/@lliT2008",
+          "$qr_toggle_name": "toggle_youtube"
+        }
+      }
+    ]
+  },
   "content": {
     "type": "panel",
     "controls": [
@@ -1653,6 +1823,9 @@
       },
       {
         "3@Nova_Client_Nova_screen.navigation_buttons": {}
+      },
+      {
+        "4@Nova_Client_Nova_screen.qr_panel": {}
       }
     ]
   }
