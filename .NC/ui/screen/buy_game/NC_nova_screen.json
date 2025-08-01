@@ -447,26 +447,36 @@
             },
             {
               "2@Nova_Client_common.information_label": {
-                "$NC_information_label": "advanced coordinates mod"
+                "$NC_information_label": "added qr codes in Nova screen"
               }
             },
             {
               "3@Nova_Client_common.information_label": {
-                "$NC_information_label": "advanced mainhand mod"
+                "$NC_information_label": "advanced coordinates mod"
               }
             },
             {
               "4@Nova_Client_common.information_label": {
-                "$NC_information_label": "added friends button"
+                "$NC_information_label": "advanced mainhand mod"
               }
             },
             {
               "5@Nova_Client_common.information_label": {
-                "$NC_information_label": "added game is paused indicator"
+                "$NC_information_label": "added friends button"
               }
             },
             {
               "6@Nova_Client_common.information_label": {
+                "$NC_information_label": "added game is paused indicator"
+              }
+            },
+            {
+              "7@Nova_Client_common.information_label": {
+                "$NC_information_label": "disabled the gathering button"
+              }
+            },
+            {
+              "8@Nova_Client_common.information_label": {
                 "$NC_information_label": "code and bug fixes"
               }
             }
