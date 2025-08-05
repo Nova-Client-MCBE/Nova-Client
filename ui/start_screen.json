@@ -17,7 +17,7 @@
       }
     ]
   },
-  "Nova_Client_start_content@Nova_Client_common.version_lock": {
+  "Nova_Client_start_content": {
     "type": "panel",
     "controls": [
       {
