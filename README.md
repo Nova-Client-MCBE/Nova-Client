@@ -8,7 +8,9 @@
 <br>
 
 
-Nova Client is a client that adds useful Modules to Minecraft Bedrock Edition
+Nova Client is a texture pack that adds useful Modules to Minecraft Bedrock Edition
+
+Nova Client is entirely ui based using no molang/player entity
 
 ## Building
 
