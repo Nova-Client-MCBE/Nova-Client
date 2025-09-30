@@ -442,12 +442,12 @@
           "$NC_changelog_content": [
             {
               "1@Nova_Client_common.information_label": {
-                "$NC_information_label": "added information screen"
+                "$NC_information_label": "added information section"
               }
             },
             {
               "2@Nova_Client_common.information_label": {
-                "$NC_information_label": "added qr codes in Nova screen"
+                "$NC_information_label": "added qr codes in information screen"
               }
             },
             {
