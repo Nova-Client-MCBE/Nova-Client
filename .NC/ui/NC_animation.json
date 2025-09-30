@@ -85,6 +85,9 @@
     "moon_phase_screen@Nova_Client_animations.screen_page_in_template": {
         "$NC_sreen_button_name": "moon_phase_screen"
     },
+    "armor_hud_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "armor_hud_screen"
+    },
     "screen_page_in_template": {
         "anim_type":"offset",
         "easing": "linear",

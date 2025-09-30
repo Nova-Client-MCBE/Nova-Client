@@ -41,6 +41,9 @@
         "10@Nova_Client_player_list.content": {}
       },
       {
+        "11@Nova_Client_armor_hud.content": {}
+      },
+      {
         "stack_bottom_left": {
           "type": "stack_panel",
           "orientation": "vertical",

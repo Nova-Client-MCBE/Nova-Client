@@ -90,6 +90,9 @@
         "$moon_phase_icon": true,
         "$moon_phase_opacity": 0.5,
 
+        "$armor_hud": true,
+        "$armor_hud_opacity": 0.5,
+
 
 
         /*HUD Elements*/

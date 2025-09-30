@@ -284,6 +284,9 @@
       },
       {
         "22@Nova_Client_moon_phase_screen.content": {}
+      },
+      {
+        "23@Nova_Client_armor_hud_screen.content": {}
       }
     ]
   },

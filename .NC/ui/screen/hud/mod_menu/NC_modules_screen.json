@@ -58,6 +58,12 @@
         },
         {
           "5@Nova_Client_modules_row_five.content": {}
+        },
+        {
+          "spacer6@Nova_Client_common.spacer": {}
+        },
+        {
+          "6@Nova_Client_modules_row_six.content": {}
         }
       ]
     }

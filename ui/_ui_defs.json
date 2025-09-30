@@ -4,6 +4,7 @@
     //button
       ".NC/ui/button/NC_button.json",
     //modules
+      ".NC/ui/modules/NC_armor_hud.json",
       ".NC/ui/modules/NC_bossbar.json",
       ".NC/ui/modules/NC_brightness.json",
       ".NC/ui/modules/NC_chat.json",
@@ -38,12 +39,14 @@
       ".NC/ui/screen/hud/mod_menu/rows/modules/NC_3.json",
       ".NC/ui/screen/hud/mod_menu/rows/modules/NC_4.json",
       ".NC/ui/screen/hud/mod_menu/rows/modules/NC_5.json",
+      ".NC/ui/screen/hud/mod_menu/rows/modules/NC_6.json",
 
       ".NC/ui/screen/hud/mod_menu/rows/element/NC_1.json",
       ".NC/ui/screen/hud/mod_menu/rows/element/NC_2.json",
       ".NC/ui/screen/hud/mod_menu/rows/element/NC_3.json",
       ".NC/ui/screen/hud/mod_menu/rows/element/NC_4.json",
 
+      ".NC/ui/screen/hud/mod_menu/screens/NC_armor_hud_screen.json",
       ".NC/ui/screen/hud/mod_menu/screens/NC_bossbar_screen.json",
       ".NC/ui/screen/hud/mod_menu/screens/NC_brightness_screen.json",
       ".NC/ui/screen/hud/mod_menu/screens/NC_clock_and_compass_screen.json",

@@ -11,7 +11,7 @@
   "external@Nova_Client_common.element": {
     "type": "image",
     "texture": "('textures/ui/' + $NC_external)",
-    "$NC_external|default": "background/White"
+    "$NC_external|default": "Black"
   },
   "internal@Nova_Client_common.element": {
     "type": "image",

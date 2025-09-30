@@ -1529,6 +1529,17 @@
         "moon_spacer4@Nova_Client_common.spacer": {}
       },
       {
+        "77@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Dsiplays the current armor your wearing",
+          "$mod_enabled": "($armor_hud)",
+          "$mod_disabled": "(not $armor_hud)",
+          "$module_name": "armor_hud"
+        }
+      },
+      {
+        "armor_spacer1@Nova_Client_common.spacer": {}
+      },
+      {
         "buffer_label2": {
           "type": "panel",
           "size": [

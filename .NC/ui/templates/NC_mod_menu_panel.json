@@ -29,7 +29,7 @@
             {
                 "button@Nova_client_toggles.Nova_client_toggle": {
                     "$button_text": "$modules_template_toggle_text",
-                    "$font_scale_factor": 0.5,
+                    "$font_scale_factor": 0.7,
                     "size": "$modules_template_toggle_size",
                     "$modules_template_toggle_size|default": [
                         "100% - 20px",
