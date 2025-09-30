@@ -441,6 +441,11 @@
           "$NC_changelog_version": "1.4",
           "$NC_changelog_content": [
             {
+              "0@Nova_Client_common.information_label": {
+                "$NC_information_label": "added armor hud"
+              }
+            },
+            {
               "1@Nova_Client_common.information_label": {
                 "$NC_information_label": "added information section"
               }
