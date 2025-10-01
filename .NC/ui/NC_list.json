@@ -50,8 +50,8 @@
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [
-            10,
-            -5
+            3.5,
+            -3.5
           ],
           "controls": [
             {

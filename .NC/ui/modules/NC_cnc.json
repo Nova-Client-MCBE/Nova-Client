@@ -6,6 +6,10 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "alpha": 0.5,
+    "offset": [
+      -3.5,
+      3.5
+    ],
     "size": [
       "100%c +3px",
       "100%c +3px"

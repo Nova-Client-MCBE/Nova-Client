@@ -1,8 +1,8 @@
 {
-    "namespace": "Nova_Client_armor_hud",
-    "content": {
-        "type": "panel",
-        "bindings": [
+  "namespace": "Nova_Client_armor_hud",
+  "content": {
+    "type": "panel",
+    "bindings": [
       {
         "binding_type": "view",
         "source_control_name": "armor_hud_toggle",
@@ -10,38 +10,42 @@
         "target_property_name": "#visible"
       }
     ],
-        "controls": [
-            {
-                "1@Nova_Client_armor_hud.mod": {}
-            },
-            {
-                "2@Nova_Client_armor_hud.background": {}
-            }
-        ]
-    },
-    "mod@Nova_Client_common.element": {
-        "type": "custom",
-        "renderer": "live_player_renderer",
-        "$NC_anchor": "left_middle",
-        "layer": 10,
-        "offset": [
-            2.5,
-            -15
-        ],
-        "size": [
-            32,
-            64
-        ]
-    },
-    "background@Nova_Client_common.external": {
-        "$NC_anchor": "left_middle",
-        "alpha": 0.5,
-        "layer": 0,
-        "size": [
-            37,
-            64
-        ],
-        "bindings": [
+    "controls": [
+      {
+        "1@Nova_Client_armor_hud.mod": {}
+      },
+      {
+        "2@Nova_Client_armor_hud.background": {}
+      }
+    ]
+  },
+  "mod@Nova_Client_common.element": {
+    "type": "custom",
+    "renderer": "live_player_renderer",
+    "$NC_anchor": "left_middle",
+    "layer": 10,
+    "offset": [
+      6,
+      -15
+    ],
+    "size": [
+      32,
+      64
+    ]
+  },
+  "background@Nova_Client_common.external": {
+    "$NC_anchor": "left_middle",
+    "alpha": 0.5,
+    "layer": 0,
+    "offset": [
+      3.5,
+      0
+    ],
+    "size": [
+      37,
+      64
+    ],
+    "bindings": [
       {
         "binding_type": "view",
         "source_control_name": "armor_hud_opacity",
@@ -49,6 +53,5 @@
         "target_property_name": "#alpha"
       }
     ]
-
-    }
+  }
 }
