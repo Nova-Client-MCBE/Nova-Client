@@ -8,10 +8,6 @@
       144,
       48
     ],
-    "offset": [
-      -10,
-      -25
-    ],
     "$durability_bar_required|default": true,
     "$stack_count_required|default": true,
     "bindings": [

@@ -26,12 +26,6 @@
         "5@Nova_Client_crosshair.content": {}
       },
       {
-        "6@Nova_Client_inventory_hud.content": {}
-      },
-      {
-        "7@Nova_Client_ip_display.content": {}
-      },
-      {
         "8@Nova_Client_item_counters.content": {}
       },
       {
@@ -71,6 +65,46 @@
             },
             {
               "3@Nova_Client_xp_indicator.content": {}
+            }
+          ]
+        }
+      },
+      {
+        "stack_bottom_right": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "offset": [
+            -3.5,
+            -3.5
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_common.bottom_right_template": {
+                "$template_controll": "Nova_Client_ip_display.content"
+              }
+            },
+            {
+              "2@Nova_Client_common.spacer": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_hud_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "3@Nova_Client_common.bottom_right_template": {
+                "$template_controll": "Nova_Client_inventory_hud.content"
+              }
             }
           ]
         }

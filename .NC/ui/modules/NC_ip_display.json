@@ -8,10 +8,6 @@
     ],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
-    "offset": [
-      -10,
-      -5
-    ],
     "bindings": [
       {
         "binding_type": "view",
