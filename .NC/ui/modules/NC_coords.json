@@ -59,6 +59,25 @@
                   }
                 ]
               }
+            },
+            {
+              "player_position_text_off": {
+                "type": "label",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 2,
+                "enable_profanity_filter": false,
+                "text": "Position: §cDisabled",
+                "shadow": true,
+                "bindings": [
+                  {
+                    "binding_name": "(not #player_position_visible)",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always",
+                    "binding_type": "global"
+                  }
+                ]
+              }
             }
           ]
         }

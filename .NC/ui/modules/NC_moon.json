@@ -80,6 +80,12 @@
                 "binding_type": "view",
                 "source_property_name": "('Moon Phase ' + #moon_phases_index)",
                 "target_property_name": "#text"
+              },
+              {
+                "binding_name": "#number_of_days_played_visible",
+                "binding_name_override": "#visible",
+                "binding_condition": "always",
+                "binding_type": "global"
               }
             ]
           }
@@ -134,6 +140,31 @@
                 "binding_type": "view",
                 "source_property_name": "('.NC/textures/modules/moon/moon_phase_' + #moon_phases_index)",
                 "target_property_name": "#texture"
+              },
+              {
+                "binding_name": "#number_of_days_played_visible",
+                "binding_name_override": "#visible",
+                "binding_condition": "always",
+                "binding_type": "global"
+              }
+            ]
+          }
+        },
+        {
+          "number_of_days_played_text_off": {
+            "type": "label",
+            "anchor_from": "bottom_middle",
+            "anchor_to": "bottom_middle",
+            "layer": 2,
+            "enable_profanity_filter": false,
+            "text": "Days Played: §cDisabled",
+            "shadow": true,
+            "bindings": [
+              {
+                "binding_name": "(not #number_of_days_played_visible)",
+                "binding_name_override": "#visible",
+                "binding_condition": "always",
+                "binding_type": "global"
               }
             ]
           }
