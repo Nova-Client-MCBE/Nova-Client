@@ -450,7 +450,8 @@
   "black@Nova_Client_common.internal": {
       "$NC_inernal": "background/White",
       "fill": true,
-      "alpha": 0.5,
+      "alpha": "$back_alpha",
+      "$back_alpha|default": 0.5,
       "layer": 0,
       "color": [
         0,

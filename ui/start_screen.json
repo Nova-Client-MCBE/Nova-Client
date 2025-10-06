@@ -1,7 +1,8 @@
 {
   "namespace": "start",
   "start_screen": {
-    "$screen_content": "start.Nova_Client_start_screen"
+    "$screen_content": "start.Nova_Client_start_screen",
+    "$screen_bg_content": "Nova_client_start.background"
   },
   "Nova_Client_start_screen": {
     "type": "panel",

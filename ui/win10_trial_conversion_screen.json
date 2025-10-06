@@ -2,7 +2,7 @@
   "namespace": "win10_trial_conversion",
   "win10_trial_conversion_screen@common.base_screen": {
     "$screen_content": "Nova_Client_Nova_screen.content",
-    "$screen_bg_content": "Nova_Client_common.black",
+    "$screen_bg_content": "Nova_client_start.background",
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
