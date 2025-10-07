@@ -484,6 +484,16 @@
               "8@Nova_Client_common.information_label": {
                 "$NC_information_label": "code and bug fixes"
               }
+            },
+            {
+              "8@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.111"
+              }
+            },
+            {
+              "8@Nova_Client_common.information_label": {
+                "$NC_information_label": "adjusted some textures for october"
+              }
             }
           ]
         }
