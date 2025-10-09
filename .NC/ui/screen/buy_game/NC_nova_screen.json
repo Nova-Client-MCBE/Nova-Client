@@ -436,6 +436,19 @@
     ],
     "controls": [
       {
+        "1.4.1@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_4_1",
+          "$NC_changelog_version": "1.4.1",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "special icons for the playerlist"
+              }
+            }
+          ]
+        }
+      },
+      {
         "1.4@Nova_Client_common.changelog_template": {
           "$NC_changelog_toggle": "1_4",
           "$NC_changelog_version": "1.4",
