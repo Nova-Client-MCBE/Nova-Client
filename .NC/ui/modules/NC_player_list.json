@@ -203,6 +203,12 @@
                     }
                   },
                   {
+                    "halloween25@Nova_Client_player_list.special_icon_template": {
+                      "$NC_icon_texture": "halloween25",
+                      "$NC_icon_owner": "(#gamertag = 'lliT008')"
+                    }
+                  },
+                  {
                     "player_gamertag": {
                       "type": "label",
                       "text": "#gamertag",
@@ -226,6 +232,33 @@
             }
           ]
         }
+      }
+    ]
+  },
+  "special_icon_template": {
+    "type": "image",
+    "texture": "('.NC/textures/icons/tab/' + $NC_icon_texture)",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "layer": 2,
+    "size": [
+      8,
+      8
+    ],
+    "offset": [
+      13,
+      0
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_property_name": "$NC_icon_owner",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_name": "#gamertag",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
       }
     ]
   },
