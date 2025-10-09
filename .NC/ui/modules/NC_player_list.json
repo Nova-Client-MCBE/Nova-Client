@@ -172,7 +172,7 @@
                       "texture_file_system": "#texture_source",
                       "anchor_from": "left_middle",
                       "anchor_to": "left_middle",
-                      "layer": 2,
+                      "layer": 3,
                       "offset": [
                         2,
                         0
