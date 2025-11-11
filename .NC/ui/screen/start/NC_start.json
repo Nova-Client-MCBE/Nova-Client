@@ -1,13 +1,5 @@
 {
   "namespace": "Nova_client_start",
-  "background@Nova_Client_common.internal": {
-      "$NC_internal": "background/bg",
-      "fill": true,
-      "size": [
-        "100%",
-        "100%"
-      ]
-  },
   "bg_and_title@Nova_Client_common.black": {
     "$back_alpha": 0,
     "controls": [

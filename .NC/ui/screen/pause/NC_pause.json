@@ -167,14 +167,14 @@
               "spacer@Nova_Client_common.spacer": {}
             },
             {
-              "invite_peopel@Nova_client_button.gray_button": {
+              "invite_people@Nova_client_button.gray_button": {
                 "size": [
                   "100%",
                   25
                 ],
                 "$gray_button_alpha": 0,
                 "$custom_content": "Nova_client_button.label_icon",
-                "$pressed_button_name": "button.menu_invite_players",
+                "$pressed_button_name": "button.friends_drawer",
                 "$NC_button_text": "pauseScreen.invite",
                 "$NC_icon": "featured"
               }
@@ -183,7 +183,7 @@
               "spacer@Nova_Client_common.spacer": {}
             },
             {
-              "invite_peopel@Nova_client_button.gray_button": {
+              "player_list@Nova_client_button.gray_button": {
                 "size": [
                   "100%",
                   25

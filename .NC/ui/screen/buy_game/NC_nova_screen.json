@@ -444,6 +444,16 @@
               "1@Nova_Client_common.information_label": {
                 "$NC_information_label": "special icons for the playerlist"
               }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "reverted the october changes"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v1.21.122"
+              }
             }
           ]
         }
