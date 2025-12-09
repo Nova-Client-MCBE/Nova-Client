@@ -337,7 +337,7 @@
             {
               "mc_version@Nova_Client_common.just_some_vars": {
                 "type": "label",
-                "text": "('§l§2» §rRequired Minecraft Version: ' + $NC_needed_version)",
+                "text": "('§l§2» §rSupported Minecraft Version: ' + $NC_needed_version)",
                 "size": [
                   "default",
                   15
