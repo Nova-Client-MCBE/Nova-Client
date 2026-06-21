@@ -209,14 +209,6 @@
       }
     ]
   },
-  "root_panel": {
-    "modifications": [
-      {
-        "control_name": "curor_rend",
-        "operation": "remove"
-      }
-    ]
-  },
   "chat_panel": {
     "ignored": true,
     "controls": []
