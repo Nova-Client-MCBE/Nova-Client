@@ -1,0 +1,18 @@
+{
+    "namespace": "common",
+
+    "item_cell_overlay_ref": {
+        "type": "image",
+        "texture": "$item_cell_overlay_texture",
+        "$item_cell_overlay_texture|default": "textures/ui/cell_image",
+        "size": ["100%", "100%"],
+        "anchor_from": "center",
+        "anchor_to": "center"
+    },
+
+    "container_item/item_cell_overlay_ref": {
+        "type": "image",
+        "ignored": "$cell_controls_visible",
+        "$cell_controls_visible|default": false
+    }
+}

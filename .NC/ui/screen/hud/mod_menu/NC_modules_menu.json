@@ -52,7 +52,7 @@
     ]
   },
   "modules_menu@Nova_Client_common.internal": {
-    "$NC_inernal": "background/White",
+    "$NC_internal": "background/White",
     "clips_children": true,
     "$NC_anchor": "center",
     "layer": 7,
@@ -172,7 +172,7 @@
             },
             {
               "mods_list@Nova_Client_common.internal": {
-                "$NC_inernal": "background/White",
+                "$NC_internal": "background/White",
                 "alpha": 0.5,
                 "color": [
                   0,

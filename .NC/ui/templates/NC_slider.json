@@ -113,21 +113,19 @@
         ]
     },
     "Nova_Client_slider_bar_default@Nova_Client_slider_bar": {
-        "color": "$slider_hover_border_color",
         "$background_control": "Nova_Client_slider.Nova_Client_slider_background",
         "$progress_control": "Nova_Client_slider.Nova_Client_slider_progress",
         "$background_control_name": "slider_background",
         "$progress_control_name": "slider_progress"
     },
     "Nova_Client_slider_bar_hover@Nova_Client_slider_bar": {
-        "color": "$slider_hover_border_color",
         "$background_control": "Nova_Client_slider.Nova_Client_slider_background",
         "$progress_control": "Nova_Client_slider.Nova_Client_slider_progress",
         "$background_control_name": "slider_background_hover",
         "$progress_control_name": "slider_progress_hover"
     },
     "Nova_Client_slider_bar": {
-        "type":"panel",
+        "type": "panel",
         "controls": [
             {
                 "sizing_panel": {
@@ -151,7 +149,7 @@
         ]
     },
     "Nova_Client_slider_text": {
-        "type":"panel",
+        "type": "panel",
         "size": [
             "100%",
             "100%cm"

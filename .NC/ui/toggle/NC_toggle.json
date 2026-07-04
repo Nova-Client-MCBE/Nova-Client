@@ -11,6 +11,7 @@
     "$checked_hover_control|default": "Nova_client_toggles.toggle_checked_hover",
     "button_mappings": "$button_mappings",
     "toggle_default_state": "$toggle_tags",
+    "$toggle_tags|default": false,
     "$is_back_button|default": false,
     "$enable_focus_enabled_bind|default": false,
     "$enable_focus_id_bind|default": false,
@@ -56,17 +57,80 @@
     "$custom_toggle_binding_type|default": "none",
     "$custom_toggle_state_binding_name_override|default": "",
     "$custom_toggle_state_binding_name|default": "",
-    "$default_border_color": "$Nova_Client_border_toggle_default_color",
+    "$default_border_color|default": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "$Nova_Client_border_toggle_default_color|default": [
+      1,
+      1,
+      1,
+      1
+    ],
     "$default_border_visible|default": false,
-    "$default_checked_glyph_color|default": "$Nova_Client_glyph_toggle_checked_default_color",
-    "$default_checked_text_color|default": "$Nova_Client_toggle_checked_default_text_color",
+    "$default_checked_glyph_color|default": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "$Nova_Client_glyph_toggle_checked_default_color|default": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "$default_checked_text_color|default": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "$Nova_Client_toggle_checked_default_text_color|default": [
+      1,
+      1,
+      1,
+      1
+    ],
     "$default_checked_texture_alpha|default": 1,
-    "$default_checked_texture_color|default": "$f_color_format",
-    "$default_glyph_color|default": "$Nova_Client_glyph_toggle_default_color",
+    "$default_checked_texture_color|default": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "$default_glyph_color|default": [
+      0.3,
+      0.3,
+      0.3,
+      1
+    ],
+    "$Nova_Client_glyph_toggle_default_color|default": [
+      0.3,
+      0.3,
+      0.3,
+      1
+    ],
     "$default_state|default": false,
-    "$default_text_color|default": "$Nova_Client_toggle_default_text_color",
+    "$default_text_color|default": [
+      0.3,
+      0.3,
+      0.3
+    ],
+    "$Nova_Client_toggle_default_text_color|default": [
+      0.3,
+      0.3,
+      0.3
+    ],
     "$default_texture_alpha|default": 1,
-    "$default_texture_color|default": "$f_color_format",
+    "$default_texture_color|default": [
+      1,
+      1,
+      1,
+      1
+    ],
     "$toggle_focus_enabled": true,
     "$binding_type": "global",
     "$binding_condition": "t",
@@ -220,6 +284,7 @@
     "type": "label",
     "shadow": false,
     "font_scale_factor": "$font_scale_factor",
+    "$font_scale_factor|default": 1,
     "font_type": "$font_type",
     "$font_type|default": "default",
     "size": [
@@ -233,11 +298,7 @@
       0
     ],
     "text": "$button_text",
-    "bindings": [
-      {
-        "binding_name": "$button_text"
-      }
-    ]
+    "$button_text|default": ""
   },
   "label_icon": {
     "type": "panel",
@@ -302,6 +363,7 @@
     "$radio_toggle_group": true,
     "$toggle_group_default_selected": 0,
     "$toggle_name": "categories_toggle",
+    "$toggle_name|default": "categories_toggle",
     "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
     "$toggle_tab_focus_binding_type": "global",
     "$toggle_on_hover_binding_type": "global",

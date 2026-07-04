@@ -436,6 +436,44 @@
     ],
     "controls": [
       {
+        "1.5.0@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_5_0",
+          "$NC_changelog_version": "1.5.0",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "removed all content log errors"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "improved brightness module"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "improved chat module"
+              }
+            },
+            {
+              "4@Nova_Client_common.information_label": {
+                "$NC_information_label": "fix padding in the mod menu"
+              }
+            },
+            {
+              "5@Nova_Client_common.information_label": {
+                "$NC_information_label": "changed info text in the mod menu"
+              }
+            },
+            {
+              "@Nova_Client_common.information_label": {
+                "$NC_information_label": "code improvement"
+              }
+            }
+          ]
+        }
+      },
+      {
         "1.4.3@Nova_Client_common.changelog_template": {
           "$NC_changelog_toggle": "1_4_3",
           "$NC_changelog_version": "1.4.3",
@@ -1397,9 +1435,9 @@
       {
         "48@Nova_Client_common.config_helper": {
           "$NC_hover_text": "Displays a 2d paperdoll\n§crequiers paperdoll to be enabled",
-          "$mod_enabled": "($2d_paperdoll)",
-          "$mod_disabled": "(not $2d_paperdoll)",
-          "$module_name": "2d_paperdoll"
+          "$module_name": "2d_paperdoll",
+          "$button_text": "2d_paperdoll",
+          "variables": []
         }
       },
       {

@@ -41,9 +41,6 @@
     ],
     "controls": [
       {
-        "black": {}
-      },
-      {
         "play_button@Nova_client_button.green_button": {
           "size": [
             250,
@@ -220,7 +217,7 @@
             },
             {
               "spacer@Nova_Client_common.spacer": {
-              "ignored": "$NC_gathering_event"
+                "ignored": "$NC_gathering_event"
               }
             },
             {
@@ -280,8 +277,8 @@
                 ],
                 "$gray_button_alpha": 0,
                 "$custom_content": "Nova_client_button.label_icon",
-                "$pressed_button_name":"button.menu_profile",
-					      "$NC_button_text":"menu.profile",
+                "$pressed_button_name": "button.menu_profile",
+                "$NC_button_text": "menu.profile",
                 "$NC_icon": "genre"
               }
             },

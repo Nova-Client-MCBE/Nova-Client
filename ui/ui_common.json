@@ -1,45 +1,45 @@
 {
-    "namespace": "common",
-    "highlight_slot_panel/highlight/hover_text": {
-        "bindings": [
-            {
-                "binding_name": "$hover_text_binding_name",
-                "binding_name_override": "#hover_text_binding",
-                "binding_type": "collection",
-                "binding_collection_name": "$item_collection_name"
-            },
-            {
-                "binding_name": "#item_id_aux",
-                "binding_type": "collection",
-                "binding_collection_name": "$item_collection_name"
-            },
-            {
-                "binding_type": "collection_details",
-                "binding_collection_name": "$item_collection_name"
-            },
-            {
-                "binding_type": "view",
-                "source_property_name": "(#item_id_aux/65536)",
-                "target_property_name": "#item_id"
-            },
-            {
-                "binding_type": "view",
-                "source_property_name": "('\n§zItem Tooltips:\n§7Aux Id: ' + #item_id_aux + '\nItem Id: ' + #item_id)",
-                "target_property_name": "#item_data"
-            },
-            {
-                "binding_type": "view",
-                "source_property_name": "(#hover_text_binding + '\n§f§r' + #item_data)",
-                "target_property_name": "#hover_text"
-            },
-            {
-                "binding_type": "view",
-                "source_property_name": "(not (#item_id_aux=-1))",
-                "target_property_name": "#visible"
-            }
-        ]
-    },
-    "inf_hover_button_controls": {
+	"namespace": "common",
+	"highlight_slot_panel/highlight/hover_text": {
+		"bindings": [
+			{
+				"binding_name": "$hover_text_binding_name",
+				"binding_name_override": "#hover_text_binding",
+				"binding_type": "collection",
+				"binding_collection_name": "$item_collection_name"
+			},
+			{
+				"binding_name": "#item_id_aux",
+				"binding_type": "collection",
+				"binding_collection_name": "$item_collection_name"
+			},
+			{
+				"binding_type": "collection_details",
+				"binding_collection_name": "$item_collection_name"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(#item_id_aux/65536)",
+				"target_property_name": "#item_id"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "('\n§zItem Tooltips:\n§7Aux Id: ' + #item_id_aux + '\nItem Id: ' + #item_id)",
+				"target_property_name": "#item_data"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(#hover_text_binding + '\n§f§r' + #item_data)",
+				"target_property_name": "#hover_text"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(not (#item_id_aux=-1))",
+				"target_property_name": "#visible"
+			}
+		]
+	},
+	"inf_hover_button_controls": {
 		"type": "panel",
 		"size": [
 			0,
@@ -151,14 +151,17 @@
 					],
 					"controls": [
 						{
-							"hover_background_renderer@library.background_render": {
-								"ignored": "$hover_background_renderer_ignored",
-								"$color": [
+							"hover_background_renderer": {
+								"type": "image",
+								"texture": "textures/ui/Black",
+								"color": "$color",
+								"$color|default": [
 									0.2,
 									0.2,
 									0.2,
 									0.7
 								],
+								"ignored": "$hover_background_renderer_ignored",
 								"layer": -1,
 								"anchor_from": "center",
 								"anchor_to": "center",
@@ -189,7 +192,9 @@
 				"to_button_id": "$to_button_id",
 				"mapping_type": "pressed"
 			}
-		]
+		],
+		"$super_mode|default": false,
+		"$to_button_id|default": "button.menu_select"
 	},
 	"hotbar_grid_template": {
 		"$cell_selected_ignored": true
@@ -220,16 +225,19 @@
 		"$add_controls|default": "common.empty",
 		"controls": [
 			{
-				"cell_image_red@library.background_render": {
-					"$color": "$cell_color",
-					"anchor_from": "center",
-					"anchor_to": "center",
+				"cell_image_red": {
+					"type": "image",
+					"texture": "$cell_texture",
+					"$cell_texture|default": "textures/ui/cell_image",
+					"color": "$cell_color",
 					"$cell_color|default": [
 						0,
 						0,
 						0,
 						0.7
 					],
+					"anchor_from": "center",
+					"anchor_to": "center",
 					"size": [
 						"100% - 2px",
 						"100% - 2px"
@@ -275,7 +283,7 @@
 		}
 	},
 	"common_panel": {
-		"$add|default": "common.panel",
+		"$add|default": "common.empty",
 		"modifications": [
 			{
 				"array_name": "controls",
@@ -309,7 +317,8 @@
 					}
 				]
 			}
-		]
+		],
+		"$super_mode|default": false
 	},
 	"auto_grid_button@common.container_slot_button_prototype": {
 		"button_mappings": [
@@ -324,7 +333,9 @@
 		"ignored": "$cell_controls_visible"
 	},
 	"container_item/item_cell_overlay_ref": {
-		"ignored": "$cell_controls_visible"
+		"type": "image",
+		"ignored": "$cell_controls_visible",
+		"$cell_controls_visible|default": false
 	},
 	"container_item/item_selected_image": {
 		"ignored": "$cell_controls_visible"
@@ -336,28 +347,47 @@
 		"ignored": "$cell_controls_visible"
 	},
 	"container_item": {
-		"$cell_controls_visible|default": false
+		"$cell_controls_visible|default": false,
+		"$cell_selected_ignored|default": false
 	},
 	"scroll_box/box": {
-        "modifications": [
-            {
-                "control_name": "touch_box",
-                "operation": "remove"
-            }
-        ]
-    },
-    "scroll_box/box/mouse_box": {
-        "ignored": false
-    },
-    "scrolling_panel": {
-        "modifications": [
-            {
-                "control_name": "scroll_touch",
-                "operation": "remove"
-            }
-        ]
-    },
-    "scrolling_panel/scroll_mouse": {
-        "ignored": false
-    }
+		"modifications": [
+			{
+				"control_name": "touch_box",
+				"operation": "remove"
+			}
+		]
+	},
+	"scroll_box/box/mouse_box": {
+		"ignored": false
+	},
+	"scrolling_panel": {
+		"modifications": [
+			{
+				"control_name": "scroll_touch",
+				"operation": "remove"
+			}
+		]
+	},
+	"scrolling_panel/scroll_mouse": {
+		"ignored": false
+	},
+	"item_cell_overlay_ref": {
+		"type": "image",
+		"texture": "$item_cell_overlay_texture",
+		"$item_cell_overlay_texture|default": "textures/ui/cell_image",
+		"size": [
+			"100%",
+			"100%"
+		],
+		"anchor_from": "center",
+		"anchor_to": "center"
+	},
+	"empty": {
+		"type": "panel",
+		"size": [
+			0,
+			0
+		]
+	}
 }

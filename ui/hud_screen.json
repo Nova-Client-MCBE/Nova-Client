@@ -27,22 +27,6 @@
       }
     ]
   },
-  "player_position": {
-    "type": "panel",
-    "controls": [
-      {
-        "1@Nova_Client_coords.content": {}
-      }
-    ]
-  },
-  "number_of_days_played": {
-    "type": "panel",
-    "controls": [
-      {
-        "1@Nova_Client_day_counter.content": {}
-      }
-    ]
-  },
   "hud_actionbar_text": {
     "bindings": [
       {
@@ -137,7 +121,7 @@
   "root_panel/chat_stack": {
     "modifications": [
       {
-        "control_name": "chat_panel",
+        "control_name": "game_tip",
         "operation": "insert_before",
         "value": [
           {
@@ -196,6 +180,33 @@
             }
           }
         ]
+      },
+      {
+        "control_name": "player_position",
+        "operation": "replace",
+        "value": [
+          {
+            "6@Nova_Client_coords.content": {}
+          }
+        ]
+      },
+      {
+        "control_name": "number_of_days_played",
+        "operation": "replace",
+        "value": [
+          {
+            "7@Nova_Client_day_counter.content": {}
+          }
+        ]
+      },
+      {
+        "control_name": "chat_panel",
+        "operation": "replace",
+        "value": [
+          {
+            "8@Nova_Client_chat.normal_chat": {}
+          }
+        ]
       }
     ]
   },
@@ -208,10 +219,6 @@
         "target_property_name": "#visible"
       }
     ]
-  },
-  "chat_panel": {
-    "ignored": true,
-    "controls": []
   },
   "hud_screen": {
     "always_accepts_input": true,

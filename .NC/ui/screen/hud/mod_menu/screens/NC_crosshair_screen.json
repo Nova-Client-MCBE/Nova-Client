@@ -7,16 +7,7 @@
       "@Nova_Client_animations.screen_page_out"
     ],
     "controls": [
-      {
-        "background@Nova_Client_common.external": {
-          "$NC_external": "Black",
-          "alpha": 0.4,
-          "size": [
-            "100%",
-            "100%"
-          ]
-        }
-      },
+      { "background@Nova_Client_common.screen_bg": {} },
       {
         "1@Nova_Client_dialog_toggle_template.content": {
           "$toggle_view_binding_name": "third_person_crosshair",
@@ -31,10 +22,7 @@
           "$toggle_tags": "$rgb_crosshair",
           "$NC_dialog_toggle_text": "RGB Crosshair",
           "$NC_dialog_toggle_anchor": "top_middle",
-          "offset": [
-            0,
-            25
-          ],
+          "offset": [ 0, 25 ],
           "bindings": [
             {
               "binding_type": "view",

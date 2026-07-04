@@ -16,19 +16,13 @@
       {
         "pressed@Nova_client_button.pressed": {
           "$pressed_texture": ".NC/textures/buttons/common/button_pressed",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       },
       {
         "locked@Nova_client_button.locked": {
           "$locked_texture": ".NC/textures/buttons/common/button_pressed",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       }
     ]
@@ -50,19 +44,13 @@
       {
         "pressed@Nova_client_button.pressed": {
           "$pressed_texture": ".NC/textures/buttons/red/button_pressed",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       },
       {
         "locked@Nova_client_button.locked": {
           "$locked_texture": ".NC/textures/buttons/red/button_pressed",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       }
     ]
@@ -87,20 +75,14 @@
         "pressed@Nova_client_button.pressed": {
           "$pressed_texture": ".NC/textures/buttons/green/button_pressed",
           "$font_type": "MinecraftTen",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       },
       {
         "locked@Nova_client_button.locked": {
           "$locked_texture": ".NC/textures/buttons/green/button_pressed",
           "$font_type": "MinecraftTen",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       }
     ]
@@ -122,19 +104,13 @@
       {
         "pressed@Nova_client_button.pressed": {
           "$pressed_texture": ".NC/textures/buttons/pink/button_pressed",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       },
       {
         "locked@Nova_client_button.locked": {
           "$locked_texture": ".NC/textures/buttons/pink/button_pressed",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       }
     ]
@@ -157,19 +133,13 @@
       {
         "pressed@Nova_client_button.pressed": {
           "$pressed_texture": ".NC/textures/buttons/gray/button_pressed",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       },
       {
         "locked@Nova_client_button.locked": {
           "$locked_texture": ".NC/textures/buttons/gray/button_pressed",
-          "$button_text_offset": [
-            0,
-            1
-          ]
+          "$button_text_offset": [0, 1]
         }
       }
     ]
@@ -187,22 +157,14 @@
         "hover@Nova_client_button.hover": {
           "$hover_texture": "textures/ui/hud_tip_text_background",
           "alpha": 0.6,
-          "$text_color": [
-            1,
-            1,
-            1
-          ]
+          "$text_color": [1, 1, 1]
         }
       },
       {
         "pressed@Nova_client_button.pressed": {
           "$pressed_texture": "textures/ui/Black",
           "alpha": 0.6,
-          "$text_color": [
-            1,
-            1,
-            1
-          ]
+          "$text_color": [1, 1, 1]
         }
       },
       {
@@ -221,42 +183,26 @@
         "default@Nova_client_button.default": {
           "$default_texture": "textures/ui/Black",
           "alpha": 0.4,
-          "$text_color": [
-            1,
-            1,
-            1
-          ]
+          "$text_color": [1, 1, 1]
         }
       },
       {
         "hover@Nova_client_button.hover": {
           "$hover_texture": "textures/ui/focus_border_white",
-          "$text_color": [
-            1,
-            1,
-            1
-          ]
+          "$text_color": [1, 1, 1]
         }
       },
       {
         "pressed@Nova_client_button.pressed": {
           "$pressed_texture": "textures/ui/focus_border_white",
-          "$text_color": [
-            1,
-            1,
-            1
-          ]
+          "$text_color": [1, 1, 1]
         }
       },
       {
         "locked@Nova_client_button.locked": {
           "$locked_texture": "textures/ui/Black",
           "alpha": 0.2,
-          "$text_color": [
-            1,
-            1,
-            1
-          ]
+          "$text_color": [1, 1, 1]
         }
       }
     ]
@@ -286,38 +232,6 @@
     "$custom_content|default": "Nova_client_button.button_label",
     "bindings": "$button_bindings",
     "$button_bindings|default": [],
-    "button_mappings": "$NC_button_mappings",
-    "$NC_button_mappings|default": [
-      {
-        "from_button_id": "button.menu_select",
-        "mapping_type": "pressed",
-        "to_button_id": "button.menu_select"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "mapping_type": "focused",
-        "to_button_id": "button.menu_ok"
-      },
-      {
-        "from_button_id": "button.menu_left",
-        "ignored": "(not $enable_directional_toggling)",
-        "input_mode_condition": "gamepad_and_not_gaze",
-        "mapping_type": "pressed",
-        "to_button_id": "$toggle_off_button"
-      },
-      {
-        "from_button_id": "button.menu_right",
-        "ignored": "(not $enable_directional_toggling)",
-        "input_mode_condition": "gamepad_and_not_gaze",
-        "mapping_type": "pressed",
-        "to_button_id": "$toggle_on_button"
-      },
-      {
-        "ignored": "(not $enable_hover_event_mapping)",
-        "mapping_type": "pressed",
-        "to_button_id": "$toggle_hover_event_mapping"
-      }
-    ],
     "controls": [
       {
         "custom_content@$custom_content": {}
@@ -350,14 +264,8 @@
           "layer": 13,
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-          "size": [
-            16,
-            16
-          ],
-          "offset": [
-            3,
-            1
-          ]
+          "size": [16, 16],
+          "offset": [3, 1]
         }
       },
       {
@@ -367,15 +275,8 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "layer": 13,
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "offset": [
-            24,
-            1.3
-          ]
+          "color": [1, 1, 1],
+          "offset": [24, 1.3]
         }
       }
     ]
@@ -385,16 +286,14 @@
     "texture": "$button_icon",
     "type": "image",
     "size": "$button_icon_size",
-    "$button_icon_size|default": [
-      15,
-      15
-    ],
+    "$button_icon_size|default": [15, 15],
     "bindings": "$button_bindings",
     "$button_bindings|default": []
   },
   "button_label": {
     "type": "label",
     "text": "$button_text",
+    "$button_text|default": "",
     "shadow": "$shadow",
     "$shadow|default": false,
     "font_scale_factor": "$font_scale_factor",
@@ -402,21 +301,11 @@
     "layer": 10,
     "font_type": "$font_type",
     "$font_type|default": "default",
-    "size": [
-      "default",
-      "default"
-    ],
+    "size": ["default", "default"],
     "color": "$text_color",
-    "$text_color|default": [
-      0.3,
-      0.3,
-      0.3
-    ],
+    "$text_color|default": [0.3, 0.3, 0.3],
     "offset": "$button_text_offset",
-    "$button_text_offset|default": [
-      0,
-      0
-    ]
+    "$button_text_offset|default": [0, 0]
   },
   "label_hover_text": {
     "type": "panel",

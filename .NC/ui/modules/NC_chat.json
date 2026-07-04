@@ -1,82 +1,89 @@
 {
   "namespace": "Nova_Client_chat",
-  "content": {
+  "normal_chat": {
     "type": "panel",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "max_size": [
+      "100%",
+      "50%"
+    ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "chat_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
     "controls": [
       {
-        "chat": {
-          "type": "panel",
+        "chat_panel@Nova_Client_chat.chat_panel": {
           "size": [
             "100%",
             "100%c"
           ],
           "max_size": [
             "100%",
-            "50%"
+            140
           ],
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "chat_toggle",
-              "source_property_name": "#toggle_state",
+              "source_control_name": "bottom_chat_toggle",
+              "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
-            }
-          ],
-          "controls": [
-            {
-              "chat_panel@Nova_Client_chat.chat_panel": {
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "bottom_chat_toggle",
-                    "source_property_name": "(not #toggle_state)",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
             }
           ]
         }
-      },
+      }
+    ]
+  },
+  "bottom_chat": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "max_size": [
+      "100%",
+      "50%"
+    ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [
+      0,
+      -50
+    ],
+    "bindings": [
       {
-        "bottom_chat": {
-          "type": "panel",
+        "binding_type": "view",
+        "source_control_name": "chat_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "chat_panel@Nova_Client_chat.bottom_chat_panel": {
           "size": [
-            "100%",
+            "40%",
             "100%c"
           ],
           "max_size": [
-            "100%",
-            "50%"
-          ],
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [
-            0,
-            -50
+            "40%",
+            140
           ],
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "chat_toggle",
+              "source_control_name": "bottom_chat_toggle",
               "source_property_name": "#toggle_state",
               "target_property_name": "#visible"
-            }
-          ],
-          "controls": [
-            {
-              "chat_panel@Nova_Client_chat.bottom_chat_panel": {
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "bottom_chat_toggle",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
             }
           ]
         }
@@ -86,14 +93,6 @@
   "chat_panel": {
     "type": "panel",
     "clips_children": true,
-    "size": [
-      "40%",
-      "100%c"
-    ],
-    "max_size": [
-      "40%",
-      140
-    ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [

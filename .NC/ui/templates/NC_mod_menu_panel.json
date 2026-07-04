@@ -58,6 +58,7 @@
                     "anchor_to": "bottom_right"
                 }
             }
-        ]
+        ],
+        "$modules_template_button_name|default": "button.menu_select"
     }
 }

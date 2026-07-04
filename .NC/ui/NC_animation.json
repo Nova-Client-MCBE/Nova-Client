@@ -89,28 +89,28 @@
         "$NC_sreen_button_name": "armor_hud_screen"
     },
     "screen_page_in_template": {
-        "anim_type":"offset",
+        "anim_type": "offset",
         "easing": "linear",
         "play_event": "('button.' + $NC_sreen_button_name)",
         "duration": 0.3,
-        "from":[
+        "from": [
             150,
             0
         ],
-        "to":[
+        "to": [
             0,
             0
         ]
     },
     "screen_page_out": {
-        "anim_type":"offset",
+        "anim_type": "offset",
         "easing": "linear",
         "duration": 0.3,
-        "from":[
+        "from": [
             0,
             0
         ],
-        "to":[
+        "to": [
             150,
             0
         ]
@@ -118,7 +118,7 @@
     "rgb1": {
         "anim_type": "color",
         "duration": 2,
-        "next": "rgb@Nova_Client_animations.rgb2",
+        "next": "@Nova_Client_animations.rgb2",
         "from": [
             1,
             0,
@@ -135,7 +135,7 @@
     "rgb2": {
         "anim_type": "color",
         "duration": 2,
-        "next": "rgb@Nova_Client_animations.rgb3",
+        "next": "@Nova_Client_animations.rgb3",
         "from": [
             0,
             1,
@@ -152,7 +152,7 @@
     "rgb3": {
         "anim_type": "color",
         "duration": 2,
-        "next": "rgb@Nova_Client_animations.rgb1",
+        "next": "@Nova_Client_animations.rgb1",
         "from": [
             0,
             0,
