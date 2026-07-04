@@ -66,8 +66,6 @@
 
 
         "$brightness": false,
-        "$night_shift": false,
-        "$brightness_opacity": 0.5,
 
 
         "$exp_calculator": true,

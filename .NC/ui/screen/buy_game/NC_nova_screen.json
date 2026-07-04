@@ -1501,17 +1501,6 @@
         }
       },
       {
-        "59@Nova_Client_common.spacer": {}
-      },
-      {
-        "60@Nova_Client_common.config_helper": {
-          "$NC_hover_text": "Makes brihtnees section more bearable at night\n§crequiers brightness to be enabled",
-          "$mod_enabled": "($night_shift)",
-          "$mod_disabled": "(not $night_shift)",
-          "$module_name": "night_shift"
-        }
-      },
-      {
         "61@Nova_Client_common.spacer": {}
       },
       {
