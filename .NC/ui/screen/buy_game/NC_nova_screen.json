@@ -390,7 +390,7 @@
       },
       {
         "dari@Nova_Client_common.information_label": {
-          "$NC_information_label": "Dari (Discord: proplam)"
+          "$NC_information_label": "Dari"
         }
       },
       {
@@ -436,9 +436,9 @@
     ],
     "controls": [
       {
-        "1.5.0@Nova_Client_common.changelog_template": {
-          "$NC_changelog_toggle": "1_5_0",
-          "$NC_changelog_version": "1.5.0",
+        "1.5@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_5",
+          "$NC_changelog_version": "1.5",
           "$NC_changelog_content": [
             {
               "1@Nova_Client_common.information_label": {
@@ -468,6 +468,11 @@
             {
               "@Nova_Client_common.information_label": {
                 "$NC_information_label": "code improvement"
+              }
+            },
+            {
+              "@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v26.32"
               }
             }
           ]

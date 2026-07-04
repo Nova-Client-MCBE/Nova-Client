@@ -519,6 +519,9 @@
         "main_buttons_and_title@Nova_Client_pause_screen.main_buttons_and_title": {}
       },
       {
+        "background@Nova_Client_common.black": {}
+      },
+      {
         "sidebar@Nova_Client_pause_screen.sidebar": {
           "bindings": [
             {

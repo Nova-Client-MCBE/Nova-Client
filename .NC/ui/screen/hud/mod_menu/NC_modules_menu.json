@@ -230,6 +230,7 @@
   },
   "pages": {
     "type": "panel",
+    "layer": 10,
     "controls": [
       {
         "1@Nova_Client_inventory_hud_screen.content": {}
@@ -263,9 +264,6 @@
       },
       {
         "11@Nova_Client_item_info_screen.content": {}
-      },
-      {
-        "12@Nova_Client_brightness_screen.content": {}
       },
       {
         "13@Nova_Client_xp_screen.content": {}

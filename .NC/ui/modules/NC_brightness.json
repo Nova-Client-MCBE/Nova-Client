@@ -1,18 +1,6 @@
 {
   "namespace": "Nova_Client_brightness",
-  "base": {
-    "type": "image",
-    "texture": ".NC/textures/background/White",
-    "fill": true,
-    "alpha": 0.5,
-    "layer": 0,
-    "size": [
-      "100%",
-      "100%"
-    ]
-  },
-  "content": {
-    "type": "panel",
+  "content@Nova_Client_brightness.template": {
     "bindings": [
       {
         "binding_type": "view",
@@ -20,49 +8,25 @@
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
       }
+    ]
+  },
+  "template": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "color1": "$color1",
+    "color2": "$color2",
+    "layer": -1,
+    "$color1|default": [
+      1,
+      1,
+      1,
+      1
     ],
-    "controls": [
-      {
-        "white@Nova_Client_brightness.base": {
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "night_toggle",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
-            },
-            {
-              "binding_type": "view",
-              "source_control_name": "brightness_opacity",
-              "source_property_name": "(#slider_value / 10)",
-              "target_property_name": "#alpha"
-            }
-          ]
-        }
-      },
-      {
-        "night@Nova_Client_brightness.base": {
-          "color": [
-            1,
-            0.784,
-            0.188
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "night_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            },
-            {
-              "binding_type": "view",
-              "source_control_name": "brightness_opacity",
-              "source_property_name": "(#slider_value / 10)",
-              "target_property_name": "#alpha"
-            }
-          ]
-        }
-      }
+    "$color2|default": [
+      1,
+      1,
+      1,
+      1
     ]
   }
 }

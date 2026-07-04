@@ -41,7 +41,18 @@
             "$toggle_view_binding_name": "brightness_toggle",
             "$toggle_tags": "$brightness",
             "$modules_template_toggle_text": "Brightness",
-            "$modules_template_button_name": "button.brightness_screen"
+            "$modules_template_toggle_size": [
+              "100%",
+              20
+            ],
+            "$modules_template_button_size": [
+              0,
+              0
+            ],
+            "$button_icon_size": [
+              0,
+              0
+            ]
           }
         }
       ]
