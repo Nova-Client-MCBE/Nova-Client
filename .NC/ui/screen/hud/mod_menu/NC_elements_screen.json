@@ -67,6 +67,17 @@
       },
       {
         "4@Nova_Client_element_row_four.content": {}
+      },
+      {
+        "spacer5@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            7,
+            7
+          ]
+        }
+      },
+      {
+        "5@Nova_Client_element_row_five.content": {}
       }
     ]
   }

@@ -40,7 +40,8 @@
 
         "$coordinates": true,
         "$default_coordinates": true,
-        "$chunk_coordinates": true,
+        "$chunk_coordinates": false,
+        "$nether_coordinates": false,
         "$coordinates_opacity": 0.5,
 
 
@@ -91,6 +92,9 @@
         "$armor_hud": true,
         "$armor_hud_opacity": 0.5,
 
+        "$shiny_potions": true,
+        "$shiny_potions_opacity": 0.3,
+
 
 
         /*HUD Elements*/
@@ -126,6 +130,27 @@
 
 
         "$jukebox_text": true,
+        "$jukebox_opacity": 0.5,
+
+
+        "$item_text": true,
+        "$item_text_opacity": 0.5,
+
+
+        "$xp_bar": true,
+        "$xp_number": true,
+        "$xp_bar_opacity": 1,
+
+
+        "$hotbar": true,
+        "$hotbar_opacity": 1,
+
+
+        "$sound_subtitles": true,
+        "$sound_subtitles_opacity": 0.5,
+
+
+        "$tip_text": true,
 
 
 

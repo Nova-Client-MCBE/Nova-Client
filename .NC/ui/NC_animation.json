@@ -88,6 +88,24 @@
     "armor_hud_screen@Nova_Client_animations.screen_page_in_template": {
         "$NC_sreen_button_name": "armor_hud_screen"
     },
+    "item_text_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "item_text_screen"
+    },
+    "xp_bar_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "xp_bar_screen"
+    },
+    "hotbar_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "hotbar_screen"
+    },
+    "sound_subtitles_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "sound_subtitles_screen"
+    },
+    "jukebox_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "jukebox_screen"
+    },
+    "shiny_potions_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "shiny_potions_screen"
+    },
     "screen_page_in_template": {
         "anim_type": "offset",
         "easing": "linear",
@@ -165,5 +183,62 @@
             0,
             1
         ]
+    },
+    "NC_popup_fade_in": {
+        "anim_type": "alpha",
+        "duration": 0.15,
+        "from": 0,
+        "to": 1,
+        "next": "@Nova_Client_animations.NC_popup_fade_wait"
+    },
+    "NC_popup_fade_wait": {
+        "anim_type": "wait",
+        "duration": 1.25,
+        "next": "@Nova_Client_animations.NC_popup_fade_out"
+    },
+    "NC_popup_fade_out": {
+        "anim_type": "alpha",
+        "duration": 1.3,
+        "easing": "in_quart",
+        "from": 1,
+        "to": 0
+    },
+    "NC_popup_size_wait_item": {
+        "anim_type": "wait",
+        "duration": 2.75,
+        "next": "@Nova_Client_animations.NC_popup_size_out_item"
+    },
+    "NC_popup_size_out_item": {
+        "anim_type": "size",
+        "duration": 0.25,
+        "easing": "out_cubic",
+        "from": [
+            "100%",
+            "100%c"
+        ],
+        "to": [
+            "100%",
+            0
+        ],
+        "destroy_at_end": "item_text"
+    },
+    "NC_popup_size_wait_jukebox": {
+        "anim_type": "wait",
+        "duration": 2.75,
+        "next": "@Nova_Client_animations.NC_popup_size_out_jukebox"
+    },
+    "NC_popup_size_out_jukebox": {
+        "anim_type": "size",
+        "duration": 0.25,
+        "easing": "out_cubic",
+        "from": [
+            "100%",
+            "100%c"
+        ],
+        "to": [
+            "100%",
+            0
+        ],
+        "destroy_at_end": "jukebox_text"
     }
 }

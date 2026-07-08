@@ -1,0 +1,19 @@
+{
+  "namespace": "toast_screen",
+
+  "popup": {
+    "visible": false
+  },
+  "chat_popup": {
+    "visible": false
+  },
+  "recipe_unlocked_popup": {
+    "visible": false
+  },
+  "recipe_unlocked_pocket_popup": {
+    "visible": false
+  },
+  "snackbar": {
+    "visible": false
+  }
+}

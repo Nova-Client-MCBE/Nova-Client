@@ -1,0 +1,60 @@
+{
+    "namespace": "Nova_Client_element_row_five",
+    "content": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "size": [
+        "100%",
+        75
+      ],
+      "controls": [
+        {
+          "spacer@Nova_Client_common.spacer": {}
+        },
+        {
+          "hotbar@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/items/iron_sword",
+            "$toggle_view_binding_name": "hotbar_toggle",
+            "$toggle_tags": "$hotbar",
+            "$modules_template_toggle_text": "Hotbar",
+            "$modules_template_button_name": "button.hotbar_screen"
+          }
+        },
+        {
+          "spacer2@Nova_Client_common.spacer": {}
+        },
+        {
+          "sound_subtitles@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/text_color_paintbrush",
+            "$toggle_view_binding_name": "sound_subtitles_toggle",
+            "$toggle_tags": "$sound_subtitles",
+            "$modules_template_toggle_text": "Sound Subtitles",
+            "$modules_template_button_name": "button.sound_subtitles_screen"
+          }
+        },
+        {
+          "spacer3@Nova_Client_common.spacer": {}
+        },
+        {
+          "f1@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/switch_sl_button",
+            "$toggle_view_binding_name": "f1_toggle",
+            "$toggle_tags": "$f1_button",
+            "$modules_template_toggle_text": "F1 Button",
+            "$modules_template_toggle_size": [
+              "100%",
+              20
+            ],
+            "$modules_template_button_size": [
+              0,
+              0
+            ],
+            "$button_icon_size": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  }

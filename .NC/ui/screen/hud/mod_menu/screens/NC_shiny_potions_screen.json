@@ -1,0 +1,26 @@
+{
+  "namespace": "Nova_Client_shiny_potions_screen",
+  "content@Nova_Client_common.screen_template": {
+    "$NC_sreen_button_name": "shiny_potions_out",
+    "anims": [
+      "@Nova_Client_animations.shiny_potions_screen",
+      "@Nova_Client_animations.screen_page_out"
+    ],
+    "controls": [
+      { "background@Nova_Client_common.screen_bg": {} },
+      {
+        "opacity_slider@Nova_Client_common.opacity_slider_section": {
+          "$NC_opacity_slider_name": "shiny_potions_opacity",
+          "$NC_opacity_default_value": "$shiny_potions_opacity",
+          "$NC_slider_section_offset": [ 0, 0 ]
+        }
+      },
+      {
+        "close_button@Nova_Client_dialog_toggle_template.close_button": {
+          "$pressed_button_name": "button.shiny_potions_out",
+          "$button_text": "Close"
+        }
+      }
+    ]
+  }
+}

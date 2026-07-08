@@ -11,7 +11,7 @@
       {
         "1@Nova_Client_dialog_toggle_template.content": {
           "$toggle_view_binding_name": "2d_paper_doll_toggle",
-          "$toggle_tags": "$paperdoll_2d",
+          "$toggle_tags": "$2d_paperdoll",
           "$NC_dialog_toggle_text": "2d Paperdoll",
           "$NC_dialog_toggle_anchor": "top_middle"
         }

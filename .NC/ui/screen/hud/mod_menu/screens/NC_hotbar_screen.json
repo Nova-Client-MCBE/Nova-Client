@@ -1,0 +1,26 @@
+{
+  "namespace": "Nova_Client_hotbar_screen",
+  "content@Nova_Client_common.screen_template": {
+    "$NC_sreen_button_name": "hotbar_out",
+    "anims": [
+      "@Nova_Client_animations.hotbar_screen",
+      "@Nova_Client_animations.screen_page_out"
+    ],
+    "controls": [
+      { "background@Nova_Client_common.screen_bg": {} },
+      {
+        "opacity_slider@Nova_Client_common.opacity_slider_section": {
+          "$NC_opacity_slider_name": "hotbar_opacity",
+          "$NC_opacity_default_value": "$hotbar_opacity",
+          "$NC_slider_section_offset": [ 0, 0 ]
+        }
+      },
+      {
+        "close_button@Nova_Client_dialog_toggle_template.close_button": {
+          "$pressed_button_name": "button.hotbar_out",
+          "$button_text": "Close"
+        }
+      }
+    ]
+  }
+}

@@ -26,10 +26,19 @@
         }
       },
       {
+        "4@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "nether_coords_toggle",
+          "$toggle_tags": "$nether_coordinates",
+          "$NC_dialog_toggle_text": "Nether",
+          "$NC_dialog_toggle_anchor": "top_middle",
+          "offset": [ 0, 50 ]
+        }
+      },
+      {
         "opacity_slider@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "coords_opacity",
           "$NC_opacity_default_value": "$coordinates_opacity",
-          "$NC_slider_section_offset": [ 0, 50 ]
+          "$NC_slider_section_offset": [ 0, 75 ]
         }
       },
       {

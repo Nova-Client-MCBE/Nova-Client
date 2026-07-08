@@ -175,7 +175,8 @@
         "to_button_id": "button.menu_select",
         "mapping_type": "global"
       }
-    ]
+    ],
+    "$toggle_name|default": "nova_toggle_group"
   },
   "toggle_unchecked@Nova_client_toggles.toggle_content": {
     "type": "image",
@@ -304,7 +305,7 @@
     "type": "panel",
     "layer": 15,
     "$NC_icon|default": "realms",
-    "$NC_button_text|default": "§cMissing Text",
+    "$NC_button_text|default": "\u00a7cMissing Text",
     "controls": [
       {
         "icon": {

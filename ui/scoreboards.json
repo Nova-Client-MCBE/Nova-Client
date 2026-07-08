@@ -9,7 +9,7 @@
       },
       {
         "binding_type": "view",
-        "source_control_name": "scorecoard_numbers_toggle",
+        "source_control_name": "scoreboard_numbers_toggle",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
       }

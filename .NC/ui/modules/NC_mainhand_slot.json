@@ -5,7 +5,7 @@
       "orientation": "horizontal",
       "$NC_anchor": "bottom_middle",
       "offset": [
-        162,
+        148,
         -2
       ],
       "size": [
@@ -24,6 +24,10 @@
         {
           "1": {
             "type": "panel",
+            "size": [
+              22,
+              22
+            ],
             "controls": [
               {
                 "1@Nova_Client_mainhand.mainhand_hud_item": {}

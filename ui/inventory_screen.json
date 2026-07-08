@@ -196,7 +196,6 @@
     },
     "recipe_inventory_screen_content": {
       "$player_inventory_ignored": true,
-      "$add_button": "focus_common.Nova_Client_chest_screen",
       "modifications": [
         {
           "array_name": "controls",

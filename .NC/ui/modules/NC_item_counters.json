@@ -3,10 +3,12 @@
   "content": {
     "type": "stack_panel",
     "orientation": "horizontal",
-    "offset": [
-      0,
-      "77%"
+    "size": [
+      "100%c",
+      "100%cm"
     ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
     "layer": 3,
     "bindings": [
       {

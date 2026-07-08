@@ -285,6 +285,24 @@
       },
       {
         "23@Nova_Client_armor_hud_screen.content": {}
+      },
+      {
+        "24@Nova_Client_item_text_screen.content": {}
+      },
+      {
+        "25@Nova_Client_xp_bar_screen.content": {}
+      },
+      {
+        "26@Nova_Client_hotbar_screen.content": {}
+      },
+      {
+        "27@Nova_Client_sound_subtitles_screen.content": {}
+      },
+      {
+        "28@Nova_Client_jukebox_screen.content": {}
+      },
+      {
+        "29@Nova_Client_shiny_potions_screen.content": {}
       }
     ]
   },

@@ -12,11 +12,11 @@
           "spacer@Nova_Client_common.spacer": {}
         },
         {
-          "f1@Nova_client_modules_menu_button_template.content": {
-            "$modules_template_texture": "textures/ui/switch_sl_button",
-            "$toggle_view_binding_name": "f1_toggle",
-            "$toggle_tags": "$f1_button",
-            "$modules_template_toggle_text": "F1 Button",
+          "tips@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/blue_info_glyph",
+            "$toggle_view_binding_name": "tip_text_toggle",
+            "$toggle_tags": "$tip_text",
+            "$modules_template_toggle_text": "Tips",
             "$modules_template_toggle_size": [
               "100%",
               20
@@ -29,6 +29,30 @@
               0,
               0
             ]
+          }
+        },
+        {
+          "spacer2@Nova_Client_common.spacer": {}
+        },
+        {
+          "item_text@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/ui/text_color_paintbrush",
+            "$toggle_view_binding_name": "item_text_toggle",
+            "$toggle_tags": "$item_text",
+            "$modules_template_toggle_text": "Item Text",
+            "$modules_template_button_name": "button.item_text_screen"
+          }
+        },
+        {
+          "spacer3@Nova_Client_common.spacer": {}
+        },
+        {
+          "xp_bar@Nova_client_modules_menu_button_template.content": {
+            "$modules_template_texture": "textures/items/experience_bottle",
+            "$toggle_view_binding_name": "xp_bar_toggle",
+            "$toggle_tags": "$xp_bar",
+            "$modules_template_toggle_text": "XP Bar",
+            "$modules_template_button_name": "button.xp_bar_screen"
           }
         }
       ]

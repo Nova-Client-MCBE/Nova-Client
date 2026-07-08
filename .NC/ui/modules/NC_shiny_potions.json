@@ -1,0 +1,61 @@
+{
+  "namespace": "Nova_Client_shiny_potions",
+  "overlay": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 10,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "shiny_potions_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "glint": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [
+            16,
+            16
+          ],
+          "alpha": 0.3,
+          "layer": 10,
+          "color": [
+            1.0,
+            0.4,
+            1.0
+          ],
+          "bindings": [
+            {
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection",
+              "binding_collection_name": "hotbar_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#item_id_aux / 65536)",
+              "target_property_name": "#item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#item_id = 459) or ((#item_id = 600) or (#item_id = 601)))",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "shiny_potions_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

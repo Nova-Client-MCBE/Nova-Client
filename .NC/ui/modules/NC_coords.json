@@ -116,77 +116,167 @@
                 "layer": 2,
                 "bindings": [
                   {
-                     "binding_type": "view",
-                     "source_control_name": "player_position_text",
-                     "source_property_name": "#text",
-                     "target_property_name": "#raw_player_position_text"
+                    "binding_type": "view",
+                    "source_control_name": "player_position_text",
+                    "source_property_name": "#text",
+                    "target_property_name": "#raw_player_position_text"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#raw_player_position_text - '-0' - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
-                     "target_property_name": "#raw_1"
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_player_position_text - '-0' - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
+                    "target_property_name": "#raw_1"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#raw_1 - '0' - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9')",
-                     "target_property_name": "#raw_2"
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_1 - '0' - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9')",
+                    "target_property_name": "#raw_2"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#raw_player_position_text - (#raw_2 - ' , , ' - ':'))",
-                     "target_property_name": "#raw_coords"
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_player_position_text - (#raw_2 - ' , , ' - ':'))",
+                    "target_property_name": "#raw_coords"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#raw_coords - ':')",
-                     "target_property_name": "#x_coord"
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_coords - ':')",
+                    "target_property_name": "#x_coord"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#raw_coords - (': ' + #x_coord + ','))",
-                     "target_property_name": "#y_coord"
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_coords - (': ' + #x_coord + ','))",
+                    "target_property_name": "#y_coord"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#raw_coords - (': ' + #x_coord + ', ' + #y_coord + ','))",
-                     "target_property_name": "#z_coord"
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_coords - (': ' + #x_coord + ', ' + #y_coord + ','))",
+                    "target_property_name": "#z_coord"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "((#x_coord - (#x_coord < 0) * 15) / 16)",
-                     "target_property_name": "#x_chunk"
+                    "binding_type": "view",
+                    "source_property_name": "((#x_coord - (#x_coord < 0) * 15) / 16)",
+                    "target_property_name": "#x_chunk"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "((#y_coord - (#y_coord < 0) * 15) / 16)",
-                     "target_property_name": "#y_chunk"
+                    "binding_type": "view",
+                    "source_property_name": "((#y_coord - (#y_coord < 0) * 15) / 16)",
+                    "target_property_name": "#y_chunk"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "((#z_coord - (#z_coord < 0) * 15) / 16)",
-                     "target_property_name": "#z_chunk"
+                    "binding_type": "view",
+                    "source_property_name": "((#z_coord - (#z_coord < 0) * 15) / 16)",
+                    "target_property_name": "#z_chunk"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#x_coord - (#x_chunk * 16))",
-                     "target_property_name": "#x_pos_in_chunk"
+                    "binding_type": "view",
+                    "source_property_name": "(#x_coord - (#x_chunk * 16))",
+                    "target_property_name": "#x_pos_in_chunk"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#y_coord - (#y_chunk * 16))",
-                     "target_property_name": "#y_pos_in_chunk"
+                    "binding_type": "view",
+                    "source_property_name": "(#y_coord - (#y_chunk * 16))",
+                    "target_property_name": "#y_pos_in_chunk"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "(#z_coord - (#z_chunk * 16))",
-                     "target_property_name": "#z_pos_in_chunk"
+                    "binding_type": "view",
+                    "source_property_name": "(#z_coord - (#z_chunk * 16))",
+                    "target_property_name": "#z_pos_in_chunk"
                   },
                   {
-                     "binding_type": "view",
-                     "source_property_name": "('§r' + #x_chunk + ', ' + #y_chunk + ', ' + #z_chunk + ' [' + #x_pos_in_chunk + ', ' + #y_pos_in_chunk + ', ' + #z_pos_in_chunk + ']')",
-                     "target_property_name": "#chunk_text"
+                    "binding_type": "view",
+                    "source_property_name": "('§rChunk: ' + #x_chunk + ', ' + #y_chunk + ', ' + #z_chunk + ' [' + #x_pos_in_chunk + ', ' + #y_pos_in_chunk + ', ' + #z_pos_in_chunk + ']')",
+                    "target_property_name": "#chunk_text"
                   }
-               ]
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "nether": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.5,
+          "layer": 1,
+          "size": [
+            "100%c + 6px",
+            "100%c + 2px"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nether_coords_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "coords_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ],
+          "controls": [
+            {
+              "label": {
+                "type": "label",
+                "text": "#nether_text",
+                "shadow": true,
+                "enable_profanity_filter": false,
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "player_position_text",
+                    "source_property_name": "#text",
+                    "target_property_name": "#raw_player_position_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_player_position_text - '-0' - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
+                    "target_property_name": "#raw_1"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_1 - '0' - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9')",
+                    "target_property_name": "#raw_2"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_player_position_text - (#raw_2 - ' , , ' - ':'))",
+                    "target_property_name": "#raw_coords"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_coords - ':')",
+                    "target_property_name": "#x_coord"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_coords - (': ' + #x_coord + ','))",
+                    "target_property_name": "#y_coord"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#raw_coords - (': ' + #x_coord + ', ' + #y_coord + ','))",
+                    "target_property_name": "#z_coord"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#x_coord - (#x_coord < 0) * 7) / 8)",
+                    "target_property_name": "#x_nether"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#z_coord - (#z_coord < 0) * 7) / 8)",
+                    "target_property_name": "#z_nether"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('§rNether: ' + #x_nether + ', ' + #y_coord + ', ' + #z_nether)",
+                    "target_property_name": "#nether_text"
+                  }
+                ]
               }
             }
           ]

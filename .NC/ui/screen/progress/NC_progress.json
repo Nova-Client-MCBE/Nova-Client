@@ -23,7 +23,7 @@
                         10,
                         10
                     ],
-                    "uv": "@persona.pick_axe_animation",
+                    "uv": "@persona_common.pick_axe_animation",
                     "color": [
                         1,
                         1,
