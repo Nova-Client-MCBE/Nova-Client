@@ -587,8 +587,8 @@
     ]
   },
   "just_some_vars": {
-    "$NC_version": "1.5",
-    "$NC_needed_version": "v26.32",
+    "$NC_version": "1.5.1",
+    "$NC_needed_version": "v26.33",
     "$NC_gathering_event": true
   }
 }

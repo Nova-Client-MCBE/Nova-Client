@@ -1,0 +1,46 @@
+{
+  "namespace": "Nova_Client_brightness_screen",
+  "content@Nova_Client_common.screen_template": {
+    "$NC_sreen_button_name": "brightness_out",
+    "anims": [
+      "@Nova_Client_animations.brightness_screen",
+      "@Nova_Client_animations.screen_page_out"
+    ],
+    "controls": [
+      { "background@Nova_Client_common.screen_bg": {} },
+      {
+        "1": {
+            "type": "label",
+            "text": "Increase/Decrease Brightness",
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "font_scale_factor": 0.8
+        }
+      },
+      {
+        "1@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "fullbright_show_mobile_toggles",
+          "$toggle_tags": "$brightness_mobile_toggles",
+          "$NC_dialog_toggle_text": "Mobile Buttons",
+          "$NC_dialog_toggle_anchor": "top_middle",
+          "offset": [ 0, 5 ]
+        }
+      },
+      {
+        "1@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "fullbright_keyboard_controls",
+          "$toggle_tags": "$brightness_keyboard_controls",
+          "$NC_dialog_toggle_text": "Arrow Keys",
+          "$NC_dialog_toggle_anchor": "top_middle",
+          "offset": [ 0, 30 ]
+        }
+      },
+      {
+        "close_button@Nova_Client_dialog_toggle_template.close_button": {
+          "$pressed_button_name": "button.brightness_out",
+          "$button_text": "Close"
+        }
+      }
+    ]
+  }
+}

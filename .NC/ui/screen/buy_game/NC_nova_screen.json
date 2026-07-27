@@ -436,6 +436,29 @@
     ],
     "controls": [
       {
+        "1.5.1@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_5_1",
+          "$NC_changelog_version": "1.5.1",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "improved brightness module"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "fixed progress screen"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v26.33"
+              }
+            }
+          ]
+        }
+      },
+      {
         "1.5@Nova_Client_common.changelog_template": {
           "$NC_changelog_toggle": "1_5",
           "$NC_changelog_version": "1.5",
@@ -1589,6 +1612,28 @@
       },
       {
         "spacer_31@Nova_Client_common.spacer": {}
+      },
+      {
+        "31_1@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Mobile Buttons to increase and decrease the brightness\n§crequires brightness to be enabled\nmobile only",
+          "$mod_enabled": "($brightness_mobile_toggles)",
+          "$mod_disabled": "(not $brightness_mobile_toggles)",
+          "$module_name": "brightness_mobile_toggles"
+        }
+      },
+      {
+        "spacer_31_1@Nova_Client_common.spacer": {}
+      },
+      {
+        "31_2@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Arrow Keys can adjust the brightness\n§crequires brightness to be enabled\nPC only",
+          "$mod_enabled": "($brightness_keyboard_controls)",
+          "$mod_disabled": "(not $brightness_keyboard_controls)",
+          "$module_name": "brightness_keyboard_controls"
+        }
+      },
+      {
+        "spacer_31_2@Nova_Client_common.spacer": {}
       },
       {
         "32@Nova_Client_common.config_helper": {

@@ -104,6 +104,23 @@
             },
             {
                 "black@Nova_Client_common.black": {}
+            },
+            {
+                "vanilla_pack_download_prompt@progress.popup_dialog_factory": {}
+            }
+        ],
+        "variables": [
+            {
+                "requires": "$desktop_screen",
+                "$button_state_default_base": "common.button_state_default",
+                "$button_state_hover_base": "common.button_state_hover",
+                "$button_state_pressed_base": "common.button_state_pressed"
+            },
+            {
+                "requires": "$pocket_screen",
+                "$button_state_default_base": "common-classic.button_state_default",
+                "$button_state_hover_base": "common-classic.button_state_hover",
+                "$button_state_pressed_base": "common-classic.button_state_pressed"
             }
         ]
     }

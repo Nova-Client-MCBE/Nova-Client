@@ -64,9 +64,6 @@
     "item_info_screen@Nova_Client_animations.screen_page_in_template": {
         "$NC_sreen_button_name": "item_info_screen"
     },
-    "brightness_screen@Nova_Client_animations.screen_page_in_template": {
-        "$NC_sreen_button_name": "brightness_screen"
-    },
     "xp_screen@Nova_Client_animations.screen_page_in_template": {
         "$NC_sreen_button_name": "xp_calculator_screen"
     },
@@ -105,6 +102,10 @@
     },
     "shiny_potions_screen@Nova_Client_animations.screen_page_in_template": {
         "$NC_sreen_button_name": "shiny_potions_screen"
+    },
+    
+    "brightness_screen@Nova_Client_animations.screen_page_in_template": {
+        "$NC_sreen_button_name": "brightness_screen"
     },
     "screen_page_in_template": {
         "anim_type": "offset",

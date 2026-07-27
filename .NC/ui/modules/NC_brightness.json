@@ -1,6 +1,9 @@
 {
   "namespace": "Nova_Client_brightness",
-  "content@Nova_Client_brightness.template": {
+
+  "content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
     "bindings": [
       {
         "binding_type": "view",
@@ -8,25 +11,283 @@
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
       }
+    ],
+    "controls": [
+      {
+        "base_brightness@Nova_Client_brightness.brightness_layer": {}
+      },
+      {
+        "additional_brightness_layers@Nova_Client_brightness.brightness_layer_collection": {}
+      },
+      {
+        "keyboard_brightness_control": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "fullbright_keyboard_controls",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "brightness_up_keyboard@Nova_Client_brightness.brightness_increase": {
+                "alpha": 0,
+                "propagate_alpha": true,
+                "ignored": "$touch",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right"
+              }
+            },
+            {
+              "brightness_down_keyboard@Nova_Client_brightness.brightness_decrease": {
+                "alpha": 0,
+                "propagate_alpha": true,
+                "ignored": "$touch",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "mobile_brightness_controls": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ 84, 36 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -18, 62 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "fullbright_show_mobile_toggles",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "ignored": "(not $touch)",
+          "controls": [
+            {
+              "brightness_down_touch@Nova_Client_brightness.brightness_decrease": {
+                "size": [ "50%-1px", "100%" ],
+                "alpha": 1,
+                "propagate_alpha": false
+              }
+            },
+            {
+              "brightness_button_spacer": {
+                "type": "panel",
+                "size": [ 2, 1 ]
+              }
+            },
+            {
+              "brightness_up_touch@Nova_Client_brightness.brightness_increase": {
+                "size": [ "50%-1px", "100%" ],
+                "alpha": 1,
+                "propagate_alpha": false
+              }
+            }
+          ]
+        }
+      }
     ]
   },
-  "template": {
+
+  "brightness_layer": {
     "type": "custom",
     "renderer": "gradient_renderer",
-    "color1": "$color1",
-    "color2": "$color2",
-    "layer": -1,
-    "$color1|default": [
-      1,
-      1,
-      1,
-      1
+    "color1": [ 1, 1, 1, 1 ],
+    "color2": [ 1, 1, 1, 1 ],
+    "size": [ "500%", "500%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": -10
+  },
+
+  "brightness_layer_collection": {
+    "type": "collection_panel",
+    "collection_name": "fullbright_additional_brightness_layers",
+    "factory": {
+      "name": "fullbright_additional_brightness_factory",
+      "control_name": "Nova_Client_brightness.brightness_layer",
+      "max_children_size": 4
+    },
+    "property_bag": {
+      "#increase_state": 0,
+      "#decrease_state": 0,
+      "#increase_count": 0,
+      "#decrease_count": 0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "fullbright_brightness_increase",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#increase_state"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "fullbright_brightness_decrease",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#decrease_state"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "visibility_changed",
+        "source_property_name": "((0 * #increase_state) + 1 + #increase_count)",
+        "target_property_name": "#increase_count"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "visibility_changed",
+        "source_property_name": "((0 * #decrease_state) + 1 + #decrease_count)",
+        "target_property_name": "#decrease_count"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#increase_count - #decrease_count)",
+        "target_property_name": "#collection_length"
+      }
+    ]
+  },
+
+  "brightness_increase@common_toggles.light_text_toggle": {
+    "$button_text": "+",
+    "$sound_volume": 0,
+    "$toggle_name": "fullbright_brightness_increase_toggle",
+    "$toggle_view_binding_name": "fullbright_brightness_increase",
+    "$button_mappings": [
+      {
+        "consume_event": false,
+        "from_button_id": "button.arrow_up",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global",
+        "ignored": "(not #keyboard_controls_enabled)"
+      },
+      {
+        "consume_event": false,
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed",
+        "ignored": "(not $touch)"
+      }
     ],
-    "$color2|default": [
-      1,
-      1,
-      1,
-      1
+    "property_bag": {
+      "#keyboard_controls_enabled": false,
+      "#increase_state": 0,
+      "#decrease_state": 0,
+      "#increase_count": 0,
+      "#decrease_count": 0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "fullbright_enable_hotkeys_to_change",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#keyboard_controls_enabled"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "fullbright_brightness_increase",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#increase_state"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "fullbright_brightness_decrease",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#decrease_state"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "visibility_changed",
+        "source_property_name": "((0 * #increase_state) + 1 + #increase_count)",
+        "target_property_name": "#increase_count"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "visibility_changed",
+        "source_property_name": "((0 * #decrease_state) + 1 + #decrease_count)",
+        "target_property_name": "#decrease_count"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "((#increase_count - #decrease_count) < 4)",
+        "target_property_name": "#enabled"
+      }
+    ]
+  },
+
+  "brightness_decrease@common_toggles.light_text_toggle": {
+    "$button_text": "-",
+    "$sound_volume": 0,
+    "$toggle_name": "fullbright_brightness_decrease_toggle",
+    "$toggle_view_binding_name": "fullbright_brightness_decrease",
+    "$button_mappings": [
+      {
+        "consume_event": false,
+        "from_button_id": "button.arrow_down",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global",
+        "ignored": "(not #keyboard_controls_enabled)"
+      },
+      {
+        "consume_event": false,
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed",
+        "ignored": "(not $touch)"
+      }
+    ],
+    "property_bag": {
+      "#keyboard_controls_enabled": false,
+      "#increase_state": 0,
+      "#decrease_state": 0,
+      "#increase_count": 0,
+      "#decrease_count": 0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "fullbright_enable_hotkeys_to_change",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#keyboard_controls_enabled"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "fullbright_brightness_increase",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#increase_state"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "fullbright_brightness_decrease",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#decrease_state"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "visibility_changed",
+        "source_property_name": "((0 * #increase_state) + 1 + #increase_count)",
+        "target_property_name": "#increase_count"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "visibility_changed",
+        "source_property_name": "((0 * #decrease_state) + 1 + #decrease_count)",
+        "target_property_name": "#decrease_count"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "((#increase_count - #decrease_count) > 0)",
+        "target_property_name": "#enabled"
+      }
     ]
   }
 }

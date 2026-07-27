@@ -67,6 +67,8 @@
 
 
         "$brightness": false,
+        "$brightness_mobile_toggles": true,
+        "$brightness_keyboard_controls": true,
 
 
         "$exp_calculator": true,
