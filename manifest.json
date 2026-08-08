@@ -7,12 +7,12 @@
      "version": [
        1,
        5,
-       1
+       2
      ],
      "min_engine_version": [
        1,
        26,
-       30
+       40
      ]
    },
    "modules": [
