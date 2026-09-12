@@ -1,11 +1,26 @@
 {
     "namespace": "common_buttons",
-    "dark_button_assets@common.button": {
-        "$default_button_texture|default": ".NC/textures/buttons/gray/button_default",
-        "$hover_button_texture|default": ".NC/textures/buttons/gray/button_hover",
-        "$pressed_button_texture|default": ".NC/textures/buttons/gray/button_pressed",
-        "$locked_button_texture|default": ".NC/textures/buttons/gray/button_pressed",
-        "locked_control": "locked",
+    "dark_button_assets@Nova_client_button.tinted_button": {
+        "$tint_default": [
+            0.184,
+            0.184,
+            0.188
+        ],
+        "$tint_hover": [
+            0.404,
+            0.408,
+            0.416
+        ],
+        "$tint_pressed": [
+            0.192,
+            0.196,
+            0.2
+        ],
+        "$tint_locked": [
+            0.192,
+            0.196,
+            0.2
+        ],
         "$border_visible": false,
         "$default_state_border_visible": false,
         "$hover_state_border_visible": false,
@@ -14,12 +29,27 @@
         "$default_border_visible": false,
         "$locked_alpha": 1
     },
-    "light_button_assets@common.button": {
-        "$default_button_texture|default": ".NC/textures/buttons/common/button_default",
-        "$hover_button_texture|default": ".NC/textures/buttons/common/button_hover",
-        "$pressed_button_texture|default": ".NC/textures/buttons/common/button_pressed",
-        "$locked_button_texture|default": ".NC/textures/buttons/common/button_pressed",
-        "locked_control": "locked",
+    "light_button_assets@Nova_client_button.tinted_button": {
+        "$tint_default": [
+            0.816,
+            0.82,
+            0.831
+        ],
+        "$tint_hover": [
+            0.957,
+            0.965,
+            0.976
+        ],
+        "$tint_pressed": [
+            0.235,
+            0.522,
+            0.153
+        ],
+        "$tint_locked": [
+            0.235,
+            0.522,
+            0.153
+        ],
         "$border_visible": false,
         "$default_state_border_visible": false,
         "$hover_state_border_visible": false,

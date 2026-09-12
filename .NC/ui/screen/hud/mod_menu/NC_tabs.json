@@ -30,9 +30,11 @@
                   "$NC_icon": "shulker",
                   "$button_content": "Nova_client_toggles.label_icon",
                   "$button_default_texture": ".NC/textures/invis",
-                  "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
-                  "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
-                  "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "$button_default_overlay_texture": ".NC/textures/invis",
+                  "$button_default_tint": [ 1, 1, 1 ],
+                  "$button_hover_tint": [ 0.404, 0.408, 0.416 ],
+                  "$button_pressed_tint": [ 0.192, 0.196, 0.200 ],
+                  "$button_pressed_hover_tint": [ 0.192, 0.196, 0.200 ],
                   "size": [
                     "100%",
                     25
@@ -47,9 +49,11 @@
                   "$NC_icon": "chest",
                   "$button_content": "Nova_client_toggles.label_icon",
                   "$button_default_texture": ".NC/textures/invis",
-                  "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
-                  "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
-                  "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "$button_default_overlay_texture": ".NC/textures/invis",
+                  "$button_default_tint": [ 1, 1, 1 ],
+                  "$button_hover_tint": [ 0.404, 0.408, 0.416 ],
+                  "$button_pressed_tint": [ 0.192, 0.196, 0.200 ],
+                  "$button_pressed_hover_tint": [ 0.192, 0.196, 0.200 ],
                   "size": [
                     "100%",
                     25
@@ -64,9 +68,11 @@
                   "$NC_icon": "people",
                   "$button_content": "Nova_client_toggles.label_icon",
                   "$button_default_texture": ".NC/textures/invis",
-                  "$button_hover_texture": ".NC/textures/buttons/gray/button_hover",
-                  "$button_pressed_texture": ".NC/textures/buttons/gray/button_pressed",
-                  "$button_pressed_hover_texture": ".NC/textures/buttons/gray/button_pressed",
+                  "$button_default_overlay_texture": ".NC/textures/invis",
+                  "$button_default_tint": [ 1, 1, 1 ],
+                  "$button_hover_tint": [ 0.404, 0.408, 0.416 ],
+                  "$button_pressed_tint": [ 0.192, 0.196, 0.200 ],
+                  "$button_pressed_hover_tint": [ 0.192, 0.196, 0.200 ],
                   "size": [
                     "100%",
                     25

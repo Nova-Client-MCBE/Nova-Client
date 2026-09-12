@@ -9,10 +9,18 @@
     "controls": [
       { "background@Nova_Client_common.screen_bg": {} },
       {
+        "1@Nova_Client_dialog_toggle_template.content": {
+          "$toggle_view_binding_name": "java_item_text_toggle",
+          "$toggle_tags": "$java_item_text",
+          "$NC_dialog_toggle_text": "Java Item Text",
+          "$NC_dialog_toggle_anchor": "top_middle"
+        }
+      },
+      {
         "opacity_slider@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "item_text_opacity",
           "$NC_opacity_default_value": "$item_text_opacity",
-          "$NC_slider_section_offset": [ 0, 0 ]
+          "$NC_slider_section_offset": [ 0, 25 ]
         }
       },
       {

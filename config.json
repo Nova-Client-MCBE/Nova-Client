@@ -137,6 +137,7 @@
 
         "$item_text": true,
         "$item_text_opacity": 0.5,
+        "$java_item_text": false,
 
 
         "$xp_bar": true,

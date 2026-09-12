@@ -391,14 +391,24 @@
     "$button_text|default": ""
   },
   "header@Nova_Client_common.internal": {
-    "$NC_internal": "background/header",
+    "$NC_internal": "background/White",
     "$NC_anchor": "top_middle",
     "layer": 2,
+    "color": [ 0.902, 0.910, 0.922 ],
     "size": [
       "100%",
       25
     ],
     "controls": [
+      {
+        "rule@Nova_Client_common.internal": {
+          "$NC_internal": "background/White",
+          "$NC_anchor": "bottom_middle",
+          "color": [ 0.569, 0.569, 0.569 ],
+          "layer": 3,
+          "size": [ "100%", 1 ]
+        }
+      },
       {
         "text": {
           "type": "label",

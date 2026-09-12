@@ -79,22 +79,36 @@
         ],
         "texture": ".NC/textures/slider/progress"
     },
+    "NC_knob_overlay": {
+        "type": "image",
+        "texture": ".NC/textures/buttons/base/button_default_overlay",
+        "size": [ "100%", "100%" ],
+        "layer": 1
+    },
     "Nova_Client_slider_button_default": {
         "type": "image",
-        "texture": ".NC/textures/buttons/common/button_default",
+        "texture": ".NC/textures/buttons/base/button_default",
+        "color": [ 0.816, 0.820, 0.831 ],
         "layer": 10,
         "size": [
             15,
             15
+        ],
+        "controls": [
+            { "overlay@Nova_Client_slider.NC_knob_overlay": {} }
         ]
     },
     "Nova_Client_slider_button_hover": {
         "type": "image",
-        "texture": ".NC/textures/buttons/common/button_hover",
+        "texture": ".NC/textures/buttons/base/button_default",
+        "color": [ 0.957, 0.965, 0.976 ],
         "layer": 100,
         "size": [
             15,
             15
+        ],
+        "controls": [
+            { "overlay@Nova_Client_slider.NC_knob_overlay": {} }
         ]
     },
     "Nova_Client_slider_panel": {

@@ -10,6 +10,7 @@
     "$nc_popup_text_binding|default": "#item_text",
     "$nc_popup_bg_slider|default": "item_text_opacity",
     "$nc_popup_toggle|default": "item_text_toggle",
+    "$nc_popup_java_toggle|default": "java_item_text_toggle",
     "anims": [
       "@Nova_Client_animations.NC_popup_size_wait_item"
     ],
@@ -35,44 +36,79 @@
           ],
           "controls": [
             {
-              "popup_bg": {
-                "type": "image",
-                "texture": "textures/ui/hud_tip_text_background",
-                "size": [
-                  "100%c + 12px",
-                  "100%c + 5px"
-                ],
-                "alpha": 0.5,
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "$nc_popup_bg_slider",
-                    "source_property_name": "(#slider_value / 10)",
-                    "target_property_name": "#alpha"
-                  }
-                ],
-                "controls": [
-                  {
-                    "popup_label": {
-                      "type": "label",
-                      "layer": 2,
-                      "shadow": true,
-                      "localize": false,
-                      "text_alignment": "center",
-                      "enable_profanity_filter": true,
-                      "text": "#text",
-                      "bindings": [
-                        {
-                          "binding_name": "$nc_popup_text_binding",
-                          "binding_name_override": "#text"
-                        }
-                      ]
-                    }
-                  }
-                ]
+              "bedrock_body@Nova_Client_hud_stacker.popup_body": {
+                "$nc_popup_visible_expr": "(not #toggle_state)"
+              }
+            },
+            {
+              "java_body@Nova_Client_hud_stacker.popup_body": {
+                "$popup_bg_texture": ".NC/textures/invis",
+                "$nc_popup_visible_expr": "#toggle_state",
+                "$popup_label_control": "Nova_Client_hud_stacker.popup_label_clipped"
               }
             }
           ]
+        }
+      }
+    ]
+  },
+  "popup_body": {
+    "type": "image",
+    "texture": "$popup_bg_texture",
+    "$popup_bg_texture|default": "textures/ui/hud_tip_text_background",
+    "$popup_label_control|default": "Nova_Client_hud_stacker.popup_label",
+    "size": [
+      "100%c + 12px",
+      "100%c + 5px"
+    ],
+    "alpha": 0.5,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$nc_popup_bg_slider",
+        "source_property_name": "(#slider_value / 10)",
+        "target_property_name": "#alpha"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "$nc_popup_java_toggle",
+        "source_property_name": "$nc_popup_visible_expr",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "label@$popup_label_control": {}
+      }
+    ]
+  },
+  "popup_label": {
+    "type": "label",
+    "layer": 2,
+    "shadow": true,
+    "localize": false,
+    "text_alignment": "center",
+    "enable_profanity_filter": true,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "$nc_popup_text_binding",
+        "binding_name_override": "#text"
+      }
+    ]
+  },
+  "popup_label_clipped": {
+    "type": "panel",
+    "clips_children": true,
+    "size": [
+      "100%c",
+      10
+    ],
+    "controls": [
+      {
+        "popup_label@Nova_Client_hud_stacker.popup_label": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
         }
       }
     ]

@@ -1,149 +1,79 @@
 {
   "namespace": "Nova_client_button",
-  "ore_ui_button@common.button": {
+
+  "tinted_button@common.button": {
     "locked_control": "locked",
+    "$tint_default|default": [1, 1, 1],
+    "$tint_hover|default": [1, 1, 1],
+    "$tint_pressed|default": [1, 1, 1],
+    "$tint_locked|default": [1, 1, 1],
     "controls": [
       {
         "default@Nova_client_button.default": {
-          "$default_texture": ".NC/textures/buttons/common/button_default"
-        }
-      },
-      {
-        "hover@Nova_client_button.hover": {
-          "$hover_texture": ".NC/textures/buttons/common/button_hover"
-        }
-      },
-      {
-        "pressed@Nova_client_button.pressed": {
-          "$pressed_texture": ".NC/textures/buttons/common/button_pressed",
-          "$button_text_offset": [0, 1]
-        }
-      },
-      {
-        "locked@Nova_client_button.locked": {
-          "$locked_texture": ".NC/textures/buttons/common/button_pressed",
-          "$button_text_offset": [0, 1]
-        }
-      }
-    ]
-  },
-  "red_button@common.button": {
-    "sound_name": "NC.click",
-    "locked_control": "locked",
-    "controls": [
-      {
-        "default@Nova_client_button.default": {
-          "$default_texture": ".NC/textures/buttons/red/button_default"
-        }
-      },
-      {
-        "hover@Nova_client_button.hover": {
-          "$hover_texture": ".NC/textures/buttons/red/button_hover"
-        }
-      },
-      {
-        "pressed@Nova_client_button.pressed": {
-          "$pressed_texture": ".NC/textures/buttons/red/button_pressed",
-          "$button_text_offset": [0, 1]
-        }
-      },
-      {
-        "locked@Nova_client_button.locked": {
-          "$locked_texture": ".NC/textures/buttons/red/button_pressed",
-          "$button_text_offset": [0, 1]
-        }
-      }
-    ]
-  },
-  "green_button@common.button": {
-    "sound_name": "NC.click",
-    "locked_control": "locked",
-    "controls": [
-      {
-        "default@Nova_client_button.default": {
-          "$default_texture": ".NC/textures/buttons/green/button_default",
-          "$font_type": "MinecraftTen"
-        }
-      },
-      {
-        "hover@Nova_client_button.hover": {
-          "$hover_texture": ".NC/textures/buttons/green/button_hover",
-          "$font_type": "MinecraftTen"
-        }
-      },
-      {
-        "pressed@Nova_client_button.pressed": {
-          "$pressed_texture": ".NC/textures/buttons/green/button_pressed",
-          "$font_type": "MinecraftTen",
-          "$button_text_offset": [0, 1]
-        }
-      },
-      {
-        "locked@Nova_client_button.locked": {
-          "$locked_texture": ".NC/textures/buttons/green/button_pressed",
-          "$font_type": "MinecraftTen",
-          "$button_text_offset": [0, 1]
-        }
-      }
-    ]
-  },
-  "pink_button@common.button": {
-    "sound_name": "NC.click",
-    "locked_control": "locked",
-    "controls": [
-      {
-        "default@Nova_client_button.default": {
-          "$default_texture": ".NC/textures/buttons/pink/button_default"
-        }
-      },
-      {
-        "hover@Nova_client_button.hover": {
-          "$hover_texture": ".NC/textures/buttons/pink/button_hover"
-        }
-      },
-      {
-        "pressed@Nova_client_button.pressed": {
-          "$pressed_texture": ".NC/textures/buttons/pink/button_pressed",
-          "$button_text_offset": [0, 1]
-        }
-      },
-      {
-        "locked@Nova_client_button.locked": {
-          "$locked_texture": ".NC/textures/buttons/pink/button_pressed",
-          "$button_text_offset": [0, 1]
-        }
-      }
-    ]
-  },
-  "gray_button@common.button": {
-    "locked_control": "locked",
-    "controls": [
-      {
-        "default@Nova_client_button.default": {
-          "$default_texture": ".NC/textures/buttons/gray/button_default",
+          "$default_texture": ".NC/textures/buttons/base/button_default",
+          "$overlay_texture": ".NC/textures/buttons/base/button_default_overlay",
           "alpha": "$gray_button_alpha",
           "$gray_button_alpha|default": 1
         }
       },
       {
         "hover@Nova_client_button.hover": {
-          "$hover_texture": ".NC/textures/buttons/gray/button_hover"
+          "$hover_texture": ".NC/textures/buttons/base/button_default",
+          "$overlay_texture": ".NC/textures/buttons/base/button_default_overlay"
         }
       },
       {
         "pressed@Nova_client_button.pressed": {
-          "$pressed_texture": ".NC/textures/buttons/gray/button_pressed",
+          "$pressed_texture": ".NC/textures/buttons/base/button_pressed",
+          "$overlay_texture": ".NC/textures/buttons/base/button_pressed_overlay",
           "$button_text_offset": [0, 1]
         }
       },
       {
         "locked@Nova_client_button.locked": {
-          "$locked_texture": ".NC/textures/buttons/gray/button_pressed",
+          "$locked_texture": ".NC/textures/buttons/base/button_pressed",
+          "$overlay_texture": ".NC/textures/buttons/base/button_pressed_overlay",
           "$button_text_offset": [0, 1]
         }
       }
     ]
   },
+
+  "ore_ui_button@Nova_client_button.tinted_button": {
+    "$tint_default": [0.816, 0.820, 0.831],
+    "$tint_hover": [0.957, 0.965, 0.976],
+    "$tint_pressed": [0.235, 0.522, 0.153],
+    "$tint_locked": [0.235, 0.522, 0.153]
+  },
+  "gray_button@Nova_client_button.tinted_button": {
+    "$tint_default": [0.184, 0.184, 0.188],
+    "$tint_hover": [0.404, 0.408, 0.416],
+    "$tint_pressed": [0.192, 0.196, 0.200],
+    "$tint_locked": [0.192, 0.196, 0.200]
+  },
+  "red_button@Nova_client_button.tinted_button": {
+    "sound_name": "NC.click",
+    "$tint_default": [0.792, 0.212, 0.212],
+    "$tint_hover": [0.996, 0.502, 0.506],
+    "$tint_pressed": [0.749, 0.176, 0.176],
+    "$tint_locked": [0.749, 0.176, 0.176]
+  },
+  "green_button@Nova_client_button.tinted_button": {
+    "sound_name": "NC.click",
+    "$font_type": "MinecraftTen",
+    "$tint_default": [0.235, 0.522, 0.153],
+    "$tint_hover": [0.322, 0.647, 0.208],
+    "$tint_pressed": [0.165, 0.392, 0.110],
+    "$tint_locked": [0.165, 0.392, 0.110]
+  },
+  "pink_button@Nova_client_button.tinted_button": {
+    "sound_name": "NC.click",
+    "$tint_default": [0.984, 0.584, 0.886],
+    "$tint_hover": [1.000, 0.694, 0.925],
+    "$tint_pressed": [0.973, 0.467, 0.863],
+    "$tint_locked": [0.973, 0.467, 0.863]
+  },
+
   "clear_button@common.button": {
     "locked_control": "locked",
     "controls": [
@@ -207,24 +137,53 @@
       }
     ]
   },
+
   "default@Nova_client_button.button_content": {
     "$default": true,
-    "texture": "$default_texture"
+    "texture": "$default_texture",
+    "color": "$tint_default",
+    "$tint_default|default": [1, 1, 1],
+    "$overlay_control": "Nova_client_button.button_overlay_default"
   },
   "hover@Nova_client_button.button_content": {
     "$hover": true,
-    "texture": "$hover_texture"
+    "texture": "$hover_texture",
+    "color": "$tint_hover",
+    "$tint_hover|default": [1, 1, 1]
   },
   "pressed@Nova_client_button.button_content": {
     "$pressed": true,
-    "texture": "$pressed_texture"
+    "texture": "$pressed_texture",
+    "color": "$tint_pressed",
+    "$tint_pressed|default": [1, 1, 1]
   },
   "locked@Nova_client_button.button_content": {
     "$locked": true,
-    "texture": "$locked_texture"
+    "texture": "$locked_texture",
+    "color": "$tint_locked",
+    "$tint_locked|default": [1, 1, 1]
   },
+
+  "button_overlay": {
+    "type": "image",
+    "texture": "$overlay_texture",
+    "$overlay_texture|default": ".NC/textures/invis",
+    "size": ["100%", "100%"],
+    "layer": 1
+  },
+  "button_overlay_default": {
+    "type": "image",
+    "texture": "$overlay_texture",
+    "$overlay_texture|default": ".NC/textures/invis",
+    "alpha": "$gray_button_alpha",
+    "$gray_button_alpha|default": 1,
+    "size": ["100%", "100%"],
+    "layer": 1
+  },
+
   "button_content": {
     "type": "image",
+    "$overlay_control|default": "Nova_client_button.button_overlay",
     "$default|default": false,
     "$hover|default": false,
     "$pressed|default": false,
@@ -233,6 +192,9 @@
     "bindings": "$button_bindings",
     "$button_bindings|default": [],
     "controls": [
+      {
+        "overlay@$overlay_control": {}
+      },
       {
         "custom_content@$custom_content": {}
       }
@@ -255,7 +217,7 @@
     "type": "panel",
     "layer": 15,
     "$NC_icon|default": "realms",
-    "$NC_button_text|default": "§cMissing Text",
+    "$NC_button_text|default": "\u00a7cMissing Text",
     "controls": [
       {
         "icon": {

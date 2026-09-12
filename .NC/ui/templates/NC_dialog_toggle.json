@@ -14,6 +14,11 @@
             {
                 "toggle@Nova_client_toggles.Nova_client_toggle": {
                     "$button_text": "",
+                    "$toggle_overlay_control": "Nova_client_toggles.toggle_overlay_none",
+                    "$button_default_tint": [ 1, 1, 1 ],
+                    "$button_hover_tint": [ 1, 1, 1 ],
+                    "$button_pressed_tint": [ 1, 1, 1 ],
+                    "$button_pressed_hover_tint": [ 1, 1, 1 ],
                     "$button_default_texture": ".NC/textures/toggle/toggle_off",
                     "$button_hover_texture": ".NC/textures/toggle/toggle_off_hover",
                     "$button_pressed_texture": ".NC/textures/toggle/toggle_on",
