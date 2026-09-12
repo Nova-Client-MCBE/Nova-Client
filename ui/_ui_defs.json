@@ -3,6 +3,7 @@
 		"ui/item_tooltip_overrides.json",
 		"config.json",
 		".NC/ui/button/NC_button.json",
+		".NC/ui/screen/NC_armor.json",
 		".NC/ui/modules/NC_armor_hud.json",
 		".NC/ui/modules/NC_bossbar.json",
 		".NC/ui/modules/NC_brightness.json",

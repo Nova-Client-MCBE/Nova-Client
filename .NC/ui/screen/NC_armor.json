@@ -1,0 +1,355 @@
+{
+  "namespace": "Nova_Client_armor",
+  "durability_text": {
+    "type": "label",
+    "text": "#item_durability_current_amount",
+    "shadow": true,
+    "layer": 6,
+    "size": [
+      "default",
+      "default"
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "font_scale_factor": 0.9,
+    "color": "$durability_color",
+    "$renderer_collection_name|default": "armor_items",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$renderer_collection_name",
+        "binding_name": "#item_durability_current_amount"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$renderer_collection_name",
+        "binding_name": "#item_durability_total_amount"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#item_durability_current_amount / #item_durability_total_amount) * 100)",
+        "target_property_name": "#distribution_durability"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#distribution_durability > $min_durability) and (#distribution_durability < $max_durability) or (#distribution_durability = $max_durability))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "durability_panel": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$renderer_collection_name|default": "armor_items",
+    "controls": [
+      {
+        "red@Nova_Client_armor.durability_text": {
+          "$min_durability": 0,
+          "$max_durability": 25,
+          "$durability_color": [
+            1.0,
+            0.25,
+            0.25
+          ]
+        }
+      },
+      {
+        "orange@Nova_Client_armor.durability_text": {
+          "$min_durability": 25,
+          "$max_durability": 50,
+          "$durability_color": [
+            1.0,
+            0.66,
+            0.0
+          ]
+        }
+      },
+      {
+        "yellow@Nova_Client_armor.durability_text": {
+          "$min_durability": 50,
+          "$max_durability": 75,
+          "$durability_color": [
+            1.0,
+            1.0,
+            0.4
+          ]
+        }
+      },
+      {
+        "green@Nova_Client_armor.durability_text": {
+          "$min_durability": 75,
+          "$max_durability": 100,
+          "$durability_color": [
+            0.45,
+            1.0,
+            0.45
+          ]
+        }
+      }
+    ]
+  },
+  "durability_readout": {
+    "type": "panel",
+    "size": [
+      28,
+      12
+    ],
+    "layer": 6,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "$renderer_collection_name|default": "armor_items",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$renderer_collection_name",
+        "binding_name": "#item_durability_total_amount"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#item_durability_total_amount > 0)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": ".NC/textures/background/White",
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "alpha": 0.45,
+          "layer": 5,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      },
+      {
+        "value@Nova_Client_armor.durability_panel": {}
+      }
+    ]
+  },
+  "armor_cell": {
+    "type": "panel",
+    "size": [
+      52,
+      20
+    ],
+    "$renderer_collection_name|default": "armor_items",
+    "controls": [
+      {
+        "icon": {
+          "type": "custom",
+          "renderer": "inventory_item_renderer",
+          "size": [
+            18,
+            18
+          ],
+          "layer": 4,
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            1,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$renderer_collection_name"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$renderer_collection_name",
+              "binding_name": "#item_id_aux"
+            }
+          ]
+        }
+      },
+      {
+        "readout@Nova_Client_armor.durability_readout": {
+          "offset": [
+            -2,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "armor_column": {
+    "type": "grid",
+    "collection_name": "armor_items",
+    "grid_dimensions": [
+      1,
+      4
+    ],
+    "size": [
+      52,
+      80
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 4,
+    "controls": [
+      {
+        "head@Nova_Client_armor.armor_cell": {
+          "grid_position": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "chest@Nova_Client_armor.armor_cell": {
+          "grid_position": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "legs@Nova_Client_armor.armor_cell": {
+          "grid_position": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "feet@Nova_Client_armor.armor_cell": {
+          "grid_position": [
+            0,
+            3
+          ]
+        }
+      }
+    ]
+  },
+  "armor_tab": {
+    "type": "image",
+    "texture": "textures/ui/TabRightFront",
+    "size": [
+      60,
+      88
+    ],
+    "anchor_from": "right_middle",
+    "anchor_to": "left_middle",
+    "offset": [
+      -4,
+      0
+    ],
+    "layer": 12,
+    "controls": [
+      {
+        "column@Nova_Client_armor.armor_column": {
+          "offset": [
+            3,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "container_player_panel": {
+    "type": "image",
+    "texture": "textures/ui/TabLeftFrontBottomMost",
+    "size": [
+      62,
+      80
+    ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_right",
+    "offset": [
+      4,
+      0
+    ],
+    "layer": 3,
+    "controls": [
+      {
+        "player_bg@Nova_Client_common.internal": {
+          "$NC_internal": "background/White",
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "alpha": 0.55,
+          "size": [
+            52,
+            70
+          ],
+          "layer": 2,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            5,
+            5
+          ],
+          "controls": [
+            {
+              "player_renderer_panel": {
+                "type": "panel",
+                "size": [
+                  30,
+                  30
+                ],
+                "offset": [
+                  0,
+                  -14
+                ],
+                "controls": [
+                  {
+                    "player_renderer": {
+                      "type": "custom",
+                      "renderer": "live_player_renderer",
+                      "property_bag": {
+                        "#look_at_cursor": true
+                      },
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@common.screen_exit_size_animation_push",
+                        "@common.screen_exit_size_animation_pop",
+                        "@common.screen_entrance_size_animation_push",
+                        "@common.screen_entrance_size_animation_pop"
+                      ],
+                      "layer": 8,
+                      "anchor_from": "center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "player_preview_border": {
+          "type": "image",
+          "texture": "textures/ui/player_preview_border",
+          "size": [
+            54,
+            72
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4,
+            4
+          ],
+          "layer": 1
+        }
+      }
+    ]
+  }
+}

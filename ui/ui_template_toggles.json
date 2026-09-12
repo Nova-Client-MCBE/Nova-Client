@@ -11,11 +11,5 @@
         "$hover_texture": ".NC/textures/buttons/baked/light_pressed",
         "$pressed_texture": ".NC/textures/buttons/baked/light_hover",
         "$locked_texture": ".NC/textures/buttons/baked/light_pressed"
-    },
-    "dark_ui_toggle_collection@common_toggles.light_ui_toggle_collection": {
-        "$default_texture": ".NC/textures/buttons/baked/dark_default",
-        "$hover_texture": ".NC/textures/buttons/baked/dark_pressed",
-        "$pressed_texture": ".NC/textures/buttons/baked/dark_hover",
-        "$locked_texture": ".NC/textures/buttons/baked/dark_pressed"
     }
 }

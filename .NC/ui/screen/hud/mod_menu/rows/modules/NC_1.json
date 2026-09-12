@@ -1,49 +1,96 @@
 {
-    "namespace": "Nova_Client_modules_row_one",
-    "content": {
-      "type": "stack_panel",
-      "orientation": "horizontal",
-      "size": [
-        "100%",
-        75
-      ],
-      "controls": [
-        {
-          "spacer1@Nova_Client_common.spacer": {}
-        },
-        {
-          "inventory_hud@Nova_client_modules_menu_button_template.content": {
-            "$modules_template_texture": ".NC/textures/modules/slot",
-            "$toggle_view_binding_name": "inventory_hud_toggle",
-            "$toggle_tags": "$inventoryhud",
-            "$modules_template_toggle_text": "Inventory Hud",
-            "$modules_template_button_name": "button.inventory_hud_screen"
-          }
-        },
-        {
-          "spacer2@Nova_Client_common.spacer": {}
-        },
-        {
-          "world_name@Nova_client_modules_menu_button_template.content": {
-            "$modules_template_texture": "textures/ui/world_glyph_color",
-            "$toggle_view_binding_name": "ip_display_hud_toggle",
-            "$toggle_tags": "$world_name",
-            "$modules_template_toggle_text": "World Name",
-            "$modules_template_button_name": "button.world_name_screen"
-          }
-        },
-        {
-          "spacer3@Nova_Client_common.spacer": {}
-        },
-        {
-          "main_hand@Nova_client_modules_menu_button_template.content": {
-            "$modules_template_texture": "textures/items/diamond_sword",
-            "$toggle_view_binding_name": "mainhand_toggle",
-            "$toggle_tags": "$mainhand",
-            "$modules_template_toggle_text": "Main Hand Slot",
-            "$modules_template_button_name": "button.main_hand_screen"
-          }
+  "namespace": "Nova_Client_modules_row_one",
+  "content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      75
+    ],
+    "controls": [
+      {
+        "spacer1@Nova_Client_common.spacer": {}
+      },
+      {
+        "inventory_hud@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": ".NC/textures/modules/slot",
+          "$toggle_view_binding_name": "inventory_hud_toggle",
+          "$toggle_tags": "$inventoryhud",
+          "$modules_template_toggle_text": "Inventory Hud",
+          "$modules_template_button_name": "button.inventory_hud_screen",
+          "$nc_letter_ctrl": "nc_ltr_i"
         }
-      ]
-    }
+      },
+      {
+        "spacer2@Nova_Client_common.spacer": {}
+      },
+      {
+        "world_name@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/ui/world_glyph_color",
+          "$toggle_view_binding_name": "ip_display_hud_toggle",
+          "$toggle_tags": "$world_name",
+          "$modules_template_toggle_text": "World Name",
+          "$modules_template_button_name": "button.world_name_screen",
+          "$nc_letter_ctrl": "nc_ltr_w"
+        }
+      },
+      {
+        "spacer3@Nova_Client_common.spacer": {}
+      },
+      {
+        "main_hand@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/items/diamond_sword",
+          "$toggle_view_binding_name": "mainhand_toggle",
+          "$toggle_tags": "$mainhand",
+          "$modules_template_toggle_text": "Main Hand Slot",
+          "$modules_template_button_name": "button.main_hand_screen",
+          "$nc_letter_ctrl": "nc_ltr_m"
+        }
+      }
+    ],
+    "property_bag": {
+      "#nc_kb_off": true,
+      "#nc_all": true,
+      "#nc_l1": true,
+      "#nc_l2": true,
+      "#nc_l3": true
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "keyboard_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#nc_kb_off"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_ltr_all",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_all"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_ltr_i",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_l1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_ltr_m",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_l2"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_ltr_w",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_l3"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_kb_off or #nc_all or #nc_l1 or #nc_l2 or #nc_l3)",
+        "target_property_name": "#visible"
+      }
+    ]
   }
+}

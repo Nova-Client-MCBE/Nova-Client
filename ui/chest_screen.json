@@ -1,0 +1,29 @@
+{
+  "namespace": "chest",
+  "small_chest_panel/root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "nc_container_player_panel@Nova_Client_armor.container_player_panel": {}
+          }
+        ]
+      }
+    ]
+  },
+  "large_chest_panel/root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "nc_container_player_panel@Nova_Client_armor.container_player_panel": {}
+          }
+        ]
+      }
+    ]
+  }
+}

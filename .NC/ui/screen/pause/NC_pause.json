@@ -455,6 +455,10 @@
           "$pressed_alpha": 0,
           "$button_pressed_hover_texture": "textures/ui/hud_tip_text_background",
           "$pressed_hover_alpha": 0.5,
+          "$button_default_overlay_texture": ".NC/textures/invis",
+          "$button_hover_overlay_texture": ".NC/textures/invis",
+          "$button_pressed_overlay_texture": ".NC/textures/invis",
+          "$button_pressed_hover_overlay_texture": ".NC/textures/invis",
           "$default_text_color|default": [
             0,
             0,

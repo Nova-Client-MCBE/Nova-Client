@@ -30,7 +30,52 @@
     ],
     "controls": [
       {
-        "spacer1@Nova_Client_common.spacer": {}
+        "spacer1@Nova_Client_common.spacer": {
+          "property_bag": {
+            "#nc_kb_off": true,
+            "#nc_all": true,
+            "#nc_l1": true,
+            "#nc_l2": true,
+            "#nc_l3": true
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "keyboard_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#nc_kb_off"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_all",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_all"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_i",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l1"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_m",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l2"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_w",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_kb_off or #nc_all or #nc_l1 or #nc_l2 or #nc_l3)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       },
       {
         "1@Nova_Client_modules_row_one.content": {}
@@ -40,6 +85,50 @@
           "$NC_spacer_size": [
             7,
             7
+          ],
+          "property_bag": {
+            "#nc_kb_off": true,
+            "#nc_all": true,
+            "#nc_l1": true,
+            "#nc_l2": true,
+            "#nc_l3": true
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "keyboard_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#nc_kb_off"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_all",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_all"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_c",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l1"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_d",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l2"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_i",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_kb_off or #nc_all or #nc_l1 or #nc_l2 or #nc_l3)",
+              "target_property_name": "#visible"
+            }
           ]
         }
       },
@@ -51,6 +140,43 @@
           "$NC_spacer_size": [
             7,
             7
+          ],
+          "property_bag": {
+            "#nc_kb_off": true,
+            "#nc_all": true,
+            "#nc_l1": true,
+            "#nc_l2": true
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "keyboard_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#nc_kb_off"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_all",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_all"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_c",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l1"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_i",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_kb_off or #nc_all or #nc_l1 or #nc_l2)",
+              "target_property_name": "#visible"
+            }
           ]
         }
       },
@@ -62,6 +188,50 @@
           "$NC_spacer_size": [
             7,
             7
+          ],
+          "property_bag": {
+            "#nc_kb_off": true,
+            "#nc_all": true,
+            "#nc_l1": true,
+            "#nc_l2": true,
+            "#nc_l3": true
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "keyboard_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#nc_kb_off"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_all",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_all"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_b",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l1"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_i",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l2"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_p",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_kb_off or #nc_all or #nc_l1 or #nc_l2 or #nc_l3)",
+              "target_property_name": "#visible"
+            }
           ]
         }
       },
@@ -73,6 +243,50 @@
           "$NC_spacer_size": [
             7,
             7
+          ],
+          "property_bag": {
+            "#nc_kb_off": true,
+            "#nc_all": true,
+            "#nc_l1": true,
+            "#nc_l2": true,
+            "#nc_l3": true
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "keyboard_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#nc_kb_off"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_all",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_all"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_e",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l1"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_m",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l2"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_p",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_kb_off or #nc_all or #nc_l1 or #nc_l2 or #nc_l3)",
+              "target_property_name": "#visible"
+            }
           ]
         }
       },
@@ -84,6 +298,50 @@
           "$NC_spacer_size": [
             7,
             7
+          ],
+          "property_bag": {
+            "#nc_kb_off": true,
+            "#nc_all": true,
+            "#nc_l1": true,
+            "#nc_l2": true,
+            "#nc_l3": true
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "keyboard_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#nc_kb_off"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_all",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_all"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_a",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l1"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_k",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l2"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_ltr_s",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_l3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_kb_off or #nc_all or #nc_l1 or #nc_l2 or #nc_l3)",
+              "target_property_name": "#visible"
+            }
           ]
         }
       },

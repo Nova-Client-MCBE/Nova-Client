@@ -207,6 +207,10 @@
                       "$button_hover_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$button_default_overlay_texture": ".NC/textures/invis",
+                      "$button_hover_overlay_texture": ".NC/textures/invis",
+                      "$button_pressed_overlay_texture": ".NC/textures/invis",
+                      "$button_pressed_hover_overlay_texture": ".NC/textures/invis",
                       "$default_alpha": 0.5,
                       "$hover_alpha": 0.3,
                       "$pressed_alpha": 0.5,
@@ -243,6 +247,10 @@
                       "$button_hover_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$button_default_overlay_texture": ".NC/textures/invis",
+                      "$button_hover_overlay_texture": ".NC/textures/invis",
+                      "$button_pressed_overlay_texture": ".NC/textures/invis",
+                      "$button_pressed_hover_overlay_texture": ".NC/textures/invis",
                       "$default_alpha": 0.5,
                       "$hover_alpha": 0.3,
                       "$pressed_alpha": 0.5,
@@ -279,6 +287,10 @@
                       "$button_hover_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_hover_texture": "textures/ui/hud_tip_text_background",
+                      "$button_default_overlay_texture": ".NC/textures/invis",
+                      "$button_hover_overlay_texture": ".NC/textures/invis",
+                      "$button_pressed_overlay_texture": ".NC/textures/invis",
+                      "$button_pressed_hover_overlay_texture": ".NC/textures/invis",
                       "$default_alpha": 0.5,
                       "$hover_alpha": 0.3,
                       "$pressed_alpha": 0.5,
@@ -451,12 +463,45 @@
     ],
     "controls": [
       {
+        "1.5.3@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_5_3",
+          "$NC_changelog_version": "1.5.3",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added keyboard module"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "added java item text"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "added paperdoll to chest screen"
+              }
+            },
+            {
+              "4@Nova_Client_common.information_label": {
+                "$NC_information_label": "optimized code and textures"
+              }
+            },
+            {
+              "5@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v26.45"
+              }
+            }
+          ]
+        }
+      },
+      {
         "1.5.2@Nova_Client_common.changelog_template": {
           "$NC_changelog_toggle": "1_5_2",
           "$NC_changelog_version": "1.5.2",
           "$NC_changelog_content": [
             {
-              "3@Nova_Client_common.information_label": {
+              "1@Nova_Client_common.information_label": {
                 "$NC_information_label": "updated to v26.42"
               }
             }
@@ -1974,6 +2019,17 @@
       },
       {
         "spacer_57@Nova_Client_common.spacer": {}
+      },
+      {
+        "57_2@Nova_Client_common.config_helper": {
+          "$NC_hover_text": "Changes the item text to look more like java edition\n§crequires item_text to be enabled",
+          "$mod_enabled": "($java_item_text)",
+          "$mod_disabled": "(not $java_item_text)",
+          "$module_name": "java_item_text"
+        }
+      },
+      {
+        "spacer_57_2@Nova_Client_common.spacer": {}
       },
       {
         "58@Nova_Client_common.config_helper": {

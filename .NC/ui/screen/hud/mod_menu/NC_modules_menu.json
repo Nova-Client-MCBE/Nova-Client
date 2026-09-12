@@ -22,10 +22,35 @@
         "modules_menu_button@Nova_client_toggles.Nova_client_toggle": {
           "$button_text": "",
           "$toggle_view_binding_name": "mod_menu_toggle",
+          "$toggle_overlay_control": "Nova_client_toggles.toggle_overlay_none",
+          "$button_default_tint": [
+            1,
+            1,
+            1
+          ],
+          "$button_hover_tint": [
+            1,
+            1,
+            1
+          ],
+          "$button_pressed_tint": [
+            1,
+            1,
+            1
+          ],
+          "$button_pressed_hover_tint": [
+            1,
+            1,
+            1
+          ],
           "$button_default_texture": ".NC/textures/invis",
           "$button_hover_texture": ".NC/textures/invis",
           "$button_pressed_texture": ".NC/textures/invis",
           "$button_pressed_hover_texture": ".NC/textures/invis",
+          "$button_default_overlay_texture": ".NC/textures/invis",
+          "$button_hover_overlay_texture": ".NC/textures/invis",
+          "$button_pressed_overlay_texture": ".NC/textures/invis",
+          "$button_pressed_hover_overlay_texture": ".NC/textures/invis",
           "$toggle_group_forced_index": 2,
           "size": [
             112.5,
@@ -77,7 +102,7 @@
     "controls": [
       {
         "header@Nova_Client_common.internal": {
-          "$NC_internal": "buttons/common/button_default",
+          "$NC_internal": "buttons/baked/light_default",
           "$NC_anchor": "top_middle",
           "layer": 2,
           "size": [
@@ -99,6 +124,10 @@
                   0,
                   0
                 ],
+                "offset": [
+                  0,
+                  2
+                ],
                 "size": [
                   "default",
                   23
@@ -110,10 +139,35 @@
                 "$button_text": "",
                 "$tab_view_binding_name": "mod_menu_toggle",
                 "$toggle_group_forced_index": 130,
+                "$toggle_overlay_control": "Nova_client_toggles.toggle_overlay_none",
+                "$button_default_tint": [
+                  1,
+                  1,
+                  1
+                ],
+                "$button_hover_tint": [
+                  1,
+                  1,
+                  1
+                ],
+                "$button_pressed_tint": [
+                  1,
+                  1,
+                  1
+                ],
+                "$button_pressed_hover_tint": [
+                  1,
+                  1,
+                  1
+                ],
                 "$button_default_texture": ".NC/textures/invis",
                 "$button_hover_texture": ".NC/textures/invis",
                 "$button_pressed_texture": ".NC/textures/invis",
                 "$button_pressed_hover_texture": ".NC/textures/invis",
+                "$button_default_overlay_texture": ".NC/textures/invis",
+                "$button_hover_overlay_texture": ".NC/textures/invis",
+                "$button_pressed_overlay_texture": ".NC/textures/invis",
+                "$button_pressed_hover_overlay_texture": ".NC/textures/invis",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "size": [
@@ -185,37 +239,75 @@
                 ],
                 "controls": [
                   {
-                    "modules@Nova_Client_modules_screen.content": {
-                      "bindings": [
+                    "column": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "controls": [
                         {
-                          "binding_type": "view",
-                          "source_control_name": "Nova_Client_modules",
-                          "source_property_name": "#toggle_state",
-                          "target_property_name": "#visible"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "elements@Nova_Client_elements_screen.content": {
-                      "bindings": [
+                          "nc_filter_bar@Nova_client_modules_menu.nc_filter_bar": {}
+                        },
                         {
-                          "binding_type": "view",
-                          "source_control_name": "Nova_Client_elements",
-                          "source_property_name": "#toggle_state",
-                          "target_property_name": "#visible"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "info@Nova_Client_info_screen.content": {
-                      "bindings": [
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "Nova_Client_info",
-                          "source_property_name": "#toggle_state",
-                          "target_property_name": "#visible"
+                          "pages": {
+                            "type": "panel",
+                            "size": [
+                              "100%",
+                              "fill"
+                            ],
+                            "controls": [
+                              {
+                                "modules@Nova_Client_modules_screen.content": {
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "Nova_Client_modules",
+                                      "source_property_name": "#toggle_state",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "size": [
+                                    "100%",
+                                    "100%"
+                                  ]
+                                }
+                              },
+                              {
+                                "elements@Nova_Client_elements_screen.content": {
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "Nova_Client_elements",
+                                      "source_property_name": "#toggle_state",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "size": [
+                                    "100%",
+                                    "100%"
+                                  ]
+                                }
+                              },
+                              {
+                                "info@Nova_Client_info_screen.content": {
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "Nova_Client_info",
+                                      "source_property_name": "#toggle_state",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "size": [
+                                    "100%",
+                                    "100%"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
                         }
                       ]
                     }
@@ -317,6 +409,275 @@
       },
       {
         "2@Nova_client_modules_menu.modules_menu": {}
+      }
+    ]
+  },
+  "nc_letter_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$toggle_view_binding_name|default": "nc_ltr_all",
+    "$template_toggle|default": "Nova_client_toggles.toggle_template",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 0,
+    "$toggle_name": "nc_letter_group",
+    "$toggle_tab_focus_binding_name": "#nc_letter_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "size": "$nc_btn_size",
+    "$nc_btn_size|default": [
+      "12.5%",
+      18
+    ],
+    "$button_default_tint": [
+      0.184,
+      0.184,
+      0.188
+    ],
+    "$button_hover_tint": [
+      0.404,
+      0.408,
+      0.416
+    ],
+    "$button_pressed_tint": [
+      0.235,
+      0.522,
+      0.153
+    ],
+    "$button_pressed_hover_tint": [
+      0.322,
+      0.647,
+      0.208
+    ],
+    "$default_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$hover_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$pressed_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$pressed_hover_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$font_scale_factor": 0.85,
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+  "nc_filter_bar": {
+    "type": "panel",
+    "size": [
+      "100%",
+      40
+    ],
+    "layer": 25,
+    "property_bag": {
+      "#nc_not_info": true,
+      "#nc_kb": true
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "Nova_Client_info",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#nc_not_info"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "keyboard_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_kb"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_not_info and #nc_kb)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "strip": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [
+            "100% - 6px",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "r1": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%",
+                  18
+                ],
+                "controls": [
+                  {
+                    "all@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_all",
+                      "$toggle_group_forced_index": 0,
+                      "$button_text": "All"
+                    }
+                  },
+                  {
+                    "A@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_a",
+                      "$toggle_group_forced_index": 1,
+                      "$button_text": "A"
+                    }
+                  },
+                  {
+                    "B@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_b",
+                      "$toggle_group_forced_index": 2,
+                      "$button_text": "B"
+                    }
+                  },
+                  {
+                    "C@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_c",
+                      "$toggle_group_forced_index": 3,
+                      "$button_text": "C"
+                    }
+                  },
+                  {
+                    "D@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_d",
+                      "$toggle_group_forced_index": 4,
+                      "$button_text": "D"
+                    }
+                  },
+                  {
+                    "E@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_e",
+                      "$toggle_group_forced_index": 5,
+                      "$button_text": "E"
+                    }
+                  },
+                  {
+                    "F@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_f",
+                      "$toggle_group_forced_index": 6,
+                      "$button_text": "F"
+                    }
+                  },
+                  {
+                    "H@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_h",
+                      "$toggle_group_forced_index": 7,
+                      "$button_text": "H"
+                    }
+                  },
+                  {
+                    "I@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_i",
+                      "$toggle_group_forced_index": 8,
+                      "$button_text": "I"
+                    }
+                  },
+                  {
+                    "J@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_j",
+                      "$toggle_group_forced_index": 9,
+                      "$button_text": "J"
+                    }
+                  }
+                ],
+                "$nc_btn_size": [
+                  "10.0%",
+                  18
+                ]
+              }
+            },
+            {
+              "r2": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%",
+                  18
+                ],
+                "controls": [
+                  {
+                    "K@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_k",
+                      "$toggle_group_forced_index": 10,
+                      "$button_text": "K"
+                    }
+                  },
+                  {
+                    "M@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_m",
+                      "$toggle_group_forced_index": 11,
+                      "$button_text": "M"
+                    }
+                  },
+                  {
+                    "P@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_p",
+                      "$toggle_group_forced_index": 12,
+                      "$button_text": "P"
+                    }
+                  },
+                  {
+                    "S@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_s",
+                      "$toggle_group_forced_index": 13,
+                      "$button_text": "S"
+                    }
+                  },
+                  {
+                    "T@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_t",
+                      "$toggle_group_forced_index": 14,
+                      "$button_text": "T"
+                    }
+                  },
+                  {
+                    "V@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_v",
+                      "$toggle_group_forced_index": 15,
+                      "$button_text": "V"
+                    }
+                  },
+                  {
+                    "W@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_w",
+                      "$toggle_group_forced_index": 16,
+                      "$button_text": "W"
+                    }
+                  },
+                  {
+                    "X@Nova_client_modules_menu.nc_letter_toggle": {
+                      "$toggle_view_binding_name": "nc_ltr_x",
+                      "$toggle_group_forced_index": 17,
+                      "$button_text": "X"
+                    }
+                  }
+                ],
+                "$nc_btn_size": [
+                  "12.5%",
+                  18
+                ]
+              }
+            }
+          ]
+        }
       }
     ]
   }

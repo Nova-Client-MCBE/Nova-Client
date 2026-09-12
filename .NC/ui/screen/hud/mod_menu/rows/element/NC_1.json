@@ -1,60 +1,107 @@
 {
-    "namespace": "Nova_Client_element_row_one",
-    "content": {
-      "type": "stack_panel",
-      "orientation": "horizontal",
-      "size": [
-        "100%",
-        75
-      ],
-      "controls": [
-        {
-          "spacer1@Nova_Client_common.spacer": {}
-        },
-        {
-          "bossbar@Nova_client_modules_menu_button_template.content": {
-            "$modules_template_texture": "textures/gui/newgui/Realms",
-            "$toggle_view_binding_name": "boss_bar_toggle",
-            "$toggle_tags": "$bossbar",
-            "$modules_template_toggle_text": "Bossbar",
-            "$modules_template_button_name": "button.bossbar_screen"
-          }
-        },
-        {
-          "spacer2@Nova_Client_common.spacer": {}
-        },
-        {
-          "effects@Nova_client_modules_menu_button_template.content": {
-            "$modules_template_texture": "textures/ui/absorption_effect",
-            "$toggle_view_binding_name": "mob_effect_toggle",
-            "$toggle_tags": "$mob_effects",
-            "$modules_template_toggle_text": "Mob effects",
-            "$modules_template_toggle_size": [
-              "100%",
-              20
-            ],
-            "$modules_template_button_size": [
-              0,
-              0
-            ],
-            "$button_icon_size": [
-              0,
-              0
-            ]
-          }
-        },
-        {
-          "spacer3@Nova_Client_common.spacer": {}
-        },
-        {
-          "scoreboard@Nova_client_modules_menu_button_template.content": {
-            "$modules_template_texture": "textures/ui/blue_info_glyph",
-            "$toggle_view_binding_name": "scoreboard_toggle",
-            "$toggle_tags": "$scoreboard",
-            "$modules_template_toggle_text": "Scoreboard",
-            "$modules_template_button_name": "button.scoreboard_screen"
-          }
+  "namespace": "Nova_Client_element_row_one",
+  "content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      75
+    ],
+    "controls": [
+      {
+        "spacer1@Nova_Client_common.spacer": {}
+      },
+      {
+        "bossbar@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/gui/newgui/Realms",
+          "$toggle_view_binding_name": "boss_bar_toggle",
+          "$toggle_tags": "$bossbar",
+          "$modules_template_toggle_text": "Bossbar",
+          "$modules_template_button_name": "button.bossbar_screen",
+          "$nc_letter_ctrl": "nc_ltr_b"
         }
-      ]
-    }
+      },
+      {
+        "spacer2@Nova_Client_common.spacer": {}
+      },
+      {
+        "effects@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/ui/absorption_effect",
+          "$toggle_view_binding_name": "mob_effect_toggle",
+          "$toggle_tags": "$mob_effects",
+          "$modules_template_toggle_text": "Mob effects",
+          "$modules_template_toggle_size": [
+            "100%",
+            20
+          ],
+          "$modules_template_button_size": [
+            0,
+            0
+          ],
+          "$button_icon_size": [
+            0,
+            0
+          ],
+          "$nc_letter_ctrl": "nc_ltr_m"
+        }
+      },
+      {
+        "spacer3@Nova_Client_common.spacer": {}
+      },
+      {
+        "scoreboard@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/ui/blue_info_glyph",
+          "$toggle_view_binding_name": "scoreboard_toggle",
+          "$toggle_tags": "$scoreboard",
+          "$modules_template_toggle_text": "Scoreboard",
+          "$modules_template_button_name": "button.scoreboard_screen",
+          "$nc_letter_ctrl": "nc_ltr_s"
+        }
+      }
+    ],
+    "property_bag": {
+      "#nc_kb_off": true,
+      "#nc_all": true,
+      "#nc_l1": true,
+      "#nc_l2": true,
+      "#nc_l3": true
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "keyboard_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#nc_kb_off"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_ltr_all",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_all"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_ltr_b",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_l1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_ltr_m",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_l2"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_ltr_s",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_l3"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_kb_off or #nc_all or #nc_l1 or #nc_l2 or #nc_l3)",
+        "target_property_name": "#visible"
+      }
+    ]
   }
+}
