@@ -2,17 +2,17 @@
    "format_version": 2,
    "header": {
      "name": "§l§6Nova §fClient§r",
-     "description": "Nova Client is a client that adds useful Modules\n\n§9Discord§r: llit008",
+     "description": "Nova Client is a client that adds useful Modules\n§9Discord§r: https://discord.gg/hu6ftWcsbU",
      "uuid": "47af92e8-f6d5-459a-9521-946d6de0b1b8",
      "version": [
        1,
        5,
-       3
+       4
      ],
      "min_engine_version": [
        1,
        26,
-       45
+       50
      ]
    },
    "modules": [

@@ -463,6 +463,19 @@
     ],
     "controls": [
       {
+        "1.5.4@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_5_4",
+          "$NC_changelog_version": "1.5.4",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v26.51"
+              }
+            }
+          ]
+        }
+      },
+      {
         "1.5.3@Nova_Client_common.changelog_template": {
           "$NC_changelog_toggle": "1_5_3",
           "$NC_changelog_version": "1.5.3",
