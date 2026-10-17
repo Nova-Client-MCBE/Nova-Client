@@ -1,7 +1,7 @@
 {
   "namespace": "Nova_Client_inventory_hud",
   "content": {
-    "type": "stack_panel",
+    "type": "panel",
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "size": [
@@ -16,28 +16,467 @@
         "source_control_name": "inventory_hud_toggle",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_inventory_hud_size_eff",
+        "source_property_name": "#nc_eff",
+        "target_property_name": "#nc_s"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_hud_gui_style",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_g"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#nc_s + 10) * 144) / 20)",
+        "target_property_name": "#size_binding_x_absolute"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#nc_s + 10) * (48 + (#nc_g * 12))) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
       }
     ],
     "controls": [
       {
-        "inventory_hud_panel": {
+        "normal_style": {
           "type": "panel",
-          "clips_children": true,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_hud_gui_style",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
           "controls": [
             {
-              "inventory_grid": {
-                "type": "grid",
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "collection_name": "hotbar_items",
-                "grid_dimensions": [
-                  9,
-                  4
+              "inventory_hud_panel": {
+                "type": "panel",
+                "clips_children": true,
+                "controls": [
+                  {
+                    "rows": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "row_0": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [
+                              "100%",
+                              "33.33%"
+                            ],
+                            "collection_name": "hotbar_items",
+                            "controls": [
+                              {
+                                "cell_9@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 9
+                                }
+                              },
+                              {
+                                "cell_10@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 10
+                                }
+                              },
+                              {
+                                "cell_11@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 11
+                                }
+                              },
+                              {
+                                "cell_12@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 12
+                                }
+                              },
+                              {
+                                "cell_13@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 13
+                                }
+                              },
+                              {
+                                "cell_14@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 14
+                                }
+                              },
+                              {
+                                "cell_15@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 15
+                                }
+                              },
+                              {
+                                "cell_16@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 16
+                                }
+                              },
+                              {
+                                "cell_17@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 17
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "row_1": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [
+                              "100%",
+                              "33.33%"
+                            ],
+                            "collection_name": "hotbar_items",
+                            "controls": [
+                              {
+                                "cell_18@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 18
+                                }
+                              },
+                              {
+                                "cell_19@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 19
+                                }
+                              },
+                              {
+                                "cell_20@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 20
+                                }
+                              },
+                              {
+                                "cell_21@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 21
+                                }
+                              },
+                              {
+                                "cell_22@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 22
+                                }
+                              },
+                              {
+                                "cell_23@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 23
+                                }
+                              },
+                              {
+                                "cell_24@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 24
+                                }
+                              },
+                              {
+                                "cell_25@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 25
+                                }
+                              },
+                              {
+                                "cell_26@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 26
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "row_2": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [
+                              "100%",
+                              "33.33%"
+                            ],
+                            "collection_name": "hotbar_items",
+                            "controls": [
+                              {
+                                "cell_27@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 27
+                                }
+                              },
+                              {
+                                "cell_28@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 28
+                                }
+                              },
+                              {
+                                "cell_29@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 29
+                                }
+                              },
+                              {
+                                "cell_30@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 30
+                                }
+                              },
+                              {
+                                "cell_31@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 31
+                                }
+                              },
+                              {
+                                "cell_32@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 32
+                                }
+                              },
+                              {
+                                "cell_33@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 33
+                                }
+                              },
+                              {
+                                "cell_34@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 34
+                                }
+                              },
+                              {
+                                "cell_35@Nova_Client_inventory_hud.inventory_hud_grid": {
+                                  "collection_index": 35
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "gui_style": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_hud_gui_style",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "gui_bg": {
+                "type": "image",
+                "texture": ".NC/textures/inventory_hud/background_gui",
+                "size": [
+                  "100%",
+                  "100%"
                 ],
-                "grid_item_template": "Nova_Client_inventory_hud.inventory_hud_grid",
-                "offset": [
-                  0,
-                  -16
+                "layer": 0
+              }
+            },
+            {
+              "gui_clip": {
+                "type": "panel",
+                "size": [
+                  "93.75%",
+                  "75%"
+                ],
+                "clips_children": true,
+                "layer": 1,
+                "controls": [
+                  {
+                    "rows": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "row_0": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [
+                              "100%",
+                              "33.33%"
+                            ],
+                            "collection_name": "hotbar_items",
+                            "controls": [
+                              {
+                                "cell_9@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 9
+                                }
+                              },
+                              {
+                                "cell_10@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 10
+                                }
+                              },
+                              {
+                                "cell_11@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 11
+                                }
+                              },
+                              {
+                                "cell_12@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 12
+                                }
+                              },
+                              {
+                                "cell_13@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 13
+                                }
+                              },
+                              {
+                                "cell_14@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 14
+                                }
+                              },
+                              {
+                                "cell_15@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 15
+                                }
+                              },
+                              {
+                                "cell_16@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 16
+                                }
+                              },
+                              {
+                                "cell_17@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 17
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "row_1": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [
+                              "100%",
+                              "33.33%"
+                            ],
+                            "collection_name": "hotbar_items",
+                            "controls": [
+                              {
+                                "cell_18@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 18
+                                }
+                              },
+                              {
+                                "cell_19@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 19
+                                }
+                              },
+                              {
+                                "cell_20@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 20
+                                }
+                              },
+                              {
+                                "cell_21@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 21
+                                }
+                              },
+                              {
+                                "cell_22@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 22
+                                }
+                              },
+                              {
+                                "cell_23@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 23
+                                }
+                              },
+                              {
+                                "cell_24@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 24
+                                }
+                              },
+                              {
+                                "cell_25@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 25
+                                }
+                              },
+                              {
+                                "cell_26@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 26
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "row_2": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [
+                              "100%",
+                              "33.33%"
+                            ],
+                            "collection_name": "hotbar_items",
+                            "controls": [
+                              {
+                                "cell_27@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 27
+                                }
+                              },
+                              {
+                                "cell_28@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 28
+                                }
+                              },
+                              {
+                                "cell_29@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 29
+                                }
+                              },
+                              {
+                                "cell_30@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 30
+                                }
+                              },
+                              {
+                                "cell_31@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 31
+                                }
+                              },
+                              {
+                                "cell_32@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 32
+                                }
+                              },
+                              {
+                                "cell_33@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 33
+                                }
+                              },
+                              {
+                                "cell_34@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 34
+                                }
+                              },
+                              {
+                                "cell_35@Nova_Client_inventory_hud.inventory_hud_gui_cell": {
+                                  "collection_index": 35
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
                 ]
               }
             }
@@ -51,8 +490,8 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [
-      16,
-      16
+      "11.11%",
+      "100%"
     ],
     "controls": [
       {
@@ -78,41 +517,227 @@
         }
       }
     ],
-    "bindings": [
-      {
-        "binding_collection_name": "hotbar_items",
-        "binding_type": "collection_details"
-      }
-    ]
+    "bindings": []
   },
   "inventory_hud_grid_item": {
     "type": "panel",
     "layer": 1,
     "size": [
-      16,
-      16
+      "100%",
+      "100%"
     ],
     "$durability_bar_required": true,
     "$item_collection_name": "hotbar_items",
     "$stack_count_required": true,
     "controls": [
       {
-        "stack_count@common.stack_count_label": {
-          "layer": 3
+        "count_box": {
+          "type": "panel",
+          "size": [
+            "100%",
+            10
+          ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            0,
+            1
+          ],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_inventory_hud_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 10) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "controls": [
+            {
+              "stack_count": {
+                "type": "label",
+                "ignored": "(not $stack_count_required)",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor_to": "top_right",
+                "anchor_from": "top_right",
+                "layer": 3,
+                "shadow": true,
+                "text": "#inventory_stack_count",
+                "bindings": [
+                  {
+                    "binding_name": "#inventory_stack_count",
+                    "binding_type": "collection",
+                    "binding_collection_name": "hotbar_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_inventory_hud_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+                    "target_property_name": "#font_scale_factor"
+                  }
+                ],
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "text_alignment": "right"
+              }
+            }
+          ]
         }
       },
       {
         "2@common.item_renderer": {
           "layer": 1,
           "size": [
-            12,
-            12
+            "75%",
+            "75%"
           ]
         }
       },
       {
         "durability@common.durability_bar": {
-          "layer": 2
+          "layer": 2,
+          "$durability_bar_size": [
+            "75%",
+            "6.25%"
+          ],
+          "$durability_bar_offset": [
+            0,
+            "31.25%"
+          ]
+        }
+      }
+    ]
+  },
+  "inventory_hud_gui_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$durability_bar_required": true,
+    "$item_collection_name": "hotbar_items",
+    "$stack_count_required": true,
+    "controls": [
+      {
+        "count_box": {
+          "type": "panel",
+          "size": [
+            "100%",
+            10
+          ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            0,
+            1
+          ],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_inventory_hud_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 10) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "controls": [
+            {
+              "stack_count": {
+                "type": "label",
+                "ignored": "(not $stack_count_required)",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor_to": "top_right",
+                "anchor_from": "top_right",
+                "layer": 3,
+                "shadow": true,
+                "text": "#inventory_stack_count",
+                "bindings": [
+                  {
+                    "binding_name": "#inventory_stack_count",
+                    "binding_type": "collection",
+                    "binding_collection_name": "hotbar_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_inventory_hud_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+                    "target_property_name": "#font_scale_factor"
+                  }
+                ],
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "text_alignment": "right"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "2@common.item_renderer": {
+          "layer": 1,
+          "size": [
+            "93.33%",
+            "93.33%"
+          ]
+        }
+      },
+      {
+        "durability@common.durability_bar": {
+          "layer": 2,
+          "$durability_bar_size": [
+            "75%",
+            "6.25%"
+          ],
+          "$durability_bar_offset": [
+            0,
+            "31.25%"
+          ]
+        }
+      }
+    ]
+  },
+  "inventory_hud_gui_cell": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [
+      "11.11%",
+      "100%"
+    ],
+    "bindings": [],
+    "controls": [
+      {
+        "gui_item@Nova_Client_inventory_hud.inventory_hud_gui_item": {}
+      },
+      {
+        "cell": {
+          "type": "image",
+          "texture": "textures/ui/cell_image",
+          "size": [
+            "100%",
+            "100%"
+          ]
         }
       }
     ]

@@ -62,7 +62,8 @@
       {
         "pressed@tab_list_content": {}
       }
-    ]
+    ],
+    "focus_enabled": false
   },
   "mobile_content@tab_list_content": {
     "bindings": [
@@ -202,14 +203,6 @@
                       ]
                     }
                   },
-                  /*
-                  {
-                    "halloween25@Nova_Client_player_list.special_icon_template": {
-                      "$NC_icon_texture": "halloween25",
-                      "$NC_icon_owner": "(#gamertag = ('lliT008' + 'ChikenWings5544'))"
-                    }
-                  },
-                  */
                   {
                     "player_gamertag": {
                       "type": "label",

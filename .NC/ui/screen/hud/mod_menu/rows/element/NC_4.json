@@ -29,7 +29,8 @@
             0,
             0
           ],
-          "$nc_letter_ctrl": "nc_ltr_t"
+          "$nc_letter_ctrl": "nc_ltr_t",
+          "$nc_no_page": true
         }
       },
       {
@@ -42,7 +43,9 @@
           "$toggle_tags": "$item_text",
           "$modules_template_toggle_text": "Item Text",
           "$modules_template_button_name": "button.item_text_screen",
-          "$nc_letter_ctrl": "nc_ltr_i"
+          "$nc_letter_ctrl": "nc_ltr_i",
+          "$nc_page_toggle": "nc_page_item_text",
+          "$nc_page_index": 19
         }
       },
       {
@@ -55,7 +58,9 @@
           "$toggle_tags": "$xp_bar",
           "$modules_template_toggle_text": "XP Bar",
           "$modules_template_button_name": "button.xp_bar_screen",
-          "$nc_letter_ctrl": "nc_ltr_x"
+          "$nc_letter_ctrl": "nc_ltr_x",
+          "$nc_page_toggle": "nc_page_xp_bar",
+          "$nc_page_index": 20
         }
       }
     ],

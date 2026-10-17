@@ -18,7 +18,9 @@
           "$toggle_tags": "$paperdoll",
           "$modules_template_toggle_text": "Paperdoll",
           "$modules_template_button_name": "button.paperdoll_screen",
-          "$nc_letter_ctrl": "nc_ltr_p"
+          "$nc_letter_ctrl": "nc_ltr_p",
+          "$nc_page_toggle": "nc_page_paperdoll",
+          "$nc_page_index": 10
         }
       },
       {
@@ -31,20 +33,24 @@
           "$toggle_tags": "$item_info",
           "$modules_template_toggle_text": "Item Info",
           "$modules_template_button_name": "button.item_info_screen",
-          "$nc_letter_ctrl": "nc_ltr_i"
+          "$nc_letter_ctrl": "nc_ltr_i",
+          "$nc_page_toggle": "nc_page_item_info",
+          "$nc_page_index": 11
         }
       },
       {
         "spacer3@Nova_Client_common.spacer": {}
       },
       {
-        "brightness@Nova_client_modules_menu_button_template.content": {
-          "$modules_template_texture": "textures/items/light_block_0",
-          "$toggle_view_binding_name": "brightness_toggle",
-          "$toggle_tags": "$brightness",
-          "$modules_template_toggle_text": "Brightness",
-          "$modules_template_button_name": "button.brightness_screen",
-          "$nc_letter_ctrl": "nc_ltr_b"
+        "xp_panel@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/items/experience_bottle",
+          "$toggle_view_binding_name": "xp_panel_toggle",
+          "$toggle_tags": "$exp_calculator",
+          "$modules_template_toggle_text": "EXP Calculator",
+          "$modules_template_button_name": "button.xp_calculator_screen",
+          "$nc_letter_ctrl": "nc_ltr_e",
+          "$nc_page_toggle": "nc_page_xp_calculator",
+          "$nc_page_index": 12
         }
       }
     ],

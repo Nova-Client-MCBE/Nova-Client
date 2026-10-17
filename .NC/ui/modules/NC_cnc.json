@@ -49,6 +49,18 @@
                     "source_control_name": "compass_toggle",
                     "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_clock_and_compass_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+                    "target_property_name": "#size_binding_x_absolute"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_clock_and_compass_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+                    "target_property_name": "#size_binding_y_absolute"
                   }
                 ]
               }
@@ -64,6 +76,18 @@
                     "source_control_name": "clock_toggle",
                     "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_clock_and_compass_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+                    "target_property_name": "#size_binding_x_absolute"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_clock_and_compass_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+                    "target_property_name": "#size_binding_y_absolute"
                   }
                 ]
               }
@@ -79,9 +103,29 @@
                     "source_control_name": "recovery_toggle",
                     "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_clock_and_compass_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+                    "target_property_name": "#size_binding_x_absolute"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_clock_and_compass_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+                    "target_property_name": "#size_binding_y_absolute"
                   }
                 ]
               }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_clock_and_compass_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
             }
           ]
         }

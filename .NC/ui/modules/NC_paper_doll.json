@@ -3,9 +3,60 @@
   "content": {
     "type": "panel",
     "layer": 2,
+    "size": [
+      23.33,
+      35
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "3d_paper_doll_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_paperdoll_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 2333) / 2000)",
+        "target_property_name": "#size_binding_x_absolute"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_paperdoll_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 35) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
+      }
+    ],
     "controls": [
       {
+        "bg@Nova_Client_common.external": {
+          "alpha": 0.5,
+          "layer": 0,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "paperdoll_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            }
+          ]
+        }
+      },
+      {
         "3d": {
+          "type": "panel",
+          "size": [
+            "64.27%",
+            "42.86%"
+          ],
+          "offset": [
+            0,
+            "-20.23%"
+          ],
           "bindings": [
             {
               "binding_type": "view",
@@ -17,40 +68,40 @@
           "controls": [
             {
               "hud_player": {
+                "type": "custom",
+                "renderer": "hud_player_renderer",
+                "layer": 1,
+                "size": [
+                  "100%",
+                  "100%"
+                ],
                 "animation_reset_name": "screen_animation_reset",
                 "anims": [
                   "@common.screen_exit_size_animation_push",
                   "@common.screen_exit_size_animation_pop",
                   "@common.screen_entrance_size_animation_push",
                   "@common.screen_entrance_size_animation_pop"
-                ],
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "3d_paper_doll_toggle",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ],
-                "layer": 1,
-                "renderer": "hud_player_renderer",
-                "type": "custom"
+                ]
               }
             }
-          ],
-          "size": [
-            15,
-            15
-          ],
-          "type": "panel"
+          ]
         }
       },
       {
         "2d": {
+          "type": "panel",
+          "size": [
+            "64.27%",
+            "42.86%"
+          ],
+          "offset": [
+            0,
+            "-20.23%"
+          ],
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "3d_paper_doll_toggle",
+              "source_control_name": "2d_paper_doll_toggle",
               "source_property_name": "#toggle_state",
               "target_property_name": "#visible"
             }
@@ -58,32 +109,23 @@
           "controls": [
             {
               "hud_player": {
+                "type": "custom",
+                "renderer": "live_player_renderer",
+                "layer": 1,
+                "size": [
+                  "100%",
+                  "100%"
+                ],
                 "animation_reset_name": "screen_animation_reset",
                 "anims": [
                   "@common.screen_exit_size_animation_push",
                   "@common.screen_exit_size_animation_pop",
                   "@common.screen_entrance_size_animation_push",
                   "@common.screen_entrance_size_animation_pop"
-                ],
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "2d_paper_doll_toggle",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ],
-                "layer": 1,
-                "renderer": "live_player_renderer",
-                "type": "custom"
+                ]
               }
             }
-          ],
-          "size": [
-            15,
-            15
-          ],
-          "type": "panel"
+          ]
         }
       }
     ]

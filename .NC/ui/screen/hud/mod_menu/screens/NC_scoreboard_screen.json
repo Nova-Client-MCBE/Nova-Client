@@ -1,32 +1,42 @@
 {
   "namespace": "Nova_Client_scoreboard_screen",
-  "content@Nova_Client_common.screen_template": {
-    "$NC_sreen_button_name": "scoreboard_out",
-    "anims": [
-      "@Nova_Client_animations.scoreboard_screen",
-      "@Nova_Client_animations.screen_page_out"
-    ],
-    "controls": [
-      { "background@Nova_Client_common.screen_bg": {} },
+  "content@Nova_Client_layout.page_body": {
+    "$nc_page_toggle": "nc_page_scoreboard",
+    "$nc_page_desc": "The sidebar scoreboard used by servers and maps. \"Numbers\" toggles the red score numbers.",
+    "$nc_page_req": "Only appears when the world or server shows a sidebar scoreboard.",
+    "$nc_page_no_req": false,
+    "$nc_page_rows": [
       {
-        "1@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "scoreboard_numbers_toggle",
-          "$toggle_tags": "$scoreboard_numbers",
-          "$NC_dialog_toggle_text": "Numbers",
-          "$NC_dialog_toggle_anchor": "top_middle"
+        "row_1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "scoreboard_numbers_toggle",
+                "$toggle_tags": "$scoreboard_numbers",
+                "$NC_dialog_toggle_text": "Numbers",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "opacity_slider@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "scoreboard_opacity",
           "$NC_opacity_default_value": "$scoreboard_opacity",
-          "$NC_slider_section_offset": [ 0, 25 ]
-        }
-      },
-      {
-        "close_button@Nova_Client_dialog_toggle_template.close_button": {
-          "$pressed_button_name": "button.scoreboard_out",
-          "$button_text": "Close"
+          "$NC_slider_section_offset": [
+            0,
+            0
+          ]
         }
       }
     ]

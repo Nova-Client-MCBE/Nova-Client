@@ -11,57 +11,13 @@
     ],
     "controls": [
       {
-        "1@Nova_Client_brightness.content": {}
-      },
-      {
         "3@Nova_Client_chat.bottom_chat": {}
-      },
-      {
-        "4@Nova_Client_clock_and_compass.content": {}
       },
       {
         "5@Nova_Client_crosshair.content": {}
       },
       {
-        "9@Nova_Client_mainhand.content": {}
-      },
-      {
         "10@Nova_Client_player_list.content": {}
-      },
-      {
-        "11@Nova_Client_armor_hud.content": {}
-      },
-      {
-        "stack_bottom_left": {
-          "type": "stack_panel",
-          "orientation": "vertical",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [
-            3.5,
-            -3.5
-          ],
-          "controls": [
-            {
-              "1@Nova_Client_slot_counter.content": {}
-            },
-            {
-              "2@Nova_Client_common.spacer": {
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "inventory_slot_counter_toggle",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "3@Nova_Client_xp_indicator.content": {}
-            }
-          ]
-        }
       },
       {
         "stack_bottom_right": {
@@ -79,44 +35,10 @@
           ],
           "controls": [
             {
-              "1@Nova_Client_common.bottom_right_template": {
-                "$template_controll": "Nova_Client_ip_display.content"
-              }
-            },
-            {
-              "2@Nova_Client_common.spacer": {
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "inventory_hud_toggle",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "3@Nova_Client_common.bottom_right_template": {
-                "$template_controll": "Nova_Client_inventory_hud.content"
-              }
-            },
-            {
-              "4@Nova_Client_common.spacer": {
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "sound_subtitles_toggle",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            },
-            {
               "5@Nova_Client_common.bottom_right_template": {
                 "$template_controll": "hud.subtitle_panel",
                 "$subtitle_panel_anchor": "bottom_right",
-                "offset":[
+                "offset": [
                   "70%",
                   0
                 ]

@@ -1,28 +1,73 @@
 {
   "namespace": "Nova_Client_crosshair_screen",
-  "content@Nova_Client_common.screen_template": {
-    "$NC_sreen_button_name": "crosshair_out",
-    "anims": [
-      "@Nova_Client_animations.crosshair_screen",
-      "@Nova_Client_animations.screen_page_out"
-    ],
-    "controls": [
-      { "background@Nova_Client_common.screen_bg": {} },
+  "content@Nova_Client_layout.page_body": {
+    "$nc_page_toggle": "nc_page_crosshair",
+    "$nc_page_desc": "Replaces the crosshair. It can also show a crosshair in third person and cycle through RGB colors. While \"Third Person Crosshair\" is on, you can change its size.",
+    "$nc_page_req": "",
+    "$nc_page_no_req": true,
+    "$nc_page_rows": [
       {
-        "1@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "third_person_crosshair",
-          "$toggle_tags": "$third_person_crosshair",
-          "$NC_dialog_toggle_text": "Third Person Crosshair",
-          "$NC_dialog_toggle_anchor": "top_middle"
+        "row_1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "third_person_crosshair",
+                "$toggle_tags": "$third_person_crosshair",
+                "$NC_dialog_toggle_text": "Third Person Crosshair",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
-        "2@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "rgb_crosshair",
-          "$toggle_tags": "$rgb_crosshair",
-          "$NC_dialog_toggle_text": "RGB Crosshair",
-          "$NC_dialog_toggle_anchor": "top_middle",
-          "offset": [ 0, 25 ],
+        "row_2": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "2@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "rgb_crosshair",
+                "$toggle_tags": "$rgb_crosshair",
+                "$NC_dialog_toggle_text": "RGB Crosshair",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "third_person_crosshair",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tp_size": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100%",
+            "100%c"
+          ],
           "bindings": [
             {
               "binding_type": "view",
@@ -30,13 +75,48 @@
               "source_property_name": "#toggle_state",
               "target_property_name": "#visible"
             }
+          ],
+          "controls": [
+            {
+              "pos_gap@Nova_Client_common.spacer": {
+                "$NC_spacer_size": [
+                  8,
+                  8
+                ]
+              }
+            },
+            {
+              "nc_crosshair_size_row@Nova_Client_layout.value_slider": {
+                "$nc_vs_name": "nc_crosshair_size",
+                "$nc_vs_caption": "Crosshair Size",
+                "$nc_vs_steps": 31,
+                "$nc_vs_cfg": "$crosshair_size",
+                "$nc_vs_init_expr": "((((#slider_steps * 0) + #nc_cfg) - 50) / 5)",
+                "$nc_vs_mul": 5,
+                "$nc_vs_add": 50,
+                "$nc_vs_unit": "%"
+              }
+            },
+            {
+              "cfg_hint": {
+                "type": "label",
+                "shadow": false,
+                "font_scale_factor": 0.8,
+                "color": [
+                  0.6,
+                  0.6,
+                  0.6
+                ],
+                "text": "Default is saved in config.json: crosshair_size",
+                "size": [
+                  "100% - 14px",
+                  "default"
+                ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
           ]
-        }
-      },
-      {
-        "close_button@Nova_Client_dialog_toggle_template.close_button": {
-          "$pressed_button_name": "button.crosshair_out",
-          "$button_text": "Close"
         }
       }
     ]

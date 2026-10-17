@@ -51,7 +51,7 @@
                     "text": {
                       "type": "label",
                       "layer": 2,
-                      "text": "#name",
+                      "text": "#nc_txt",
                       "shadow": true,
                       "property_bag": {
                         "force_update": true
@@ -64,6 +64,43 @@
                           "binding_type": "view",
                           "source_property_name": "('Item Name: ' + #item_text)",
                           "target_property_name": "#name"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_item_info_size_eff",
+                          "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+                          "target_property_name": "#font_scale_factor"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_item_info_size_eff",
+                          "source_property_name": "#nc_eff",
+                          "target_property_name": "#nc_fe"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+                          "target_property_name": "#nc_fq"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+                          "target_property_name": "#nc_fr"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+                          "target_property_name": "#nc_fk"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+                          "target_property_name": "#nc_sfx"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('' + #name + #nc_sfx)",
+                          "target_property_name": "#nc_txt"
                         }
                       ]
                     }
@@ -228,7 +265,7 @@
           "type": "label",
           "layer": 2,
           "shadow": true,
-          "text": "§fItem ID: -1",
+          "text": "#nc_txt",
           "bindings": [
             {
               "binding_name": "#item_id_aux",
@@ -239,6 +276,43 @@
               "binding_type": "view",
               "source_property_name": "(#item_id_aux = -1)",
               "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_item_info_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+              "target_property_name": "#font_scale_factor"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_item_info_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_fe"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+              "target_property_name": "#nc_fq"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+              "target_property_name": "#nc_fr"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+              "target_property_name": "#nc_fk"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+              "target_property_name": "#nc_sfx"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('' + '§fItem ID: -1' + #nc_sfx)",
+              "target_property_name": "#nc_txt"
             }
           ]
         }
@@ -249,7 +323,7 @@
     "type": "label",
     "layer": 2,
     "shadow": true,
-    "text": "#text",
+    "text": "#nc_txt",
     "bindings": [
       {
         "binding_name": "#item_id_aux",
@@ -265,6 +339,43 @@
         "binding_type": "view",
         "source_property_name": "(not (#item_id_aux = -1))",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_item_info_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+        "target_property_name": "#font_scale_factor"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_item_info_size_eff",
+        "source_property_name": "#nc_eff",
+        "target_property_name": "#nc_fe"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+        "target_property_name": "#nc_fq"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+        "target_property_name": "#nc_fr"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+        "target_property_name": "#nc_fk"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+        "target_property_name": "#nc_sfx"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('' + #text + #nc_sfx)",
+        "target_property_name": "#nc_txt"
       }
     ]
   },
@@ -371,7 +482,7 @@
     "type": "label",
     "layer": 2,
     "shadow": true,
-    "text": "#text",
+    "text": "#nc_txt",
     "bindings": [
       {
         "binding_name": "#item_id_aux",
@@ -387,6 +498,43 @@
         "binding_type": "view",
         "source_property_name": "('Aux ID: ' + (not (#item_id_aux = -1)))",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_item_info_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+        "target_property_name": "#font_scale_factor"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_item_info_size_eff",
+        "source_property_name": "#nc_eff",
+        "target_property_name": "#nc_fe"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+        "target_property_name": "#nc_fq"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+        "target_property_name": "#nc_fr"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+        "target_property_name": "#nc_fk"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+        "target_property_name": "#nc_sfx"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('' + #text + #nc_sfx)",
+        "target_property_name": "#nc_txt"
       }
     ]
   }

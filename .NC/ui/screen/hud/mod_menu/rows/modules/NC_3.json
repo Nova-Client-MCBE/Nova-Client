@@ -18,7 +18,9 @@
           "$toggle_tags": "$coordinates",
           "$modules_template_toggle_text": "Coordinates",
           "$modules_template_button_name": "button.coordinates_screen",
-          "$nc_letter_ctrl": "nc_ltr_c"
+          "$nc_letter_ctrl": "nc_ltr_c",
+          "$nc_page_toggle": "nc_page_coordinates",
+          "$nc_page_index": 7
         }
       },
       {
@@ -31,7 +33,9 @@
           "$toggle_tags": "$crosshair",
           "$modules_template_toggle_text": "Crosshair",
           "$modules_template_button_name": "button.crosshair_screen",
-          "$nc_letter_ctrl": "nc_ltr_c"
+          "$nc_letter_ctrl": "nc_ltr_c",
+          "$nc_page_toggle": "nc_page_crosshair",
+          "$nc_page_index": 8
         }
       },
       {
@@ -44,7 +48,9 @@
           "$toggle_tags": "$inventory_slot_counter",
           "$modules_template_toggle_text": "Inventory Slots",
           "$modules_template_button_name": "button.inventory_slot_counter_screen",
-          "$nc_letter_ctrl": "nc_ltr_i"
+          "$nc_letter_ctrl": "nc_ltr_i",
+          "$nc_page_toggle": "nc_page_inventory_slot_counter",
+          "$nc_page_index": 9
         }
       }
     ],

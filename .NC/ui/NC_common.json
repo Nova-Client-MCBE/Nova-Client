@@ -394,7 +394,11 @@
     "$NC_internal": "background/White",
     "$NC_anchor": "top_middle",
     "layer": 2,
-    "color": [ 0.902, 0.910, 0.922 ],
+    "color": [
+      0.902,
+      0.91,
+      0.922
+    ],
     "size": [
       "100%",
       25
@@ -404,9 +408,16 @@
         "rule@Nova_Client_common.internal": {
           "$NC_internal": "background/White",
           "$NC_anchor": "bottom_middle",
-          "color": [ 0.569, 0.569, 0.569 ],
+          "color": [
+            0.569,
+            0.569,
+            0.569
+          ],
           "layer": 3,
-          "size": [ "100%", 1 ]
+          "size": [
+            "100%",
+            1
+          ]
         }
       },
       {
@@ -506,77 +517,77 @@
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.0",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.0')",
           "$slider_value": 0
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.1",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.1')",
           "$slider_value": 1
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.2",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.2')",
           "$slider_value": 2
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.3",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.3')",
           "$slider_value": 3
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.4",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.4')",
           "$slider_value": 4
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.5",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.5')",
           "$slider_value": 5
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.6",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.6')",
           "$slider_value": 6
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.7",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.7')",
           "$slider_value": 7
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.8",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.8')",
           "$slider_value": 8
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r0.9",
+          "$NC_slider_text": "($NC_opacity_title + ': §r0.9')",
           "$slider_value": 9
         }
       },
       {
         "@Nova_Client_slider.Nova_Client_slider_text": {
           "$slider_name_controls": "$NC_opacity_slider_name",
-          "$NC_slider_text": "Background Opacity: §r1.0",
+          "$NC_slider_text": "($NC_opacity_title + ': §r1.0')",
           "$slider_value": 10
         }
       },
@@ -594,11 +605,11 @@
           "$Nova_Client_slider_binding_controls_name": "$NC_opacity_slider_name"
         }
       }
-    ]
+    ],
+    "$NC_opacity_title|default": "Background Opacity"
   },
   "just_some_vars": {
-    "$NC_version": "1.5.4",
-    "$NC_needed_version": "v26.51",
-    "$NC_gathering_event": true
+    "$NC_version": "1.6",
+    "$NC_needed_version": "v26.52"
   }
 }

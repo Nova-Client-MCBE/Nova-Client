@@ -13,10 +13,10 @@
             "modules@Nova_client_module_list.content": {}
           },
           {
-            "f1@Nova_Client_hud_buttons.content": {}
+            "NC_movable@Nova_Client_layout.movable_layer": {}
           },
           {
-            "NC_bottom_stack@Nova_Client_hud_stacker.content": {}
+            "f1@Nova_Client_hud_buttons.content": {}
           }
         ]
       }
@@ -24,11 +24,7 @@
   },
   "hud_player_renderer": {
     "type": "panel",
-    "controls": [
-      {
-        "1@Nova_Client_paperdoll.content": {}
-      }
-    ]
+    "controls": []
   },
   "hud_actionbar_text": {
     "bindings": [
@@ -128,36 +124,6 @@
         "operation": "insert_before",
         "value": [
           {
-            "1@Nova_Client_common.spacer": {
-              "bindings": [
-                {
-                  "binding_type": "view",
-                  "source_control_name": "moon_phase_toggle",
-                  "source_property_name": "#toggle_state",
-                  "target_property_name": "#visible"
-                }
-              ]
-            }
-          },
-          {
-            "2@Nova_Client_moon_phase.content": {}
-          },
-          {
-            "3@Nova_Client_common.spacer": {
-              "bindings": [
-                {
-                  "binding_type": "view",
-                  "source_control_name": "item_information_toggle",
-                  "source_property_name": "#toggle_state",
-                  "target_property_name": "#visible"
-                }
-              ]
-            }
-          },
-          {
-            "4@Nova_Client_item_info_panel.content": {}
-          },
-          {
             "5@Nova_Client_common.spacer": {}
           }
         ]
@@ -167,40 +133,17 @@
         "operation": "replace",
         "value": [
           {
-            "Nova_Client_paperdoll_padding@Nova_Client_common.spacer": {
-              "$NC_spacer_size": [
-                "100%",
-                50
-              ],
-              "bindings": [
-                {
-                  "binding_type": "view",
-                  "source_control_name": "3d_paper_doll_toggle",
-                  "source_property_name": "#toggle_state",
-                  "target_property_name": "#visible"
-                }
-              ]
-            }
+            "Nova_Client_chat_push@Nova_Client_layout.chat_push": {}
           }
         ]
       },
       {
         "control_name": "player_position",
-        "operation": "replace",
-        "value": [
-          {
-            "6@Nova_Client_coords.content": {}
-          }
-        ]
+        "operation": "remove"
       },
       {
         "control_name": "number_of_days_played",
-        "operation": "replace",
-        "value": [
-          {
-            "7@Nova_Client_day_counter.content": {}
-          }
-        ]
+        "operation": "remove"
       },
       {
         "control_name": "chat_panel",
@@ -476,6 +419,10 @@
       {
         "control_name": "subtitle_container_host",
         "operation": "remove"
+      },
+      {
+        "control_name": "hud_actionbar_text_area",
+        "operation": "remove"
       }
     ]
   },
@@ -493,5 +440,8 @@
     "$use_loading_bars": false,
     "cache_screen": true,
     "$screen_animations": []
+  },
+  "gui_hotbar_slot_button_prototype": {
+    "focus_enabled": false
   }
 }

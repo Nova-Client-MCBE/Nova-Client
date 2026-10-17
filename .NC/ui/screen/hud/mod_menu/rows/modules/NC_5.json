@@ -12,30 +12,19 @@
         "spacer1@Nova_Client_common.spacer": {}
       },
       {
-        "xp_panel@Nova_client_modules_menu_button_template.content": {
-          "$modules_template_texture": "textures/items/experience_bottle",
-          "$toggle_view_binding_name": "xp_panel_toggle",
-          "$toggle_tags": "$exp_calculator",
-          "$modules_template_toggle_text": "EXP Calculator",
-          "$modules_template_button_name": "button.xp_calculator_screen",
-          "$nc_letter_ctrl": "nc_ltr_e"
-        }
-      },
-      {
-        "spacer2@Nova_Client_common.spacer": {}
-      },
-      {
         "player_list@Nova_client_modules_menu_button_template.content": {
           "$modules_template_texture": "textures/ui/glyph_inventory",
           "$toggle_view_binding_name": "player_list_toggle",
           "$toggle_tags": "$playerlist",
           "$modules_template_toggle_text": "Playerlist",
           "$modules_template_button_name": "button.playerlist_screen",
-          "$nc_letter_ctrl": "nc_ltr_p"
+          "$nc_letter_ctrl": "nc_ltr_p",
+          "$nc_page_toggle": "nc_page_playerlist",
+          "$nc_page_index": 13
         }
       },
       {
-        "spacer3@Nova_Client_common.spacer": {}
+        "spacer2@Nova_Client_common.spacer": {}
       },
       {
         "moon_phase@Nova_client_modules_menu_button_template.content": {
@@ -44,7 +33,24 @@
           "$toggle_tags": "$moon_phase",
           "$modules_template_toggle_text": "Moon Phase",
           "$modules_template_button_name": "button.moon_phase_screen",
-          "$nc_letter_ctrl": "nc_ltr_m"
+          "$nc_letter_ctrl": "nc_ltr_m",
+          "$nc_page_toggle": "nc_page_moon_phase",
+          "$nc_page_index": 17
+        }
+      },
+      {
+        "spacer3@Nova_Client_common.spacer": {}
+      },
+      {
+        "xp_panel@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/items/diamond_chestplate",
+          "$toggle_view_binding_name": "armor_hud_toggle",
+          "$toggle_tags": "$armor_hud",
+          "$modules_template_toggle_text": "Armor HUD",
+          "$modules_template_button_name": "button.armor_hud_screen",
+          "$nc_letter_ctrl": "nc_ltr_a",
+          "$nc_page_toggle": "nc_page_armor_hud",
+          "$nc_page_index": 18
         }
       }
     ],

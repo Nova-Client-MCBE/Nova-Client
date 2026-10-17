@@ -8,6 +8,18 @@
         "source_control_name": "armor_hud_toggle",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_armor_hud_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 37) / 20)",
+        "target_property_name": "#size_binding_x_absolute"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_armor_hud_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 64) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
       }
     ],
     "controls": [
@@ -17,6 +29,10 @@
       {
         "2@Nova_Client_armor_hud.background": {}
       }
+    ],
+    "size": [
+      37,
+      64
     ]
   },
   "mod@Nova_Client_common.element": {
@@ -25,12 +41,12 @@
     "$NC_anchor": "left_middle",
     "layer": 10,
     "offset": [
-      6,
-      -15
+      "6.76%",
+      "-23.44%"
     ],
     "size": [
-      32,
-      64
+      "86.49%",
+      "100%"
     ]
   },
   "background@Nova_Client_common.external": {
@@ -38,12 +54,12 @@
     "alpha": 0.5,
     "layer": 0,
     "offset": [
-      3.5,
+      0,
       0
     ],
     "size": [
-      37,
-      64
+      "100%",
+      "100%"
     ],
     "bindings": [
       {

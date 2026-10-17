@@ -12,30 +12,19 @@
         "spacer1@Nova_Client_common.spacer": {}
       },
       {
-        "xp_panel@Nova_client_modules_menu_button_template.content": {
-          "$modules_template_texture": "textures/items/diamond_chestplate",
-          "$toggle_view_binding_name": "armor_hud_toggle",
-          "$toggle_tags": "$armor_hud",
-          "$modules_template_toggle_text": "Armor HUD",
-          "$modules_template_button_name": "button.armor_hud_screen",
-          "$nc_letter_ctrl": "nc_ltr_a"
-        }
-      },
-      {
-        "spacer2@Nova_Client_common.spacer": {}
-      },
-      {
         "shiny_potions@Nova_client_modules_menu_button_template.content": {
           "$modules_template_texture": "textures/items/potion_bottle_heal",
           "$toggle_view_binding_name": "shiny_potions_toggle",
           "$toggle_tags": "$shiny_potions",
           "$modules_template_toggle_text": "Shiny Potions",
           "$modules_template_button_name": "button.shiny_potions_screen",
-          "$nc_letter_ctrl": "nc_ltr_s"
+          "$nc_letter_ctrl": "nc_ltr_s",
+          "$nc_page_toggle": "nc_page_shiny_potions",
+          "$nc_page_index": 24
         }
       },
       {
-        "spacer3@Nova_Client_common.spacer": {}
+        "spacer2@Nova_Client_common.spacer": {}
       },
       {
         "keyboard@Nova_client_modules_menu_button_template.content": {
@@ -55,7 +44,23 @@
             0,
             0
           ],
-          "$nc_letter_ctrl": "nc_ltr_k"
+          "$nc_letter_ctrl": "nc_ltr_k",
+          "$nc_no_page": true
+        }
+      },
+      {
+        "spacer3@Nova_Client_common.spacer": {}
+      },
+      {
+        "held_item_total@Nova_client_modules_menu_button_template.content": {
+          "$modules_template_texture": "textures/items/diamond",
+          "$toggle_view_binding_name": "held_item_total_toggle",
+          "$toggle_tags": "$held_item_total",
+          "$modules_template_toggle_text": "Held Item Total",
+          "$modules_template_button_name": "button.held_item_total_screen",
+          "$nc_letter_ctrl": "nc_ltr_h",
+          "$nc_page_toggle": "nc_page_held_item_total",
+          "$nc_page_index": 25
         }
       }
     ],

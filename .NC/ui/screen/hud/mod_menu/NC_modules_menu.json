@@ -71,7 +71,8 @@
               "mapping_type": "double_pressed",
               "to_button_id": "button.mod_menu_toggle"
             }
-          ]
+          ],
+          "$focus_id": "nc_hud_mod_open"
         }
       }
     ]
@@ -208,9 +209,6 @@
         }
       },
       {
-        "modules_settings@Nova_client_modules_menu.pages": {}
-      },
-      {
         "main_panel@Nova_Client_common.element": {
           "type": "stack_panel",
           "orientation": "horizontal",
@@ -309,8 +307,19 @@
                             ]
                           }
                         }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_page_back",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
                       ]
                     }
+                  },
+                  {
+                    "settings_area@Nova_Client_layout.settings_area": {}
                   }
                 ]
               }
@@ -321,8 +330,8 @@
     ]
   },
   "pages": {
-    "type": "panel",
-    "layer": 10,
+    "type": "stack_panel",
+    "layer": 6,
     "controls": [
       {
         "1@Nova_Client_inventory_hud_screen.content": {}
@@ -397,8 +406,13 @@
         "29@Nova_Client_shiny_potions_screen.content": {}
       },
       {
-        "30@Nova_Client_brightness_screen.content": {}
+        "held_item_total@Nova_Client_held_item_total_screen.content": {}
       }
+    ],
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%c + 8px"
     ]
   },
   "content@config.1": {

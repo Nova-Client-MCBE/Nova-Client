@@ -1,24 +1,112 @@
 {
   "namespace": "Nova_Client_day_counter_screen",
-  "content@Nova_Client_common.screen_template": {
-    "$NC_sreen_button_name": "day_counter_out",
-    "anims": [
-      "@Nova_Client_animations.day_counter_screen",
-      "@Nova_Client_animations.screen_page_out"
-    ],
-    "controls": [
-      { "background@Nova_Client_common.screen_bg": {} },
+  "content@Nova_Client_layout.page_body": {
+    "$nc_page_toggle": "nc_page_day_counter",
+    "$nc_page_desc": "Shows how many in-game days have passed in this world.",
+    "$nc_page_req": "Needs the world setting \"Show Days Played\". Without it the module only shows \"Disabled\".",
+    "$nc_page_no_req": false,
+    "$nc_page_rows": [
       {
         "opacity_slider@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "day_counter_opacity",
           "$NC_opacity_default_value": "$day_counter_opacity",
-          "$NC_slider_section_offset": [ 0, 0 ]
+          "$NC_slider_section_offset": [
+            0,
+            0
+          ]
         }
       },
       {
-        "close_button@Nova_Client_dialog_toggle_template.close_button": {
-          "$pressed_button_name": "button.day_counter_out",
-          "$button_text": "Close"
+        "pos_gap@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            8,
+            8
+          ]
+        }
+      },
+      {
+        "pos_title": {
+          "type": "label",
+          "text": "§lPosition & Size",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "pos_gap2@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      },
+      {
+        "nc_day_counter_x_row@Nova_Client_layout.value_slider": {
+          "$nc_vs_name": "nc_day_counter_x",
+          "$nc_vs_caption": "X",
+          "$nc_vs_steps": 101,
+          "$nc_vs_cfg": "$day_counter_x",
+          "$nc_vs_init_expr": "((#slider_steps * 0) + #nc_cfg)",
+          "$nc_vs_mul": 1,
+          "$nc_vs_add": 0,
+          "$nc_vs_unit": "%"
+        }
+      },
+      {
+        "nc_day_counter_y_row@Nova_Client_layout.value_slider": {
+          "$nc_vs_name": "nc_day_counter_y",
+          "$nc_vs_caption": "Y",
+          "$nc_vs_steps": 101,
+          "$nc_vs_cfg": "$day_counter_y",
+          "$nc_vs_init_expr": "((#slider_steps * 0) + #nc_cfg)",
+          "$nc_vs_mul": 1,
+          "$nc_vs_add": 0,
+          "$nc_vs_unit": "%"
+        }
+      },
+      {
+        "nc_day_counter_size_row@Nova_Client_layout.value_slider": {
+          "$nc_vs_name": "nc_day_counter_size",
+          "$nc_vs_caption": "Size",
+          "$nc_vs_steps": 31,
+          "$nc_vs_cfg": "$day_counter_size",
+          "$nc_vs_init_expr": "((((#slider_steps * 0) + #nc_cfg) - 50) / 5)",
+          "$nc_vs_mul": 5,
+          "$nc_vs_add": 50,
+          "$nc_vs_unit": "%"
+        }
+      },
+      {
+        "cfg_hint": {
+          "type": "label",
+          "shadow": false,
+          "font_scale_factor": 0.8,
+          "color": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "text": "Defaults are saved in config.json: day_counter_x, day_counter_y, day_counter_size",
+          "size": [
+            "100% - 14px",
+            "default"
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "end_gap@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            6,
+            6
+          ]
         }
       }
     ]

@@ -1,24 +1,19 @@
 {
   "namespace": "Nova_Client_sound_subtitles_screen",
-  "content@Nova_Client_common.screen_template": {
-    "$NC_sreen_button_name": "sound_subtitles_out",
-    "anims": [
-      "@Nova_Client_animations.sound_subtitles_screen",
-      "@Nova_Client_animations.screen_page_out"
-    ],
-    "controls": [
-      { "background@Nova_Client_common.screen_bg": {} },
+  "content@Nova_Client_layout.page_body": {
+    "$nc_page_toggle": "nc_page_sound_subtitles",
+    "$nc_page_desc": "Text subtitles for the sounds around you.",
+    "$nc_page_req": "Needs subtitles to be turned on in the Minecraft accessibility settings.",
+    "$nc_page_no_req": false,
+    "$nc_page_rows": [
       {
         "opacity_slider@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "sound_subtitles_opacity",
           "$NC_opacity_default_value": "$sound_subtitles_opacity",
-          "$NC_slider_section_offset": [ 0, 0 ]
-        }
-      },
-      {
-        "close_button@Nova_Client_dialog_toggle_template.close_button": {
-          "$pressed_button_name": "button.sound_subtitles_out",
-          "$button_text": "Close"
+          "$NC_slider_section_offset": [
+            0,
+            0
+          ]
         }
       }
     ]

@@ -1,50 +1,181 @@
 {
   "namespace": "Nova_Client_clock_and_compass_screen",
-  "content@Nova_Client_common.screen_template": {
-    "$NC_sreen_button_name": "clock_and_compass_out",
-    "anims": [
-      "@Nova_Client_animations.clock_and_compass_screen",
-      "@Nova_Client_animations.screen_page_out"
-    ],
-    "controls": [
-      { "background@Nova_Client_common.screen_bg": {} },
+  "content@Nova_Client_layout.page_body": {
+    "$nc_page_toggle": "nc_page_clock_and_compass",
+    "$nc_page_desc": "Shows a compass, a clock and a recovery compass on the screen, so you can read them without holding them.",
+    "$nc_page_req": "",
+    "$nc_page_no_req": true,
+    "$nc_page_rows": [
       {
-        "1@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "compass_toggle",
-          "$toggle_tags": "$compass",
-          "$NC_dialog_toggle_text": "Compass",
-          "$NC_dialog_toggle_anchor": "top_middle"
+        "row_1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "compass_toggle",
+                "$toggle_tags": "$compass",
+                "$NC_dialog_toggle_text": "Compass",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
-        "2@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "clock_toggle",
-          "$toggle_tags": "$clock",
-          "$NC_dialog_toggle_text": "Clock",
-          "$NC_dialog_toggle_anchor": "top_middle",
-          "offset": [ 0, 25 ]
+        "row_2": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "2@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "clock_toggle",
+                "$toggle_tags": "$clock",
+                "$NC_dialog_toggle_text": "Clock",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
-        "3@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "recovery_toggle",
-          "$toggle_tags": "$recovery_compass",
-          "$NC_dialog_toggle_text": "Recovery Compass",
-          "$NC_dialog_toggle_anchor": "top_middle",
-          "offset": [ 0, 50 ]
+        "row_3": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "3@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "recovery_toggle",
+                "$toggle_tags": "$recovery_compass",
+                "$NC_dialog_toggle_text": "Recovery Compass",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "opacity_slider@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "clock_and_compass_opacity",
           "$NC_opacity_default_value": "$clock_and_compass_opacity",
-          "$NC_slider_section_offset": [ 0, 75 ]
+          "$NC_slider_section_offset": [
+            0,
+            0
+          ]
         }
       },
       {
-        "close_button@Nova_Client_dialog_toggle_template.close_button": {
-          "$pressed_button_name": "button.clock_and_compass_out",
-          "$button_text": "Close"
+        "pos_gap@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            8,
+            8
+          ]
+        }
+      },
+      {
+        "pos_title": {
+          "type": "label",
+          "text": "§lPosition & Size",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "pos_gap2@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      },
+      {
+        "nc_clock_and_compass_x_row@Nova_Client_layout.value_slider": {
+          "$nc_vs_name": "nc_clock_and_compass_x",
+          "$nc_vs_caption": "X",
+          "$nc_vs_steps": 101,
+          "$nc_vs_cfg": "$clock_and_compass_x",
+          "$nc_vs_init_expr": "((#slider_steps * 0) + #nc_cfg)",
+          "$nc_vs_mul": 1,
+          "$nc_vs_add": 0,
+          "$nc_vs_unit": "%"
+        }
+      },
+      {
+        "nc_clock_and_compass_y_row@Nova_Client_layout.value_slider": {
+          "$nc_vs_name": "nc_clock_and_compass_y",
+          "$nc_vs_caption": "Y",
+          "$nc_vs_steps": 101,
+          "$nc_vs_cfg": "$clock_and_compass_y",
+          "$nc_vs_init_expr": "((#slider_steps * 0) + #nc_cfg)",
+          "$nc_vs_mul": 1,
+          "$nc_vs_add": 0,
+          "$nc_vs_unit": "%"
+        }
+      },
+      {
+        "nc_clock_and_compass_size_row@Nova_Client_layout.value_slider": {
+          "$nc_vs_name": "nc_clock_and_compass_size",
+          "$nc_vs_caption": "Size",
+          "$nc_vs_steps": 31,
+          "$nc_vs_cfg": "$clock_and_compass_size",
+          "$nc_vs_init_expr": "((((#slider_steps * 0) + #nc_cfg) - 50) / 5)",
+          "$nc_vs_mul": 5,
+          "$nc_vs_add": 50,
+          "$nc_vs_unit": "%"
+        }
+      },
+      {
+        "cfg_hint": {
+          "type": "label",
+          "shadow": false,
+          "font_scale_factor": 0.8,
+          "color": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "text": "Defaults are saved in config.json: clock_and_compass_x, clock_and_compass_y, clock_and_compass_size",
+          "size": [
+            "100% - 14px",
+            "default"
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "end_gap@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            6,
+            6
+          ]
         }
       }
     ]

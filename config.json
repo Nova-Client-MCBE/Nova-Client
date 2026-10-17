@@ -6,9 +6,12 @@
 
         "$inventoryhud": true,
         "$Inventoryhud_opacity": 0.5,
+        "$inventory_hud_gui_style": false,
 
 
         "$world_name": true,
+        "$world_name_pack_icon": true,
+        "$world_name_server_ip": true,
         "$world_name_opacity": 0.5,
 
 
@@ -16,8 +19,10 @@
         "$mainhand_item": true,
         "$mainhand_stack": true,
         "$mainhand_durability": true,
+        "$mainhand_low_durability": true,
         "$mainhand_slot_opacity": 1,
         "$mainhand_durability_opacity": 0.5,
+        "$mainhand_warning_opacity": 0.5,
 
         
         "$item_counter": true,
@@ -52,7 +57,9 @@
 
         "$inventory_slot_counter": true,
         "$inventory_slot_counter_icon": true,
+        "$inventory_full_warning": true,
         "$inventory_slot_opacity": 0.5,
+        "$inventory_full_warning_opacity": 0.5,
 
 
         "$paperdoll": true,
@@ -66,9 +73,6 @@
         "$item_info_opacity": 0.5,
 
 
-        "$brightness": false,
-        "$brightness_mobile_toggles": true,
-        "$brightness_keyboard_controls": true,
 
 
         "$exp_calculator": true,
@@ -93,12 +97,83 @@
 
         "$armor_hud": true,
         "$armor_hud_opacity": 0.5,
+        "$paperdoll_opacity": 0.5,
 
         "$shiny_potions": true,
         "$shiny_potions_opacity": 0.3,
 
         "$keyboard": false,
 
+        "$held_item_total": true,
+        "$held_item_total_opacity": 0.5,
+
+
+
+        /*Module Position & Size*/
+        /*X and Y: 0-100 = percent of the free screen space (0 = left/top, 100 = right/bottom)*/
+        /*Size: 50-200 in steps of 5 (100 = normal size)*/
+
+        "$paperdoll_x": 0,
+        "$paperdoll_y": 0,
+        "$paperdoll_size": 100,
+
+        "$coordinates_x": 0,
+        "$coordinates_y": 16,
+        "$coordinates_size": 100,
+
+        "$crosshair_size": 100,
+
+        "$day_counter_x": 0,
+        "$day_counter_y": 22,
+        "$day_counter_size": 100,
+
+        "$moon_phase_x": 0,
+        "$moon_phase_y": 28,
+        "$moon_phase_size": 100,
+
+        "$item_info_x": 0,
+        "$item_info_y": 40,
+        "$item_info_size": 100,
+
+        "$armor_hud_x": 0,
+        "$armor_hud_y": 50,
+        "$armor_hud_size": 100,
+
+        "$inventory_slot_counter_x": 0,
+        "$inventory_slot_counter_y": 90,
+        "$inventory_slot_counter_size": 100,
+
+        "$exp_calculator_x": 0,
+        "$exp_calculator_y": 100,
+        "$exp_calculator_size": 100,
+
+        "$clock_and_compass_x": 100,
+        "$clock_and_compass_y": 0,
+        "$clock_and_compass_size": 100,
+
+        "$mainhand_x": 88,
+        "$mainhand_y": 100,
+        "$mainhand_size": 100,
+
+        "$world_name_x": 100,
+        "$world_name_y": 79,
+        "$world_name_size": 100,
+
+        "$inventory_hud_x": 100,
+        "$inventory_hud_y": 100,
+        "$inventory_hud_size": 100,
+
+        "$held_item_total_x": 50,
+        "$held_item_total_y": 63,
+        "$held_item_total_size": 100,
+
+        "$item_counter_x": 50,
+        "$item_counter_y": 70,
+        "$item_counter_size": 100,
+
+        /*Item Text + Jukebox Text + Action Bar move together*/
+        "$popups_x": 50,
+        "$popups_y": 85,
 
 
         /*HUD Elements*/
@@ -121,6 +196,7 @@
 
         "$chat": true,
         "$bottom_chat": false,
+        "$chat_mention_highlight": true,
         "$chat_opacity": 0.5,
 
 

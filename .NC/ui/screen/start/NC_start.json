@@ -216,22 +216,37 @@
               }
             },
             {
-              "spacer@Nova_Client_common.spacer": {
-                "ignored": "$NC_gathering_event"
-              }
-            },
-            {
-              "gathering_button@Nova_client_button.gray_button": {
+              "gathering_area": {
+                "type": "stack_panel",
+                "orientation": "vertical",
                 "size": [
                   "100%",
-                  25
+                  "100%c"
                 ],
-                "$gray_button_alpha": 0,
-                "$custom_content": "Nova_client_button.label_icon",
-                "$pressed_button_name": "button.gathering",
-                "$NC_button_text": "options.dev_gatherings_section",
-                "$NC_icon": "squaredonut",
-                "ignored": "$NC_gathering_event"
+                "bindings": [
+                  {
+                    "binding_name": "#gathering_button_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "spacer@Nova_Client_common.spacer": {}
+                  },
+                  {
+                    "gathering_button@Nova_client_button.gray_button": {
+                      "size": [
+                        "100%",
+                        25
+                      ],
+                      "$gray_button_alpha": 0,
+                      "$custom_content": "Nova_client_button.label_icon",
+                      "$pressed_button_name": "button.gathering",
+                      "$NC_button_text": "Event",
+                      "$NC_icon": "squaredonut"
+                    }
+                  }
+                ]
               }
             },
             {

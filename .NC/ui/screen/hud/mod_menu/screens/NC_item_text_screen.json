@@ -1,32 +1,142 @@
 {
   "namespace": "Nova_Client_item_text_screen",
-  "content@Nova_Client_common.screen_template": {
-    "$NC_sreen_button_name": "item_text_out",
-    "anims": [
-      "@Nova_Client_animations.item_text_screen",
-      "@Nova_Client_animations.screen_page_out"
-    ],
-    "controls": [
-      { "background@Nova_Client_common.screen_bg": {} },
+  "content@Nova_Client_layout.page_body": {
+    "$nc_page_toggle": "nc_page_item_text",
+    "$nc_page_desc": "The item name above the hotbar when you switch items. \"Java Item Text\" uses a Java Edition style. The position below moves Item Text, Jukebox Text and Action Bar together.",
+    "$nc_page_req": "",
+    "$nc_page_no_req": true,
+    "$nc_page_rows": [
       {
-        "1@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "java_item_text_toggle",
-          "$toggle_tags": "$java_item_text",
-          "$NC_dialog_toggle_text": "Java Item Text",
-          "$NC_dialog_toggle_anchor": "top_middle"
+        "row_1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "java_item_text_toggle",
+                "$toggle_tags": "$java_item_text",
+                "$NC_dialog_toggle_text": "Java Item Text",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "opacity_slider@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "item_text_opacity",
           "$NC_opacity_default_value": "$item_text_opacity",
-          "$NC_slider_section_offset": [ 0, 25 ]
+          "$NC_slider_section_offset": [
+            0,
+            0
+          ]
         }
       },
       {
-        "close_button@Nova_Client_dialog_toggle_template.close_button": {
-          "$pressed_button_name": "button.item_text_out",
-          "$button_text": "Close"
+        "pos_gap@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            8,
+            8
+          ]
+        }
+      },
+      {
+        "pos_title": {
+          "type": "label",
+          "text": "§lPosition",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "pos_gap2@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      },
+      {
+        "nc_popups_x_row@Nova_Client_layout.value_slider": {
+          "$nc_vs_name": "nc_popups_x",
+          "$nc_vs_caption": "X",
+          "$nc_vs_steps": 101,
+          "$nc_vs_cfg": "$popups_x",
+          "$nc_vs_init_expr": "((#slider_steps * 0) + #nc_cfg)",
+          "$nc_vs_mul": 1,
+          "$nc_vs_add": 0,
+          "$nc_vs_unit": "%"
+        }
+      },
+      {
+        "nc_popups_y_row@Nova_Client_layout.value_slider": {
+          "$nc_vs_name": "nc_popups_y",
+          "$nc_vs_caption": "Y",
+          "$nc_vs_steps": 101,
+          "$nc_vs_cfg": "$popups_y",
+          "$nc_vs_init_expr": "((#slider_steps * 0) + #nc_cfg)",
+          "$nc_vs_mul": 1,
+          "$nc_vs_add": 0,
+          "$nc_vs_unit": "%"
+        }
+      },
+      {
+        "pos_note": {
+          "type": "label",
+          "shadow": false,
+          "font_scale_factor": 0.8,
+          "color": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "text": "Moves Item Text, Jukebox Text and Action Bar together as one group.",
+          "size": [
+            "100% - 14px",
+            "default"
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "cfg_hint": {
+          "type": "label",
+          "shadow": false,
+          "font_scale_factor": 0.8,
+          "color": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "text": "Defaults are saved in config.json: popups_x, popups_y",
+          "size": [
+            "100% - 14px",
+            "default"
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "end_gap@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            6,
+            6
+          ]
         }
       }
     ]

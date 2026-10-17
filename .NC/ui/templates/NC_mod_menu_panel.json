@@ -76,20 +76,48 @@
         }
       },
       {
-        "cog@Nova_client_button.green_button": {
-          "$custom_content": "Nova_client_button.button_icon",
-          "$pressed_button_name": "$modules_template_button_name",
+        "cog@Nova_client_toggles.Nova_client_toggle": {
+          "ignored": "$nc_no_page",
+          "$radio_toggle_group": true,
+          "$toggle_name": "nc_page_group",
+          "$toggle_group_default_selected": 0,
+          "$toggle_view_binding_name": "$nc_page_toggle",
+          "$toggle_group_forced_index": "$nc_page_index",
+          "$button_content": "Nova_client_button.button_icon",
           "$button_icon": "textures/ui/gear",
-          "size": "$modules_template_button_size",
-          "$modules_template_button_size|default": [
-            20,
-            20
+          "$button_default_tint": [
+            0.235,
+            0.522,
+            0.153
           ],
+          "$button_hover_tint": [
+            0.322,
+            0.647,
+            0.208
+          ],
+          "$button_pressed_tint": [
+            0.165,
+            0.392,
+            0.11
+          ],
+          "$button_pressed_hover_tint": [
+            0.322,
+            0.647,
+            0.208
+          ],
+          "size": "$modules_template_button_size",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right"
         }
       }
     ],
-    "$modules_template_button_name|default": "button.menu_select"
+    "$modules_template_button_name|default": "button.menu_select",
+    "$nc_no_page|default": false,
+    "$nc_page_toggle|default": "nc_page_none",
+    "$nc_page_index|default": 99,
+    "$modules_template_button_size|default": [
+      20,
+      20
+    ]
   }
 }

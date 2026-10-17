@@ -199,10 +199,26 @@
                       "$button_content": "Nova_client_button.button_icon",
                       "$button_icon": ".NC/textures/icons/discord",
                       "$toggle_overlay_control": "Nova_client_toggles.toggle_overlay_none",
-                      "$button_default_tint": [ 1, 1, 1 ],
-                      "$button_hover_tint": [ 1, 1, 1 ],
-                      "$button_pressed_tint": [ 1, 1, 1 ],
-                      "$button_pressed_hover_tint": [ 1, 1, 1 ],
+                      "$button_default_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_hover_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_pressed_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_pressed_hover_tint": [
+                        1,
+                        1,
+                        1
+                      ],
                       "$button_default_texture": "textures/ui/hud_tip_text_background",
                       "$button_hover_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_texture": "textures/ui/hud_tip_text_background",
@@ -239,10 +255,26 @@
                       "$button_content": "Nova_client_button.button_icon",
                       "$button_icon": ".NC/textures/icons/github",
                       "$toggle_overlay_control": "Nova_client_toggles.toggle_overlay_none",
-                      "$button_default_tint": [ 1, 1, 1 ],
-                      "$button_hover_tint": [ 1, 1, 1 ],
-                      "$button_pressed_tint": [ 1, 1, 1 ],
-                      "$button_pressed_hover_tint": [ 1, 1, 1 ],
+                      "$button_default_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_hover_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_pressed_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_pressed_hover_tint": [
+                        1,
+                        1,
+                        1
+                      ],
                       "$button_default_texture": "textures/ui/hud_tip_text_background",
                       "$button_hover_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_texture": "textures/ui/hud_tip_text_background",
@@ -279,10 +311,26 @@
                       "$button_content": "Nova_client_button.button_icon",
                       "$button_icon": ".NC/textures/icons/youtube",
                       "$toggle_overlay_control": "Nova_client_toggles.toggle_overlay_none",
-                      "$button_default_tint": [ 1, 1, 1 ],
-                      "$button_hover_tint": [ 1, 1, 1 ],
-                      "$button_pressed_tint": [ 1, 1, 1 ],
-                      "$button_pressed_hover_tint": [ 1, 1, 1 ],
+                      "$button_default_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_hover_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_pressed_tint": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "$button_pressed_hover_tint": [
+                        1,
+                        1,
+                        1
+                      ],
                       "$button_default_texture": "textures/ui/hud_tip_text_background",
                       "$button_hover_texture": "textures/ui/hud_tip_text_background",
                       "$button_pressed_texture": "textures/ui/hud_tip_text_background",
@@ -462,6 +510,85 @@
       }
     ],
     "controls": [
+      {
+        "1.6@Nova_Client_common.changelog_template": {
+          "$NC_changelog_toggle": "1_6",
+          "$NC_changelog_version": "1.6",
+          "$NC_changelog_content": [
+            {
+              "1@Nova_Client_common.information_label": {
+                "$NC_information_label": "added position sliders for most modules"
+              }
+            },
+            {
+              "2@Nova_Client_common.information_label": {
+                "$NC_information_label": "added a size slider for most modules"
+              }
+            },
+            {
+              "3@Nova_Client_common.information_label": {
+                "$NC_information_label": "added held item total module"
+              }
+            },
+            {
+              "4@Nova_Client_common.information_label": {
+                "$NC_information_label": "added gui style for inventory hud"
+              }
+            },
+            {
+              "5@Nova_Client_common.information_label": {
+                "$NC_information_label": "added chat mention highlight"
+              }
+            },
+            {
+              "6@Nova_Client_common.information_label": {
+                "$NC_information_label": "added inventory full warning"
+              }
+            },
+            {
+              "7@Nova_Client_common.information_label": {
+                "$NC_information_label": "added low durability warning"
+              }
+            },
+            {
+              "8@Nova_Client_common.information_label": {
+                "$NC_information_label": "added pack icon to world name module"
+              }
+            },
+            {
+              "9@Nova_Client_common.information_label": {
+                "$NC_information_label": "added background for paperdoll"
+              }
+            },
+            {
+              "10@Nova_Client_common.information_label": {
+                "$NC_information_label": "added module descriptions"
+              }
+            },
+            {
+              "11@Nova_Client_common.information_label": {
+                "$NC_information_label": "improved settings pages for modules"
+              }
+            },
+            {
+              "12@Nova_Client_common.information_label": {
+                "$NC_information_label": "improved controller support"
+              }
+            },
+            {
+              "13@Nova_Client_common.information_label": {
+                "$NC_information_label": "removed brightness module"
+              }
+            },
+            {
+              "14@Nova_Client_common.information_label": {
+                "$NC_information_label": "updated to v26.52"
+              }
+            }
+            
+          ]
+        }
+      },
       {
         "1.5.4@Nova_Client_common.changelog_template": {
           "$NC_changelog_toggle": "1_5_4",
@@ -1687,39 +1814,6 @@
       },
       {
         "spacer_30@Nova_Client_common.spacer": {}
-      },
-      {
-        "31@Nova_Client_common.config_helper": {
-          "$NC_hover_text": "Makes the screen a little brighter",
-          "$mod_enabled": "($brightness)",
-          "$mod_disabled": "(not $brightness)",
-          "$module_name": "brightness"
-        }
-      },
-      {
-        "spacer_31@Nova_Client_common.spacer": {}
-      },
-      {
-        "31_1@Nova_Client_common.config_helper": {
-          "$NC_hover_text": "Mobile Buttons to increase and decrease the brightness\n§crequires brightness to be enabled\nmobile only",
-          "$mod_enabled": "($brightness_mobile_toggles)",
-          "$mod_disabled": "(not $brightness_mobile_toggles)",
-          "$module_name": "brightness_mobile_toggles"
-        }
-      },
-      {
-        "spacer_31_1@Nova_Client_common.spacer": {}
-      },
-      {
-        "31_2@Nova_Client_common.config_helper": {
-          "$NC_hover_text": "Arrow Keys can adjust the brightness\n§crequires brightness to be enabled\nPC only",
-          "$mod_enabled": "($brightness_keyboard_controls)",
-          "$mod_disabled": "(not $brightness_keyboard_controls)",
-          "$module_name": "brightness_keyboard_controls"
-        }
-      },
-      {
-        "spacer_31_2@Nova_Client_common.spacer": {}
       },
       {
         "32@Nova_Client_common.config_helper": {

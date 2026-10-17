@@ -1,32 +1,65 @@
 {
   "namespace": "Nova_Client_chat_screen",
-  "content@Nova_Client_common.screen_template": {
-    "$NC_sreen_button_name": "chat_out",
-    "anims": [
-      "@Nova_Client_animations.chat_screen",
-      "@Nova_Client_animations.screen_page_out"
-    ],
-    "controls": [
-      { "background@Nova_Client_common.screen_bg": {} },
+  "content@Nova_Client_layout.page_body": {
+    "$nc_page_toggle": "nc_page_chat",
+    "$nc_page_desc": "The chat. \"Bottom Chat\" moves it to the bottom of the screen. \"Mention Highlight\" marks messages that contain your name.",
+    "$nc_page_req": "",
+    "$nc_page_no_req": true,
+    "$nc_page_rows": [
       {
-        "1@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "bottom_chat_toggle",
-          "$toggle_tags": "$bottom_chat",
-          "$NC_dialog_toggle_text": "Bottom Chat",
-          "$NC_dialog_toggle_anchor": "top_middle"
+        "row_1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "bottom_chat_toggle",
+                "$toggle_tags": "$bottom_chat",
+                "$NC_dialog_toggle_text": "Bottom Chat",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "opacity_slider@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "chat_opacity",
           "$NC_opacity_default_value": "$chat_opacity",
-          "$NC_slider_section_offset": [ 0, 25 ]
+          "$NC_slider_section_offset": [
+            0,
+            0
+          ]
         }
       },
       {
-        "close_button@Nova_Client_dialog_toggle_template.close_button": {
-          "$pressed_button_name": "button.chat_out",
-          "$button_text": "Close"
+        "row_chat_mention_highlight": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "chat_mention_highlight",
+                "$toggle_tags": "$chat_mention_highlight",
+                "$NC_dialog_toggle_text": "Mention Highlight",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       }
     ]

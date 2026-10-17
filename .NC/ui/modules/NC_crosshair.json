@@ -20,6 +20,18 @@
         "source_control_name": "third_person_crosshair",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_crosshair_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+        "target_property_name": "#size_binding_x_absolute"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_crosshair_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
       }
     ]
   },
@@ -37,6 +49,18 @@
         "source_control_name": "third_person_crosshair",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_crosshair_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+        "target_property_name": "#size_binding_x_absolute"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_crosshair_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
       }
     ]
   },

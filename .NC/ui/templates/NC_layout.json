@@ -1,0 +1,2444 @@
+{
+  "namespace": "Nova_Client_layout",
+  "movable_layer": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#hud_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "nc_bridges@config.1": {
+          "type": "panel",
+          "size": [
+            0,
+            0
+          ],
+          "controls": [
+            {
+              "nc_paperdoll_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_paperdoll_x",
+                "$nc_br_def": "$paperdoll_x"
+              }
+            },
+            {
+              "nc_coordinates_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_coordinates_x",
+                "$nc_br_def": "$coordinates_x"
+              }
+            },
+            {
+              "nc_day_counter_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_day_counter_x",
+                "$nc_br_def": "$day_counter_x"
+              }
+            },
+            {
+              "nc_moon_phase_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_moon_phase_x",
+                "$nc_br_def": "$moon_phase_x"
+              }
+            },
+            {
+              "nc_item_info_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_item_info_x",
+                "$nc_br_def": "$item_info_x"
+              }
+            },
+            {
+              "nc_armor_hud_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_armor_hud_x",
+                "$nc_br_def": "$armor_hud_x"
+              }
+            },
+            {
+              "nc_inventory_slot_counter_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_inventory_slot_counter_x",
+                "$nc_br_def": "$inventory_slot_counter_x"
+              }
+            },
+            {
+              "nc_exp_calculator_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_exp_calculator_x",
+                "$nc_br_def": "$exp_calculator_x"
+              }
+            },
+            {
+              "nc_clock_and_compass_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_clock_and_compass_x",
+                "$nc_br_def": "$clock_and_compass_x"
+              }
+            },
+            {
+              "nc_mainhand_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_mainhand_x",
+                "$nc_br_def": "$mainhand_x"
+              }
+            },
+            {
+              "nc_world_name_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_world_name_x",
+                "$nc_br_def": "$world_name_x"
+              }
+            },
+            {
+              "nc_inventory_hud_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_inventory_hud_x",
+                "$nc_br_def": "$inventory_hud_x"
+              }
+            },
+            {
+              "nc_held_item_total_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_held_item_total_x",
+                "$nc_br_def": "$held_item_total_x"
+              }
+            },
+            {
+              "nc_item_counter_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_item_counter_x",
+                "$nc_br_def": "$item_counter_x"
+              }
+            },
+            {
+              "nc_paperdoll_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_paperdoll_y",
+                "$nc_br_def": "$paperdoll_y"
+              }
+            },
+            {
+              "nc_coordinates_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_coordinates_y",
+                "$nc_br_def": "$coordinates_y"
+              }
+            },
+            {
+              "nc_day_counter_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_day_counter_y",
+                "$nc_br_def": "$day_counter_y"
+              }
+            },
+            {
+              "nc_moon_phase_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_moon_phase_y",
+                "$nc_br_def": "$moon_phase_y"
+              }
+            },
+            {
+              "nc_item_info_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_item_info_y",
+                "$nc_br_def": "$item_info_y"
+              }
+            },
+            {
+              "nc_armor_hud_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_armor_hud_y",
+                "$nc_br_def": "$armor_hud_y"
+              }
+            },
+            {
+              "nc_inventory_slot_counter_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_inventory_slot_counter_y",
+                "$nc_br_def": "$inventory_slot_counter_y"
+              }
+            },
+            {
+              "nc_exp_calculator_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_exp_calculator_y",
+                "$nc_br_def": "$exp_calculator_y"
+              }
+            },
+            {
+              "nc_clock_and_compass_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_clock_and_compass_y",
+                "$nc_br_def": "$clock_and_compass_y"
+              }
+            },
+            {
+              "nc_mainhand_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_mainhand_y",
+                "$nc_br_def": "$mainhand_y"
+              }
+            },
+            {
+              "nc_world_name_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_world_name_y",
+                "$nc_br_def": "$world_name_y"
+              }
+            },
+            {
+              "nc_inventory_hud_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_inventory_hud_y",
+                "$nc_br_def": "$inventory_hud_y"
+              }
+            },
+            {
+              "nc_held_item_total_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_held_item_total_y",
+                "$nc_br_def": "$held_item_total_y"
+              }
+            },
+            {
+              "nc_item_counter_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_item_counter_y",
+                "$nc_br_def": "$item_counter_y"
+              }
+            },
+            {
+              "nc_paperdoll_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_paperdoll_size",
+                "$nc_br_def": "$paperdoll_size"
+              }
+            },
+            {
+              "nc_coordinates_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_coordinates_size",
+                "$nc_br_def": "$coordinates_size"
+              }
+            },
+            {
+              "nc_day_counter_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_day_counter_size",
+                "$nc_br_def": "$day_counter_size"
+              }
+            },
+            {
+              "nc_moon_phase_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_moon_phase_size",
+                "$nc_br_def": "$moon_phase_size"
+              }
+            },
+            {
+              "nc_item_info_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_item_info_size",
+                "$nc_br_def": "$item_info_size"
+              }
+            },
+            {
+              "nc_armor_hud_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_armor_hud_size",
+                "$nc_br_def": "$armor_hud_size"
+              }
+            },
+            {
+              "nc_inventory_slot_counter_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_inventory_slot_counter_size",
+                "$nc_br_def": "$inventory_slot_counter_size"
+              }
+            },
+            {
+              "nc_exp_calculator_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_exp_calculator_size",
+                "$nc_br_def": "$exp_calculator_size"
+              }
+            },
+            {
+              "nc_clock_and_compass_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_clock_and_compass_size",
+                "$nc_br_def": "$clock_and_compass_size"
+              }
+            },
+            {
+              "nc_mainhand_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_mainhand_size",
+                "$nc_br_def": "$mainhand_size"
+              }
+            },
+            {
+              "nc_world_name_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_world_name_size",
+                "$nc_br_def": "$world_name_size"
+              }
+            },
+            {
+              "nc_inventory_hud_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_inventory_hud_size",
+                "$nc_br_def": "$inventory_hud_size"
+              }
+            },
+            {
+              "nc_held_item_total_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_held_item_total_size",
+                "$nc_br_def": "$held_item_total_size"
+              }
+            },
+            {
+              "nc_item_counter_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_item_counter_size",
+                "$nc_br_def": "$item_counter_size"
+              }
+            },
+            {
+              "nc_popups_x_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_popups_x",
+                "$nc_br_def": "$popups_x"
+              }
+            },
+            {
+              "nc_popups_y_eff@Nova_Client_layout.bridge_pos": {
+                "$nc_br_src": "nc_popups_y",
+                "$nc_br_def": "$popups_y"
+              }
+            },
+            {
+              "nc_crosshair_size_eff@Nova_Client_layout.bridge_size": {
+                "$nc_br_src": "nc_crosshair_size",
+                "$nc_br_def": "$crosshair_size"
+              }
+            },
+            {
+              "nc_hit_helpers@Nova_Client_held_item_total.helpers": {}
+            }
+          ]
+        }
+      },
+      {
+        "paperdoll_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_paperdoll.content",
+          "$nc_x_slider": "nc_paperdoll_x_eff",
+          "$nc_y_slider": "nc_paperdoll_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_paperdoll_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 35)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_abs_x",
+          "$nc_res_x_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_paperdoll_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) * 2333) / 2000)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      },
+      {
+        "coordinates_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_coords.content",
+          "$nc_x_slider": "nc_coordinates_x_eff",
+          "$nc_y_slider": "nc_coordinates_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_coordinates_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "default_coords_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_a"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_coords_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_b"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nether_coords_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_c"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_a + #nc_b + #nc_c) * ((((#nc_s + 10) / 20) * 10) + 2))",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_copy"
+        }
+      },
+      {
+        "day_counter_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_day_counter.content",
+          "$nc_x_slider": "nc_day_counter_x_eff",
+          "$nc_y_slider": "nc_day_counter_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_day_counter_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#nc_s + 10) / 20) * 10) + 2)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_copy"
+        }
+      },
+      {
+        "moon_phase_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_moon_phase.content",
+          "$nc_x_slider": "nc_moon_phase_x_eff",
+          "$nc_y_slider": "nc_moon_phase_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_moon_phase_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#nc_s + 10) / 20) * 10) + 2)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_copy"
+        }
+      },
+      {
+        "item_info_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_item_info_panel.content",
+          "$nc_x_slider": "nc_item_info_x_eff",
+          "$nc_y_slider": "nc_item_info_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_item_info_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "item_info_item_name",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_a"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "item_aux_id",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_b"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "item_id_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_c"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_a + #nc_b + #nc_c) * ((((#nc_s + 10) / 20) * 10) + 4))",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_copy"
+        }
+      },
+      {
+        "armor_hud_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_armor_hud.content",
+          "$nc_x_slider": "nc_armor_hud_x_eff",
+          "$nc_y_slider": "nc_armor_hud_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_armor_hud_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 64)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_abs_x",
+          "$nc_res_x_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_armor_hud_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 37)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      },
+      {
+        "inventory_slot_counter_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_slot_counter.content",
+          "$nc_x_slider": "nc_inventory_slot_counter_x_eff",
+          "$nc_y_slider": "nc_inventory_slot_counter_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_inventory_slot_counter_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_abs_x",
+          "$nc_res_x_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_inventory_slot_counter_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#nc_s + 10) / 20) * 45) + 3)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      },
+      {
+        "exp_calculator_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_xp_indicator.content",
+          "$nc_x_slider": "nc_exp_calculator_x_eff",
+          "$nc_y_slider": "nc_exp_calculator_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_exp_calculator_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_copy"
+        }
+      },
+      {
+        "clock_and_compass_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_clock_and_compass.content",
+          "$nc_x_slider": "nc_clock_and_compass_x_eff",
+          "$nc_y_slider": "nc_clock_and_compass_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_clock_and_compass_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#nc_s + 10) / 20) * 16) + 3)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_abs_x",
+          "$nc_res_x_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_clock_and_compass_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "compass_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_a"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "clock_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_b"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "recovery_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_c"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_a + #nc_b + #nc_c) * (((#nc_s + 10) / 20) * 16)) + 3)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      },
+      {
+        "mainhand_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_mainhand.content",
+          "$nc_x_slider": "nc_mainhand_x_eff",
+          "$nc_y_slider": "nc_mainhand_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 22)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_abs_x",
+          "$nc_res_x_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 102)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ],
+          "$nc_frame_size": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "world_name_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_ip_display.content",
+          "$nc_x_slider": "nc_world_name_x_eff",
+          "$nc_y_slider": "nc_world_name_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_world_name_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 16)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_copy"
+        }
+      },
+      {
+        "inventory_hud_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_inventory_hud.content",
+          "$nc_x_slider": "nc_inventory_hud_x_eff",
+          "$nc_y_slider": "nc_inventory_hud_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_inventory_hud_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_hud_gui_style",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_g"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) * (48 + (#nc_g * 12))) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_abs_x",
+          "$nc_res_x_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_inventory_hud_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_s + 10) / 20) * 144)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      },
+      {
+        "held_item_total_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_held_item_total.content",
+          "$nc_x_slider": "nc_held_item_total_x_eff",
+          "$nc_y_slider": "nc_held_item_total_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_held_item_total_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#nc_s + 10) / 20) * 12) + 4)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_abs_x",
+          "$nc_res_x_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_held_item_total_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#nc_s + 10) / 20) * 32) + 6)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      },
+      {
+        "item_counter_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_item_counters.content",
+          "$nc_x_slider": "nc_item_counter_x_eff",
+          "$nc_y_slider": "nc_item_counter_y_eff",
+          "$nc_reserve_y": "Nova_Client_layout.reserve_abs_y",
+          "$nc_res_y_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_item_counter_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#nc_s + 10) / 20) * 12) + 5)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "$nc_reserve_x": "Nova_Client_layout.reserve_abs_x",
+          "$nc_res_x_bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_item_counter_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_s"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "item_counter_arrow",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_a"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "item_counter_potion",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_b"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "item_counter_totem",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#nc_c"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#nc_a + #nc_b + #nc_c) * ((((#nc_s + 10) / 20) * 24) + 5)) + 4)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      },
+      {
+        "popups_frame@Nova_Client_layout.frame": {
+          "$nc_content": "Nova_Client_hud_stacker.popup_group",
+          "$nc_x_slider": "nc_popups_x_eff",
+          "$nc_y_slider": "nc_popups_y_eff",
+          "$nc_reserve_x": "Nova_Client_layout.reserve_fixed_x",
+          "$nc_res_x_size": [
+            220,
+            0
+          ],
+          "$nc_reserve_y": "Nova_Client_layout.reserve_fixed_y",
+          "$nc_res_y_size": [
+            0,
+            56
+          ]
+        }
+      }
+    ]
+  },
+  "frame": {
+    "type": "panel",
+    "size": "$nc_frame_size",
+    "$nc_frame_size|default": [
+      "100% - 7px",
+      "100% - 7px"
+    ],
+    "$nc_content|default": "Nova_Client_common.spacer",
+    "$nc_reserve_x|default": "Nova_Client_layout.reserve_none",
+    "$nc_reserve_y|default": "Nova_Client_layout.reserve_none",
+    "$nc_x_slider|default": "",
+    "$nc_y_slider|default": "",
+    "$nc_res_x_bindings|default": [],
+    "$nc_res_y_bindings|default": [],
+    "controls": [
+      {
+        "out_v": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "area_v": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "fill"
+                ],
+                "controls": [
+                  {
+                    "y_offset": {
+                      "type": "panel",
+                      "size": [
+                        0,
+                        0
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$nc_y_slider",
+                          "source_property_name": "(#nc_eff / 100)",
+                          "target_property_name": "#size_binding_y"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        "100%cm"
+                      ],
+                      "controls": [
+                        {
+                          "area_h": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [
+                              "fill",
+                              "100%cm"
+                            ],
+                            "controls": [
+                              {
+                                "x_offset": {
+                                  "type": "panel",
+                                  "size": [
+                                    0,
+                                    0
+                                  ],
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "$nc_x_slider",
+                                      "source_property_name": "(#nc_eff / 100)",
+                                      "target_property_name": "#size_binding_x"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "module@$nc_content": {
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "offset": [
+                                    0,
+                                    0
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "reserve_x@$nc_reserve_x": {}
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "reserve_y@$nc_reserve_y": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "reserve_none": {
+    "type": "panel",
+    "size": [
+      0,
+      0
+    ]
+  },
+  "bridge_pos": {
+    "type": "panel",
+    "size": [
+      0,
+      0
+    ],
+    "$nc_br_src|default": "",
+    "$nc_br_def|default": 0,
+    "property_bag": {
+      "#nc_def": "$nc_br_def",
+      "#nc_w": 0,
+      "#nc_one": 1.0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$nc_br_src",
+        "source_property_name": "#nc_val1",
+        "target_property_name": "#nc_w"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_w > 0)",
+        "target_property_name": "#nc_ok"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_ok * (#nc_w - 1)) + ((not #nc_ok) * (#nc_def * #nc_one)))",
+        "target_property_name": "#nc_eff"
+      }
+    ]
+  },
+  "bridge_size": {
+    "type": "panel",
+    "size": [
+      0,
+      0
+    ],
+    "$nc_br_src|default": "",
+    "$nc_br_def|default": 0,
+    "property_bag": {
+      "#nc_def": "$nc_br_def",
+      "#nc_w": 0,
+      "#nc_one": 1.0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$nc_br_src",
+        "source_property_name": "#nc_val1",
+        "target_property_name": "#nc_w"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_w > 0)",
+        "target_property_name": "#nc_ok"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_ok * (#nc_w - 1)) + ((not #nc_ok) * (((#nc_def * #nc_one) - 50) / 5)))",
+        "target_property_name": "#nc_eff"
+      }
+    ]
+  },
+  "reserve_fixed_x": {
+    "type": "panel",
+    "size": "$nc_res_x_size",
+    "$nc_res_x_size|default": [
+      0,
+      0
+    ]
+  },
+  "reserve_fixed_y": {
+    "type": "panel",
+    "size": "$nc_res_y_size",
+    "$nc_res_y_size|default": [
+      0,
+      0
+    ]
+  },
+  "reserve_copy": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      "100%c"
+    ],
+    "alpha": 0.0,
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "copy@$nc_content": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "reserve_abs_x": {
+    "type": "panel",
+    "size": [
+      0,
+      0
+    ],
+    "bindings": "$nc_res_x_bindings"
+  },
+  "reserve_abs_y": {
+    "type": "panel",
+    "size": [
+      0,
+      0
+    ],
+    "bindings": "$nc_res_y_bindings"
+  },
+  "chat_push": {
+    "type": "panel",
+    "size": [
+      "100%",
+      0
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "3d_paper_doll_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_pd"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_paperdoll_x_eff",
+        "source_property_name": "(#nc_eff < 50)",
+        "target_property_name": "#nc_pdl"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_paperdoll_size_eff",
+        "source_property_name": "#nc_eff",
+        "target_property_name": "#nc_pds"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "coords_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_c"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "default_coords_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_c1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "chunk_coords_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_c2"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nether_coords_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_c3"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_coordinates_x_eff",
+        "source_property_name": "(#nc_eff < 50)",
+        "target_property_name": "#nc_cl"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_coordinates_size_eff",
+        "source_property_name": "#nc_eff",
+        "target_property_name": "#nc_cs"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "day_counter_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_d"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_day_counter_x_eff",
+        "source_property_name": "(#nc_eff < 50)",
+        "target_property_name": "#nc_dl"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_day_counter_size_eff",
+        "source_property_name": "#nc_eff",
+        "target_property_name": "#nc_ds"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "moon_phase_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_m"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_moon_phase_x_eff",
+        "source_property_name": "(#nc_eff < 50)",
+        "target_property_name": "#nc_ml"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_moon_phase_size_eff",
+        "source_property_name": "#nc_eff",
+        "target_property_name": "#nc_ms"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "item_information_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_i"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "item_info_item_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_i1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "item_aux_id",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_i2"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "item_id_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_i3"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_item_info_x_eff",
+        "source_property_name": "(#nc_eff < 50)",
+        "target_property_name": "#nc_il"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_item_info_size_eff",
+        "source_property_name": "#nc_eff",
+        "target_property_name": "#nc_is"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_pd and #nc_pdl) * ((((#nc_pds + 10) * 35) / 20) + 4))",
+        "target_property_name": "#nc_h1"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_c and #nc_cl) * ((#nc_c1 + #nc_c2 + #nc_c3) * ((((#nc_cs + 10) * 10) / 20) + 3)))",
+        "target_property_name": "#nc_h2"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_d and #nc_dl) * ((((#nc_ds + 10) * 10) / 20) + 4))",
+        "target_property_name": "#nc_h3"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_m and #nc_ml) * ((((#nc_ms + 10) * 10) / 20) + 4))",
+        "target_property_name": "#nc_h4"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#nc_i and #nc_il) * ((#nc_i1 + #nc_i2 + #nc_i3) * ((((#nc_is + 10) * 10) / 20) + 5)))",
+        "target_property_name": "#nc_h5"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_h1 + #nc_h2 + #nc_h3 + #nc_h4 + #nc_h5 + 4)",
+        "target_property_name": "#size_binding_y_absolute"
+      }
+    ]
+  },
+  "settings_area": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 40,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_page_back",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "area_bg@Nova_Client_common.internal": {
+          "$NC_internal": "background/White",
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "alpha": 0.35,
+          "layer": 1,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "area_header@Nova_Client_layout.page_header": {}
+      },
+      {
+        "area_scroll@common.scrolling_panel": {
+          "$show_background": false,
+          "$always_handle_scrolling": false,
+          "layer": 5,
+          "$scroll_size": [
+            3,
+            "100%"
+          ],
+          "$scroll_bar_left_padding_size": [
+            5,
+            5
+          ],
+          "size": [
+            "100%",
+            "100% - 24px"
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "$scrolling_content": "Nova_client_modules_menu.pages"
+        }
+      }
+    ]
+  },
+  "page_header": {
+    "type": "panel",
+    "size": [
+      "100%",
+      22
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "layer": 6,
+    "controls": [
+      {
+        "bar@Nova_Client_common.internal": {
+          "$NC_internal": "background/White",
+          "color": [
+            0.192,
+            0.196,
+            0.2
+          ],
+          "layer": 1,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "back@Nova_client_toggles.Nova_client_toggle": {
+          "$toggle_view_binding_name": "nc_page_back",
+          "$radio_toggle_group": true,
+          "$toggle_name": "nc_page_group",
+          "$toggle_group_forced_index": 0,
+          "$toggle_group_default_selected": 0,
+          "$button_text": "<",
+          "$toggle_overlay_control": "Nova_client_toggles.toggle_overlay_none",
+          "$button_default_tint": [
+            0.25,
+            0.25,
+            0.26
+          ],
+          "$button_hover_tint": [
+            0.404,
+            0.408,
+            0.416
+          ],
+          "$button_pressed_tint": [
+            0.25,
+            0.25,
+            0.26
+          ],
+          "$button_pressed_hover_tint": [
+            0.404,
+            0.408,
+            0.416
+          ],
+          "$default_text_color": [
+            1,
+            1,
+            1
+          ],
+          "$hover_text_color": [
+            1,
+            1,
+            1
+          ],
+          "$pressed_text_color": [
+            1,
+            1,
+            1
+          ],
+          "$pressed_hover_text_color": [
+            1,
+            1,
+            1
+          ],
+          "size": [
+            20,
+            20
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "titles": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "t_inventory_hud": {
+                "type": "label",
+                "text": "Inventory HUD",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_inventory_hud",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_world_name": {
+                "type": "label",
+                "text": "World Name",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_world_name",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_main_hand": {
+                "type": "label",
+                "text": "Main Hand Slot",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_main_hand",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_item_counter": {
+                "type": "label",
+                "text": "Item Counter",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_item_counter",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_clock_and_compass": {
+                "type": "label",
+                "text": "Clock and Compass",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_clock_and_compass",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_day_counter": {
+                "type": "label",
+                "text": "Day Counter",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_day_counter",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_coordinates": {
+                "type": "label",
+                "text": "Coordinates",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_coordinates",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_crosshair": {
+                "type": "label",
+                "text": "Crosshair",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_crosshair",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_inventory_slot_counter": {
+                "type": "label",
+                "text": "Inventory Slots",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_inventory_slot_counter",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_paperdoll": {
+                "type": "label",
+                "text": "Paperdoll",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_paperdoll",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_item_info": {
+                "type": "label",
+                "text": "Item Info",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_item_info",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_xp_calculator": {
+                "type": "label",
+                "text": "EXP Calculator",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_xp_calculator",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_playerlist": {
+                "type": "label",
+                "text": "Playerlist",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_playerlist",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_bossbar": {
+                "type": "label",
+                "text": "Bossbar",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_bossbar",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_scoreboard": {
+                "type": "label",
+                "text": "Scoreboard",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_scoreboard",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_chat": {
+                "type": "label",
+                "text": "Chat",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_chat",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_moon_phase": {
+                "type": "label",
+                "text": "Moon Phase",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_moon_phase",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_armor_hud": {
+                "type": "label",
+                "text": "Armor HUD",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_armor_hud",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_item_text": {
+                "type": "label",
+                "text": "Item Text",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_item_text",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_xp_bar": {
+                "type": "label",
+                "text": "XP Bar",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_xp_bar",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_hotbar": {
+                "type": "label",
+                "text": "Hotbar",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_hotbar",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_sound_subtitles": {
+                "type": "label",
+                "text": "Sound Subtitles",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_sound_subtitles",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_jukebox": {
+                "type": "label",
+                "text": "Jukebox Text",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_jukebox",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_shiny_potions": {
+                "type": "label",
+                "text": "Shiny Potions",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_shiny_potions",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "t_held_item_total": {
+                "type": "label",
+                "text": "Held Item Total",
+                "font_type": "MinecraftTen",
+                "color": [
+                  1,
+                  1,
+                  1
+                ],
+                "shadow": false,
+                "offset": [
+                  0,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_page_held_item_total",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "page_body": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "layer": 6,
+    "$nc_page_toggle|default": "nc_page_none",
+    "$nc_page_desc|default": "",
+    "$nc_page_req|default": "",
+    "$nc_page_no_req|default": true,
+    "$nc_page_rows|default": [],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$nc_page_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "top_pad@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      },
+      {
+        "desc": {
+          "type": "label",
+          "text": "$nc_page_desc",
+          "size": [
+            "100% - 14px",
+            "default"
+          ],
+          "color": [
+            0.88,
+            0.88,
+            0.88
+          ],
+          "font_scale_factor": 0.9,
+          "shadow": false,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "req_pad@Nova_Client_common.spacer": {
+          "ignored": "$nc_page_no_req",
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      },
+      {
+        "req": {
+          "type": "label",
+          "ignored": "$nc_page_no_req",
+          "text": "$nc_page_req",
+          "size": [
+            "100% - 14px",
+            "default"
+          ],
+          "color": [
+            1,
+            0.72,
+            0.25
+          ],
+          "font_scale_factor": 0.9,
+          "shadow": false,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "div_pad@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            6,
+            6
+          ]
+        }
+      },
+      {
+        "rows": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "controls": "$nc_page_rows"
+        }
+      }
+    ]
+  },
+  "value_slider": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "90%",
+      "100%c"
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$nc_vs_name|default": "nc_unused_slider",
+    "$nc_vs_caption|default": "",
+    "$nc_vs_steps|default": 101,
+    "$nc_vs_init_expr|default": "((#slider_steps * 0) + #nc_cfg)",
+    "$nc_vs_cfg|default": 0,
+    "$nc_vs_mul|default": 1,
+    "$nc_vs_add|default": 0,
+    "$nc_vs_unit|default": "%",
+    "controls": [
+      {
+        "value_label": {
+          "type": "label",
+          "text": "#text",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "size": [
+            "100%",
+            10
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$nc_vs_name",
+              "source_property_name": "#slider_value",
+              "target_property_name": "#nc_v"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_v > 9) + (#nc_v > 19) + (#nc_v > 29) + (#nc_v > 39) + (#nc_v > 49) + (#nc_v > 59) + (#nc_v > 69) + (#nc_v > 79) + (#nc_v > 89) + (#nc_v > 99))",
+              "target_property_name": "#nc_t"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_v - (#nc_t * 10))",
+              "target_property_name": "#nc_r"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_r > 0) + (#nc_r > 1) + (#nc_r > 2) + (#nc_r > 3) + (#nc_r > 4) + (#nc_r > 5) + (#nc_r > 6) + (#nc_r > 7) + (#nc_r > 8))",
+              "target_property_name": "#nc_u"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#nc_t * 10) + #nc_u) * $nc_vs_mul) + $nc_vs_add)",
+              "target_property_name": "#nc_n"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§7' + $nc_vs_caption + ': §f' + #nc_n + $nc_vs_unit)",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "gap@Nova_Client_common.spacer": {}
+      },
+      {
+        "slider@Nova_Client_layout.nf_slider_panel": {
+          "size": [
+            "100%",
+            18
+          ],
+          "$Nova_Client_slider_steps": "$nc_vs_steps",
+          "$Nova_Client_slider_binding_controls_name": "$nc_vs_name",
+          "$Nova_Client_slider_cfg": "$nc_vs_cfg",
+          "$Nova_Client_slider_value_bindings": "$nc_vs_init_expr"
+        }
+      },
+      {
+        "gap2@Nova_Client_common.spacer": {
+          "$NC_spacer_size": [
+            4,
+            4
+          ]
+        }
+      }
+    ]
+  },
+  "nf_slider_base": {
+    "type": "slider",
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": true,
+    "$default_focus_precedence|default": 0,
+    "default_focus_precedence": "$default_focus_precedence",
+    "$slider_select_on_hover|default": false,
+    "slider_select_on_hover": "$slider_select_on_hover",
+    "layer": 1,
+    "always_listen_to_input": false,
+    "always_handle_pointer": true,
+    "slider_box_control": "slider_box",
+    "$slider_box_layout|default": "common.slider_button_layout",
+    "$slider_box_hover_layout|default": "common.slider_button_hover_layout",
+    "$slider_box_locked_layout|default": "common.slider_button_locked_layout",
+    "$slider_box_indent_layout|default": "common.slider_button_indent_layout",
+    "$slider_box_size|default": [
+      10,
+      16
+    ],
+    "$slider_track_button|default": "button.slider_skip_track",
+    "$slider_direction|default": "horizontal",
+    "$slider_steps|default": 1,
+    "$slider_collection_name|default": "",
+    "slider_name": "$slider_name",
+    "slider_track_button": "$slider_name",
+    "slider_direction": "$slider_direction",
+    "slider_steps": "$slider_steps",
+    "slider_collection_name": "$slider_collection_name",
+    "$slider_binding_type|default": "global",
+    "$slider_binding_condition|default": "visible",
+    "$slider_value_binding_name|default": "#slider_value",
+    "$slider_steps_binding_type|default": "global",
+    "$slider_steps_binding_condition|default": "visible",
+    "$slider_steps_binding_name|default": "#slider_steps",
+    "$slider_enabled_binding_type|default": "none",
+    "$slider_enabled_binding_condition|default": "visible",
+    "$slider_enabled_binding_name|default": "#slider_enabled",
+    "$slider_timeout_binding_type|default": "none",
+    "$slider_timeout_binding_condition|default": "once",
+    "$slider_timeout_binding_name|default": "#slider_timeout",
+    "$slider_tts_binding_type|default": "global",
+    "$slider_tts_binding_condition|default": "visible",
+    "$slider_tts_header|default": "",
+    "$slider_tts_header_binding_type|default": "none",
+    "$slider_tts_header_binding_condition|default": "visible",
+    "$slider_header_collection_name": "",
+    "$slider_tts_override_value|default": " ",
+    "$slider_tts_name|default": "accessibility.slider.tts.title",
+    "$slider_tts_text_value|default": "",
+    "$tts_section_header|default": "",
+    "default_control": "slider_bar_default",
+    "hover_control": "slider_bar_hover",
+    "background_control": "slider_background",
+    "background_hover_control": "slider_background_hover",
+    "progress_control": "slider_progress",
+    "progress_hover_control": "slider_progress_hover",
+    "tts_control_header": "$slider_tts_header",
+    "tts_section_header": "$tts_section_header",
+    "tts_override_control_value": "$slider_tts_override_value",
+    "tts_name": "$slider_tts_name",
+    "tts_value_changed": "$slider_tts_text_value",
+    "$slider_small_decrease_button|default": "slider.small_decrease",
+    "$slider_small_increase_button|default": "slider.small_increase",
+    "$slider_selected_button|default": "slider.selected",
+    "$slider_deselected_button|default": "slider.deselected",
+    "slider_small_decrease_button": "$slider_small_decrease_button",
+    "slider_small_increase_button": "$slider_small_increase_button",
+    "slider_selected_button": "$slider_selected_button",
+    "slider_deselected_button": "$slider_deselected_button",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$slider_name",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$slider_selected_button",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$slider_deselected_button",
+        "mapping_type": "focused"
+      },
+      {
+        "ignored": "($slider_direction = 'vertical')",
+        "from_button_id": "button.menu_left",
+        "to_button_id": "$slider_small_decrease_button",
+        "mapping_type": "pressed",
+        "ignore_input_scope": true
+      },
+      {
+        "ignored": "($slider_direction = 'horizontal')",
+        "from_button_id": "button.menu_up",
+        "to_button_id": "$slider_small_decrease_button",
+        "mapping_type": "pressed",
+        "ignore_input_scope": true
+      },
+      {
+        "ignored": "($slider_direction = 'vertical')",
+        "from_button_id": "button.menu_right",
+        "to_button_id": "$slider_small_increase_button",
+        "mapping_type": "pressed",
+        "ignore_input_scope": true
+      },
+      {
+        "ignored": "($slider_direction = 'horizontal')",
+        "from_button_id": "button.menu_down",
+        "to_button_id": "$slider_small_increase_button",
+        "mapping_type": "pressed",
+        "ignore_input_scope": true
+      }
+    ],
+    "controls": [
+      {
+        "slider_box@common.slider_box": {
+          "$slider_box_layout": "$slider_box_layout",
+          "$slider_box_size": "$slider_box_size",
+          "$slider_track_button": "$slider_name"
+        }
+      },
+      {
+        "slider_bar_default@common.slider_bar_default": {}
+      },
+      {
+        "slider_bar_hover@common.slider_bar_hover": {
+          "visible": false
+        }
+      }
+    ],
+    "property_bag": {
+      "#slider_steps": 1,
+      "#slider_value": 0,
+      "#slider_timeout": 0.25
+    },
+    "bindings": [
+      {
+        "binding_type": "$slider_steps_binding_type",
+        "binding_condition": "$slider_steps_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_steps_binding_name",
+        "binding_name_override": "#slider_steps"
+      },
+      {
+        "binding_type": "$slider_binding_type",
+        "binding_condition": "$slider_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_value_binding_name",
+        "binding_name_override": "#slider_value"
+      },
+      {
+        "binding_type": "$slider_enabled_binding_type",
+        "binding_condition": "$slider_enabled_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_type": "$slider_tts_binding_type",
+        "binding_condition": "$slider_tts_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_tts_text_value"
+      },
+      {
+        "binding_type": "$slider_tts_header_binding_type",
+        "binding_condition": "$slider_tts_header_binding_condition",
+        "binding_collection_name": "$slider_header_collection_name",
+        "binding_name": "$slider_tts_header"
+      },
+      {
+        "binding_type": "$slider_timeout_binding_type",
+        "binding_condition": "$slider_timeout_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_timeout_binding_name",
+        "binding_name_override": "#slider_timeout"
+      }
+    ]
+  },
+  "nf_slider@Nova_Client_layout.nf_slider_base": {
+    "$option_enabled_binding_name": "slider_enabled",
+    "$slider_name": "Nova_Client_slider",
+    "$slider_box_layout": "Nova_Client_slider.Nova_Client_slider_button_default",
+    "$slider_box_hover_layout": "Nova_Client_slider.Nova_Client_slider_button_hover",
+    "$slider_box_indent_layout": "Nova_Client_slider.Nova_Client_slider_button_default",
+    "$slider_box_locked_layout": "Nova_Client_slider.Nova_Client_slider_button_default",
+    "$option_label": "",
+    "$Nova_Client_slider_toggle_tags|default": 0,
+    "$Nova_Client_slider_steps|default": 1,
+    "$Nova_Client_slider_value_bindings|default": "(((#slider_steps * 0) + $Nova_Client_slider_toggle_tags) * 10)",
+    "property_bag": {
+      "#slider_steps": "$Nova_Client_slider_steps",
+      "#nc_cfg": "$Nova_Client_slider_cfg"
+    },
+    "bindings": [
+      {
+        "binding_name": "#slider_steps"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$Nova_Client_slider_value_bindings",
+        "target_property_name": "#slider_value"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#slider_value + 1)",
+        "target_property_name": "#nc_val1"
+      }
+    ],
+    "controls": [
+      {
+        "slider_box@common.slider_box": {}
+      },
+      {
+        "slider_bar_default@Nova_Client_slider.Nova_Client_slider_bar_default": {}
+      },
+      {
+        "slider_bar_hover@Nova_Client_slider.Nova_Client_slider_bar_hover": {}
+      }
+    ],
+    "$Nova_Client_slider_cfg|default": 0
+  },
+  "nf_slider_panel": {
+    "type": "panel",
+    "layer": 100,
+    "clips_children": false,
+    "controls": [
+      {
+        "$Nova_Client_slider_binding_controls_name@Nova_Client_layout.nf_slider": {
+          "size": [
+            "100% - 2px",
+            "100% - 2px"
+          ]
+        }
+      }
+    ]
+  }
+}

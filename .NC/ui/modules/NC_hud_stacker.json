@@ -49,6 +49,15 @@
             }
           ]
         }
+      },
+      {
+        "nc_pad": {
+          "type": "panel",
+          "size": [
+            "100%",
+            3
+          ]
+        }
       }
     ]
   },
@@ -140,37 +149,6 @@
       }
     ],
     "controls": [
-      {
-        "item_counters_row": {
-          "type": "panel",
-          "size": [
-            "100%",
-            "100%c"
-          ],
-          "controls": [
-            {
-              "counters@Nova_Client_item_counters.content": {}
-            }
-          ]
-        }
-      },
-      {
-        "counters_padding": {
-          "type": "panel",
-          "size": [
-            2,
-            2
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "item_counter_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
       {
         "jukebox_text_row": {
           "type": "panel",
@@ -315,6 +293,318 @@
               "binding_type": "view",
               "source_property_name": "(#nc_one and #nc_two)",
               "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "actionbar_text@hud.hud_actionbar_text": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [
+      0,
+      0
+    ]
+  },
+  "popup_group": {
+    "type": "panel",
+    "size": [
+      220,
+      56
+    ],
+    "controls": [
+      {
+        "popup_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "warn_inventory_full": {
+                "type": "stack_panel",
+                "size": [
+                  "100%",
+                  "100%c"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_slots_renderer",
+                    "source_property_name": "(#invslot_total = 36)",
+                    "target_property_name": "#nc_full"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_full_warning",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#nc_w"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_slot_counter_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#nc_m"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#nc_full and #nc_w and #nc_m)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "center": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "bg": {
+                            "type": "image",
+                            "texture": "textures/ui/hud_tip_text_background",
+                            "alpha": 0.6,
+                            "size": [
+                              "100%c + 10px",
+                              "100%c + 4px"
+                            ],
+                            "controls": [
+                              {
+                                "text": {
+                                  "type": "label",
+                                  "text": "§cInventory Full!",
+                                  "shadow": true,
+                                  "layer": 2
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "inventory_full_warning_opacity",
+                                "source_property_name": "(#slider_value / 10)",
+                                "target_property_name": "#alpha"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pad": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        3
+                      ]
+                    }
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "warn_low_durability": {
+                "type": "stack_panel",
+                "size": [
+                  "100%",
+                  "100%c"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s0",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l0"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s1",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l1"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s2",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l2"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s3",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l3"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s4",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l4"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s5",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l5"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s6",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l6"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s7",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l7"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_low_s8",
+                    "source_property_name": "#nc_low",
+                    "target_property_name": "#nc_l8"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mainhand_low_durability",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#nc_w"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mainhand_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#nc_m"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#nc_l0 or #nc_l1 or #nc_l2 or #nc_l3 or #nc_l4 or #nc_l5 or #nc_l6 or #nc_l7 or #nc_l8) and #nc_w and #nc_m)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "center": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        "100%c"
+                      ],
+                      "controls": [
+                        {
+                          "bg": {
+                            "type": "image",
+                            "texture": "textures/ui/hud_tip_text_background",
+                            "alpha": 0.6,
+                            "size": [
+                              "100%c + 10px",
+                              "100%c + 4px"
+                            ],
+                            "controls": [
+                              {
+                                "text": {
+                                  "type": "label",
+                                  "text": "§cLow Durability!",
+                                  "shadow": true,
+                                  "layer": 2
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "mainhand_warning_opacity",
+                                "source_property_name": "(#slider_value / 10)",
+                                "target_property_name": "#alpha"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pad": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        3
+                      ]
+                    }
+                  }
+                ],
+                "orientation": "vertical"
+              }
+            },
+            {
+              "actionbar_row": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%c"
+                ],
+                "factory": {
+                  "name": "hud_actionbar_text_factory",
+                  "control_ids": {
+                    "hud_actionbar_text": "hud_actionbar_text@Nova_Client_hud_stacker.actionbar_text"
+                  }
+                }
+              }
+            },
+            {
+              "jukebox_text_row": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%c"
+                ],
+                "controls": [
+                  {
+                    "item_text_factory": {
+                      "type": "factory",
+                      "size": [
+                        "100%",
+                        "100%c"
+                      ],
+                      "control_ids": {
+                        "jukebox_text": "jukebox_text@Nova_Client_hud_stacker.jukebox_popup"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "item_text_row": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%c"
+                ],
+                "controls": [
+                  {
+                    "item_text_factory": {
+                      "type": "factory",
+                      "size": [
+                        "100%",
+                        "100%c"
+                      ],
+                      "control_ids": {
+                        "item_text": "item_text@Nova_Client_hud_stacker.item_popup"
+                      }
+                    }
+                  }
+                ]
+              }
             }
           ]
         }

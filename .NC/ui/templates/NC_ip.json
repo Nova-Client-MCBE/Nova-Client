@@ -1,46 +1,215 @@
 {
-    "namespace": "Nova_Client_ip_template",
-    "content": {
-        "type": "image",
-        "texture": "textures/ui/hud_tip_text_background",
-        "alpha": 0.5,
-        "size": [
-            "100%c + 6px",
+  "namespace": "Nova_Client_ip_template",
+  "content": {
+    "type": "image",
+    "texture": "textures/ui/hud_tip_text_background",
+    "alpha": 0.5,
+    "size": [
+      "100%c + 3px",
+      16
+    ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "bindings": [
+      {
+        "binding_name": "#player_list_title"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$server_name",
+        "target_property_name": "#nc_srv"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "ipdisplay_opacity",
+        "source_property_name": "(#slider_value / 10)",
+        "target_property_name": "#alpha"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_world_name_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "world_name_server_ip",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#nc_sip"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#nc_srv and #nc_sip)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "wn_row": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%c",
             16
-        ],
-        "anchor_from": "bottom_right",
-        "anchor_to": "bottom_right",
-        "bindings": [
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "bindings": [
             {
-                "binding_name": "#player_list_title"
-            },
-            {
-                "binding_type": "view",
-                "source_property_name": "$server_name",
-                "target_property_name": "#visible"
-            },
-            {
-                "binding_type": "view",
-                "source_control_name": "ipdisplay_opacity",
-                "source_property_name": "(#slider_value / 10)",
-                "target_property_name": "#alpha"
+              "binding_type": "view",
+              "source_control_name": "nc_world_name_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
             }
-        ],
-        "controls": [
+          ],
+          "controls": [
             {
-                "label": {
-                    "type": "label",
-                    "text": "$server_ip",
-                    "layer": 12,
-                    "ignored": "$world_name",
-                    "offset": [
-                        2,
+              "pad_noicon": {
+                "type": "panel",
+                "size": [
+                  3,
+                  0
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "world_name_pack_icon",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "icon_box": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "world_name_pack_icon",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "icon": {
+                      "type": "image",
+                      "texture": "pack_icon",
+                      "size": [
+                        16,
+                        16
+                      ],
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_world_name_size_eff",
+                          "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+                          "target_property_name": "#size_binding_x_absolute"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_world_name_size_eff",
+                          "source_property_name": "(((#nc_eff + 10) * 16) / 20)",
+                          "target_property_name": "#size_binding_y_absolute"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "gap": {
+                      "type": "panel",
+                      "size": [
+                        3,
                         0
-                    ],
-                    "$world_name|default": false
-                }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_world_name_size_eff",
+                          "source_property_name": "(((#nc_eff + 10) * 3) / 20)",
+                          "target_property_name": "#size_binding_x_absolute"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "txt_c": {
+                "type": "panel",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "text": "#nc_txt",
+                      "layer": 12,
+                      "ignored": "$world_name",
+                      "offset": [
+                        0,
+                        0
+                      ],
+                      "$world_name|default": false,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_world_name_size_eff",
+                          "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+                          "target_property_name": "#font_scale_factor"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_world_name_size_eff",
+                          "source_property_name": "#nc_eff",
+                          "target_property_name": "#nc_fe"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+                          "target_property_name": "#nc_fq"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+                          "target_property_name": "#nc_fr"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+                          "target_property_name": "#nc_fk"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+                          "target_property_name": "#nc_sfx"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('' + $server_ip + #nc_sfx)",
+                          "target_property_name": "#nc_txt"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
-        ],
-        "$world_name|default": false
-    }
+          ]
+        }
+      }
+    ],
+    "$world_name|default": false,
+    "$server_ip|default": ""
+  }
 }

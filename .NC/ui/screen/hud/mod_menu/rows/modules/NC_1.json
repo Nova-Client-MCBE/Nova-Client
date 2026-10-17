@@ -18,7 +18,9 @@
           "$toggle_tags": "$inventoryhud",
           "$modules_template_toggle_text": "Inventory Hud",
           "$modules_template_button_name": "button.inventory_hud_screen",
-          "$nc_letter_ctrl": "nc_ltr_i"
+          "$nc_letter_ctrl": "nc_ltr_i",
+          "$nc_page_toggle": "nc_page_inventory_hud",
+          "$nc_page_index": 1
         }
       },
       {
@@ -31,7 +33,9 @@
           "$toggle_tags": "$world_name",
           "$modules_template_toggle_text": "World Name",
           "$modules_template_button_name": "button.world_name_screen",
-          "$nc_letter_ctrl": "nc_ltr_w"
+          "$nc_letter_ctrl": "nc_ltr_w",
+          "$nc_page_toggle": "nc_page_world_name",
+          "$nc_page_index": 2
         }
       },
       {
@@ -44,7 +48,9 @@
           "$toggle_tags": "$mainhand",
           "$modules_template_toggle_text": "Main Hand Slot",
           "$modules_template_button_name": "button.main_hand_screen",
-          "$nc_letter_ctrl": "nc_ltr_m"
+          "$nc_letter_ctrl": "nc_ltr_m",
+          "$nc_page_toggle": "nc_page_main_hand",
+          "$nc_page_index": 3
         }
       }
     ],

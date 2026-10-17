@@ -1,430 +1,777 @@
 {
-    "namespace": "Nova_Client_mainhand",
-    "content@Nova_Client_common.element": {
-      "type": "stack_panel",
-      "orientation": "horizontal",
-      "$NC_anchor": "bottom_middle",
-      "offset": [
-        148,
-        -2
-      ],
-      "size": [
-        102,
-        22
-      ],
-      "bindings": [
-        {
-          "binding_type": "view",
-          "source_control_name": "mainhand_toggle",
-          "source_property_name": "#toggle_state",
-          "target_property_name": "#visible"
+  "namespace": "Nova_Client_mainhand",
+  "content@Nova_Client_common.element": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "$NC_anchor": "bottom_middle",
+    "offset": [
+      148,
+      -2
+    ],
+    "size": [
+      102,
+      22
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mainhand_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_mainhand_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 102) / 20)",
+        "target_property_name": "#size_binding_x_absolute"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_mainhand_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 22) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
+      }
+    ],
+    "controls": [
+      {
+        "1": {
+          "type": "panel",
+          "size": [
+            22,
+            22
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_mainhand.mainhand_hud_item": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 22) / 20)",
+              "target_property_name": "#size_binding_x_absolute"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 22) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ]
         }
-      ],
-      "controls": [
-        {
-          "1": {
-            "type": "panel",
-            "size": [
-              22,
-              22
-            ],
-            "controls": [
-              {
-                "1@Nova_Client_mainhand.mainhand_hud_item": {}
+      },
+      {
+        "2@Nova_Client_common.spacer": {}
+      },
+      {
+        "spacer_stack_panel": {
+          "type": "stack_panel",
+          "size": [
+            "100%c",
+            22
+          ],
+          "controls": [
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [
+                  3,
+                  3
+                ]
               }
-            ]
-          }
-        },
-        {
-          "2@Nova_Client_common.spacer": {}
-        },
-        {
-          "spacer_stack_panel": {
-            "type": "stack_panel",
-            "size": [
-              "100%c",
-              22
-            ],
-            "controls": [
-              {
-                "spacer": {
-                  "type": "panel",
-                  "size": [
-                    3,
-                    3
-                  ]
-                }
-              },
-              {
-                "3@Nova_Client_mainhand.durability_viewer_collection_panel": {}
+            },
+            {
+              "dur_center": {
+                "type": "panel",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "3@Nova_Client_mainhand.durability_viewer_collection_panel": {}
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 22) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "ignored": true
         }
-      ]
-    },
-    "mainhand_hud_item": {
-      "type": "panel",
-      "size": [
-        22,
-        22
-      ],
-      "offset": [
-        0,
-        10
-      ],
-      "bindings": [
-        {
-          "binding_type": "view",
-          "source_control_name": "mainhand_item_toggle",
-          "source_property_name": "#toggle_state",
-          "target_property_name": "#visible"
+      }
+    ]
+  },
+  "mainhand_hud_item": {
+    "type": "panel",
+    "size": [
+      22,
+      22
+    ],
+    "offset": [
+      0,
+      "45.45%"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_mainhand_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 22) / 20)",
+        "target_property_name": "#size_binding_x_absolute"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_mainhand_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 22) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
+      }
+    ],
+    "controls": [
+      {
+        "inventory_grid": {
+          "type": "grid",
+          "grid_item_template": "Nova_Client_mainhand.mainhand_hud_item_panel",
+          "collection_name": "hotbar_items",
+          "grid_dimensions": [
+            9,
+            1
+          ],
+          "size": [
+            0,
+            0
+          ]
         }
-      ],
-      "controls": [
-        {
-          "inventory_grid": {
-            "type": "grid",
-            "grid_item_template": "Nova_Client_mainhand.mainhand_hud_item_panel",
-            "collection_name": "hotbar_items",
-            "grid_dimensions": [
-              9,
-              1
-            ],
-            "size": [
-              0,
-              0
-            ]
-          }
-        }
-      ]
-    },
-    "mainhand_hud_item_panel": {
-      "type": "panel",
-      "offset": [
-        0,
-        3
-      ],
-      "bindings": [
-        {
-          "binding_collection_name": "hotbar_items",
-          "binding_name": "#slot_selected",
-          "binding_name_override": "#visible",
-          "binding_type": "collection"
-        }
-      ],
-      "controls": [
-        {
-          "mainhand_item_content@Nova_Client_common.internal": {
-            "$NC_internal": "modules/slot",
-            "$item_collection_name": "hotbar_items",
-            "$durability_bar_required": true,
-            "$stack_count_required": true,
-            "size": [
-              22,
-              22
-            ],
-            "bindings": [
-              {
-                "binding_type": "view",
-                "source_control_name": "mainhand_slot_opacity",
-                "source_property_name": "(#slider_value / 10)",
-                "target_property_name": "#alpha"
-              },
-              {
-                "binding_collection_name": "hotbar_items",
-                "binding_name": "#item_id_aux",
-                "binding_type": "collection"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "(not (#item_id_aux = -1))",
-                "target_property_name": "#visible"
+      }
+    ]
+  },
+  "mainhand_hud_item_panel": {
+    "type": "panel",
+    "offset": [
+      0,
+      3
+    ],
+    "bindings": [
+      {
+        "binding_collection_name": "hotbar_items",
+        "binding_name": "#slot_selected",
+        "binding_name_override": "#visible",
+        "binding_type": "collection"
+      }
+    ],
+    "controls": [
+      {
+        "mainhand_item_content@Nova_Client_common.internal": {
+          "$NC_internal": "invis",
+          "$item_collection_name": "hotbar_items",
+          "$durability_bar_required": true,
+          "$stack_count_required": true,
+          "size": [
+            22,
+            22
+          ],
+          "bindings": [
+            {
+              "binding_collection_name": "hotbar_items",
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#item_id_aux = -1))",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 22) / 20)",
+              "target_property_name": "#size_binding_x_absolute"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 22) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "controls": [
+            {
+              "slot_bg@Nova_Client_common.internal": {
+                "$NC_internal": "modules/slot",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mainhand_slot_opacity",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mainhand_item_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
               }
-            ],
-            "controls": [
-              {
-                "mainhand_hud_item@common.item_renderer": {
-                  "layer": 1,
-                  "size": [
-                    14,
-                    14
-                  ]
-                }
-              },
-              {
-                "stack_count_label@Nova_Client_common.element": {
-                  "type": "label",
-                  "text": "#inventory_stack_count",
-                  "$NC_anchor": "bottom_right",
-                  "shadow": true,
-                  "layer": 7,
-                  "offset": [
-                    -1,
-                    -0.5
-                  ],
-                  "max_size": [
-                    22,
-                    22
-                  ],
-                  "bindings": [
-                    {
-                      "binding_type": "view",
-                      "source_control_name": "mainhand_stack_toggle",
-                      "source_property_name": "#toggle_state",
-                      "target_property_name": "#visible"
-                    },
-                    {
-                      "binding_name": "#inventory_stack_count",
-                      "binding_type": "collection",
-                      "binding_collection_name": "hotbar_items"
-                    },
-                    {
-                      "binding_name": "#stack_count_visible",
-                      "binding_name_override": "#visible",
-                      "binding_type": "collection",
-                      "binding_collection_name": "#hotbar_items"
+            },
+            {
+              "item_wrap": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mainhand_item_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "mainhand_hud_item@common.item_renderer": {
+                      "layer": 1,
+                      "size": [
+                        "63.64%",
+                        "63.64%"
+                      ]
                     }
-                  ]
-                }
+                  }
+                ]
               }
-            ]
-          }
-        }
-      ]
-    },
-    "durability_viewer_collection_panel": {
-      "type": "image",
-      "size": [
-        "100%c",
-        17
-      ],
-      "$hotbar_collection_name|default": "hotbar_items",
-      "bindings": [
-        {
-          "binding_type": "view",
-          "source_control_name": "mainhand_durability_toggle",
-          "source_property_name": "#toggle_state",
-          "target_property_name": "#visible"
-        }
-      ],
-      "controls": [
-        {
-          "durability_viewer_collection_panel_wrapper": {
-            "type": "panel",
-            "size": [
-              "100%c",
-              "100%"
-            ],
-            "controls": [
-              {
-                "durability_viewer_hotbar_collection@Nova_Client_mainhand.durability_viewer_hotbar_collection": {}
+            },
+            {
+              "stack_count_label@Nova_Client_common.element": {
+                "type": "label",
+                "text": "#inventory_stack_count",
+                "$NC_anchor": "bottom_right",
+                "shadow": true,
+                "layer": 7,
+                "offset": [
+                  -1,
+                  -0.5
+                ],
+                "max_size": [
+                  22,
+                  22
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mainhand_stack_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_name": "#inventory_stack_count",
+                    "binding_type": "collection",
+                    "binding_collection_name": "hotbar_items"
+                  },
+                  {
+                    "binding_name": "#stack_count_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "#hotbar_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_mainhand_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+                    "target_property_name": "#font_scale_factor"
+                  }
+                ]
               }
-            ]
-          }
-        }
-      ]
-    },
-    "durability_viewer_hotbar_collection": {
-      "type": "stack_panel",
-      "size": [
-        "100%c",
-        10
-      ],
-      "collection_name": "$hotbar_collection_name",
-      "offset": [
-        0.5,
-        0
-      ],
-      "controls": [
-        {
-          "0@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 0
-          }
-        },
-        {
-          "1@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 1
-          }
-        },
-        {
-          "2@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 2
-          }
-        },
-        {
-          "3@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 3
-          }
-        },
-        {
-          "4@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 4
-          }
-        },
-        {
-          "5@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 5
-          }
-        },
-        {
-          "6@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 6
-          }
-        },
-        {
-          "7@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 7
-          }
-        },
-        {
-          "8@Nova_Client_mainhand.durability_viewer_grid": {
-            "collection_index": 8
-          }
-        }
-      ]
-    },
-    "durability_viewer_grid": {
-      "type": "panel",
-      "layer": 10,
-      "size": [
-        "100%c",
-        0
-      ],
-      "$item_collection_name": "$hotbar_collection_name",
-      "controls": [
-        {
-          "durability_viewer_background": {
-            "type": "image",
-            "offset": [
-              0,
-              5
-            ],
-            "size": [
-              "100%c + 7px",
-              17
-            ],
-            "texture": "textures/ui/hud_tip_text_background",
-            "alpha": 0.65,
-            "bindings": [
-              {
-                "binding_type": "view",
-                "source_control_name": "mainhand_percent_opacity",
-                "source_property_name": "(#slider_value / 10)",
-                "target_property_name": "#alpha"
-              },
-              {
-                "binding_name": "#item_durability_total_amount",
-                "binding_type": "collection",
-                "binding_collection_name": "hotbar_items"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "(#item_durability_total_amount > 0)",
-                "target_property_name": "#condition1"
-              },
-              {
-                "binding_name": "#slot_selected",
-                "binding_name_override": "#condition2",
-                "binding_type": "collection",
-                "binding_collection_name": "hotbar_items"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "(#condition1 and #condition2)",
-                "target_property_name": "#visible"
+            },
+            {
+              "nc_dur_attach": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  "100%cm"
+                ],
+                "anchor_from": "right_middle",
+                "anchor_to": "left_middle",
+                "layer": 5,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mainhand_durability_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "gap": {
+                      "type": "panel",
+                      "size": [
+                        4,
+                        0
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_mainhand_size_eff",
+                          "source_property_name": "(((#nc_eff + 10) * 4) / 20)",
+                          "target_property_name": "#size_binding_x_absolute"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "durability_viewer_background": {
+                      "type": "image",
+                      "offset": [
+                        0,
+                        0
+                      ],
+                      "size": [
+                        "100%c",
+                        17
+                      ],
+                      "texture": "textures/ui/hud_tip_text_background",
+                      "alpha": 0.65,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "mainhand_percent_opacity",
+                          "source_property_name": "(#slider_value / 10)",
+                          "target_property_name": "#alpha"
+                        },
+                        {
+                          "binding_name": "#item_durability_total_amount",
+                          "binding_type": "collection",
+                          "binding_collection_name": "hotbar_items"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#item_durability_total_amount > 0)",
+                          "target_property_name": "#condition1"
+                        },
+                        {
+                          "binding_name": "#slot_selected",
+                          "binding_name_override": "#condition2",
+                          "binding_type": "collection",
+                          "binding_collection_name": "hotbar_items"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#condition1 and #condition2)",
+                          "target_property_name": "#visible"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "nc_mainhand_size_eff",
+                          "source_property_name": "(((#nc_eff + 10) * 17) / 20)",
+                          "target_property_name": "#size_binding_y_absolute"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "durability_viewer_background_content@Nova_Client_mainhand.durability_viewer_background_content": {}
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
-            ],
-            "controls": [
-              {
-                "durability_viewer_background_content@Nova_Client_mainhand.durability_viewer_background_content": {}
-              }
-            ]
-          }
+            }
+          ]
         }
-      ]
-    },
-    "durability_viewer_background_content": {
-      "type": "stack_panel",
-      "orientation": "horizontal",
-      "layer": 10,
-      "size": [
-        "100%c",
-        10
-      ],
-      "controls": [
-        {
-          "1@Nova_Client_common.spacer": {}
-        },
-        {
-          "durability_viewer_current_label": {
-            "shadow": false,
-            "type": "label",
-            "text": "#text",
-            "bindings": [
-              {
-                "binding_name": "#slot_selected",
-                "binding_name_override": "#visible",
-                "binding_type": "collection",
-                "binding_collection_name": "$hotbar_collection_name"
-              },
-              {
-                "binding_name": "#item_durability_current_amount",
-                "binding_type": "collection",
-                "binding_collection_name": "hotbar_items"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "((#current_value < #item_durability_current_amount) - (#current_value > #item_durability_current_amount) + #current_value)",
-                "target_property_name": "#current_value"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "('§z' + #current_value)",
-                "target_property_name": "#text"
-              }
-            ]
-          }
-        },
-        {
-          "durability_view_total_label": {
-            "type": "label",
-            "shadow": false,
-            "text": "#text",
-            "bindings": [
-              {
-                "binding_name": "#slot_selected",
-                "binding_name_override": "#visible",
-                "binding_type": "collection",
-                "binding_collection_name": "$hotbar_collection_name"
-              },
-              {
-                "binding_name": "#item_durability_total_amount",
-                "binding_type": "collection",
-                "binding_collection_name": "hotbar_items"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "((#total_value < #item_durability_total_amount) - (#total_value > #item_durability_total_amount) + #total_value)",
-                "target_property_name": "#total_value"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "('§r/' + #total_value)",
-                "target_property_name": "#text"
-              },
-              {
-                "binding_type": "view",
-                "source_control_name": "durability_viewer_total_text",
-                "source_property_name": "#toggle_state",
-                "target_property_name": "#visible"
-              }
-            ]
-          }
-        },
-        {
-          "2@Nova_Client_common.spacer": {}
+      }
+    ]
+  },
+  "durability_viewer_collection_panel": {
+    "type": "image",
+    "size": [
+      "100%c",
+      17
+    ],
+    "$hotbar_collection_name|default": "hotbar_items",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mainhand_durability_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_mainhand_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 17) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
+      }
+    ],
+    "controls": [
+      {
+        "durability_viewer_collection_panel_wrapper": {
+          "type": "panel",
+          "size": [
+            "100%c",
+            "100%"
+          ],
+          "controls": [
+            {
+              "durability_viewer_hotbar_collection@Nova_Client_mainhand.durability_viewer_hotbar_collection": {}
+            }
+          ]
         }
-      ]
-    }
+      }
+    ]
+  },
+  "durability_viewer_hotbar_collection": {
+    "type": "collection_panel",
+    "size": [
+      "100%c",
+      10
+    ],
+    "collection_name": "$hotbar_collection_name",
+    "offset": [
+      0.5,
+      0
+    ],
+    "controls": [
+      {
+        "nc_dur_0@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 0,
+          "$nc_cell": "nc_dur_0"
+        }
+      },
+      {
+        "nc_dur_1@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 1,
+          "$nc_cell": "nc_dur_1"
+        }
+      },
+      {
+        "nc_dur_2@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 2,
+          "$nc_cell": "nc_dur_2"
+        }
+      },
+      {
+        "nc_dur_3@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 3,
+          "$nc_cell": "nc_dur_3"
+        }
+      },
+      {
+        "nc_dur_4@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 4,
+          "$nc_cell": "nc_dur_4"
+        }
+      },
+      {
+        "nc_dur_5@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 5,
+          "$nc_cell": "nc_dur_5"
+        }
+      },
+      {
+        "nc_dur_6@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 6,
+          "$nc_cell": "nc_dur_6"
+        }
+      },
+      {
+        "nc_dur_7@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 7,
+          "$nc_cell": "nc_dur_7"
+        }
+      },
+      {
+        "nc_dur_8@Nova_Client_mainhand.durability_viewer_grid": {
+          "collection_index": 8,
+          "$nc_cell": "nc_dur_8"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_mainhand_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 10) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
+      }
+    ]
+  },
+  "durability_viewer_grid": {
+    "type": "panel",
+    "layer": 10,
+    "size": [
+      "100%c",
+      0
+    ],
+    "$item_collection_name": "$hotbar_collection_name",
+    "controls": [
+      {
+        "durability_viewer_background": {
+          "type": "image",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%c",
+            17
+          ],
+          "texture": "textures/ui/hud_tip_text_background",
+          "alpha": 0.65,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mainhand_percent_opacity",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_name": "#item_durability_total_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "hotbar_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#item_durability_total_amount > 0)",
+              "target_property_name": "#condition1"
+            },
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#condition2",
+              "binding_type": "collection",
+              "binding_collection_name": "hotbar_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#condition1 and #condition2)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 17) / 20)",
+              "target_property_name": "#size_binding_y_absolute"
+            }
+          ],
+          "controls": [
+            {
+              "durability_viewer_background_content@Nova_Client_mainhand.durability_viewer_background_content": {}
+            }
+          ]
+        }
+      }
+    ],
+    "$nc_cell|default": "nc_dur_0"
+  },
+  "durability_viewer_background_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 10,
+    "size": [
+      "100%c",
+      10
+    ],
+    "controls": [
+      {
+        "pad_l": {
+          "type": "panel",
+          "size": [
+            3.5,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 350) / 2000)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      },
+      {
+        "1@Nova_Client_common.spacer": {}
+      },
+      {
+        "durability_viewer_current_label": {
+          "shadow": false,
+          "type": "label",
+          "text": "#nc_txt",
+          "bindings": [
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            {
+              "binding_name": "#item_durability_current_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "hotbar_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#current_value < #item_durability_current_amount) - (#current_value > #item_durability_current_amount) + #current_value)",
+              "target_property_name": "#current_value"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§z' + #current_value)",
+              "target_property_name": "#text"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+              "target_property_name": "#font_scale_factor"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_fe"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+              "target_property_name": "#nc_fq"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+              "target_property_name": "#nc_fr"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+              "target_property_name": "#nc_fk"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+              "target_property_name": "#nc_sfx"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('' + #text + #nc_sfx)",
+              "target_property_name": "#nc_txt"
+            }
+          ]
+        }
+      },
+      {
+        "durability_view_total_label": {
+          "type": "label",
+          "shadow": false,
+          "text": "#nc_txt",
+          "bindings": [
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            {
+              "binding_name": "#item_durability_total_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "hotbar_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#total_value < #item_durability_total_amount) - (#total_value > #item_durability_total_amount) + #total_value)",
+              "target_property_name": "#total_value"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§r/' + #total_value)",
+              "target_property_name": "#text"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "durability_viewer_total_text",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+              "target_property_name": "#font_scale_factor"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "#nc_eff",
+              "target_property_name": "#nc_fe"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+              "target_property_name": "#nc_fq"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+              "target_property_name": "#nc_fr"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+              "target_property_name": "#nc_fk"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+              "target_property_name": "#nc_sfx"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('' + #text + #nc_sfx)",
+              "target_property_name": "#nc_txt"
+            }
+          ]
+        }
+      },
+      {
+        "2@Nova_Client_common.spacer": {}
+      },
+      {
+        "pad_r": {
+          "type": "panel",
+          "size": [
+            3.5,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "nc_mainhand_size_eff",
+              "source_property_name": "(((#nc_eff + 10) * 350) / 2000)",
+              "target_property_name": "#size_binding_x_absolute"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_mainhand_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 10) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
+      }
+    ]
   }
+}

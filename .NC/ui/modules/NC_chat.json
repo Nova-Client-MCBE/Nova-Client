@@ -181,6 +181,80 @@
                 "offset": [
                   2,
                   0.5
+                ],
+                "controls": [
+                  {
+                    "nc_mention": {
+                      "type": "image",
+                      "texture": "textures/ui/White",
+                      "color": [
+                        1.0,
+                        0.78,
+                        0.2
+                      ],
+                      "alpha": 0.3,
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "layer": -1,
+                      "bindings": [
+                        {
+                          "binding_name": "#chat_text",
+                          "binding_type": "collection",
+                          "binding_collection_name": "chat_text_grid"
+                        },
+                        {
+                          "binding_name": "#gamertag"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "chat_mention_highlight",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#nc_on"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not ((#chat_text - #gamertag) = #chat_text))",
+                          "target_property_name": "#nc_has"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#chat_text - ('<' + #gamertag + '>')) = #chat_text)",
+                          "target_property_name": "#nc_notown"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#nc_on and #nc_has and #nc_notown)",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "bar": {
+                            "type": "image",
+                            "texture": "textures/ui/White",
+                            "color": [
+                              1.0,
+                              0.78,
+                              0.2
+                            ],
+                            "size": [
+                              2,
+                              "100%"
+                            ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": [
+                              -2,
+                              0
+                            ],
+                            "layer": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
                 ]
               }
             }
@@ -228,6 +302,80 @@
                 "offset": [
                   2,
                   0.5
+                ],
+                "controls": [
+                  {
+                    "nc_mention": {
+                      "type": "image",
+                      "texture": "textures/ui/White",
+                      "color": [
+                        1.0,
+                        0.78,
+                        0.2
+                      ],
+                      "alpha": 0.3,
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "layer": -1,
+                      "bindings": [
+                        {
+                          "binding_name": "#chat_text",
+                          "binding_type": "collection",
+                          "binding_collection_name": "chat_text_grid"
+                        },
+                        {
+                          "binding_name": "#gamertag"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "chat_mention_highlight",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#nc_on"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not ((#chat_text - #gamertag) = #chat_text))",
+                          "target_property_name": "#nc_has"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#chat_text - ('<' + #gamertag + '>')) = #chat_text)",
+                          "target_property_name": "#nc_notown"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(#nc_on and #nc_has and #nc_notown)",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "bar": {
+                            "type": "image",
+                            "texture": "textures/ui/White",
+                            "color": [
+                              1.0,
+                              0.78,
+                              0.2
+                            ],
+                            "size": [
+                              2,
+                              "100%"
+                            ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": [
+                              -2,
+                              0
+                            ],
+                            "layer": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
                 ]
               }
             }

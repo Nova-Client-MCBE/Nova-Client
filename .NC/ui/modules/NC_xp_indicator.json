@@ -20,6 +20,12 @@
         "source_control_name": "exp_calculator_opacity",
         "source_property_name": "(#slider_value / 10)",
         "target_property_name": "#alpha"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "nc_exp_calculator_size_eff",
+        "source_property_name": "(((#nc_eff + 10) * 20) / 20)",
+        "target_property_name": "#size_binding_y_absolute"
       }
     ],
     "controls": [
@@ -41,7 +47,7 @@
           "type": "panel",
           "size": [
             "100%c",
-            "100%c"
+            "100%"
           ],
           "controls": [
             {
@@ -50,7 +56,7 @@
                 "texture": "textures/items/experience_bottle",
                 "offset": [
                   0,
-                  3
+                  0
                 ],
                 "size": [
                   15,
@@ -62,6 +68,18 @@
                     "source_control_name": "xp_point_calculator_icon_toggle",
                     "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 15) / 20)",
+                    "target_property_name": "#size_binding_x_absolute"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 15) / 20)",
+                    "target_property_name": "#size_binding_y_absolute"
                   }
                 ]
               }
@@ -73,7 +91,7 @@
         "exp_point_caculator": {
           "size": [
             "100%c",
-            "100%c"
+            "100%"
           ],
           "type": "panel",
           "bindings": [
@@ -186,17 +204,17 @@
             {
               "label": {
                 "type": "label",
-                "text": "#text",
+                "text": "#nc_txt",
                 "layer": 5,
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "offset": [
                   0,
-                  6
+                  0
                 ],
                 "size": [
                   "default",
-                  18
+                  "default"
                 ],
                 "bindings": [
                   {
@@ -204,6 +222,43 @@
                     "source_control_name": "exp_point_caculator",
                     "source_property_name": "('§z' + #current_point + '/' + #exp_require)",
                     "target_property_name": "#text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+                    "target_property_name": "#font_scale_factor"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "#nc_eff",
+                    "target_property_name": "#nc_fe"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+                    "target_property_name": "#nc_fq"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+                    "target_property_name": "#nc_fr"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+                    "target_property_name": "#nc_fk"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+                    "target_property_name": "#nc_sfx"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('' + #text + #nc_sfx)",
+                    "target_property_name": "#nc_txt"
                   }
                 ]
               }
@@ -216,23 +271,23 @@
           "type": "panel",
           "size": [
             "100%c",
-            "100%c"
+            "100%"
           ],
           "controls": [
             {
               "xp_level_percent": {
                 "type": "label",
-                "text": " | ",
+                "text": "#nc_txt",
                 "layer": 5,
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "offset": [
                   0,
-                  6
+                  0
                 ],
                 "size": [
                   "default",
-                  18
+                  "default"
                 ],
                 "bindings": [
                   {
@@ -240,6 +295,43 @@
                     "source_control_name": "xp_panel_buffer",
                     "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(((#nc_eff + 10) * 1) / 20)",
+                    "target_property_name": "#font_scale_factor"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "#nc_eff",
+                    "target_property_name": "#nc_fe"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#nc_fe > 9) + (#nc_fe > 19) + (#nc_fe > 29))",
+                    "target_property_name": "#nc_fq"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#nc_fe - (#nc_fq * 10))",
+                    "target_property_name": "#nc_fr"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#nc_fr > 0) + (#nc_fr > 1) + (#nc_fr > 2) + (#nc_fr > 3) + (#nc_fr > 4) + (#nc_fr > 5) + (#nc_fr > 6) + (#nc_fr > 7) + (#nc_fr > 8))",
+                    "target_property_name": "#nc_fk"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('§' + #nc_fq + '§' + #nc_fk)",
+                    "target_property_name": "#nc_sfx"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('' + ' | ' + #nc_sfx)",
+                    "target_property_name": "#nc_txt"
                   }
                 ]
               }
@@ -264,7 +356,7 @@
           "type": "panel",
           "size": [
             "100%c",
-            "100%c"
+            "100%"
           ],
           "bindings": [
             {
@@ -276,7 +368,7 @@
           ],
           "controls": [
             {
-              "xp_level_number": {
+              "xp_level_number_0": {
                 "type": "label",
                 "text": "#level_number",
                 "layer": 5,
@@ -284,17 +376,894 @@
                 "anchor_to": "center",
                 "offset": [
                   0,
-                  6
+                  0
                 ],
                 "size": [
                   "default",
-                  18
+                  "default"
                 ],
                 "bindings": [
                   {
                     "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 0)",
+                    "target_property_name": "#visible"
                   }
-                ]
+                ],
+                "font_scale_factor": 0.5
+              }
+            },
+            {
+              "xp_level_number_1": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 1)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.55
+              }
+            },
+            {
+              "xp_level_number_2": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 2)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.6
+              }
+            },
+            {
+              "xp_level_number_3": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 3)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.65
+              }
+            },
+            {
+              "xp_level_number_4": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 4)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.7
+              }
+            },
+            {
+              "xp_level_number_5": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 5)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.75
+              }
+            },
+            {
+              "xp_level_number_6": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 6)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.8
+              }
+            },
+            {
+              "xp_level_number_7": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 7)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.85
+              }
+            },
+            {
+              "xp_level_number_8": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 8)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.9
+              }
+            },
+            {
+              "xp_level_number_9": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 9)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 0.95
+              }
+            },
+            {
+              "xp_level_number_10": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 10)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.0
+              }
+            },
+            {
+              "xp_level_number_11": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 11)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.05
+              }
+            },
+            {
+              "xp_level_number_12": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 12)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.1
+              }
+            },
+            {
+              "xp_level_number_13": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 13)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.15
+              }
+            },
+            {
+              "xp_level_number_14": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 14)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.2
+              }
+            },
+            {
+              "xp_level_number_15": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 15)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.25
+              }
+            },
+            {
+              "xp_level_number_16": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 16)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.3
+              }
+            },
+            {
+              "xp_level_number_17": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 17)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.35
+              }
+            },
+            {
+              "xp_level_number_18": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 18)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.4
+              }
+            },
+            {
+              "xp_level_number_19": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 19)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.45
+              }
+            },
+            {
+              "xp_level_number_20": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 20)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.5
+              }
+            },
+            {
+              "xp_level_number_21": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 21)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.55
+              }
+            },
+            {
+              "xp_level_number_22": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 22)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.6
+              }
+            },
+            {
+              "xp_level_number_23": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 23)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.65
+              }
+            },
+            {
+              "xp_level_number_24": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 24)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.7
+              }
+            },
+            {
+              "xp_level_number_25": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 25)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.75
+              }
+            },
+            {
+              "xp_level_number_26": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 26)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.8
+              }
+            },
+            {
+              "xp_level_number_27": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 27)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.85
+              }
+            },
+            {
+              "xp_level_number_28": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 28)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.9
+              }
+            },
+            {
+              "xp_level_number_29": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 29)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 1.95
+              }
+            },
+            {
+              "xp_level_number_30": {
+                "type": "label",
+                "text": "#level_number",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#level_number"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nc_exp_calculator_size_eff",
+                    "source_property_name": "(#nc_eff = 30)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "font_scale_factor": 2.0
               }
             }
           ]

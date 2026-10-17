@@ -1,57 +1,100 @@
 {
   "namespace": "Nova_Client_playerlist_screen",
-  "content@Nova_Client_common.screen_template": {
-    "$NC_sreen_button_name": "playerlist_out",
-    "anims": [
-      "@Nova_Client_animations.playerlist_screen",
-      "@Nova_Client_animations.screen_page_out"
-    ],
-    "controls": [
-      { "background@Nova_Client_common.screen_bg": {} },
+  "content@Nova_Client_layout.page_body": {
+    "$nc_page_toggle": "nc_page_playerlist",
+    "$nc_page_desc": "Shows the players in the world. On PC it can open with the Tab option, on mobile with an extra button.",
+    "$nc_page_req": "",
+    "$nc_page_no_req": true,
+    "$nc_page_rows": [
       {
-        "1@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "gamer_icon",
-          "$toggle_tags": "$playerlist_icon",
-          "$NC_dialog_toggle_text": "Icon",
-          "$NC_dialog_toggle_anchor": "top_middle"
+        "row_1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "1@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "gamer_icon",
+                "$toggle_tags": "$playerlist_icon",
+                "$NC_dialog_toggle_text": "Icon",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
-        "2@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "player_list_tab_toggle",
-          "$toggle_tags": "$playerlist_pc_tab",
-          "$NC_dialog_toggle_text": "Playerlist on Tab",
-          "$NC_dialog_toggle_anchor": "top_middle",
-          "offset": [ 0, 25 ]
+        "row_2": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "2@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "player_list_tab_toggle",
+                "$toggle_tags": "$playerlist_pc_tab",
+                "$NC_dialog_toggle_text": "Playerlist on Tab",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
-        "3@Nova_Client_dialog_toggle_template.content": {
-          "$toggle_view_binding_name": "player_list_mobile_toggle",
-          "$toggle_tags": "$playlist_mobile_hud_toggle",
-          "$NC_dialog_toggle_text": "Playerlist Toggle button",
-          "$NC_dialog_toggle_anchor": "top_middle",
-          "offset": [ 0, 50 ]
+        "row_3": {
+          "type": "panel",
+          "size": [
+            "100%",
+            27
+          ],
+          "controls": [
+            {
+              "3@Nova_Client_dialog_toggle_template.content": {
+                "$toggle_view_binding_name": "player_list_mobile_toggle",
+                "$toggle_tags": "$playlist_mobile_hud_toggle",
+                "$NC_dialog_toggle_text": "Playerlist Toggle button",
+                "$NC_dialog_toggle_anchor": "left_middle",
+                "offset": [
+                  6,
+                  0
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "bg_opacity@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "main_background_opacity",
           "$NC_opacity_default_value": "$playerlist_background_opacity",
-          "$NC_slider_section_offset": [ 0, 75 ]
+          "$NC_slider_section_offset": [
+            0,
+            0
+          ],
+          "$NC_opacity_title": "Background Opacity"
         }
       },
       {
         "accent_opacity@Nova_Client_common.opacity_slider_section": {
           "$NC_opacity_slider_name": "accent_background_opacity",
           "$NC_opacity_default_value": "$accent_background_opacity",
-          "$NC_slider_section_offset": [ 0, 100 ]
-        }
-      },
-      {
-        "close_button@Nova_Client_dialog_toggle_template.close_button": {
-          "$pressed_button_name": "button.playerlist_out",
-          "$button_text": "Close"
+          "$NC_slider_section_offset": [
+            0,
+            0
+          ],
+          "$NC_opacity_title": "Accent Opacity"
         }
       }
     ]

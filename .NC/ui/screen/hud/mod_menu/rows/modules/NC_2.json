@@ -18,7 +18,9 @@
           "$toggle_tags": "$item_counter",
           "$modules_template_toggle_text": "Item Counter",
           "$modules_template_button_name": "button.item_counter_screen",
-          "$nc_letter_ctrl": "nc_ltr_i"
+          "$nc_letter_ctrl": "nc_ltr_i",
+          "$nc_page_toggle": "nc_page_item_counter",
+          "$nc_page_index": 4
         }
       },
       {
@@ -31,7 +33,9 @@
           "$toggle_tags": "$clock_and_compass",
           "$modules_template_toggle_text": "Clock and Compass",
           "$modules_template_button_name": "button.clock_and_compass_screen",
-          "$nc_letter_ctrl": "nc_ltr_c"
+          "$nc_letter_ctrl": "nc_ltr_c",
+          "$nc_page_toggle": "nc_page_clock_and_compass",
+          "$nc_page_index": 5
         }
       },
       {
@@ -44,7 +48,9 @@
           "$toggle_tags": "$day_counter",
           "$modules_template_toggle_text": "Day Counter",
           "$modules_template_button_name": "button.day_counter_screen",
-          "$nc_letter_ctrl": "nc_ltr_d"
+          "$nc_letter_ctrl": "nc_ltr_d",
+          "$nc_page_toggle": "nc_page_day_counter",
+          "$nc_page_index": 6
         }
       }
     ],
