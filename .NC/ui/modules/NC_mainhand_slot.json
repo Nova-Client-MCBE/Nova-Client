@@ -386,7 +386,8 @@
                       ]
                     }
                   }
-                ]
+                ],
+                "$hotbar_collection_name": "hotbar_items"
               }
             }
           ]
